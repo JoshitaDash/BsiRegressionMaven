@@ -22,6 +22,7 @@ public class VerifyMemberDiscount extends BaseTest {
 			Log.info("Member Signing In");
 			SignInPage signIn = new SignInPage(driver);
 			signIn.memberNewLogin();
+			System.out.println("");
 		}
 
 		catch (Exception e) {
