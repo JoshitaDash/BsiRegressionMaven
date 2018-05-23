@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="124692" started-at="2018-05-23T09:13:16Z" finished-at="2018-05-23T09:15:20Z">
+    <groups>
+    </groups>
+    <test name="Chrome Browser" duration-ms="124692" started-at="2018-05-23T09:13:16Z" finished-at="2018-05-23T09:15:20Z">
+      <class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout@6ca8564a]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-05-23T09:13:16Z" finished-at="2018-05-23T09:13:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriverInstance -->
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout@6ca8564a]" name="launchBrowser" is-config="true" duration-ms="5608" started-at="2018-05-23T09:13:16Z" finished-at="2018-05-23T09:13:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="CheckLoginAlertOnChekout()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout@6ca8564a]" name="CheckLoginAlertOnChekout" duration-ms="118101" started-at="2018-05-23T09:13:21Z" finished-at="2018-05-23T09:15:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckLoginAlertOnChekout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout@6ca8564a]" name="tearDown" is-config="true" duration-ms="962" started-at="2018-05-23T09:15:19Z" finished-at="2018-05-23T09:15:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout -->
+    </test> <!-- Chrome Browser -->
+  </suite> <!-- Suite -->
+</testng-results>

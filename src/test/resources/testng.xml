@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <test name="Chrome Browser"> <parameter name="browser" value="chrome" 
+		/> <classes> <class name="bsiShopRedesignSprint1.SCRProductsUpdateBasket" 
+		/> <class name="bsiShopRedesignSprint1.MyProfileAddTenAddresses" /> <class 
+		name="bsiShopRedesignSprint2.BookEvent" /> <class name="bsiShopRedesignSprint2.MultipleEventUpdateBasket" 
+		/> <class name="bsiShopRedesignSprint2.StandardProductAndEventRemoveBasket" 
+		/> <class name="bsiShopRedesignSprint2.EssentialsProductAndEventRemoveBasket" 
+		/> <class name="bsiShopRedesignSprint2.RegisterSubscriptions" /> <class name="bsiShopRedesignSprint2.DownloadMarketingMaterial" 
+		/> <class name="bsiShopRedesignSprint2.RegisterMUNLCode" /> <class name="bsiShopRedesignSprint2.CheckWarningMsgAddtoBasket" 
+		/> <class name="bsiShopRedesignSprint2.ViewMemberTab" /> <class name="bsiShopRedesignSprint1.MyProfile" 
+		/> <class name="bsiShopRedesignSprint3.CheckSearchCount" /> <class name="bsiShopRedesignSprint3.CheckWithdrawnStatus" 
+		/> </classes> </test> <test name="Firefox Browser"> <parameter name="browser" 
+		value="firefox" /> <classes> <class name="bsiShopRedesignSprint1.SCRProductsUpdateBasket" 
+		/> <class name="bsiShopRedesignSprint1.MyProfileAddTenAddresses" /> <class 
+		name="bsiShopRedesignSprint2.BookEvent" /> <class name="bsiShopRedesignSprint2.MultipleEventUpdateBasket" 
+		/> <class name="bsiShopRedesignSprint2.StandardProductAndEventRemoveBasket" 
+		/> <class name="bsiShopRedesignSprint2.EssentialsProductAndEventRemoveBasket" 
+		/> <class name="bsiShopRedesignSprint2.RegisterSubscriptions" /> <class name="bsiShopRedesignSprint2.DownloadMarketingMaterial" 
+		/> <class name="bsiShopRedesignSprint2.RegisterMUNLCode" /> <class name="bsiShopRedesignSprint2.CheckWarningMsgAddtoBasket" 
+		/> <class name="bsiShopRedesignSprint2.ViewMemberTab" /> <class name="bsiShopRedesignSprint1.MyProfile" 
+		/> <class name="bsiShopRedesignSprint3.CheckSearchCount" /> <class name="bsiShopRedesignSprint3.CheckWithdrawnStatus" 
+		/> </classes> </test> -->
+	<test name="Internet Explorer Browser">
+		<parameter name="browser" value="IE" />
+		<classes>
+			<!-- <class name="bsiShopRedesignSprint1.MyProfile" /> -->
+			<class name="bsiShopRedesignSprint1.SCRProductsUpdateBasket" />
+			<!-- <class name="bsiShopRedesignSprint1.MyProfileAddTenAddresses" /> -->
+			<class name="bsiShopRedesignSprint2.BookEvent" />
+			<class name="bsiShopRedesignSprint2.MultipleEventUpdateBasket" />
+			<class name="bsiShopRedesignSprint2.StandardProductAndEventRemoveBasket" />
+			<class name="bsiShopRedesignSprint2.EssentialsProductAndEventRemoveBasket" />
+			<class name="bsiShopRedesignSprint2.RegisterSubscriptions" />
+			<class name="bsiShopRedesignSprint2.DownloadMarketingMaterial" />
+			<class name="bsiShopRedesignSprint2.RegisterMUNLCode" />
+			<class name="bsiShopRedesignSprint2.CheckWarningMsgAddtoBasket" />
+			<class name="bsiShopRedesignSprint2.VerifyMemberTab" />
+			<class name="bsiShopRedesignSprint3.CheckSearchCount" />
+			<class name="bsiShopRedesignSprint3.CheckWithdrawnStatus" />
+			<class name="bsiShopRedesignSprint3.SearchSortOrderByProductType" />
+			<class name="bsiShopRedesignSprint3.CheckProductFeatures" />
+			<class name="bsiShopRedesignSprint3.CheckBlankSearchResult" />
+			<class name="bsiShopRedesignSprint3.AddToBasketFromSearchList" />
+			<class name="bsiShopRedesignSprint3.SearchSortOrderByPublishedDate" />
+		<!-- 	<class name="bsiShopRedesignSprint4and5.RegistrationsWithDiffProfile" /> -->
+			<class name="bsiShopRedesignSprint4and5.VerifyMemberProfile" />
+			<class name="bsiShopRedesignSprint4and5.AddInvoiceToBasketFromMemTab" />
+		</classes>
+	</test>
+
+</suite> 

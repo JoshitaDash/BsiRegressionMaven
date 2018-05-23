@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Chrome Browser">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<!-- <class name="bsiShopRedesignSprint1.TestProducts" />
+			<class name="bsiShopRedesignSprint1.MultipleProductUpdateBasket" 
+				/> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile" /> 
+			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.CheckSearchCount" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile" />
+			<class name="com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout" /> -->
+			<class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" />
+			
+		</classes> 
+	</test>
+</suite>

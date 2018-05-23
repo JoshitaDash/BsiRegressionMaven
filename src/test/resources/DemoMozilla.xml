@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+	<test name="Firefox 
+		Browser">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<!-- <class name="bsiShopRedesignSprint1.TestProducts" /> -->
+			<!-- <class name="bsiShopRedesignSprint1.MyProfile" /> -->
+
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile" /> 
+			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint3.CheckSearchCount" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.AddToBasketFromSearchList" />
+			<class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate" />
+			<class name="com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile" />
+			<class name="com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab" /> -->
+		</classes>
+	</test>
+</suite>
