@@ -1,9 +1,7 @@
 package com.tcs.BsiShopRedesign.sprint7;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.CheckoutPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
@@ -74,9 +72,4 @@ public class UnregisteredUserCheckout extends BaseTest {
 			Assert.fail(e.getMessage());
 		}
 	}
-
-	/*
-	 * private CheckoutPage CheckoutPage(WebDriver driver) { // TODO Auto-generated
-	 * method stub return null; }
-	 */
 }

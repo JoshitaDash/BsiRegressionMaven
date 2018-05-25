@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
+import com.tcs.BsiShopRedesign.utilities.BsiConstants;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 import com.tcs.BsiShopRedesign.utilities.Page;
 
@@ -39,11 +40,7 @@ public class SignInPage extends Page {
 			Log.info("Enter Email ID");
 			test.log(LogStatus.INFO, "Enter Email ID");
 			Thread.sleep(5000);
-			// CommonHelper.elementToBeVisible("enterEmail_css");
-			// CommonHelper.elementToBeClickable("enterEmail_css");
-			// enterText("enterEmail_id", "testUser@tcs.com");
-			// driver.findElement(By.id("email")).click();
-			driver.findElement(By.id("bsi_email")).sendKeys("autoTest@tcs.com");
+			driver.findElement(By.id("bsi_email")).sendKeys(BsiConstants.getEnvDetails().get("username"));
 
 			/*
 			 * try { JavascriptExecutor myExecutorEmail = ((JavascriptExecutor)

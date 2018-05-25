@@ -17,6 +17,8 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 import com.tcs.BsiShopRedesign.utilities.Page;
 
+import freemarker.template.utility.NumberUtil;
+
 public class SearchPage extends Page {
 
 	public SearchPage(WebDriver driver) throws Exception {
@@ -845,8 +847,6 @@ public class SearchPage extends Page {
 
 	}
 
-	
-	
 	@SuppressWarnings("null")
 	public void checkWarningMsg() {
 		try {
@@ -877,5 +877,41 @@ public class SearchPage extends Page {
 			CommonHelper.reportFailure("Check warning message was unsuccessful");
 			Assert.fail(e.getMessage());
 		}
+	}
+
+	public boolean verifyMemPriceSearchList() {
+		
+
+		try {
+			WebElement priceList = driver.findElements(By.cssSelector("span[id*='product-price']")).get(0);
+			WebElement memPriceList = driver.findElements(By.cssSelector("span[class='price']")).get(1);
+			String price = priceList.getText();
+			String memPrice = memPriceList.getText();
+
+			price = price.substring(1);
+			memPrice = memPrice.substring(1);
+	
+			double finalPrice = Double.parseDouble(price);
+			double finalMemPrice = Double.parseDouble(memPrice);
+			double memberPrice = finalPrice / 2;
+
+			if (finalMemPrice == memberPrice) {
+				System.out.println("The price of the first product in the search list is: " + finalPrice
+						+ " & The member price of the first product in the search list is: " + memberPrice);
+				test.log(LogStatus.PASS, "The price of the first product in the search list is: " + finalPrice
+						+ " & The member price of the first product in the search list is: " + memberPrice);
+				return true;
+			} else {
+				System.out.println("The member price in the search list is incorrect");
+				test.log(LogStatus.FAIL, "The member price in the search list is incorrect");
+			}
+			return false;
+
+		} catch (NumberFormatException e) {
+			CommonHelper.reportFailure("The member price in the search list is incorrect");
+			e.printStackTrace();
+		}
+		return false;
+
 	}
 }

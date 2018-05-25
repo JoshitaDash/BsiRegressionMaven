@@ -1,5 +1,7 @@
 package com.tcs.BsiShopRedesign.pages;
 
+import java.lang.reflect.Array;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -103,8 +105,8 @@ public class BasketPage extends Page {
 					Thread.sleep(2000);
 					System.out.println("Change Format to PDF");
 					test.log(LogStatus.INFO, "Change Format to PDF");
-					driver.findElement(By
-							.xpath("//div[@class='option1' and contains(.,'Hard copy')]/ancestor::dd/following-sibling::div/button[contains(.,'Change Format')]"))
+					driver.findElement(By.xpath(
+							"//div[@class='option1' and contains(.,'Hard copy')]/ancestor::dd/following-sibling::div/button[contains(.,'Change Format')]"))
 							.click();
 					Thread.sleep(2000);
 
@@ -131,8 +133,8 @@ public class BasketPage extends Page {
 					Thread.sleep(2000);
 					System.out.println("Change Format to HardCopy");
 					test.log(LogStatus.INFO, "Change Format to HardCopy");
-					driver.findElement(By
-							.xpath("//div[@class='option1' and contains(.,'PDF')]/ancestor::dd/following-sibling::div/button[contains(.,'Change Format')]"))
+					driver.findElement(By.xpath(
+							"//div[@class='option1' and contains(.,'PDF')]/ancestor::dd/following-sibling::div/button[contains(.,'Change Format')]"))
 							.click();
 					Thread.sleep(2000);
 
@@ -190,7 +192,7 @@ public class BasketPage extends Page {
 				Thread.sleep(3000);
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
-				
+
 				// CommonHelper.clickByJS("remoeItem_id");
 				System.out.println("removing product");
 				driver.findElement(By.xpath("//img[@alt='delete']")).click();
@@ -402,6 +404,53 @@ public class BasketPage extends Page {
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
+
+	}
+
+	public boolean verifyMemPriceBasket() {
+
+		try {
+			WebElement unitPrice = driver.findElements(By.cssSelector("td[data-th='Price']>div")).get(0);
+			WebElement finalPrice = driver.findElement(By.cssSelector("span[class='cart-price']"));
+			WebElement memPrice = driver.findElements(By.cssSelector("span[class='textcolour']")).get(1);
+			WebElement totalPrice = driver.findElement(By.cssSelector("span[class='floatr']"));
+
+			String priceText = unitPrice.getText();
+			String finalPriceText = finalPrice.getText();
+			String totalPriceText = totalPrice.getText();
+			
+			String memPrice1 = memPrice.getText();
+			String[] splitMemPrice = memPrice1.split(" ", 3);
+			String memPriceText = splitMemPrice[2];
+		
+			priceText = priceText.substring(1);
+			finalPriceText = finalPriceText.substring(1);
+			memPriceText = memPriceText.substring(1);
+			totalPriceText = totalPriceText.substring(1);
+
+			double finalUnitPrice = Double.parseDouble(priceText);
+			double finalFinalPrice = Double.parseDouble(finalPriceText);
+			double finalMemPrice = Double.parseDouble(memPriceText);
+			double finalTotalPrice = Double.parseDouble(totalPriceText);
+			double memberPrice = finalUnitPrice / 2;
+
+			if (finalFinalPrice == memberPrice && finalMemPrice == memberPrice && finalTotalPrice == memberPrice) {
+				System.out.println("The unit price of the product in the Basket Page is: " + finalUnitPrice
+						+ " & The member price of the product in the Basket Page is: " + memberPrice);
+				test.log(LogStatus.PASS, "The unit price of the product in the Basket Page is: " + finalUnitPrice
+						+ " & The member price of the product in the Basket Page is: " + memberPrice);
+				return true;
+			} else {
+				System.out.println("The member price in the Basket Page is incorrect");
+				test.log(LogStatus.FAIL, "The member price in the Basket Page is incorrect");
+			}
+			return false;
+
+		} catch (NumberFormatException e) {
+			CommonHelper.reportFailure("The member price in the Basket Page is incorrect");
+			e.printStackTrace();
+		}
+		return false;
 
 	}
 

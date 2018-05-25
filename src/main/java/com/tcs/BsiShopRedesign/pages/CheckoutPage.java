@@ -64,12 +64,13 @@ public class CheckoutPage extends Page {
 			System.out.println("Select VISA Credit Card");
 			test.log(LogStatus.INFO, "Select VISA Credit Card");
 			Log.info("Select VISA Credit Card");
-			/*
-			 * boolean selectCard = CommonHelper.isVisisble("selectCard_xpath"); if
-			 * (selectCard) { driver.findElement(By.xpath(
-			 * "//*[@id=\'checkout-payment-method-load\']/div[2]/div[2]/fieldset/div[2]/div/label/span/span"
-			 * )) .click(); }
-			 */
+
+			boolean selectCard = driver.findElement(By
+					.xpath("//*[@id='checkout-payment-method-load']/div[2]/div[2]/fieldset/div[2]/div/label/span/span"))
+					.isDisplayed();
+			if (selectCard) {
+				click("selectCard_xpath");
+			}
 			selectDpdwnText("creditCard_id", "VISA");
 
 			driver.switchTo().frame(0);

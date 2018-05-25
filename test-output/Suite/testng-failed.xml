@@ -5,141 +5,14 @@
   <test name="Chrome Browser(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint2.BookEvent">
-        <methods>
-          <include name="BookFreeEvent"/>
-          <include name="launchBrowser"/>
-          <include name="BookPaidEvent"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.BookEvent -->
-      <class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate -->
-      <class name="com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="regEurocodes"/>
-          <include name="regBSOLQuote"/>
-          <include name="regCNQuote"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions -->
-      <class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket">
-        <methods>
-          <include name="addAndUpdateMultipleEvents"/>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket -->
-      <class name="com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab -->
-      <class name="com.tcs.BsiShopRedesign.sprint3.CheckSearchCount">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint3.CheckSearchCount -->
-      <class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses -->
-      <class name="com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket -->
-      <class name="com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="addToBasketSearchList"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList -->
-      <class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="productUpdateBasket" invocation-numbers="0 1 2"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket -->
-      <class name="com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="BookPaidEventAndStandardProduct"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket -->
-      <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="getDriverInstance"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint1.MyProfile -->
-      <class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="registerMUNL"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode -->
-      <class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType">
-        <methods>
-          <include name="checkSortingOrderQuality"/>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType -->
-      <class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="BookPaidEventAndStandardProduct"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket -->
-      <class name="com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult -->
-      <class name="com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus -->
       <class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout">
         <methods>
           <include name="launchBrowser"/>
+          <include name="CheckLoginAlertOnChekout"/>
+          <include name="getDriverInstance"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout -->
-      <class name="com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="checkFreeEvent"/>
-          <include name="checkPaidEvent"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures -->
-      <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial -->
     </classes>
   </test> <!-- Chrome Browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

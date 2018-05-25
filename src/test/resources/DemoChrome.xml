@@ -4,9 +4,6 @@
 	<test name="Chrome Browser">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<!-- <class name="bsiShopRedesignSprint1.TestProducts" />
-			<class name="bsiShopRedesignSprint1.MultipleProductUpdateBasket" 
-				/> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile" /> 
 			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses" />
@@ -26,11 +23,11 @@
 			<class name="com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult" />
 			<class name="com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList" />
 			<class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate" /> -->
-			<!-- <class name="com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile" /> -->
-			<!-- <class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile" />
+			<class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile" />
 			<class name="com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab" /> -->
-			<!-- <class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout" /> -->
-			<class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" />
+			<class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" /> -->
 			
 		</classes> 
 	</test>
