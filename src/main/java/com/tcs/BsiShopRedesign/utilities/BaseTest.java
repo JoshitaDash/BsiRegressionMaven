@@ -27,8 +27,7 @@ public class BaseTest extends Page {
 	}
 
 	public static String browser;
-	String url = "https://staging-standards.bsigroup.com/";
-	//String url = "https://staging-standards.bsigroup.com/";
+	String url = BsiConstants.getEnvDetails().get("url");
 	public Xls_Reader xls = new Xls_Reader(
 			"D:\\BSI_Workspace\\BsiShopRedesign\\TestData\\List_of_products_users-TCS.xls");
 
@@ -48,7 +47,7 @@ public class BaseTest extends Page {
 
 				// **** setting up the path for my ChromeDriver
 				String projectPath = System.getProperty("user.dir");
-				System.setProperty("webdriver.chrome.driver", projectPath + "\\lib\\chromedriver.exe");		
+				System.setProperty("webdriver.chrome.driver", projectPath + "\\lib\\chromedriver.exe");
 				driver = new ChromeDriver();
 				// driver.manage().deleteAllCookies();
 				Thread.sleep(1000);
@@ -117,16 +116,6 @@ public class BaseTest extends Page {
 
 	}
 
-	/*@AfterClass
-	// @AfterSuite
-	public void extentQuit() {
-		if (extent != null) {
-			extent.endTest(test);
-			System.out.println("Extent Report test ended");
-			extent.flush();
-		}
-	}*/
-
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		if (extent != null) {
@@ -137,34 +126,12 @@ public class BaseTest extends Page {
 		if (driver != null) {
 			Log.info("Close Browser");
 			System.out.println("Close Browser");
-			//driver.close();
+			// driver.close();
 			driver.quit();
 		}
-		
-		/*try {
-			Thread.sleep(2000);
-			if (driver.toString().contains("InternetExplorerDriver")) {
-				Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
-			}
-			if (driver.toString().contains("geckodriver")) {
-				Runtime.getRuntime().exec("taskkill /F /IM geckodriver.exe");
-			}
 
-		} catch (IOException e) {
-			e.printStackTrace();
-		}*/
 	}
 
-	/*@AfterSuite
-	public void quit() throws InterruptedException {
-		if (driver != null) {
-			Log.info("Quit Browser");
-			System.out.println("Quit Driver");
-			driver.quit();
-		}
-
-	}*/
-	
 	@BeforeSuite
 	public WebDriver getDriverInstance() {
 		return driver;

@@ -42,35 +42,22 @@ public class SignInPage extends Page {
 			Thread.sleep(5000);
 			driver.findElement(By.id("bsi_email")).sendKeys(BsiConstants.getEnvDetails().get("username"));
 
-			/*
-			 * try { JavascriptExecutor myExecutorEmail = ((JavascriptExecutor)
-			 * driver); myExecutorEmail.executeScript(
-			 * "document.getElementById('email').setAttribute('value', 'testUser@tcs.com')"
-			 * ); } catch (Exception e) { e.printStackTrace(); }
-			 */
-
 			Thread.sleep(2000);
 			System.out.println("Enter Password");
 			Log.info("Enter Password");
 			test.log(LogStatus.INFO, "Enter Password");
 			try {
 				JavascriptExecutor myExecutorPwd = ((JavascriptExecutor) driver);
-				 myExecutorPwd.executeScript("document.getElementById('bsi_pass').setAttribute('value', 'Test@1234')");
+				myExecutorPwd.executeScript("document.getElementById('bsi_pass').setAttribute('value', 'Test@1234')");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			// WebElement pwd1 =
-			// driver.findElement(By.xpath("//*[@id='pass']"));
-			// pwd = CommonHelper.readPropertiesFile("pwd");
-			// pwd1.sendKeys(pwd);
-			// System.out.println("The password is: " + pwd);
 
 			Thread.sleep(2000);
 			System.out.println("Click on SignIn button");
 			Log.info("Click on SignIn button");
 			test.log(LogStatus.INFO, "Click on SignIn button");
 			click("loginButton_xpath");
-			// CommonHelper.clickByJS("loginButton_xpath");
 			Thread.sleep(3000);
 
 			boolean isEMyprofileVisible = CommonHelper.isVisisble("myProfile_xpath");
@@ -95,7 +82,8 @@ public class SignInPage extends Page {
 			Log.info("Enter Current Password");
 			System.out.println("Enter Current Password");
 			test.log(LogStatus.INFO, "Enter Current Password");
-			driver.findElement(By.xpath("(//*[@id='current_password'])[1]")).sendKeys("Test@1234");
+			driver.findElement(By.xpath("(//*[@id='current_password'])[1]"))
+					.sendKeys(BsiConstants.getEnvDetails().get("password"));
 			System.out.println("The current password is: " + "Test@1234");
 
 			Thread.sleep(2000);
@@ -159,8 +147,7 @@ public class SignInPage extends Page {
 			Log.info("Enter Password");
 			test.log(LogStatus.INFO, "Enter Password");
 			WebElement pwd1 = CommonHelper.element("enterPwd_id");
-			// pwd=readPropertiesFile("pwd");
-			pwd1.sendKeys("Test@1234");
+			pwd1.sendKeys(BsiConstants.getEnvDetails().get("password"));
 			String currentPassword = pwd1.getText();
 			System.out.println("The password is: " + currentPassword);
 			Thread.sleep(2000);
@@ -196,7 +183,7 @@ public class SignInPage extends Page {
 			System.out.println("Enter Email ID");
 			Log.info("Enter Email ID");
 			test.log(LogStatus.INFO, "Enter Email ID");
-			enterText("enterEmail_id", "subhrateja.satapathy@tcs.com");
+			enterText("enterEmail_id", BsiConstants.getEnvDetails().get("username"));
 
 			System.out.println("Enter Password");
 			Log.info("Enter Password");
@@ -210,9 +197,10 @@ public class SignInPage extends Page {
 			System.out.println("Click on SignIn button");
 			Log.info("Click on SignIn button");
 			test.log(LogStatus.INFO, "Click on SignIn button");
+			CommonHelper.elementToBeClickable("loginButton_xpath");
 			click("loginButton_xpath");
+			
 			Thread.sleep(3000);
-
 			CommonHelper.isVisisble("myProfile_xpath");
 			test.log(LogStatus.PASS, "Login Successful");
 
@@ -236,7 +224,7 @@ public class SignInPage extends Page {
 			System.out.println("Enter Email ID");
 			Log.info("Enter Email ID");
 			test.log(LogStatus.INFO, "Enter Email ID");
-			enterText("enterEmail_id", "subhrateja.satapathy@tcs.com");
+			enterText("enterEmail_id", BsiConstants.getEnvDetails().get("username"));
 
 			System.out.println("Enter Password");
 			Log.info("Enter Password");
@@ -250,6 +238,7 @@ public class SignInPage extends Page {
 			System.out.println("Click on SignIn button");
 			Log.info("Click on SignIn button");
 			test.log(LogStatus.INFO, "Click on SignIn button");
+			CommonHelper.elementToBeClickable("loginButton_xpath");
 			click("loginButton_xpath");
 			Thread.sleep(3000);
 

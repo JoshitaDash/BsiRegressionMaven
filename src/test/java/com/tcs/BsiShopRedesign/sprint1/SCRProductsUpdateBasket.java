@@ -3,6 +3,7 @@ package com.tcs.BsiShopRedesign.sprint1;
 import java.io.IOException;
 import java.util.Hashtable;
 
+import org.apache.poi.xssf.usermodel.extensions.XSSFCellBorder.BorderSide;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,22 +16,21 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.BasketPage;
 import com.tcs.BsiShopRedesign.pages.ProductPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.BsiConstants;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 import com.tcs.BsiShopRedesign.utilities.DataUtil;
 
 import jxl.read.biff.BiffException;
 
-
 public class SCRProductsUpdateBasket extends BaseTest {
 
 	public SCRProductsUpdateBasket() throws Exception {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	String testCaseName = "Standard_Product_Update";
-	//String url = "https://staging-standards.bsigroup.com/";
-	String url = "https://staging-standards.bsigroup.com/";
+	// String url = "https://staging-standards.bsigroup.com/";
+	String url = BsiConstants.getEnvDetails().get("url");
 
 	@DataProvider
 	public Object[][] getData() {
@@ -45,10 +45,10 @@ public class SCRProductsUpdateBasket extends BaseTest {
 		try {
 			String prodName = data.get("Product_name");
 			test = extent.startTest("Sprint 1 - Search and Update Basket of SCR imported Product: " + prodName);
-			
+
 			driver.get(url);
-			//HomePage home = new HomePage(driver);
-			//home.clickHomePage();
+			// HomePage home = new HomePage(driver);
+			// home.clickHomePage();
 
 			Log.info("Enter product name in Search textbox");
 			System.out.println("Enter product name in Search textbox");
@@ -61,7 +61,7 @@ public class SCRProductsUpdateBasket extends BaseTest {
 			System.out.println("Click on Search");
 			test.log(LogStatus.INFO, "Click on Search");
 			CommonHelper.elementToBeClickable("searchButton_css");
-			//driver.findElement(By.cssSelector("button[title='Search']")).click();
+			// driver.findElement(By.cssSelector("button[title='Search']")).click();
 			click("searchButton_css");
 
 			Log.info("Select the Product");

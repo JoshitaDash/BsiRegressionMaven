@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.tcs.BsiShopRedesign.pages.BasketPage;
 import com.tcs.BsiShopRedesign.pages.ProductPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.BsiConstants;
 
 import jxl.Sheet;
 import jxl.Workbook;
@@ -23,7 +24,7 @@ public class MultipleProductUpdateBasket extends BaseTest {
 		// TODO Auto-generated constructor stub
 	}
 
-	String url = "https://qa4-5rxefly-7redg7uykvdko.eu.magentosite.cloud/";
+	String url = BsiConstants.getEnvDetails().get("url");
 
 	@Test(priority = 1, enabled = true)
 	public void searchAndUpdateProduct1() throws BiffException, IOException {
@@ -57,10 +58,9 @@ public class MultipleProductUpdateBasket extends BaseTest {
 			/*
 			 * for (int col = 0; col < totalNoOfCols;) {
 			 * 
-			 * for (int row = 1; row < totalNoOfRows; row++) { String
-			 * CellGetContent = sh.getCell(col, row).getContents();
-			 * System.out.println("The content of the cell is: " +
-			 * CellGetContent);
+			 * for (int row = 1; row < totalNoOfRows; row++) { String CellGetContent =
+			 * sh.getCell(col, row).getContents();
+			 * System.out.println("The content of the cell is: " + CellGetContent);
 			 */
 			Log.info("Enter product name in Search textbox");
 			System.out.println("Enter product name in Search textbox");
@@ -4392,8 +4392,7 @@ public class MultipleProductUpdateBasket extends BaseTest {
 	 * ; FileInputStream fs = new FileInputStream(FilePath); Workbook wb =
 	 * Workbook.getWorkbook(fs);
 	 * 
-	 * // To get the sheet access by sheet name Sheet sh =
-	 * wb.getSheet("Products");
+	 * // To get the sheet access by sheet name Sheet sh = wb.getSheet("Products");
 	 * 
 	 * // To get the number of rows present in sheet int totalNoOfRows =
 	 * sh.getRows(); System.out.println("The total no. of rows are: " +
@@ -4403,10 +4402,9 @@ public class MultipleProductUpdateBasket extends BaseTest {
 	 * sh.getColumns(); System.out.println("The total no. of columns are: " +
 	 * totalNoOfCols);
 	 * 
-	 * // To get the content in particular location, which will return //
-	 * contents as a string String CellGetContent = sh.getCell(0,
-	 * 58).getContents(); System.out.println("The content of the cell is: " +
-	 * CellGetContent);
+	 * // To get the content in particular location, which will return // contents
+	 * as a string String CellGetContent = sh.getCell(0, 58).getContents();
+	 * System.out.println("The content of the cell is: " + CellGetContent);
 	 * 
 	 * Log.info("Enter product name in Search textbox"); System.out.println(
 	 * "Enter product name in Search textbox");
@@ -4437,7 +4435,6 @@ public class MultipleProductUpdateBasket extends BaseTest {
 	 * "The product cannot be added to basket as the status is: " + stat); }
 	 * 
 	 * 
-	 * } catch (Exception e) { e.printStackTrace(); Assert.fail(e.getMessage());
-	 * }
+	 * } catch (Exception e) { e.printStackTrace(); Assert.fail(e.getMessage()); }
 	 */
 }
