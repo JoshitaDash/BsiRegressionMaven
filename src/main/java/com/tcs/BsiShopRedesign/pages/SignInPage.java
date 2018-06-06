@@ -60,7 +60,7 @@ public class SignInPage extends Page {
 			click("loginButton_xpath");
 			Thread.sleep(3000);
 
-			boolean isEMyprofileVisible = CommonHelper.isVisisble("myProfile_xpath");
+			boolean isEMyprofileVisible = CommonHelper.isElementVisible("myProfile_xpath");
 			if (isEMyprofileVisible)
 				test.log(LogStatus.PASS, "Login Successful");
 			else
@@ -201,7 +201,7 @@ public class SignInPage extends Page {
 			click("loginButton_xpath");
 
 			Thread.sleep(3000);
-			CommonHelper.isVisisble("myProfile_xpath");
+			CommonHelper.isElementVisible("myProfile_xpath");
 			test.log(LogStatus.PASS, "Login Successful");
 
 		} catch (Exception e) {
@@ -242,7 +242,7 @@ public class SignInPage extends Page {
 			click("loginButton_xpath");
 			Thread.sleep(3000);
 
-			CommonHelper.isVisisble("myProfile_xpath");
+			CommonHelper.isElementVisible("myProfile_xpath");
 			test.log(LogStatus.PASS, "Login Successful");
 
 		} catch (Exception e) {
@@ -271,7 +271,7 @@ public class SignInPage extends Page {
 			test.log(LogStatus.INFO, "Enter Email ID");
 			Thread.sleep(5000);
 			driver.findElement(By.id("bsi_email")).sendKeys(BsiConstants.getEnvDetails().get("reg_username"));
-			
+
 			Thread.sleep(2000);
 			System.out.println("Enter Password");
 			Log.info("Enter Password");
@@ -290,7 +290,7 @@ public class SignInPage extends Page {
 			click("loginButton_xpath");
 			Thread.sleep(3000);
 
-			boolean isEMyprofileVisible = CommonHelper.isVisisble("myProfile_xpath");
+			boolean isEMyprofileVisible = CommonHelper.isElementVisible("myProfile_xpath");
 			if (isEMyprofileVisible)
 				test.log(LogStatus.PASS, "Login Successful");
 			else

@@ -42,7 +42,7 @@ public class Page {
 
 	public void click(String locator) {
 		try {
-			if (!locator.isEmpty() && CommonHelper.isVisisble(locator))
+			if (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
 				CommonHelper.elementToBeVisible(locator);
 			CommonHelper.elementToBeClickable(locator);
 			CommonHelper.element(locator).click();

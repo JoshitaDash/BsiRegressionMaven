@@ -15,7 +15,6 @@ public class SubscriptionsPage extends Page {
 
 	public SubscriptionsPage(WebDriver driver) throws Exception {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	public void clickBSOL() {
@@ -73,7 +72,7 @@ public class SubscriptionsPage extends Page {
 			 * 
 			 * } else {
 			 */
-			CommonHelper.isVisisble("title_css");
+			CommonHelper.isElementVisible("title_css");
 			CommonHelper.elementToBeClickable("title_css");
 			enterBSOLPardotFormDetails();
 

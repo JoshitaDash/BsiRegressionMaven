@@ -747,23 +747,26 @@ public class SearchPage extends Page {
 			Log.info("Verify blank search result");
 			System.out.println("Verify blank search result");
 			Thread.sleep(1000);
-			String result = CommonHelper.element("blankSearchResult_xpath").getText();
+			boolean res = CommonHelper.isElementVisible("blankSearchResult_xpath");
 
-			if (result.contains("Results")) {
+			if (res) {
+				String result = CommonHelper.element("blankSearchResult_xpath").getText();
+				if (result.contains("Results")) {
 
-				System.out.println("The List of Products on first page");
-				test.log(LogStatus.INFO, "The List of Products on first page");
+					System.out.println("The List of Products on first page");
+					test.log(LogStatus.INFO, "The List of Products on first page");
 
-				List<WebElement> productName = driver.findElements(By.cssSelector("a[class='product-item-link']"));
+					List<WebElement> productName = driver.findElements(By.cssSelector("a[class='product-item-link']"));
 
-				for (int i = 0; i < productName.size(); i++) {
-					String prodNameText = productName.get(i).getText();
-					System.out.println("The Product Name is: " + prodNameText);
-					test.log(LogStatus.INFO, "The Product Name is: " + prodNameText);
+					for (int i = 0; i < productName.size(); i++) {
+						String prodNameText = productName.get(i).getText();
+						System.out.println("The Product Name is: " + prodNameText);
+						test.log(LogStatus.INFO, "The Product Name is: " + prodNameText);
+					}
+					System.out.println("The result of Blank Search is: " + result);
+					test.log(LogStatus.INFO, "The result of Blank Search is: " + result);
+					test.log(LogStatus.PASS, "Blank search was successful");
 				}
-				System.out.println("The result of Blank Search is: " + result);
-				test.log(LogStatus.INFO, "The result of Blank Search is: " + result);
-				test.log(LogStatus.PASS, "Blank search was successful");
 			} else {
 				System.out.println("Blank search was unsuccessful");
 				test.log(LogStatus.FAIL, "Blank search was unsuccessful");
@@ -880,7 +883,6 @@ public class SearchPage extends Page {
 	}
 
 	public boolean verifyMemPriceSearchList() {
-		
 
 		try {
 			WebElement priceList = driver.findElements(By.cssSelector("span[id*='product-price']")).get(0);
@@ -890,7 +892,7 @@ public class SearchPage extends Page {
 
 			price = price.substring(1);
 			memPrice = memPrice.substring(1);
-	
+
 			double finalPrice = Double.parseDouble(price);
 			double finalMemPrice = Double.parseDouble(memPrice);
 			double memberPrice = finalPrice / 2;

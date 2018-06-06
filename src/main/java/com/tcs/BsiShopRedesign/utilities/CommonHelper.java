@@ -227,7 +227,7 @@ public class CommonHelper extends Page {
 		element.isEnabled();
 	}
 
-	public static boolean isVisisble(String locator) {
+	public static boolean isElementVisible(String locator) {
 		try {
 			visibilityOfElement(element(locator));
 			return true;

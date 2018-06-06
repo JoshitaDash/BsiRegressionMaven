@@ -25260,3 +25260,27 @@ Click here to continue shopping.
 2018-06-06 08:36:19,702 INFO  [BaseTest] Verfiy search result 
 2018-06-06 08:36:19,705 INFO  [BaseTest] Verify blank search result 
 2018-06-06 08:36:51,322 INFO  [BaseTest] Close Browser 
+2018-06-06 14:05:50,679 INFO  [BaseTest] Launching Chrome browser 
+2018-06-06 14:05:56,395 INFO  [BaseTest] User Signing In 
+2018-06-06 14:05:59,397 INFO  [BaseTest] Click on login link 
+2018-06-06 14:06:02,783 INFO  [BaseTest] Enter Email ID 
+2018-06-06 14:06:09,914 INFO  [BaseTest] Enter Password 
+2018-06-06 14:06:11,932 INFO  [BaseTest] Click on SignIn button 
+2018-06-06 14:06:17,063 INFO  [BaseTest] Perform Blank Search 
+2018-06-06 14:06:17,087 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-06 14:06:17,183 INFO  [BaseTest] Click on Search 
+2018-06-06 14:06:39,331 INFO  [BaseTest] Verfiy search result 
+2018-06-06 14:06:39,334 INFO  [BaseTest] Verify blank search result 
+2018-06-06 14:07:10,932 INFO  [BaseTest] Close Browser 
+2018-06-06 14:08:16,189 INFO  [BaseTest] Launching Chrome browser 
+2018-06-06 14:08:22,140 INFO  [BaseTest] User Signing In 
+2018-06-06 14:08:25,154 INFO  [BaseTest] Click on login link 
+2018-06-06 14:08:28,593 INFO  [BaseTest] Enter Email ID 
+2018-06-06 14:08:35,792 INFO  [BaseTest] Enter Password 
+2018-06-06 14:08:37,813 INFO  [BaseTest] Click on SignIn button 
+2018-06-06 14:08:46,275 INFO  [BaseTest] Perform Blank Search 
+2018-06-06 14:08:49,291 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-06 14:08:52,553 INFO  [BaseTest] Click on Search 
+2018-06-06 14:09:08,871 INFO  [BaseTest] Verfiy search result 
+2018-06-06 14:09:12,854 INFO  [BaseTest] Verify blank search result 
+2018-06-06 14:12:34,901 INFO  [BaseTest] Verify blank search result 
