@@ -25284,3 +25284,21 @@ Click here to continue shopping.
 2018-06-06 14:09:08,871 INFO  [BaseTest] Verfiy search result 
 2018-06-06 14:09:12,854 INFO  [BaseTest] Verify blank search result 
 2018-06-06 14:12:34,901 INFO  [BaseTest] Verify blank search result 
+2018-06-06 14:21:00,382 INFO  [BaseTest] Launching Chrome browser 
+2018-06-06 14:21:06,999 INFO  [BaseTest] User Signing In 
+2018-06-06 14:21:10,012 INFO  [BaseTest] Click on login link 
+2018-06-06 14:21:13,102 INFO  [BaseTest] Enter Email ID 
+2018-06-06 14:21:20,269 INFO  [BaseTest] Enter Password 
+2018-06-06 14:21:22,291 INFO  [BaseTest] Click on SignIn button 
+2018-06-06 14:21:26,944 INFO  [BaseTest] Perform Blank Search 
+2018-06-06 14:21:26,961 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-06 14:21:27,077 INFO  [BaseTest] Click on Search 
+2018-06-06 14:21:39,383 INFO  [BaseTest] Verfiy search result 
+2018-06-06 14:21:39,387 INFO  [BaseTest] Verify blank search result 
+2018-06-06 14:21:40,800 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-06 14:21:43,806 INFO  [BaseTest] Click on Add to Basket 
+2018-06-06 14:21:46,008 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-06 14:21:52,418 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-06 14:21:52,419 INFO  [BaseTest] Hover on Basket 
+2018-06-06 14:21:52,785 INFO  [BaseTest] Click Checkout 
+2018-06-06 14:21:54,630 INFO  [BaseTest] Close Browser 
