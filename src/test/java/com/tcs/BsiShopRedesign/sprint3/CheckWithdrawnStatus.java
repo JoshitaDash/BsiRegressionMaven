@@ -7,7 +7,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
-
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class CheckWithdrawnStatus extends BaseTest {
 
@@ -18,7 +18,7 @@ public class CheckWithdrawnStatus extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void checkProductStatus() {
 
-		test = extent.startTest("Sprint 3 - Check Withdrawn Status for Products");
+		test = extent.startTest("Sprint 3 - Check Withdrawn Status for Standard Products");
 		try {
 
 			System.out.println("Search PAS Product");
@@ -39,7 +39,8 @@ public class CheckWithdrawnStatus extends BaseTest {
 			search.checkWithdrawnStatus();
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Checking Withdrawn status of Product was unsuccessful");
+			test.log(LogStatus.FATAL, "Checking Withdrawn status of Standard Product was unsuccessful");
+			CommonHelper.reportFailure("Checking Withdrawn status of Standard Product was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -69,7 +70,8 @@ public class CheckWithdrawnStatus extends BaseTest {
 			search.checkWithdrawnStatus();
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Checking Withdrawn status of Product was unsuccessful");
+			test.log(LogStatus.FATAL, "Checking Withdrawn status of Events was unsuccessful");
+			CommonHelper.reportFailure("Checking Withdrawn status of Events was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -99,7 +101,8 @@ public class CheckWithdrawnStatus extends BaseTest {
 			search.checkWithdrawnStatus();
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Checking Withdrawn status of Product was unsuccessful");
+			test.log(LogStatus.FATAL, "Checking Withdrawn status of Books was unsuccessful");
+			CommonHelper.reportFailure("Checking Withdrawn status of Books was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

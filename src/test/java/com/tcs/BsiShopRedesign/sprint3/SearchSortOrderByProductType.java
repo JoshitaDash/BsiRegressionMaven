@@ -2,25 +2,23 @@ package com.tcs.BsiShopRedesign.sprint3;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
-
-
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class SearchSortOrderByProductType extends BaseTest {
 
 	public SearchSortOrderByProductType() throws Exception {
-		
+
 		super();
 	}
 
 	@Test(priority = 1, enabled = true)
 	public void checkSortingOrderQuality() {
 
-		test = extent.startTest("Sprint 3 - Check Sorting order for Products by Product Type in Search List");
+		test = extent.startTest("Sprint 3 - Check Sorting order for Products with Product Type in Search List");
 		try {
 
 			System.out.println("Search Quality Product");
@@ -40,7 +38,8 @@ public class SearchSortOrderByProductType extends BaseTest {
 			search.checkSortingByProductType();
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Select Product Type and Verify Sorting was unsuccessful");
+			test.log(LogStatus.FATAL, "Sorting with Product Type was unsuccsessful");
+			CommonHelper.reportFailure("Sorting with Product Type was unsuccsessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

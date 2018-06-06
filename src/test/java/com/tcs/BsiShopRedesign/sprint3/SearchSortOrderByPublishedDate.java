@@ -2,11 +2,11 @@ package com.tcs.BsiShopRedesign.sprint3;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class SearchSortOrderByPublishedDate extends BaseTest {
 
@@ -38,6 +38,7 @@ public class SearchSortOrderByPublishedDate extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Select Published Date and Verify Sorting was unsuccessful");
+			CommonHelper.reportFailure("Select Published Date and Verify Sorting was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

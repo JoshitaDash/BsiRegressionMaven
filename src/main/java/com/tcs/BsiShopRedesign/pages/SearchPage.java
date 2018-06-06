@@ -766,11 +766,11 @@ public class SearchPage extends Page {
 				test.log(LogStatus.PASS, "Blank search was successful");
 			} else {
 				System.out.println("Blank search was unsuccessful");
-				test.log(LogStatus.PASS, "Blank search was unsuccessful");
+				test.log(LogStatus.FAIL, "Blank search was unsuccessful");
 			}
 
 		} catch (Exception e) {
-			CommonHelper.reportFailure("Verify blank search result was unsuccessful");
+			CommonHelper.reportFailure("Blank search was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

@@ -10,7 +10,6 @@ import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
-
 public class MyProfile extends BaseTest {
 
 	public MyProfile() throws Exception {
@@ -30,6 +29,7 @@ public class MyProfile extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Registered User Sign In was unsuccessful");
+			CommonHelper.reportFailure("Registered User Sign In was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -49,6 +49,7 @@ public class MyProfile extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Adding Billing address was unsuccessful");
+			CommonHelper.reportFailure("Adding Billing address was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -67,6 +68,7 @@ public class MyProfile extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Make Default Billing Address was unsuccessful");
+			CommonHelper.reportFailure("Make Default Billing Address was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -86,6 +88,7 @@ public class MyProfile extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Edit Billing Address was unsuccessful");
+			CommonHelper.reportFailure("Edit Billing Address was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -105,6 +108,7 @@ public class MyProfile extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Delete Billing Address was unsuccessful");
+			CommonHelper.reportFailure("Delete Billing Address was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -122,6 +126,7 @@ public class MyProfile extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Add Delivery Address was unsuccessful");
+			CommonHelper.reportFailure("Add Delivery Address was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -139,6 +144,7 @@ public class MyProfile extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Make Default Delivery Address was unsuccessful");
+			CommonHelper.reportFailure("Make Default Delivery Address was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -156,6 +162,7 @@ public class MyProfile extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Edit Delivery Address was unsuccessful");
+			CommonHelper.reportFailure("Edit Delivery Address was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -173,6 +180,7 @@ public class MyProfile extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Delete Delivery Address was unsuccessful");
+			CommonHelper.reportFailure("Delete Delivery Address was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -189,6 +197,7 @@ public class MyProfile extends BaseTest {
 			signIn.resetPwd();
 
 		} catch (Exception e) {
+			test.log(LogStatus.FATAL, "Reset Password was unsuccessful");
 			CommonHelper.reportFailure("Reset Password was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());

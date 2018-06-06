@@ -7,6 +7,7 @@ import com.tcs.BsiShopRedesign.pages.CheckoutPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class UnregisteredUserCheckout extends BaseTest {
 
@@ -25,10 +26,14 @@ public class UnregisteredUserCheckout extends BaseTest {
 			HomePage home = new HomePage(driver);
 			home.blankSearch();
 
+			System.out.println("Verfiy search result");
+			Log.info("Verfiy search result");
+			SearchPage search = new SearchPage(driver);
+			search.verifySearchResultforBlankSearch();
+
 			System.out.println("Click on Add to Basket from Search List");
 			Log.info("Click on Add to Basket from Search List");
 			test.log(LogStatus.INFO, "Click on Add to Basket from Search List");
-			SearchPage search = new SearchPage(driver);
 			search.clickAddToBasket();
 
 			System.out.println("Select Format and Click Ok");
@@ -55,7 +60,7 @@ public class UnregisteredUserCheckout extends BaseTest {
 			Log.info("Enter Order Details");
 			test.log(LogStatus.INFO, "Enter Order Details");
 			checkOut.enterOrderDetails();
-			
+
 			System.out.println("Confirm Order Details");
 			Log.info("Confirm Order Details");
 			test.log(LogStatus.INFO, "Confirm Order Details");
@@ -67,7 +72,10 @@ public class UnregisteredUserCheckout extends BaseTest {
 			home.clickLogout();
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Verify Credentials for Unregistered user on clicking checkout was unsuccessful");
+			test.log(LogStatus.FATAL,
+					"Verification of Credentials for Unregistered user on clicking checkout was unsuccessful");
+			CommonHelper.reportFailure(
+					"Verification of Credentials for Unregistered user on clicking checkout was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

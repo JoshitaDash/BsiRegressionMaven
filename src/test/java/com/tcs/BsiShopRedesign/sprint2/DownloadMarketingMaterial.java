@@ -14,12 +14,10 @@ import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
-
 public class DownloadMarketingMaterial extends BaseTest {
 
 	public DownloadMarketingMaterial() throws Exception {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test(priority = 1, enabled = true)
@@ -34,7 +32,8 @@ public class DownloadMarketingMaterial extends BaseTest {
 		}
 
 		catch (Exception e) {
-
+			test.log(LogStatus.FATAL,"Registered User signing in was unsuccessful");
+			CommonHelper.reportFailure("Registered User signing in was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -67,25 +66,21 @@ public class DownloadMarketingMaterial extends BaseTest {
 			WebElement product = driver.findElement(By.linkText("Governance & Resilience"));
 			String name = product.toString();
 			CommonHelper.elementToBeClickable(name);
-			// click(name);
 			product.click();
 
-			//test = extent.startTest("Click Download Now");
 			Log.info("Click Download Now");
 			System.out.println("Click Download Now");
 			DownloadMMPage down = new DownloadMMPage(driver);
 			down.clickDownloadNow();
-
-			//test = extent.startTest("Enter Pardot Details");
+			
 			Log.info("Enter Pardot Details");
 			System.out.println("Enter Pardot Details");
 			down.enterGRPardotDetails();
-
-			//test = extent.startTest("Verify PAS pdf download");
+			
 			Log.info("Verify Governance Resilience pdf download");
 			System.out.println("Verify Governance Resilience pdf download");
 			down.verifyPdf();
-			
+
 			System.out.println("Click Logout");
 			Log.info("Click Logout");
 			HomePage event = new HomePage(driver);

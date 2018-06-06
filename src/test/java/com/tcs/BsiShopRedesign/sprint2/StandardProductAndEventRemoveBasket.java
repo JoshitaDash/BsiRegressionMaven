@@ -16,12 +16,10 @@ import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
-
 public class StandardProductAndEventRemoveBasket extends BaseTest {
 
 	public StandardProductAndEventRemoveBasket() throws Exception {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test(priority = 1, enabled = true)
@@ -37,6 +35,7 @@ public class StandardProductAndEventRemoveBasket extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Signing in was unsuccessful");
+			CommonHelper.reportFailure("Signing in was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -85,7 +84,7 @@ public class StandardProductAndEventRemoveBasket extends BaseTest {
 			Log.info("Click on Search");
 			System.out.println("Click on Search");
 			test.log(LogStatus.INFO, "Click on Search");
-			//driver.findElement(By.id("search-button")).click();
+			// driver.findElement(By.id("search-button")).click();
 			click("searchButton_css");
 
 			Log.info("Select the Product");
@@ -101,8 +100,6 @@ public class StandardProductAndEventRemoveBasket extends BaseTest {
 			ProductPage prod = new ProductPage(driver);
 			prod.selectDefaultFormatAndAddToBasket();
 
-			// test = extent.startTest("Remove Standard Product and Paid Event
-			// from Basket");
 			System.out.println("Remove Product and Event from Basket");
 			test.log(LogStatus.INFO, "Remove Product and Event from Basket");
 			Log.info("Remove Event from Basket");
@@ -118,6 +115,7 @@ public class StandardProductAndEventRemoveBasket extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Add and Remove Paid Event or Standard Product to Basket was unsuccessful");
+			CommonHelper.reportFailure("Add and Remove Paid Event or Standard Product to Basket was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

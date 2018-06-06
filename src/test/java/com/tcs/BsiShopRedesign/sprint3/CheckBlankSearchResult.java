@@ -7,12 +7,12 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class CheckBlankSearchResult extends BaseTest {
 
 	public CheckBlankSearchResult() throws Exception {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test(priority = 1, enabled = true)
@@ -33,6 +33,7 @@ public class CheckBlankSearchResult extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verification of Blank search was unsuccessful");
+			CommonHelper.reportFailure("Verification of Blank search was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

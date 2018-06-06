@@ -13,13 +13,12 @@ import com.tcs.BsiShopRedesign.pages.EventPage;
 import com.tcs.BsiShopRedesign.pages.ProductPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
-
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 
 	public EssentialsProductAndEventRemoveBasket() throws Exception {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test(priority = 1, enabled = true)
@@ -35,6 +34,7 @@ public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Signing in was unsuccessful");
+			CommonHelper.reportFailure("Signing in was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -69,21 +69,18 @@ public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 			System.out.println("Add Event to Basket and View Basket");
 			Log.info("Add Event to Basket and View Basket");
 			event.addEventToBasket();
-			
 
 			test = extent.startTest("Sprint 2 - Add Essentials Product to Basket");
 			Log.info("Enter product name in Search textbox");
 			System.out.println("Enter product name in Search textbox");
 			test.log(LogStatus.INFO, "Enter product name in Search textbox");
 			WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
-			// CommonHelper.elementToBeClickable("searchBox_id");
 			search.clear();
 			search.sendKeys("BSI Essentials: ISO 9001");
 
 			Log.info("Click on Search");
 			System.out.println("Click on Search");
 			test.log(LogStatus.INFO, "Click on Search");
-			//driver.findElement(By.id("search-button")).click();
 			click("searchButton_css");
 
 			Log.info("Select the Product");
@@ -92,7 +89,6 @@ public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 			WebElement product = driver.findElement(By.linkText("BSI Essentials: ISO 9001"));
 			Thread.sleep(500);
 			product.click();
-			// Thread.sleep(5000);
 
 			Log.info("Select the Format");
 			System.out.println("Select the Format");
@@ -100,8 +96,6 @@ public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 			ProductPage prod = new ProductPage(driver);
 			prod.selectFormatAndAddToBasket();
 
-			// test = extent.startTest("Remove Essentials Product and Paid Event
-			// from Basket");
 			System.out.println("Remove Product and Event from Basket");
 			test.log(LogStatus.INFO, "Remove Product and Event from Basket");
 			Log.info("Remove Event from Basket");
@@ -112,6 +106,7 @@ public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Add and Remove Paid Event or Essentials Product to Basket was unsuccessful");
+			CommonHelper.reportFailure("Add and Remove Paid Event or Essentials Product to Basket was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

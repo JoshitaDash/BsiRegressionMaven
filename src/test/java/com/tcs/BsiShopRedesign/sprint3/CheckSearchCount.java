@@ -7,6 +7,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 
 
@@ -14,7 +15,6 @@ public class CheckSearchCount extends BaseTest {
 
 	public CheckSearchCount() throws Exception {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test(priority = 1, enabled = true)
@@ -39,6 +39,7 @@ public class CheckSearchCount extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Searching PAS Product was unsuccessful");
+			CommonHelper.reportFailure("Searching PAS Product was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

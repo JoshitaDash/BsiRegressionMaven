@@ -1,7 +1,10 @@
 package com.tcs.BsiShopRedesign.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -64,10 +67,9 @@ public class SubscriptionsPage extends Page {
 
 			/*
 			 * if (CommonHelper.element("clickHere_xpath").isDisplayed() ||
-			 * CommonHelper.element("clickHere_xpath") != null) {
-			 * click("clickHere_xpath"); CommonHelper.isVisisble("title_css");
-			 * CommonHelper.elementToBeClickable("title_css");
-			 * enterBSOLPardotFormDetails();
+			 * CommonHelper.element("clickHere_xpath") != null) { click("clickHere_xpath");
+			 * CommonHelper.isVisisble("title_css");
+			 * CommonHelper.elementToBeClickable("title_css"); enterBSOLPardotFormDetails();
 			 * 
 			 * } else {
 			 */
@@ -120,12 +122,14 @@ public class SubscriptionsPage extends Page {
 			test.log(LogStatus.INFO, "Enter PostCode");
 			System.out.println("Enter PostCode");
 			Log.info("Enter PostCode");
-			enterText("postcode_xpath", "BSOL PostCode");
+			enterText("postcode_xpath", "1234568");
 
 			test.log(LogStatus.INFO, "Select Country");
 			System.out.println("Select Country");
 			Log.info("Select Country");
-			selectFirstOption("country_xpath");
+			selectFirstOption("countryBSOL_xpath");
+			// selectDpdwnText("countryBSOL_xpath", "United Kingdom");
+			// selectDpdwnValue("countryBSOL_xpath", "United Kingdom");
 
 			test.log(LogStatus.INFO, "Select Industry");
 			System.out.println("Select Industry");
@@ -141,6 +145,17 @@ public class SubscriptionsPage extends Page {
 			System.out.println("Enter How did you hear about us?");
 			Log.info("Enter How did you hear about us?");
 			enterText("howHearThis_xpath", "Social Media");
+
+			test.log(LogStatus.INFO, "Select How would you like to be contacted?");
+			System.out.println("Enter How would you like to be contacted?");
+			Log.info("Enter How would you like to be contacted?");
+			List<WebElement> checkBox = driver.findElements(By.cssSelector("input[type='checkbox']"));
+			checkBox.get(0).click();
+
+			test.log(LogStatus.INFO, "Select Terms and Conditions");
+			System.out.println("Select Terms and Conditions");
+			Log.info("Select Terms and Conditions");
+			checkBox.get(4).click();
 
 			test.log(LogStatus.INFO, "Click on Send your Enquiry");
 			System.out.println("Click on Send your Enquiry");
@@ -160,16 +175,16 @@ public class SubscriptionsPage extends Page {
 
 		try {
 
-			//ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-			//String text = driver.findElement(By.id("HeadSection")).toString();
-			//driver.switchTo().window("https://www.bsigroup.com/en-GB/standards/british-standards-online-database/find-out-more/thank-you-for-your-enquiry/");
-			//System.out.println("switched to 2nd tab");
+			// ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			// String text = driver.findElement(By.id("HeadSection")).toString();
+			// driver.switchTo().window("https://www.bsigroup.com/en-GB/standards/british-standards-online-database/find-out-more/thank-you-for-your-enquiry/");
+			// System.out.println("switched to 2nd tab");
 
-			test.log(LogStatus.INFO, "Verify BSOL Pardot Form");
-			Log.info("Verify BSOL Pardot Form");
-			System.out.println("Verify BSOL Pardot Form");
+			test.log(LogStatus.INFO, "Verify Pardot Form");
+			Log.info("Verify Pardot Form");
+			System.out.println("Verify Pardot Form");
 			Thread.sleep(5000);
-			
+
 			CommonHelper.elementToBeVisible("verifyBSOLPardotSubmit_css");
 			String verifyBSOLPardotSubmit = driver.findElement(By.cssSelector("h1[class='page-title']")).getText();
 			// String verifyBSOLPardotSubmit =
@@ -188,24 +203,23 @@ public class SubscriptionsPage extends Page {
 			/*
 			 * List<WebElement> verificationText =
 			 * driver.findElements(By.xpath("//div[@id='CenterContent']/h1") );
-			 * Thread.sleep(5000); test.log(LogStatus.INFO,
-			 * "Verify BSOL Pardot Form"); Log.info( "Verify BSOL Pardot Form");
-			 * System.out.println( "Verify BSOL Pardot Form");
-			 * CommonHelper.elementToBeVisible("verifyPardotSubmit_xpath");
-			 * //String verifyPardotSubmit =
-			 * CommonHelper.element("verifyPardotSubmit_xpath").getText();
-			 * String verifyPardotSubmit = verificationText.get(3).getText() +
-			 * verificationText.get(4).getText(); Log.info(
-			 * "The Verfication message is: " + verifyPardotSubmit);
-			 * System.out.println("The Verfication message is: " +
+			 * Thread.sleep(5000); test.log(LogStatus.INFO, "Verify BSOL Pardot Form");
+			 * Log.info( "Verify BSOL Pardot Form"); System.out.println(
+			 * "Verify BSOL Pardot Form");
+			 * CommonHelper.elementToBeVisible("verifyPardotSubmit_xpath"); //String
+			 * verifyPardotSubmit =
+			 * CommonHelper.element("verifyPardotSubmit_xpath").getText(); String
+			 * verifyPardotSubmit = verificationText.get(3).getText() +
+			 * verificationText.get(4).getText(); Log.info( "The Verfication message is: " +
+			 * verifyPardotSubmit); System.out.println("The Verfication message is: " +
 			 * verifyPardotSubmit); test.log(LogStatus.PASS,
 			 * "Verification of BSOL Pardot Form successful");
 			 */
 
-			/*driver.close();
-			driver.switchTo().window(tabs2.get(0));
-			System.out.println("switched back to to 1st tab");
-			Thread.sleep(2000);*/
+			/*
+			 * driver.close(); driver.switchTo().window(tabs2.get(0));
+			 * System.out.println("switched back to to 1st tab"); Thread.sleep(2000);
+			 */
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Pardot Form was unsuccessful");
@@ -239,7 +253,7 @@ public class SubscriptionsPage extends Page {
 
 		try {
 
-			if (CommonHelper.element("clickHere_xpath") != null
+			/*if (CommonHelper.element("clickHere_xpath") != null
 					|| CommonHelper.element("clickHere_xpath").isDisplayed()) {
 				test.log(LogStatus.INFO, "Click on the Click Here link");
 				System.out.println("Click on the Click Here link");
@@ -257,11 +271,11 @@ public class SubscriptionsPage extends Page {
 
 				test.log(LogStatus.INFO, "Enter Compliance Navigator Pardot Form Details");
 				System.out.println("Enter Compliance Navigator Pardot Form Details");
-				Log.info("Enter Compliance Navigator Pardot Form Details");
+				Log.info("Enter Compliance Navigator Pardot Form Details");*/
 				// CommonHelper.isVisisble("title_css");
 				// CommonHelper.elementToBeClickable("title_css");
 				enterCNPardotFormDetails();
-			}
+			//}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Pardot Form details was unsuccessful");
 			Assert.fail(e.getMessage());
@@ -276,8 +290,7 @@ public class SubscriptionsPage extends Page {
 
 			/*
 			 * test.log(LogStatus.INFO, "Select title"); System.out.println(
-			 * "Select title"); Log.info("Select title");
-			 * selectFirstOption("title_css");
+			 * "Select title"); Log.info("Select title"); selectFirstOption("title_css");
 			 */
 
 			test.log(LogStatus.INFO, "Enter First Name");
@@ -314,6 +327,17 @@ public class SubscriptionsPage extends Page {
 			System.out.println("Select Country");
 			Log.info("Select Country");
 			selectFirstOption("countryCN_xpath");
+
+			test.log(LogStatus.INFO, "Select How would you like to be contacted?");
+			System.out.println("Enter How would you like to be contacted?");
+			Log.info("Enter How would you like to be contacted?");
+			List<WebElement> checkBox = driver.findElements(By.cssSelector("input[type='checkbox']"));
+			checkBox.get(0).click();
+
+			test.log(LogStatus.INFO, "Select Terms and Conditions");
+			System.out.println("Select Terms and Conditions");
+			Log.info("Select Terms and Conditions");
+			checkBox.get(4).click();
 
 			test.log(LogStatus.INFO, "Click on Send your Enquiry");
 			System.out.println("Click on Send your Enquiry");
@@ -392,8 +416,7 @@ public class SubscriptionsPage extends Page {
 
 			/*
 			 * test.log(LogStatus.INFO, "Select title"); System.out.println(
-			 * "Select title"); Log.info("Select title");
-			 * selectFirstOption("title_css");
+			 * "Select title"); Log.info("Select title"); selectFirstOption("title_css");
 			 */
 
 			test.log(LogStatus.INFO, "Enter First Name");
@@ -430,6 +453,17 @@ public class SubscriptionsPage extends Page {
 			System.out.println("Select Country");
 			Log.info("Select Country");
 			selectFirstOption("countryEC_xpath");
+
+			test.log(LogStatus.INFO, "Select How would you like to be contacted?");
+			System.out.println("Enter How would you like to be contacted?");
+			Log.info("Enter How would you like to be contacted?");
+			List<WebElement> checkBox = driver.findElements(By.cssSelector("input[type='checkbox']"));
+			checkBox.get(0).click();
+
+			test.log(LogStatus.INFO, "Select Terms and Conditions");
+			System.out.println("Select Terms and Conditions");
+			Log.info("Select Terms and Conditions");
+			checkBox.get(4).click();
 
 			test.log(LogStatus.INFO, "Click on Send your Enquiry");
 			System.out.println("Click on Send your Enquiry");

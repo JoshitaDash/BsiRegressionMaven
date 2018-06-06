@@ -47,9 +47,6 @@ public class SCRProductsUpdateBasket extends BaseTest {
 			test = extent.startTest("Sprint 1 - Search and Update Basket of SCR imported Product: " + prodName);
 
 			driver.get(url);
-			// HomePage home = new HomePage(driver);
-			// home.clickHomePage();
-
 			Log.info("Enter product name in Search textbox");
 			System.out.println("Enter product name in Search textbox");
 			test.log(LogStatus.INFO, "Enter product name in Search textbox");
@@ -101,10 +98,10 @@ public class SCRProductsUpdateBasket extends BaseTest {
 				System.out.println("The product cannot be added to basket as the status is: " + stat);
 			}
 
-			// }
 		} catch (Exception e) {
 			e.printStackTrace();
 			test.log(LogStatus.FATAL, "Search and Update SCR Products was unsuccessful");
+			CommonHelper.reportFailure("Search and Update SCR Products was unsuccessful");
 			Assert.fail(e.getMessage());
 		}
 

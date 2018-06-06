@@ -2,19 +2,17 @@ package com.tcs.BsiShopRedesign.sprint3;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.BasketPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
-
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class AddPDFToBasketTwiceFromSearchList extends BaseTest {
 
 	public AddPDFToBasketTwiceFromSearchList() throws Exception {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test(priority = 1, enabled = true)
@@ -35,27 +33,29 @@ public class AddPDFToBasketTwiceFromSearchList extends BaseTest {
 			test.log(LogStatus.INFO, "Click on Add to Basket from Search List");
 			SearchPage search = new SearchPage(driver);
 			search.clickAddToBasket();
-			
+
 			System.out.println("Select Format and Click Ok");
 			Log.info("Select Format and Click Ok");
 			search.defaultFormatClickOK();
-			/*System.out.println("Select Format");
-			Log.info("Select Format");
-			search.selectFormat();*/
-			
+			/*
+			 * System.out.println("Select Format"); Log.info("Select Format");
+			 * search.selectFormat();
+			 */
+
 			Thread.sleep(7000);
 			System.out.println("Click on Add to Basket twice from Search List");
 			Log.info("Click on Add to Basket twice from Search List");
 			test.log(LogStatus.INFO, "Click on Add to Basket twice from Search List");
 			search.clickAddToBasket();
-			
+
 			System.out.println("Select Format and Click Ok");
 			Log.info("Select Format and Click Ok");
 			search.defaultFormatClickOK();
 
-			/*System.out.println("Select Format");
-			Log.info("Select Format");
-			search.selectFormat();*/
+			/*
+			 * System.out.println("Select Format"); Log.info("Select Format");
+			 * search.selectFormat();
+			 */
 
 			System.out.println("Verify Alert message for adding PDF product twice");
 			Log.info("Verify Alert message for adding PDF product twice");
@@ -75,6 +75,7 @@ public class AddPDFToBasketTwiceFromSearchList extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Add to Basket from Search List was unsuccessful");
+			CommonHelper.reportFailure("Add to Basket from Search List was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

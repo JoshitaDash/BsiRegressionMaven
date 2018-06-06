@@ -1,7 +1,5 @@
 package com.tcs.BsiShopRedesign.sprint2;
 
-import java.io.FileInputStream;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,25 +13,18 @@ import com.tcs.BsiShopRedesign.pages.ProductPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
-import jxl.Sheet;
-import jxl.Workbook;
-
-
 public class RegisterMUNLCode extends BaseTest {
 
 	public RegisterMUNLCode() throws Exception {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	
-	
 	@Test(priority = 1, enabled = true)
 	public void registerMUNL() {
-		
+
 		test = extent.startTest("Sprint 2 - Register MUNL code");
 		try {
-			
+
 			WebDriverWait wait = new WebDriverWait(driver, 120);
 			Log.info("Enter product name in Search textbox");
 			System.out.println("Enter product name in Search textbox");
@@ -71,12 +62,10 @@ public class RegisterMUNLCode extends BaseTest {
 
 			Log.info("Enter Request MUNL Code details");
 			System.out.println("Enter Request MUNL Code details");
-			//test = extent.startTest("Enter Request MUNL Code details");
 			munl.enterRegMUNLDetails();
-			
+
 			Log.info("Verify Request MUNL Code details");
 			System.out.println("Verify Request MUNL Code details");
-			//test = extent.startTest("Verify Request MUNL Code details");
 			munl.verifyMUNL();
 
 			Log.info("Remove the Product from Basket");
@@ -88,6 +77,7 @@ public class RegisterMUNLCode extends BaseTest {
 		}
 
 		catch (Exception e) {
+			test.log(LogStatus.FATAL, "Register MUNL code was unsuccessful");
 			CommonHelper.reportFailure("Register MUNL code was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());

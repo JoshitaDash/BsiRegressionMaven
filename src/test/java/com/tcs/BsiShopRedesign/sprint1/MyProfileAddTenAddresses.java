@@ -8,8 +8,7 @@ import com.tcs.BsiShopRedesign.pages.BillingAddressPage;
 import com.tcs.BsiShopRedesign.pages.DeliveryAddressPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
-
-
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class MyProfileAddTenAddresses extends BaseTest {
 
@@ -30,6 +29,7 @@ public class MyProfileAddTenAddresses extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Login unsuccessful");
+			CommonHelper.reportFailure("Login unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -50,6 +50,7 @@ public class MyProfileAddTenAddresses extends BaseTest {
 		catch (Exception e) {
 			e.printStackTrace();
 			test.log(LogStatus.FATAL, "Billing Address addition was unsuccessful");
+			CommonHelper.reportFailure("Billing Address addition was unsuccessful");
 			Assert.fail(e.getMessage());
 		}
 	}
@@ -67,6 +68,7 @@ public class MyProfileAddTenAddresses extends BaseTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 			test.log(LogStatus.FATAL, "Delete Ten Billing Address was unsuccessful");
+			CommonHelper.reportFailure("Delete Ten Billing Address was unsuccessful");
 			Assert.fail(e.getMessage());
 		}
 
@@ -86,6 +88,7 @@ public class MyProfileAddTenAddresses extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Delviery Address addition was unsuccessful");
+			CommonHelper.reportFailure("Delviery Address addition was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -103,6 +106,7 @@ public class MyProfileAddTenAddresses extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Delviery Address deletion was unsuccessful");
+			CommonHelper.reportFailure("Delviery Address deletion was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

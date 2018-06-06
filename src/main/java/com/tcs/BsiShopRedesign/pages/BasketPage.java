@@ -205,9 +205,6 @@ public class BasketPage extends Page {
 				String basketVerify = wait
 						.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='cart-empty']")))
 						.getText();
-				// wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[class='cart-empty']"))).getText();
-				// String basketVerify =
-				// driver.findElement(By.cssSelector("div[class='cart-empty']")).getText();
 				System.out.println("The Verfication message is: " + basketVerify);
 				Log.info("The Verfication message is: " + basketVerify);
 				test.log(LogStatus.PASS, "The Verfication message is: " + basketVerify);
@@ -443,6 +440,7 @@ public class BasketPage extends Page {
 			} else {
 				System.out.println("The member price in the Basket Page is incorrect");
 				test.log(LogStatus.FAIL, "The member price in the Basket Page is incorrect");
+				CommonHelper.reportFailure("The member price in the Basket Page is incorrect");
 			}
 			return false;
 

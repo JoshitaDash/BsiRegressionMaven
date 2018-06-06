@@ -6,18 +6,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.ProductPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
-
 public class CheckWarningMsgAddtoBasket extends BaseTest {
 
 	public CheckWarningMsgAddtoBasket() throws Exception {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test(priority = 1, enabled = true)
@@ -34,7 +31,6 @@ public class CheckWarningMsgAddtoBasket extends BaseTest {
 			WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
 			search.clear();
 			search.sendKeys("BS 6070-1:1981");
-			// search.sendKeys(CellGetContent);
 
 			Log.info("Click on Search");
 			System.out.println("Click on Search");
@@ -65,7 +61,8 @@ public class CheckWarningMsgAddtoBasket extends BaseTest {
 			prod.checkWarningMsg();
 
 		} catch (Exception e) {
-			CommonHelper.reportFailure("Adding same Product to Basket and checking warning message was unsuccessful");
+			test.log(LogStatus.FATAL, "Adding same Product twice to Basket and checking warning message was unsuccessful");
+			CommonHelper.reportFailure("Adding same Product twice to Basket and checking warning message was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

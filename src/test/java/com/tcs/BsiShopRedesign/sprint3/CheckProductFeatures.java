@@ -6,7 +6,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
-
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class CheckProductFeatures extends BaseTest {
 
@@ -46,6 +46,7 @@ public class CheckProductFeatures extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Free Event Features check in search list was unsuccessful");
+			CommonHelper.reportFailure("Free Event Features check in search list was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -82,6 +83,7 @@ public class CheckProductFeatures extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "PAS Product Features check in search list was unsuccessful");
+			CommonHelper.reportFailure("PAS Product Features check in search list was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -122,6 +124,7 @@ public class CheckProductFeatures extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Paid Event Features check in search list was unsuccessful");
+			CommonHelper.reportFailure("Paid Event Features check in search list was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
