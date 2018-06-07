@@ -19,6 +19,7 @@ import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.BsiConstants;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 import com.tcs.BsiShopRedesign.utilities.DataUtil;
+import com.tcs.BsiShopRedesign.utilities.Xls_Reader;
 
 import jxl.read.biff.BiffException;
 
@@ -27,11 +28,15 @@ public class SCRProductsUpdateBasket extends BaseTest {
 	public SCRProductsUpdateBasket() throws Exception {
 		super();
 	}
-
+	
+	public Xls_Reader xls = new Xls_Reader(
+			"D:\\BSI_Workspace\\BsiShopRedesign\\TestData\\List_of_products_users-TCS.xls");
+	
 	String testCaseName = "Standard_Product_Update";
+	
 	// String url = "https://staging-standards.bsigroup.com/";
 	String url = BsiConstants.getEnvDetails().get("url");
-
+	
 	@DataProvider
 	public Object[][] getData() {
 		return DataUtil.getData(xls, testCaseName);

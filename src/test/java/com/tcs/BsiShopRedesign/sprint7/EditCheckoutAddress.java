@@ -25,7 +25,7 @@ public class EditCheckoutAddress extends BaseTest {
 			System.out.println("User Signing In");
 			Log.info("User Signing In");
 			SignInPage signIn = new SignInPage(driver);
-			signIn.regUserLogin();
+			signIn.login();
 		}
 
 		catch (Exception e) {
@@ -37,7 +37,7 @@ public class EditCheckoutAddress extends BaseTest {
 	}
 
 	@Test(priority = 2, enabled = true)
-	public void editAddress() {
+	public void editBillingAddress() {
 
 		try {
 			System.out.println("Perform Blank Search");
@@ -64,6 +64,36 @@ public class EditCheckoutAddress extends BaseTest {
 			test.log(LogStatus.INFO, "Click Checkout from Mini Basket");
 			CheckoutPage checkOut = new CheckoutPage(driver);
 			checkOut.clickMiniCartCheckout();
+
+			System.out.println("Edit Billing Address");
+			Log.info("Edit Billing Address");
+			test.log(LogStatus.INFO, "Edit Billing Address");
+			checkOut.editBillingAddress();
+
+			System.out.println("Enter Payment Details");
+			Log.info("Enter Payment Details");
+			test.log(LogStatus.INFO, "Enter Payment Details");
+			checkOut.enterPaymentDetails();
+
+			System.out.println("Enter Order Details");
+			Log.info("Enter Order Details");
+			test.log(LogStatus.INFO, "Enter Order Details");
+			checkOut.enterOrderDetails();
+
+			System.out.println("Confirm Order Details");
+			Log.info("Confirm Order Details");
+			test.log(LogStatus.INFO, "Confirm Order Details");
+			checkOut.confirmOrderDetails();
+			
+			System.out.println("Verify Billing Address");
+			Log.info("Verify Billing Address");
+			test.log(LogStatus.INFO, "Verify Billing Address");
+			checkOut.verifyBillingAddress();
+
+			System.out.println("Click Logout");
+			Log.info("Click Logout");
+			test.log(LogStatus.INFO, "Click Logout");
+			home.clickLogout();
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Edit Address in Checkout Page was unsuccessful");

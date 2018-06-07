@@ -5,14 +5,14 @@
   <test name="Chrome Browser(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress">
+      <class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket">
         <methods>
           <include name="launchBrowser"/>
+          <include name="productUpdateBasket" invocation-numbers="0 1 2"/>
           <include name="getDriverInstance"/>
-          <include name="editAddress"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket -->
     </classes>
   </test> <!-- Chrome Browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

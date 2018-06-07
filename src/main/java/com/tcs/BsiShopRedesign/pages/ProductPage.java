@@ -24,22 +24,30 @@ public class ProductPage extends Page {
 		WebDriverWait wait = new WebDriverWait(driver, 120);
 		try {
 
-			//Thread.sleep(2000);
-			//boolean defaultFormat = CommonHelper.checkVisibility(By.xpath("//h4[contains(.,'Format')]"));
+			// Thread.sleep(2000);
+			// boolean defaultFormat =
+			// CommonHelper.checkVisibility(By.xpath("//h4[contains(.,'Format')]"));
 			Log.info("Check Visibility for Default Format product");
 			System.out.println("Check Visibility for Default Format product");
 			boolean defaultFormat = CommonHelper.checkVisibility(By.cssSelector("h3[class='simple-prod-head']"));
-			
+
 			Log.info("Check Visibility for Existing Format product");
 			System.out.println("Check Visibility for Existing Format product");
 			boolean existingFormat = CommonHelper.checkVisibility(By.xpath("//*[@id='r']"));
-			//boolean existingFormat = CommonHelper.checkVisibility(By.xpath("//h4[text()='Select format:']//following-sibling::div[@id='r']//label[contains(.,'PDF')]"));
-			
-			/*Log.info("Check Visibility for Withdrawn product");
-			System.out.println("Check Visibility for Withdrawn product");
-			boolean withdrawnText = CommonHelper
-					.checkVisibility(By.xpath("//*[@id='prod-main-new']/div[1]/div[2]/p[1]"));*/
-			//boolean essentialsFormat = CommonHelper.checkVisibility(By.xpath("//h4[text()='Select number of license:']//following-sibling::div[@id='r']//label[contains(.,'1 License')]"));
+			// boolean existingFormat =
+			// CommonHelper.checkVisibility(By.xpath("//h4[text()='Select
+			// format:']//following-sibling::div[@id='r']//label[contains(.,'PDF')]"));
+
+			/*
+			 * Log.info("Check Visibility for Withdrawn product");
+			 * System.out.println("Check Visibility for Withdrawn product"); boolean
+			 * withdrawnText = CommonHelper
+			 * .checkVisibility(By.xpath("//*[@id='prod-main-new']/div[1]/div[2]/p[1]"));
+			 */
+			// boolean essentialsFormat =
+			// CommonHelper.checkVisibility(By.xpath("//h4[text()='Select number of
+			// license:']//following-sibling::div[@id='r']//label[contains(.,'1
+			// License')]"));
 
 			if (defaultFormat) {
 				Log.info("Click on Add to Basket for Default Format product");
@@ -49,45 +57,21 @@ public class ProductPage extends Page {
 						ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span")))
 						.click();
 				status = wait.until(ExpectedConditions.elementToBeClickable(
-						By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]"))).getText();
+						By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]"))).getText();
 				System.out.println("The status of the product is: " + status);
 				test.log(LogStatus.INFO, "The status of the product is: " + status);
-				Thread.sleep(3000);
+				// Thread.sleep(3000);
 
 				viewBasket();
 
-			} else if (existingFormat /*&& !withdrawnText*/) {
-				Thread.sleep(3000);
+			} else if (existingFormat /* && !withdrawnText */) {
+				// Thread.sleep(3000);
 				System.out.println("Select Hardcopy format");
 				test.log(LogStatus.INFO, "Select Hardcopy format");
 				Log.info("Select Hardcopy format");
 				driver.findElement(By.xpath("//*[@id='r']/label[3]/span")).click();
 
-				Thread.sleep(3000);
-				Log.info("Click on Add to Basket");
-				System.out.println("Click on Add to Basket");
-				test.log(LogStatus.INFO, "Click on Add to Basket");
-				// driver.findElement(By.xpath("//*[@id='product-addtocart-button']/span")).click();
-				wait.until(
-						ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span")))
-						.click();
-
-				status = wait.until(ExpectedConditions.elementToBeClickable(
-						By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]"))).getText();
-				System.out.println("The status of the product is: " + status);
-				test.log(LogStatus.INFO, "The status of the product is: " + status);
-
-				viewBasket();
-
-			} /*else if (essentialsFormat) {
-
 				// Thread.sleep(3000);
-				System.out.println("Select Essentials format ");
-				test.log(LogStatus.INFO, "Select Essentials format ");
-				Log.info("Select Format Essentials format");
-				driver.findElement(By.xpath("//*[@id='r']/label[2]/span")).click();
-
-				Thread.sleep(3000);
 				Log.info("Click on Add to Basket");
 				System.out.println("Click on Add to Basket");
 				test.log(LogStatus.INFO, "Click on Add to Basket");
@@ -95,19 +79,45 @@ public class ProductPage extends Page {
 				wait.until(
 						ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span")))
 						.click();
-				status = "essentialsFormat";
+
+				status = wait
+						.until(ExpectedConditions.visibilityOfElementLocated(
+								By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+						.getText();
 				System.out.println("The status of the product is: " + status);
 				test.log(LogStatus.INFO, "The status of the product is: " + status);
 
 				viewBasket();
 
-			}*/ else {
+			} /*
+				 * else if (essentialsFormat) {
+				 * 
+				 * // Thread.sleep(3000); System.out.println("Select Essentials format ");
+				 * test.log(LogStatus.INFO, "Select Essentials format ");
+				 * Log.info("Select Format Essentials format");
+				 * driver.findElement(By.xpath("//*[@id='r']/label[2]/span")).click();
+				 * 
+				 * Thread.sleep(3000); Log.info("Click on Add to Basket");
+				 * System.out.println("Click on Add to Basket"); test.log(LogStatus.INFO,
+				 * "Click on Add to Basket"); //
+				 * driver.findElement(By.xpath("//*[@id='product-addtocart-button']/span")).
+				 * click(); wait.until( ExpectedConditions.elementToBeClickable(By.xpath(
+				 * "//*[@id='product-addtocart-button']/span"))) .click(); status =
+				 * "essentialsFormat"; System.out.println("The status of the product is: " +
+				 * status); test.log(LogStatus.INFO, "The status of the product is: " + status);
+				 * 
+				 * viewBasket();
+				 * 
+				 * }
+				 */ else {
 				Log.info("This product cannot be added to Basket");
 				System.out.println("This product cannot be added to Basket");
 				test.log(LogStatus.INFO, "This product cannot be added to Basket");
 
-				status = wait.until(ExpectedConditions.elementToBeClickable(
-						By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]"))).getText();
+				status = wait
+						.until(ExpectedConditions.elementToBeClickable(
+								By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+						.getText();
 				System.out.println("The Status of the product is: " + status);
 				test.log(LogStatus.INFO, "The Status of the product is: " + status);
 			}
@@ -122,13 +132,14 @@ public class ProductPage extends Page {
 	}
 
 	public void viewBasket() {
-
+		WebDriverWait wait = new WebDriverWait(driver, 120);
 		try {
 			Thread.sleep(12000);
 			System.out.println("Click on View Basket");
 			test.log(LogStatus.INFO, "Click on View Basket ");
 			Log.info("Click on View Basket");
-			driver.findElement(By.xpath("//*[@id='basket']/div/a")).click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='basket']/div/a/span[1]")));
+			driver.findElement(By.xpath("//*[@id='basket']/div/a/span[1]")).click();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 			CommonHelper.reportFailure("Click on View Basket was unsuccessful");
@@ -146,30 +157,37 @@ public class ProductPage extends Page {
 				Log.info("Check Visibility for Default Format product");
 				System.out.println("Check Visibility for Default Format product");
 				boolean defaultFormat = CommonHelper.checkVisibility(By.cssSelector("h3[class='simple-prod-head']"));
-				
+
 				Log.info("Check Visibility for Existing Format product");
 				System.out.println("Check Visibility for Existing Format product");
 				boolean existingFormat = CommonHelper.checkVisibility(By.xpath("//*[@id='r']"));
-				//boolean defaultFormat = CommonHelper.checkVisibility(By.xpath("//h4[contains(.,'Format')]"));
-				//boolean existingFormat = CommonHelper.checkVisibility(By.xpath("//h4[text()='Select format:']//following-sibling::div[@id='r']//label[contains(.,'PDF')]"));
-				//boolean withdrawnText = CommonHelper.checkVisibility(By.xpath("//*[@id='prod-main-new']/div[1]/div[2]/p[1]"));
-				//boolean essentialsFormat = CommonHelper.checkVisibility(By.xpath("//h4[text()='Select number of license:']//following-sibling::div[@id='r']//label[contains(.,'1 License')]"));
+				// boolean defaultFormat =
+				// CommonHelper.checkVisibility(By.xpath("//h4[contains(.,'Format')]"));
+				// boolean existingFormat =
+				// CommonHelper.checkVisibility(By.xpath("//h4[text()='Select
+				// format:']//following-sibling::div[@id='r']//label[contains(.,'PDF')]"));
+				// boolean withdrawnText =
+				// CommonHelper.checkVisibility(By.xpath("//*[@id='prod-main-new']/div[1]/div[2]/p[1]"));
+				// boolean essentialsFormat =
+				// CommonHelper.checkVisibility(By.xpath("//h4[text()='Select number of
+				// license:']//following-sibling::div[@id='r']//label[contains(.,'1
+				// License')]"));
 
 				if (defaultFormat) {
 					Log.info("Click on Add to Basket for Default Format product");
 					System.out.println("Click on Add to Basket for Default Format product");
 					test.log(LogStatus.INFO, "Click on Add to Basket for Default Format product");
 					wait.until(ExpectedConditions
-							.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).click();		
+							.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).click();
 					status = wait
 							.until(ExpectedConditions.elementToBeClickable(
 									By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]")))
 							.getText();
-				
+
 					System.out.println("The status of the product is: " + status);
 					test.log(LogStatus.INFO, "The status of the product is: " + status);
 
-				} else if (existingFormat /*&& !withdrawnText*/) {
+				} else if (existingFormat /* && !withdrawnText */) {
 					Thread.sleep(3000);
 					System.out.println("Select PDF format");
 					test.log(LogStatus.INFO, "Select PDF format");
@@ -184,7 +202,7 @@ public class ProductPage extends Page {
 					// driver.findElement(By.xpath("//*[@id='product-addtocart-button']/span")).click();
 					wait.until(ExpectedConditions
 							.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).click();
-					
+
 					status = wait
 							.until(ExpectedConditions.elementToBeClickable(
 									By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]")))
@@ -193,30 +211,30 @@ public class ProductPage extends Page {
 					System.out.println("The status of the product is: " + status);
 					test.log(LogStatus.INFO, "The status of the product is: " + status);
 
-				} /*else if (essentialsFormat) {
-
-					Thread.sleep(3000);
-					System.out.println("Select Essentials format ");
-					test.log(LogStatus.INFO, "Select Essentials format ");
-					Log.info("Select Format Essentials format");
-					driver.findElement(By.xpath("//*[@id='r']/label[2]/span")).click();
-
-					Thread.sleep(3000);
-					Log.info("Click on Add to Basket");
-					System.out.println("Click on Add to Basket");
-					test.log(LogStatus.INFO, "Click on Add to Basket");
-					// driver.findElement(By.xpath("//*[@id='product-addtocart-button']/span")).click();
-					wait.until(ExpectedConditions
-							.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).click();
-					status = "essentialsFormat";
-					System.out.println("The status of the product is: " + status);
-					test.log(LogStatus.INFO, "The status of the product is: " + status);
-
-				}*/ else {
+				} /*
+					 * else if (essentialsFormat) {
+					 * 
+					 * Thread.sleep(3000); System.out.println("Select Essentials format ");
+					 * test.log(LogStatus.INFO, "Select Essentials format ");
+					 * Log.info("Select Format Essentials format");
+					 * driver.findElement(By.xpath("//*[@id='r']/label[2]/span")).click();
+					 * 
+					 * Thread.sleep(3000); Log.info("Click on Add to Basket");
+					 * System.out.println("Click on Add to Basket"); test.log(LogStatus.INFO,
+					 * "Click on Add to Basket"); //
+					 * driver.findElement(By.xpath("//*[@id='product-addtocart-button']/span")).
+					 * click(); wait.until(ExpectedConditions
+					 * .elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).
+					 * click(); status = "essentialsFormat";
+					 * System.out.println("The status of the product is: " + status);
+					 * test.log(LogStatus.INFO, "The status of the product is: " + status);
+					 * 
+					 * }
+					 */ else {
 					Log.info("This product cannot be added to Basket");
 					System.out.println("This product cannot be added to Basket");
 					test.log(LogStatus.INFO, "This product cannot be added to Basket");
-	
+
 					status = wait
 							.until(ExpectedConditions.elementToBeClickable(
 									By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]")))
@@ -273,7 +291,8 @@ public class ProductPage extends Page {
 			Log.info("Check Visibility for Default Format product");
 			System.out.println("Check Visibility for Default Format product");
 			boolean defaultFormat = CommonHelper.checkVisibility(By.cssSelector("h3[class='simple-prod-head']"));
-			//boolean defaultFormat = CommonHelper.checkVisibility(By.xpath("//h4[contains(.,'Format')]"));
+			// boolean defaultFormat =
+			// CommonHelper.checkVisibility(By.xpath("//h4[contains(.,'Format')]"));
 
 			if (defaultFormat) {
 				Log.info("Click on Add to Basket for Default Format product");

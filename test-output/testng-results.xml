@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="54877" started-at="2018-06-06T14:21:00Z" finished-at="2018-06-06T14:21:55Z">
+  <suite name="Suite" duration-ms="375280" started-at="2018-06-07T11:35:29Z" finished-at="2018-06-07T11:41:44Z">
     <groups>
     </groups>
-    <test name="Chrome Browser" duration-ms="54877" started-at="2018-06-06T14:21:00Z" finished-at="2018-06-06T14:21:55Z">
+    <test name="Chrome Browser" duration-ms="375280" started-at="2018-06-07T11:35:29Z" finished-at="2018-06-07T11:41:44Z">
       <class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@6ca8564a]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-06-06T14:21:00Z" finished-at="2018-06-06T14:21:00Z">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@2dde1bff]" name="getDriverInstance" is-config="true" duration-ms="1" started-at="2018-06-07T11:35:29Z" finished-at="2018-06-07T11:35:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@6ca8564a]" name="launchBrowser" is-config="true" duration-ms="6603" started-at="2018-06-06T14:21:00Z" finished-at="2018-06-06T14:21:06Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@2dde1bff]" name="launchBrowser" is-config="true" duration-ms="6143" started-at="2018-06-07T11:35:29Z" finished-at="2018-06-07T11:35:35Z">
           <params>
             <param index="0">
               <value>
@@ -22,15 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@6ca8564a]" name="signIn" duration-ms="19956" started-at="2018-06-06T14:21:06Z" finished-at="2018-06-06T14:21:26Z">
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@2dde1bff]" name="signIn" duration-ms="20426" started-at="2018-06-07T11:35:35Z" finished-at="2018-06-07T11:35:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="editAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@6ca8564a]" name="editAddress" duration-ms="27278" started-at="2018-06-06T14:21:26Z" finished-at="2018-06-06T14:21:54Z">
+        <test-method status="PASS" signature="editBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@2dde1bff]" name="editBillingAddress" duration-ms="347537" started-at="2018-06-07T11:35:55Z" finished-at="2018-06-07T11:41:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editAddress -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@6ca8564a]" name="tearDown" is-config="true" duration-ms="1020" started-at="2018-06-06T14:21:54Z" finished-at="2018-06-06T14:21:55Z">
+        </test-method> <!-- editBillingAddress -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress@2dde1bff]" name="tearDown" is-config="true" duration-ms="1164" started-at="2018-06-07T11:41:43Z" finished-at="2018-06-07T11:41:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

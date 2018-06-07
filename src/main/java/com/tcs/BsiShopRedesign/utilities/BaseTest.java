@@ -26,8 +26,7 @@ public class BaseTest extends Page {
 
 	public static String browser;
 	String url = BsiConstants.getEnvDetails().get("url");
-	public Xls_Reader xls = new Xls_Reader(
-			"D:\\BSI_Workspace\\BsiShopRedesign\\TestData\\List_of_products_users-TCS.xls");
+	
 
 	@SuppressWarnings("deprecation")
 	@Parameters("browser")

@@ -1,11 +1,11 @@
 package com.tcs.BsiShopRedesign.pages;
 
-import org.apache.tools.ant.types.CommandlineJava.SysProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.relevantcodes.extentreports.LogStatus;
+import com.tcs.BsiShopRedesign.utilities.BsiConstants;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 import com.tcs.BsiShopRedesign.utilities.Page;
 
@@ -15,6 +15,7 @@ public class CheckoutPage extends Page {
 		super(driver);
 	}
 
+	
 	public void clickMiniCartCheckout() {
 
 		System.out.println("Hover on Basket");
@@ -33,12 +34,12 @@ public class CheckoutPage extends Page {
 		System.out.println("Enter Email");
 		test.log(LogStatus.INFO, "Enter Email");
 		Log.info("Enter Email");
-		enterText("email_id", "autoTest@tcs.com");
+		enterText("email_id", BsiConstants.getEnvDetails().get("username"));
 
 		System.out.println("Enter Password");
 		test.log(LogStatus.INFO, "Enter Password");
 		Log.info("Enter Password");
-		enterText("password_id", "Test@1234");
+		enterText("password_id", BsiConstants.getEnvDetails().get("password"));
 
 		System.out.println("Click SignIn");
 		test.log(LogStatus.INFO, "Click SignIn");
@@ -154,5 +155,45 @@ public class CheckoutPage extends Page {
 			System.out.println("Placing of order was unsuccesful");
 		}
 
+	}
+
+	public void editBillingAddress() {
+
+		try {
+			System.out.println("Click on Edit Billing Address");
+			test.log(LogStatus.INFO, "Click on Edit Billing Address");
+			Log.info("Click on Edit Billing Address");
+			CommonHelper.elementToBeClickable("editBillingAddress_xpath");
+			click("editBillingAddress_xpath");
+
+			Thread.sleep(1000);
+			System.out.println("Click Find Address");
+			test.log(LogStatus.INFO, "Click Find Address");
+			driver.findElement(By.cssSelector("button[class='action primary']")).click();
+
+			Thread.sleep(1000);
+			System.out.println("Select Address");
+			test.log(LogStatus.INFO, "Select Address");
+			Select address = new Select(driver.findElement(By.xpath("//*[@id='m2_address']/div/div/div[2]/select")));
+			address.selectByIndex(4);
+
+			Thread.sleep(3000);
+			System.out.println("Click Submit");
+			test.log(LogStatus.INFO, "Edit Submit");
+			driver.findElement(By.cssSelector("button[class='redbuttonsubmit']")).click();
+			test.log(LogStatus.PASS, "Edit Billing Address was successful");
+			
+			//String billingAddress = driver.fi
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Edit Billing Address was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyBillingAddress() {
+		
+		
 	}
 }
