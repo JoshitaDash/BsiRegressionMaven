@@ -38,6 +38,8 @@ public class EditCheckoutAddress extends BaseTest {
 
 	@Test(priority = 2, enabled = true)
 	public void editBillingAddress() {
+		
+		test = extent.startTest("Sprint 7 - Edit Billing Address in Checkout Page");
 
 		try {
 			System.out.println("Perform Blank Search");
@@ -68,7 +70,7 @@ public class EditCheckoutAddress extends BaseTest {
 			System.out.println("Edit Billing Address");
 			Log.info("Edit Billing Address");
 			test.log(LogStatus.INFO, "Edit Billing Address");
-			checkOut.editBillingAddress();
+			String bllingAddress = checkOut.editBillingAddress();
 
 			System.out.println("Enter Payment Details");
 			Log.info("Enter Payment Details");
@@ -88,7 +90,7 @@ public class EditCheckoutAddress extends BaseTest {
 			System.out.println("Verify Billing Address");
 			Log.info("Verify Billing Address");
 			test.log(LogStatus.INFO, "Verify Billing Address");
-			checkOut.verifyBillingAddress();
+			checkOut.verifyBillingAddress(bllingAddress);
 
 			System.out.println("Click Logout");
 			Log.info("Click Logout");

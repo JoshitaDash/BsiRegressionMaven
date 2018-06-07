@@ -15,7 +15,6 @@ public class CheckoutPage extends Page {
 		super(driver);
 	}
 
-	
 	public void clickMiniCartCheckout() {
 
 		System.out.println("Hover on Basket");
@@ -157,7 +156,9 @@ public class CheckoutPage extends Page {
 
 	}
 
-	public void editBillingAddress() {
+	public String editBillingAddress() {
+
+		String billingAddress = null;
 
 		try {
 			System.out.println("Click on Edit Billing Address");
@@ -182,18 +183,19 @@ public class CheckoutPage extends Page {
 			test.log(LogStatus.INFO, "Edit Submit");
 			driver.findElement(By.cssSelector("button[class='redbuttonsubmit']")).click();
 			test.log(LogStatus.PASS, "Edit Billing Address was successful");
-			
-			//String billingAddress = driver.fi
+
+			billingAddress = driver.findElement(By.cssSelector("span[data-bind='html: addressText']")).getText();
+			System.out.println("The updated Billing Address is: " + billingAddress);
 
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("Edit Billing Address was unsuccessful");
 			e.printStackTrace();
 		}
-
+		return billingAddress;
 	}
 
-	public void verifyBillingAddress() {
+	public void verifyBillingAddress(String bllingAddress) {
 		
-		
+
 	}
 }
