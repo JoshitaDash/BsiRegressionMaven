@@ -129,16 +129,14 @@ public class EventPage extends Page {
 			addFirstDelegate.get(1).click();
 
 			/*
-			 * List<WebElement> elements =
-			 * CommonHelper.getElements("addDelegate_id"); //int
+			 * List<WebElement> elements = CommonHelper.getElements("addDelegate_id"); //int
 			 * size=CommonHelper.getElementsSize("addDelegate_id"); int length =
 			 * elements.size(); List<WebElement> collapsedAccordion =
 			 * CommonHelper.getElements("divCollapsed_xpath"); List<WebElement>
 			 * activeAccordion = CommonHelper.getElements("divActive_xpath");
 			 * 
-			 * for(int i=0;i<length;i++){ Thread.sleep(5000);
-			 * elements.get(i).click(); Thread.sleep(1000);
-			 * collapsedAccordion.get(i).click(); addDelegateDetails();
+			 * for(int i=0;i<length;i++){ Thread.sleep(5000); elements.get(i).click();
+			 * Thread.sleep(1000); collapsedAccordion.get(i).click(); addDelegateDetails();
 			 * 
 			 * }
 			 */
@@ -307,14 +305,14 @@ public class EventPage extends Page {
 	public void viewBasket() {
 
 		try {
-			Thread.sleep(9000);
+			// Thread.sleep(9000);
 			test.log(LogStatus.INFO, "View Basket");
 			Log.info("View Basket");
 			System.out.println("View Basket");
 			CommonHelper.elementToBeClickable("viewBasket_xpath");
 			click("viewBasket_xpath");
 
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
 			CommonHelper.reportFailure("View Basket was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());

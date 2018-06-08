@@ -391,7 +391,6 @@ public class HomePage extends BaseTest {
 	public void clickLogout() {
 		try {
 			Thread.sleep(1000);
-			test.log(LogStatus.INFO, "Click Logout");
 			Log.info("Click Logout");
 			System.out.println("Click Logout");
 			driver.findElement(By.linkText("Logout")).click();

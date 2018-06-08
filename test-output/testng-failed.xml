@@ -5,14 +5,26 @@
   <test name="Chrome Browser(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket">
+      <class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress">
         <methods>
           <include name="launchBrowser"/>
-          <include name="productUpdateBasket" invocation-numbers="0 1 2"/>
+          <include name="editBillingAddress"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress -->
+      <class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount -->
+      <class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout">
+        <methods>
+          <include name="launchBrowser"/>
           <include name="getDriverInstance"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout -->
     </classes>
   </test> <!-- Chrome Browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -178,13 +178,14 @@ public class CheckoutPage extends Page {
 			Select address = new Select(driver.findElement(By.xpath("//*[@id='m2_address']/div/div/div[2]/select")));
 			address.selectByIndex(4);
 
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 			System.out.println("Click Submit");
 			test.log(LogStatus.INFO, "Edit Submit");
 			driver.findElement(By.cssSelector("button[class='redbuttonsubmit']")).click();
 			test.log(LogStatus.PASS, "Edit Billing Address was successful");
 
 			billingAddress = driver.findElement(By.cssSelector("span[data-bind='html: addressText']")).getText();
+			billingAddress = billingAddress.replace("[Edit]", "");
 			System.out.println("The updated Billing Address is: " + billingAddress);
 
 		} catch (InterruptedException e) {

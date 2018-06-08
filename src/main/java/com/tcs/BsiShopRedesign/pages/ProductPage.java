@@ -302,10 +302,10 @@ public class ProductPage extends Page {
 						ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span")))
 						.click();
 				status = wait.until(ExpectedConditions.elementToBeClickable(
-						By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]"))).getText();
+						By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]"))).getText();
 				System.out.println("The status of the product is: " + status);
 				test.log(LogStatus.INFO, "The status of the product is: " + status);
-				Thread.sleep(5000);
+				//Thread.sleep(5000);
 
 				viewBasket();
 			}

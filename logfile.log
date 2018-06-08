@@ -26404,3 +26404,1232 @@ Click here to continue shopping.
 2018-06-07 11:39:55,145 INFO  [BaseTest] Click Logout 
 2018-06-07 11:41:42,114 INFO  [BaseTest] Click Logout 
 2018-06-07 11:41:44,004 INFO  [BaseTest] Close Browser 
+2018-06-07 14:03:03,545 INFO  [BaseTest] Launching Chrome browser 
+2018-06-07 14:03:10,462 INFO  [BaseTest] User Signing In 
+2018-06-07 14:03:13,469 INFO  [BaseTest] Click on login link 
+2018-06-07 14:03:16,792 INFO  [BaseTest] Enter Email ID 
+2018-06-07 14:03:23,929 INFO  [BaseTest] Enter Password 
+2018-06-07 14:03:25,948 INFO  [BaseTest] Click on SignIn button 
+2018-06-07 14:03:31,264 INFO  [BaseTest] Perform Blank Search 
+2018-06-07 14:03:31,264 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-07 14:03:31,365 INFO  [BaseTest] Click on Search 
+2018-06-07 14:03:49,162 INFO  [BaseTest] Verfiy search result 
+2018-06-07 14:03:49,165 INFO  [BaseTest] Verify blank search result 
+2018-06-07 14:03:50,614 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-07 14:03:53,619 INFO  [BaseTest] Click on Add to Basket 
+2018-06-07 14:03:55,823 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-07 14:03:56,131 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-07 14:03:56,133 INFO  [BaseTest] Hover on Basket 
+2018-06-07 14:03:56,183 INFO  [BaseTest] Click Checkout 
+2018-06-07 14:05:56,545 INFO  [BaseTest] Edit Billing Address 
+2018-06-07 14:05:56,545 INFO  [BaseTest] Click on Edit Billing Address 
+2018-06-07 14:08:28,795 INFO  [BaseTest] Close Browser 
+2018-06-08 04:58:59,015 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 04:59:04,830 INFO  [BaseTest] User Signing In 
+2018-06-08 04:59:07,844 INFO  [BaseTest] Click on login link 
+2018-06-08 04:59:11,208 INFO  [BaseTest] Enter Email ID 
+2018-06-08 04:59:18,383 INFO  [BaseTest] Enter Password 
+2018-06-08 04:59:20,405 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 04:59:25,456 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 04:59:25,456 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 04:59:25,540 INFO  [BaseTest] Click on Search 
+2018-06-08 04:59:37,771 INFO  [BaseTest] Verfiy search result 
+2018-06-08 04:59:37,774 INFO  [BaseTest] Verify blank search result 
+2018-06-08 04:59:39,216 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 04:59:42,219 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 04:59:44,392 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 04:59:50,478 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-08 04:59:50,480 INFO  [BaseTest] Hover on Basket 
+2018-06-08 04:59:50,902 INFO  [BaseTest] Click Checkout 
+2018-06-08 04:59:52,384 INFO  [BaseTest] Edit Billing Address 
+2018-06-08 04:59:52,384 INFO  [BaseTest] Click on Edit Billing Address 
+2018-06-08 05:00:03,579 INFO  [BaseTest] Enter Payment Details 
+2018-06-08 05:00:03,579 INFO  [BaseTest] Click on Payment Details 
+2018-06-08 05:00:03,783 INFO  [BaseTest] Click Pay by Credit Card 
+2018-06-08 05:00:06,466 INFO  [BaseTest] Select VISA Credit Card 
+2018-06-08 05:00:06,635 INFO  [BaseTest] Enter Card Number 
+2018-06-08 05:00:07,774 INFO  [BaseTest] Enter Cardholder's Name 
+2018-06-08 05:00:07,917 INFO  [BaseTest] Enter Card Expiry Month 
+2018-06-08 05:00:08,016 INFO  [BaseTest] Enter Card Expiry Year 
+2018-06-08 05:00:08,111 INFO  [BaseTest] Enter CVC Number 
+2018-06-08 05:00:08,184 INFO  [BaseTest] Click Submit 
+2018-06-08 05:00:08,378 INFO  [BaseTest] Enter Order Details 
+2018-06-08 05:00:08,382 INFO  [BaseTest] Select Country 
+2018-06-08 05:00:08,488 INFO  [BaseTest] Click Review Order 
+2018-06-08 05:00:45,846 INFO  [BaseTest] Check Terms and Conditions 
+2018-06-08 05:00:46,097 INFO  [BaseTest] Click Place Order 
+2018-06-08 05:00:46,276 INFO  [BaseTest] Confirm Order Details 
+2018-06-08 05:00:56,131 INFO  [BaseTest] Verify Billing Address 
+2018-06-08 05:00:56,132 INFO  [BaseTest] Click Logout 
+2018-06-08 05:00:57,145 INFO  [BaseTest] Click Logout 
+2018-06-08 05:00:58,721 INFO  [BaseTest] Close Browser 
+2018-06-08 05:01:43,373 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 05:01:49,187 INFO  [BaseTest] User Signing In 
+2018-06-08 05:01:52,189 INFO  [BaseTest] Click on login link 
+2018-06-08 05:01:55,374 INFO  [BaseTest] Enter Email ID 
+2018-06-08 05:02:02,523 INFO  [BaseTest] Enter Password 
+2018-06-08 05:02:04,546 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 05:02:09,879 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 05:02:09,879 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 05:02:09,994 INFO  [BaseTest] Click on Search 
+2018-06-08 05:02:19,674 INFO  [BaseTest] Verfiy search result 
+2018-06-08 05:02:19,709 INFO  [BaseTest] Verify blank search result 
+2018-06-08 05:02:21,181 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 05:02:24,190 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 05:02:26,392 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 05:02:35,877 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-08 05:02:54,687 INFO  [BaseTest] Hover on Basket 
+2018-06-08 05:02:55,077 INFO  [BaseTest] Click Checkout 
+2018-06-08 05:03:01,413 INFO  [BaseTest] Edit Billing Address 
+2018-06-08 05:03:06,829 INFO  [BaseTest] Click on Edit Billing Address 
+2018-06-08 05:05:41,360 INFO  [BaseTest] Click on Edit Billing Address 
+2018-06-08 05:07:02,376 INFO  [BaseTest] Enter Payment Details 
+2018-06-08 05:07:03,571 INFO  [BaseTest] Click on Payment Details 
+2018-06-08 05:07:04,226 INFO  [BaseTest] Click Pay by Credit Card 
+2018-06-08 05:07:07,410 INFO  [BaseTest] Select VISA Credit Card 
+2018-06-08 05:07:08,089 INFO  [BaseTest] Enter Card Number 
+2018-06-08 05:07:09,104 INFO  [BaseTest] Enter Cardholder's Name 
+2018-06-08 05:07:09,383 INFO  [BaseTest] Enter Card Expiry Month 
+2018-06-08 05:07:09,822 INFO  [BaseTest] Enter Card Expiry Year 
+2018-06-08 05:07:10,253 INFO  [BaseTest] Enter CVC Number 
+2018-06-08 05:07:10,512 INFO  [BaseTest] Click Submit 
+2018-06-08 05:07:23,262 INFO  [BaseTest] Enter Order Details 
+2018-06-08 05:07:38,053 INFO  [BaseTest] Select Country 
+2018-06-08 05:07:38,194 INFO  [BaseTest] Click Review Order 
+2018-06-08 05:07:49,998 INFO  [BaseTest] Check Terms and Conditions 
+2018-06-08 05:07:50,227 INFO  [BaseTest] Click Place Order 
+2018-06-08 05:09:28,771 INFO  [BaseTest] Confirm Order Details 
+2018-06-08 05:09:50,813 INFO  [BaseTest] Verify Billing Address 
+2018-06-08 05:09:50,813 INFO  [BaseTest] Click Logout 
+2018-06-08 05:09:51,814 INFO  [BaseTest] Click Logout 
+2018-06-08 05:09:53,564 INFO  [BaseTest] Close Browser 
+2018-06-08 05:13:02,665 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 05:13:08,349 INFO  [BaseTest] User Signing In 
+2018-06-08 05:13:11,358 INFO  [BaseTest] Click on login link 
+2018-06-08 05:13:14,672 INFO  [BaseTest] Enter Email ID 
+2018-06-08 05:13:21,832 INFO  [BaseTest] Enter Password 
+2018-06-08 05:13:23,863 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 05:13:28,760 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 05:13:28,760 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 05:13:28,872 INFO  [BaseTest] Click on Search 
+2018-06-08 05:13:38,830 INFO  [BaseTest] Verfiy search result 
+2018-06-08 05:13:38,861 INFO  [BaseTest] Verify blank search result 
+2018-06-08 05:13:40,367 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 05:13:43,381 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 05:13:45,570 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 05:13:51,495 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-08 05:13:51,497 INFO  [BaseTest] Hover on Basket 
+2018-06-08 05:13:51,845 INFO  [BaseTest] Click Checkout 
+2018-06-08 05:15:51,590 INFO  [BaseTest] Edit Billing Address 
+2018-06-08 05:15:51,590 INFO  [BaseTest] Click on Edit Billing Address 
+2018-06-08 05:15:58,775 INFO  [BaseTest] Enter Payment Details 
+2018-06-08 05:15:58,775 INFO  [BaseTest] Click on Payment Details 
+2018-06-08 05:15:58,942 INFO  [BaseTest] Click Pay by Credit Card 
+2018-06-08 05:16:01,637 INFO  [BaseTest] Select VISA Credit Card 
+2018-06-08 05:16:01,802 INFO  [BaseTest] Enter Card Number 
+2018-06-08 05:16:02,854 INFO  [BaseTest] Enter Cardholder's Name 
+2018-06-08 05:16:03,000 INFO  [BaseTest] Enter Card Expiry Month 
+2018-06-08 05:16:03,091 INFO  [BaseTest] Enter Card Expiry Year 
+2018-06-08 05:16:03,185 INFO  [BaseTest] Enter CVC Number 
+2018-06-08 05:16:03,257 INFO  [BaseTest] Click Submit 
+2018-06-08 05:16:03,445 INFO  [BaseTest] Enter Order Details 
+2018-06-08 05:16:03,448 INFO  [BaseTest] Select Country 
+2018-06-08 05:16:03,561 INFO  [BaseTest] Click Review Order 
+2018-06-08 05:16:04,711 INFO  [BaseTest] Check Terms and Conditions 
+2018-06-08 05:16:04,886 INFO  [BaseTest] Click Place Order 
+2018-06-08 05:27:55,002 INFO  [BaseTest] Confirm Order Details 
+2018-06-08 05:28:26,127 INFO  [BaseTest] Close Browser 
+2018-06-08 05:28:56,800 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 05:29:02,427 INFO  [BaseTest] User Signing In 
+2018-06-08 05:29:05,441 INFO  [BaseTest] Click on login link 
+2018-06-08 05:29:09,037 INFO  [BaseTest] Enter Email ID 
+2018-06-08 05:29:16,198 INFO  [BaseTest] Enter Password 
+2018-06-08 05:29:18,221 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 05:29:22,684 INFO  [BaseTest] Add Billing Address 
+2018-06-08 05:29:25,691 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:29:28,689 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:29:43,195 INFO  [BaseTest] Make Default  Billing Address 
+2018-06-08 05:29:43,379 INFO  [BaseTest] Click on Make Default Billing Address 
+2018-06-08 05:29:46,566 INFO  [BaseTest] Edit Billing Address 
+2018-06-08 05:29:49,648 INFO  [BaseTest] Click on Edit Billing Address 
+2018-06-08 05:29:52,648 INFO  [BaseTest] Editing Billing Address Details 
+2018-06-08 05:30:07,044 INFO  [BaseTest] Delete Billing Address 
+2018-06-08 05:30:10,098 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:30:12,194 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:30:15,410 INFO  [BaseTest] Add Delivery Address 
+2018-06-08 05:30:15,410 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:30:18,412 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:30:32,866 INFO  [BaseTest] Make Default Delivery Address 
+2018-06-08 05:30:33,045 INFO  [BaseTest] Click on Make Default Delivery Address 
+2018-06-08 05:30:36,236 INFO  [BaseTest] Edit Delivery Address 
+2018-06-08 05:30:36,316 INFO  [BaseTest] Click on Edit Delivery Address 
+2018-06-08 05:30:39,202 INFO  [BaseTest] Editing Delivery Address Details 
+2018-06-08 05:30:53,681 INFO  [BaseTest] Delete Delivery Address 
+2018-06-08 05:30:56,738 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:30:58,847 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:31:02,021 INFO  [BaseTest] Reset Password 
+2018-06-08 05:31:04,035 INFO  [BaseTest] Enter Current Password 
+2018-06-08 05:31:06,129 INFO  [BaseTest] Enter New Password 
+2018-06-08 05:31:08,231 INFO  [BaseTest] Enter Confirm New Password 
+2018-06-08 05:31:10,379 INFO  [BaseTest] Click Change Password 
+2018-06-08 05:31:19,858 INFO  [BaseTest] Click Logout 
+2018-06-08 05:31:27,790 INFO  [BaseTest] Close Browser 
+2018-06-08 05:31:28,433 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 05:31:33,522 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 05:31:33,874 INFO  [BaseTest] Click on Search 
+2018-06-08 05:31:37,591 INFO  [BaseTest] Select the Product 
+2018-06-08 05:32:10,435 INFO  [BaseTest] Select the Format 
+2018-06-08 05:32:10,437 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 05:32:40,497 INFO  [BaseTest] Check Visibility for Existing Format product 
+2018-06-08 05:32:40,530 INFO  [BaseTest] Select Hardcopy format 
+2018-06-08 05:32:40,618 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 05:32:54,983 INFO  [BaseTest] Click on View Basket 
+2018-06-08 05:32:57,410 INFO  [BaseTest] Edit the Basket with Update Quantity 
+2018-06-08 05:32:59,484 INFO  [BaseTest] Update Quantity in Basket 
+2018-06-08 05:33:01,698 INFO  [BaseTest] Edit the Basket with Change Format 
+2018-06-08 05:33:01,698 INFO  [BaseTest] Change Format in Basket 
+2018-06-08 05:33:18,038 INFO  [BaseTest] Remove the Product 
+2018-06-08 05:33:31,380 INFO  [BaseTest] The Verfication message is: You have no items in your shopping basket.
+Click here to continue shopping. 
+2018-06-08 05:33:31,728 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 05:33:32,108 INFO  [BaseTest] Click on Search 
+2018-06-08 05:33:34,118 INFO  [BaseTest] Select the Product 
+2018-06-08 05:33:38,128 INFO  [BaseTest] Select the Format 
+2018-06-08 05:33:38,129 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 05:33:38,291 INFO  [BaseTest] Check Visibility for Existing Format product 
+2018-06-08 05:34:08,342 INFO  [BaseTest] Click on Add to Basket for Default Format product 
+2018-06-08 05:34:23,265 INFO  [BaseTest] Click on View Basket 
+2018-06-08 05:34:25,953 INFO  [BaseTest] Edit the Basket with Update Quantity 
+2018-06-08 05:34:28,009 INFO  [BaseTest] Update Quantity in Basket 
+2018-06-08 05:34:30,395 INFO  [BaseTest] Edit the Basket with Change Format 
+2018-06-08 05:34:30,395 INFO  [BaseTest] Change Format in Basket 
+2018-06-08 05:35:00,440 INFO  [BaseTest] There is no product in the Basket with Change Format Option 
+2018-06-08 05:35:00,440 INFO  [BaseTest] Remove the Product 
+2018-06-08 05:35:15,784 INFO  [BaseTest] The Verfication message is: You have no items in your shopping basket.
+Click here to continue shopping. 
+2018-06-08 05:35:16,105 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 05:35:16,423 INFO  [BaseTest] Click on Search 
+2018-06-08 05:35:18,247 INFO  [BaseTest] Select the Product 
+2018-06-08 05:35:21,648 INFO  [BaseTest] Select the Format 
+2018-06-08 05:35:21,648 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 05:35:21,800 INFO  [BaseTest] Check Visibility for Existing Format product 
+2018-06-08 05:35:51,893 INFO  [BaseTest] Click on Add to Basket for Default Format product 
+2018-06-08 05:36:06,259 INFO  [BaseTest] Click on View Basket 
+2018-06-08 05:36:08,934 INFO  [BaseTest] Edit the Basket with Update Quantity 
+2018-06-08 05:36:10,987 INFO  [BaseTest] Update Quantity in Basket 
+2018-06-08 05:36:13,264 INFO  [BaseTest] Edit the Basket with Change Format 
+2018-06-08 05:36:13,264 INFO  [BaseTest] Change Format in Basket 
+2018-06-08 05:36:43,367 INFO  [BaseTest] There is no product in the Basket with Change Format Option 
+2018-06-08 05:36:43,367 INFO  [BaseTest] Remove the Product 
+2018-06-08 05:36:56,657 INFO  [BaseTest] The Verfication message is: You have no items in your shopping basket.
+Click here to continue shopping. 
+2018-06-08 05:36:56,723 INFO  [BaseTest] Close Browser 
+2018-06-08 05:36:57,348 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 05:37:02,177 INFO  [BaseTest] User Signing In 
+2018-06-08 05:37:02,177 INFO  [BaseTest] Click on login link 
+2018-06-08 05:37:03,254 INFO  [BaseTest] Enter Email ID 
+2018-06-08 05:37:03,657 INFO  [BaseTest] Enter Password 
+2018-06-08 05:37:05,758 INFO  [BaseTest] Click on Login button 
+2018-06-08 05:37:10,561 INFO  [BaseTest] Add Ten Billing Address 
+2018-06-08 05:37:12,571 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:37:12,571 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:37:15,572 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:37:18,417 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:37:39,196 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:37:39,196 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:37:42,208 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:38:12,256 INFO  [BaseTest] Delete Ten Billing Address 
+2018-06-08 05:40:39,797 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 05:40:44,777 INFO  [BaseTest] User Signing In 
+2018-06-08 05:40:44,779 INFO  [BaseTest] Click on login link 
+2018-06-08 05:40:45,814 INFO  [BaseTest] Enter Email ID 
+2018-06-08 05:40:46,223 INFO  [BaseTest] Enter Password 
+2018-06-08 05:40:48,337 INFO  [BaseTest] Click on Login button 
+2018-06-08 05:40:52,647 INFO  [BaseTest] Add Ten Billing Address 
+2018-06-08 05:40:54,673 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:40:54,673 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:40:57,683 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:41:00,487 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:41:17,041 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:41:17,041 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:41:20,042 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:41:22,910 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:41:39,376 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:41:39,376 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:41:42,381 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:41:45,181 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:42:01,685 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:42:01,685 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:42:04,685 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:42:07,506 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:42:23,900 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:42:23,900 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:42:26,907 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:42:29,731 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:42:46,252 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:42:46,252 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:42:49,252 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:42:52,076 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:43:08,694 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:43:08,694 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:43:11,702 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:43:14,508 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:43:31,044 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:43:31,044 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:43:34,056 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:43:36,876 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:43:53,471 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:43:53,471 INFO  [BaseTest] Add New Billing Address 
+2018-06-08 05:43:56,483 INFO  [BaseTest] Click on Add new Billing Address 
+2018-06-08 05:43:59,281 INFO  [BaseTest] Adding Billing Address Details 
+2018-06-08 05:44:14,047 INFO  [BaseTest] The Billing Message is: You have reached the maximum of 10 billing addresses attached to your profile. If you need to add an extra one, please either edit an address from your list or delete one. 
+2018-06-08 05:44:14,050 INFO  [BaseTest] Delete Ten Billing Address 
+2018-06-08 05:44:17,086 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:44:19,359 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:44:23,112 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:44:25,411 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:44:28,929 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:44:31,221 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:44:34,747 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:44:37,017 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:44:40,682 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:44:42,961 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:44:46,438 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:44:48,722 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:44:52,107 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:44:54,376 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:44:57,652 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:44:59,909 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:45:03,114 INFO  [BaseTest] Click on Delete Billing Address 
+2018-06-08 05:45:05,388 INFO  [BaseTest] Click on Confirm Delete Billing Address 
+2018-06-08 05:45:08,644 INFO  [BaseTest] Add Ten Delivery Address 
+2018-06-08 05:45:11,658 INFO  [BaseTest] Add New Delivery Address 
+2018-06-08 05:45:11,658 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:45:14,466 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:45:31,653 INFO  [BaseTest] Add New Delivery Address 
+2018-06-08 05:45:31,653 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:45:34,451 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:45:51,698 INFO  [BaseTest] Add New Delivery Address 
+2018-06-08 05:45:51,698 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:45:54,486 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:46:12,215 INFO  [BaseTest] Add New Delivery Address 
+2018-06-08 05:46:12,215 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:46:15,019 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:46:32,237 INFO  [BaseTest] Add New Delivery Address 
+2018-06-08 05:46:32,237 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:46:35,073 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:46:52,288 INFO  [BaseTest] Add New Delivery Address 
+2018-06-08 05:46:52,288 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:46:55,128 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:47:12,294 INFO  [BaseTest] Add New Delivery Address 
+2018-06-08 05:47:12,294 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:47:15,161 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:47:32,508 INFO  [BaseTest] Add New Delivery Address 
+2018-06-08 05:47:32,508 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:47:35,362 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:47:52,636 INFO  [BaseTest] Add New Delivery Address 
+2018-06-08 05:47:52,636 INFO  [BaseTest] Click on Add new Delivery Address 
+2018-06-08 05:47:55,447 INFO  [BaseTest] Adding Delivery Address Details 
+2018-06-08 05:48:10,955 INFO  [BaseTest] The Delivery Address message is: You have reached the maximum of 10 delivery addresses attached to your profile. If you need to add an extra one, please either edit an address from your list or delete one. 
+2018-06-08 05:48:10,955 INFO  [BaseTest] Delete Ten Delivery Address 
+2018-06-08 05:48:14,002 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:48:16,273 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:48:19,880 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:48:22,149 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:48:25,729 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:48:28,014 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:48:31,479 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:48:33,751 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:48:37,270 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:48:39,540 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:48:42,995 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:48:45,260 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:48:48,563 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:48:50,837 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:48:54,176 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:48:56,450 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:48:59,584 INFO  [BaseTest] Click on Delete Delivery Address 
+2018-06-08 05:49:01,849 INFO  [BaseTest] Click on Confirm Delete Delivery Address 
+2018-06-08 05:49:05,408 INFO  [BaseTest] Close Browser 
+2018-06-08 05:49:06,121 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 05:49:11,439 INFO  [BaseTest] User Signing In 
+2018-06-08 05:49:14,446 INFO  [BaseTest] Click on login link 
+2018-06-08 05:49:17,434 INFO  [BaseTest] Enter Email ID 
+2018-06-08 05:49:24,564 INFO  [BaseTest] Enter Password 
+2018-06-08 05:49:26,584 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 05:49:31,050 INFO  [BaseTest] Search Paid Event 
+2018-06-08 05:49:31,050 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 05:49:31,302 INFO  [BaseTest] Click on Search 
+2018-06-08 05:49:33,157 INFO  [BaseTest] Select the Event 
+2018-06-08 05:49:36,186 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 05:49:36,186 INFO  [BaseTest] Click Book Now 
+2018-06-08 05:49:42,769 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 05:49:42,770 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 05:49:43,896 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 05:49:43,896 INFO  [BaseTest] Enter Title 
+2018-06-08 05:49:44,075 INFO  [BaseTest] Enter First Name 
+2018-06-08 05:49:44,294 INFO  [BaseTest] Enter Last Name 
+2018-06-08 05:49:44,459 INFO  [BaseTest] Enter Email ID 
+2018-06-08 05:49:44,620 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 05:49:44,743 INFO  [BaseTest] Enter Street Address 
+2018-06-08 05:49:44,952 INFO  [BaseTest] Enter City 
+2018-06-08 05:49:45,049 INFO  [BaseTest] Enter State/Province 
+2018-06-08 05:49:45,161 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 05:49:45,268 INFO  [BaseTest] Enter Country 
+2018-06-08 05:49:45,360 INFO  [BaseTest] Add Event to Basket and View Basket 
+2018-06-08 05:49:45,360 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 05:49:54,509 INFO  [BaseTest] View Basket 
+2018-06-08 05:50:03,520 INFO  [BaseTest] View Basket 
+2018-06-08 05:50:07,201 INFO  [BaseTest] Remove Event from Basket 
+2018-06-08 05:52:57,161 INFO  [BaseTest] Search Free Event 
+2018-06-08 05:52:57,161 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 05:53:33,390 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 05:53:38,428 INFO  [BaseTest] User Signing In 
+2018-06-08 05:53:41,442 INFO  [BaseTest] Click on login link 
+2018-06-08 05:53:44,457 INFO  [BaseTest] Enter Email ID 
+2018-06-08 05:53:51,618 INFO  [BaseTest] Enter Password 
+2018-06-08 05:53:53,647 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 05:53:58,391 INFO  [BaseTest] Search Paid Event 
+2018-06-08 05:53:58,393 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 05:53:58,646 INFO  [BaseTest] Click on Search 
+2018-06-08 05:54:00,717 INFO  [BaseTest] Select the Event 
+2018-06-08 05:54:03,056 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 05:54:03,056 INFO  [BaseTest] Click Book Now 
+2018-06-08 05:54:09,418 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 05:54:09,418 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 05:54:10,531 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 05:54:10,531 INFO  [BaseTest] Enter Title 
+2018-06-08 05:54:10,680 INFO  [BaseTest] Enter First Name 
+2018-06-08 05:54:10,930 INFO  [BaseTest] Enter Last Name 
+2018-06-08 05:54:11,103 INFO  [BaseTest] Enter Email ID 
+2018-06-08 05:54:11,255 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 05:54:11,409 INFO  [BaseTest] Enter Street Address 
+2018-06-08 05:54:11,626 INFO  [BaseTest] Enter City 
+2018-06-08 05:54:11,729 INFO  [BaseTest] Enter State/Province 
+2018-06-08 05:54:11,849 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 05:54:11,955 INFO  [BaseTest] Enter Country 
+2018-06-08 05:54:12,049 INFO  [BaseTest] Add Event to Basket and View Basket 
+2018-06-08 05:54:12,049 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 05:54:21,403 INFO  [BaseTest] View Basket 
+2018-06-08 05:54:30,410 INFO  [BaseTest] View Basket 
+2018-06-08 05:54:33,802 INFO  [BaseTest] Remove Event from Basket 
+2018-06-08 05:58:14,366 INFO  [BaseTest] Search Free Event 
+2018-06-08 05:58:14,366 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 05:58:14,724 INFO  [BaseTest] Click on Search 
+2018-06-08 05:58:17,149 INFO  [BaseTest] Select the Event 
+2018-06-08 05:58:19,629 INFO  [BaseTest] Click Book Now for Free Event 
+2018-06-08 05:58:19,629 INFO  [BaseTest] Click Book Now 
+2018-06-08 05:58:37,172 INFO  [BaseTest] Enter Pardot Details 
+2018-06-08 05:58:37,172 INFO  [BaseTest] Select Pardot Title 
+2018-06-08 05:59:37,260 INFO  [BaseTest] Enter Pardot First Name 
+2018-06-08 06:00:37,307 INFO  [BaseTest] Enter Pardot Last Name 
+2018-06-08 06:01:37,397 INFO  [BaseTest] Enter Pardot Job Title 
+2018-06-08 06:02:37,495 INFO  [BaseTest] Enter Pardot Company 
+2018-06-08 06:03:37,642 INFO  [BaseTest] Enter Pardot Email 
+2018-06-08 06:04:37,750 INFO  [BaseTest] Enter Pardot Phone 
+2018-06-08 06:05:05,601 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:05:10,657 INFO  [BaseTest] Search Paid Event 
+2018-06-08 06:05:10,659 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 06:05:11,120 INFO  [BaseTest] Click on Search 
+2018-06-08 06:05:13,051 INFO  [BaseTest] Select the Event 
+2018-06-08 06:05:14,609 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 06:05:14,609 INFO  [BaseTest] Click Book Now 
+2018-06-08 06:05:20,870 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 06:05:20,870 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 06:05:21,974 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 06:05:21,974 INFO  [BaseTest] Enter Title 
+2018-06-08 06:05:22,122 INFO  [BaseTest] Enter First Name 
+2018-06-08 06:05:22,379 INFO  [BaseTest] Enter Last Name 
+2018-06-08 06:05:22,542 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:05:22,705 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 06:05:22,833 INFO  [BaseTest] Enter Street Address 
+2018-06-08 06:05:23,065 INFO  [BaseTest] Enter City 
+2018-06-08 06:05:23,172 INFO  [BaseTest] Enter State/Province 
+2018-06-08 06:05:23,299 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 06:05:23,412 INFO  [BaseTest] Enter Country 
+2018-06-08 06:05:23,515 INFO  [BaseTest] Add Event to Basket 
+2018-06-08 06:05:23,515 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 06:05:32,385 INFO  [BaseTest] Search Paid Event 
+2018-06-08 06:05:32,385 INFO  [BaseTest] Enter second  event name in Search Box 
+2018-06-08 06:05:32,660 INFO  [BaseTest] Click on Search 
+2018-06-08 06:05:34,615 INFO  [BaseTest] Select the second Event 
+2018-06-08 06:05:36,911 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 06:05:36,911 INFO  [BaseTest] Click Book Now 
+2018-06-08 06:05:43,638 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 06:05:43,638 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 06:05:44,780 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 06:05:44,781 INFO  [BaseTest] Enter Title 
+2018-06-08 06:05:44,925 INFO  [BaseTest] Enter First Name 
+2018-06-08 06:05:45,080 INFO  [BaseTest] Enter Last Name 
+2018-06-08 06:05:45,202 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:05:45,324 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 06:05:45,422 INFO  [BaseTest] Enter Street Address 
+2018-06-08 06:05:45,569 INFO  [BaseTest] Enter City 
+2018-06-08 06:05:45,648 INFO  [BaseTest] Enter State/Province 
+2018-06-08 06:05:45,733 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 06:05:45,812 INFO  [BaseTest] Enter Country 
+2018-06-08 06:05:45,916 INFO  [BaseTest] Add Event to Basket 
+2018-06-08 06:05:45,916 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 06:05:54,815 INFO  [BaseTest] View Basket 
+2018-06-08 06:06:03,822 INFO  [BaseTest] View Basket 
+2018-06-08 06:06:07,620 INFO  [BaseTest] Edit Event 
+2018-06-08 06:06:08,620 INFO  [BaseTest] Click on Edit First Event 
+2018-06-08 06:06:11,874 INFO  [BaseTest] Edit First Event Delegate Details 
+2018-06-08 06:06:11,874 INFO  [BaseTest] Edit Title 
+2018-06-08 06:06:12,000 INFO  [BaseTest] Edit First Name 
+2018-06-08 06:06:12,273 INFO  [BaseTest] Edit Last Name 
+2018-06-08 06:06:12,502 INFO  [BaseTest] Edit Email ID 
+2018-06-08 06:06:12,778 INFO  [BaseTest] Edit Telephone Number 
+2018-06-08 06:06:12,952 INFO  [BaseTest] Edit Street Address 
+2018-06-08 06:06:13,258 INFO  [BaseTest] Edit City 
+2018-06-08 06:06:13,445 INFO  [BaseTest] Edit State/Province 
+2018-06-08 06:06:13,675 INFO  [BaseTest] Edit Zip Postal Code 
+2018-06-08 06:06:13,816 INFO  [BaseTest] Edit Country 
+2018-06-08 06:06:15,990 INFO  [BaseTest] Click on Update First Event 
+2018-06-08 06:06:26,776 INFO  [BaseTest] Click on Second First Event 
+2018-06-08 06:06:29,198 INFO  [BaseTest] Edit Second Event Delegate Details 
+2018-06-08 06:06:30,201 INFO  [BaseTest] Edit Title 
+2018-06-08 06:06:30,329 INFO  [BaseTest] Edit First Name 
+2018-06-08 06:06:30,533 INFO  [BaseTest] Edit Last Name 
+2018-06-08 06:06:30,737 INFO  [BaseTest] Edit Email ID 
+2018-06-08 06:06:30,913 INFO  [BaseTest] Edit Telephone Number 
+2018-06-08 06:06:31,043 INFO  [BaseTest] Edit Street Address 
+2018-06-08 06:06:31,263 INFO  [BaseTest] Edit City 
+2018-06-08 06:06:31,423 INFO  [BaseTest] Edit State/Province 
+2018-06-08 06:06:31,591 INFO  [BaseTest] Edit Zip Postal Code 
+2018-06-08 06:06:31,710 INFO  [BaseTest] Edit Country 
+2018-06-08 06:06:31,871 INFO  [BaseTest] Click on Update Second Event 
+2018-06-08 06:06:41,537 INFO  [BaseTest] Remove Multiple Event from Basket 
+2018-06-08 06:06:56,180 INFO  [BaseTest] The Verfication message is: You have no items in your shopping basket.
+Click here to continue shopping. 
+2018-06-08 06:06:56,464 INFO  [BaseTest] Close Browser 
+2018-06-08 06:06:57,088 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:07:01,777 INFO  [BaseTest] User Signing In 
+2018-06-08 06:07:04,792 INFO  [BaseTest] Click on login link 
+2018-06-08 06:07:07,820 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:07:14,962 INFO  [BaseTest] Enter Password 
+2018-06-08 06:07:16,983 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 06:07:21,644 INFO  [BaseTest] Search Paid Event 
+2018-06-08 06:07:21,644 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 06:07:21,911 INFO  [BaseTest] Click on Search 
+2018-06-08 06:07:24,049 INFO  [BaseTest] Select the Event 
+2018-06-08 06:07:24,503 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 06:07:24,503 INFO  [BaseTest] Click Book Now 
+2018-06-08 06:07:38,152 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 06:07:38,152 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 06:07:39,237 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 06:07:39,237 INFO  [BaseTest] Enter Title 
+2018-06-08 06:07:39,379 INFO  [BaseTest] Enter First Name 
+2018-06-08 06:07:39,631 INFO  [BaseTest] Enter Last Name 
+2018-06-08 06:07:39,803 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:07:39,991 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 06:07:40,128 INFO  [BaseTest] Enter Street Address 
+2018-06-08 06:07:40,347 INFO  [BaseTest] Enter City 
+2018-06-08 06:07:40,483 INFO  [BaseTest] Enter State/Province 
+2018-06-08 06:07:40,592 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 06:07:40,687 INFO  [BaseTest] Enter Country 
+2018-06-08 06:07:40,785 INFO  [BaseTest] Add Event to Basket and View Basket 
+2018-06-08 06:07:40,785 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 06:07:53,435 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:07:53,748 INFO  [BaseTest] Click on Search 
+2018-06-08 06:07:56,535 INFO  [BaseTest] Select the Product 
+2018-06-08 06:08:44,635 INFO  [BaseTest] Select the Format 
+2018-06-08 06:08:46,651 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 06:08:46,683 INFO  [BaseTest] Click on Add to Basket for Default Format product 
+2018-06-08 06:10:51,639 INFO  [BaseTest] Close Browser 
+2018-06-08 06:10:52,295 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:10:57,110 INFO  [BaseTest] User Signing In 
+2018-06-08 06:11:00,123 INFO  [BaseTest] Click on login link 
+2018-06-08 06:11:03,138 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:11:10,279 INFO  [BaseTest] Enter Password 
+2018-06-08 06:11:12,302 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 06:11:16,889 INFO  [BaseTest] Search Paid Event 
+2018-06-08 06:11:16,889 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 06:11:17,152 INFO  [BaseTest] Click on Search 
+2018-06-08 06:11:19,146 INFO  [BaseTest] Select the Event 
+2018-06-08 06:11:21,438 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 06:11:21,438 INFO  [BaseTest] Click Book Now 
+2018-06-08 06:11:26,902 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 06:11:26,902 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 06:13:16,555 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:13:24,320 INFO  [BaseTest] User Signing In 
+2018-06-08 06:13:27,327 INFO  [BaseTest] Click on login link 
+2018-06-08 06:13:30,408 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:13:37,562 INFO  [BaseTest] Enter Password 
+2018-06-08 06:13:39,603 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 06:13:44,435 INFO  [BaseTest] Search Paid Event 
+2018-06-08 06:13:44,435 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 06:13:44,690 INFO  [BaseTest] Click on Search 
+2018-06-08 06:13:46,711 INFO  [BaseTest] Select the Event 
+2018-06-08 06:13:48,889 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 06:13:48,890 INFO  [BaseTest] Click Book Now 
+2018-06-08 06:13:55,350 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 06:13:55,350 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 06:13:56,450 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 06:13:56,450 INFO  [BaseTest] Enter Title 
+2018-06-08 06:13:56,611 INFO  [BaseTest] Enter First Name 
+2018-06-08 06:13:56,846 INFO  [BaseTest] Enter Last Name 
+2018-06-08 06:13:57,038 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:13:57,196 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 06:13:57,325 INFO  [BaseTest] Enter Street Address 
+2018-06-08 06:13:57,546 INFO  [BaseTest] Enter City 
+2018-06-08 06:13:57,650 INFO  [BaseTest] Enter State/Province 
+2018-06-08 06:13:57,773 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 06:13:57,905 INFO  [BaseTest] Enter Country 
+2018-06-08 06:13:57,997 INFO  [BaseTest] Add Event to Basket and View Basket 
+2018-06-08 06:13:57,997 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 06:14:10,566 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:14:10,894 INFO  [BaseTest] Click on Search 
+2018-06-08 06:14:13,614 INFO  [BaseTest] Select the Product 
+2018-06-08 06:14:17,409 INFO  [BaseTest] Select the Format 
+2018-06-08 06:14:19,412 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 06:14:19,440 INFO  [BaseTest] Click on Add to Basket for Default Format product 
+2018-06-08 06:16:24,198 INFO  [BaseTest] Close Browser 
+2018-06-08 06:16:24,824 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:16:29,518 INFO  [BaseTest] User Signing In 
+2018-06-08 06:16:32,520 INFO  [BaseTest] Click on login link 
+2018-06-08 06:16:35,466 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:16:42,607 INFO  [BaseTest] Enter Password 
+2018-06-08 06:16:44,632 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 06:16:49,286 INFO  [BaseTest] Search Paid Event 
+2018-06-08 06:16:49,286 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 06:16:49,512 INFO  [BaseTest] Click on Search 
+2018-06-08 06:16:51,463 INFO  [BaseTest] Select the Event 
+2018-06-08 06:16:52,276 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 06:16:52,276 INFO  [BaseTest] Click Book Now 
+2018-06-08 06:17:04,588 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 06:17:04,589 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 06:17:05,694 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 06:17:05,694 INFO  [BaseTest] Enter Title 
+2018-06-08 06:17:05,885 INFO  [BaseTest] Enter First Name 
+2018-06-08 06:17:06,121 INFO  [BaseTest] Enter Last Name 
+2018-06-08 06:17:06,280 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:17:06,446 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 06:17:06,569 INFO  [BaseTest] Enter Street Address 
+2018-06-08 06:17:06,793 INFO  [BaseTest] Enter City 
+2018-06-08 06:17:06,894 INFO  [BaseTest] Enter State/Province 
+2018-06-08 06:17:07,025 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 06:17:07,123 INFO  [BaseTest] Enter Country 
+2018-06-08 06:17:07,214 INFO  [BaseTest] Add Event to Basket and View Basket 
+2018-06-08 06:17:07,215 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 06:17:17,627 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:17:17,861 INFO  [BaseTest] Click on Search 
+2018-06-08 06:17:20,809 INFO  [BaseTest] Select the Product 
+2018-06-08 06:18:06,310 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:18:11,429 INFO  [BaseTest] Click on Subscriptions BSOL 
+2018-06-08 06:18:11,431 INFO  [BaseTest] Click on Subscriptions BSOL 
+2018-06-08 06:18:13,302 INFO  [BaseTest] Click on Request a Quote 
+2018-06-08 06:18:13,302 INFO  [BaseTest] Click on Request a Quote 
+2018-06-08 06:18:19,171 INFO  [BaseTest] Enter Pardot Form details 
+2018-06-08 06:18:19,171 INFO  [BaseTest] Enter BSOL Pardot form details 
+2018-06-08 06:18:19,267 INFO  [BaseTest] Select title 
+2018-06-08 06:18:19,396 INFO  [BaseTest] Enter First Name 
+2018-06-08 06:18:19,552 INFO  [BaseTest] Enter Last Name 
+2018-06-08 06:18:19,680 INFO  [BaseTest] Enter Email 
+2018-06-08 06:18:19,834 INFO  [BaseTest] Enter Job Title 
+2018-06-08 06:18:19,932 INFO  [BaseTest] Enter Company 
+2018-06-08 06:18:20,058 INFO  [BaseTest] Enter PostCode 
+2018-06-08 06:18:20,158 INFO  [BaseTest] Select Country 
+2018-06-08 06:18:20,374 INFO  [BaseTest] Select Industry 
+2018-06-08 06:18:20,512 INFO  [BaseTest] Enter number of employees 
+2018-06-08 06:18:20,581 INFO  [BaseTest] Enter How did you hear about us? 
+2018-06-08 06:18:20,694 INFO  [BaseTest] Enter How would you like to be contacted? 
+2018-06-08 06:18:20,810 INFO  [BaseTest] Select Terms and Conditions 
+2018-06-08 06:18:20,899 INFO  [BaseTest] Click on Send your Enquiry 
+2018-06-08 06:18:28,139 INFO  [BaseTest] Verify BSOL Pardot Form 
+2018-06-08 06:18:28,139 INFO  [BaseTest] Verify Pardot Form 
+2018-06-08 06:18:33,245 INFO  [BaseTest] The Verfication message is: Thank you for your enquiry 
+2018-06-08 06:18:35,686 INFO  [BaseTest] Click on Subscriptions Compliance Navigator 
+2018-06-08 06:18:35,875 INFO  [BaseTest] Click on Subscriptions Compliance Navigator 
+2018-06-08 06:18:37,260 INFO  [BaseTest] Click on Request a Quote 
+2018-06-08 06:18:41,784 INFO  [BaseTest] Enter Pardot Form details 
+2018-06-08 06:18:41,784 INFO  [BaseTest] Enter First Name 
+2018-06-08 06:18:42,402 INFO  [BaseTest] Enter Last Name 
+2018-06-08 06:18:42,543 INFO  [BaseTest] Enter Email 
+2018-06-08 06:18:42,656 INFO  [BaseTest] Enter Phone 
+2018-06-08 06:18:42,753 INFO  [BaseTest] Enter Job Title 
+2018-06-08 06:18:42,836 INFO  [BaseTest] Enter Company 
+2018-06-08 06:18:42,953 INFO  [BaseTest] Select Country 
+2018-06-08 06:18:43,098 INFO  [BaseTest] Enter How would you like to be contacted? 
+2018-06-08 06:18:43,192 INFO  [BaseTest] Select Terms and Conditions 
+2018-06-08 06:18:43,266 INFO  [BaseTest] Click on Send your Enquiry 
+2018-06-08 06:18:48,510 INFO  [BaseTest] Verify Complaince Navigator Pardot Form 
+2018-06-08 06:18:48,510 INFO  [BaseTest] Verify Pardot Form 
+2018-06-08 06:19:54,341 INFO  [BaseTest] Click on Eurocodes 
+2018-06-08 06:19:54,516 INFO  [BaseTest] Click on Subscriptions Eurocodes 
+2018-06-08 06:19:56,161 INFO  [BaseTest] Click on Request a Quote 
+2018-06-08 06:19:56,161 INFO  [BaseTest] Click on Request a Quote 
+2018-06-08 06:20:00,882 INFO  [BaseTest] Enter Pardot Form details 
+2018-06-08 06:20:00,882 INFO  [BaseTest] Enter Eurocode Pardot Form Details 
+2018-06-08 06:20:00,882 INFO  [BaseTest] Enter First Name 
+2018-06-08 06:20:03,501 INFO  [BaseTest] Enter Last Name 
+2018-06-08 06:20:03,634 INFO  [BaseTest] Enter Company 
+2018-06-08 06:20:03,756 INFO  [BaseTest] Enter Job Title 
+2018-06-08 06:20:03,905 INFO  [BaseTest] Enter Email 
+2018-06-08 06:20:04,005 INFO  [BaseTest] Enter Phone 
+2018-06-08 06:20:04,100 INFO  [BaseTest] Select Country 
+2018-06-08 06:20:04,260 INFO  [BaseTest] Enter How would you like to be contacted? 
+2018-06-08 06:20:04,380 INFO  [BaseTest] Select Terms and Conditions 
+2018-06-08 06:20:04,463 INFO  [BaseTest] Click on Send your Enquiry 
+2018-06-08 06:20:09,620 INFO  [BaseTest] Verify Complaince Navigator Pardot Form 
+2018-06-08 06:20:09,620 INFO  [BaseTest] Verify Pardot Form 
+2018-06-08 06:21:15,279 INFO  [BaseTest] Close Browser 
+2018-06-08 06:21:15,915 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:21:20,589 INFO  [BaseTest] Registered User Sign In 
+2018-06-08 06:21:23,593 INFO  [BaseTest] Click on login link 
+2018-06-08 06:21:26,608 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:21:33,748 INFO  [BaseTest] Enter Password 
+2018-06-08 06:21:35,765 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 06:21:40,523 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:21:40,714 INFO  [BaseTest] Click on Search 
+2018-06-08 06:21:42,823 INFO  [BaseTest] Select the Product 
+2018-06-08 06:21:45,002 INFO  [BaseTest] Click Download Now 
+2018-06-08 06:21:45,003 INFO  [BaseTest] Click on Download Now 
+2018-06-08 06:22:45,498 INFO  [BaseTest] Close Browser 
+2018-06-08 06:22:46,125 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:22:50,860 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:22:51,256 INFO  [BaseTest] Click on Search 
+2018-06-08 06:22:54,649 INFO  [BaseTest] Select the Product 
+2018-06-08 06:23:56,988 INFO  [BaseTest] Select Format and Add to Basket 
+2018-06-08 06:23:56,990 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 06:24:27,002 INFO  [BaseTest] Check Visibility for Existing Format product 
+2018-06-08 06:24:57,064 INFO  [BaseTest] This product cannot be added to Basket 
+2018-06-08 06:26:59,099 INFO  [BaseTest] Close Browser 
+2018-06-08 06:26:59,737 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:27:05,100 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:27:05,504 INFO  [BaseTest] Click on Search 
+2018-06-08 06:27:08,945 INFO  [BaseTest] Select the Product 
+2018-06-08 06:27:10,867 INFO  [BaseTest] Select PDF Format and Add to Basket twice  
+2018-06-08 06:27:15,878 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 06:27:45,940 INFO  [BaseTest] Check Visibility for Existing Format product 
+2018-06-08 06:27:48,972 INFO  [BaseTest] Select PDF format 
+2018-06-08 06:27:52,247 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 06:29:56,526 INFO  [BaseTest] Close Browser 
+2018-06-08 06:29:57,169 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:30:01,873 INFO  [BaseTest] Member Signing In 
+2018-06-08 06:30:01,873 INFO  [BaseTest] Click on login link 
+2018-06-08 06:30:03,033 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:30:03,481 INFO  [BaseTest] Enter Password 
+2018-06-08 06:30:05,575 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 06:30:10,200 INFO  [BaseTest] Click on Member Tab 
+2018-06-08 06:30:10,200 INFO  [BaseTest] Click on Member Tab 
+2018-06-08 06:30:10,316 INFO  [BaseTest] Verify Member Status 
+2018-06-08 06:30:10,316 INFO  [BaseTest] Check membership status 
+2018-06-08 06:30:10,347 INFO  [BaseTest] Click Logout 
+2018-06-08 06:30:11,348 INFO  [BaseTest] Click Logout 
+2018-06-08 06:30:14,489 INFO  [BaseTest] Close Browser 
+2018-06-08 06:30:15,144 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:30:19,818 INFO  [BaseTest] Search PAS Product 
+2018-06-08 06:30:19,820 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:30:20,199 INFO  [BaseTest] Click on Search 
+2018-06-08 06:30:26,978 INFO  [BaseTest] Select maximum items 
+2018-06-08 06:30:26,981 INFO  [BaseTest] Select 100 items 
+2018-06-08 06:31:08,966 INFO  [BaseTest] Check the search count 
+2018-06-08 06:31:09,014 INFO  [BaseTest] Count product on the Search List 
+2018-06-08 06:31:14,176 INFO  [BaseTest] Click on Next 
+2018-06-08 06:31:40,577 INFO  [BaseTest] Count product on the Search List 
+2018-06-08 06:31:45,661 INFO  [BaseTest] Click on Next 
+2018-06-08 06:32:33,598 INFO  [BaseTest] Count product 
+2018-06-08 06:33:04,042 INFO  [BaseTest] Close Browser 
+2018-06-08 06:33:04,668 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:33:09,381 INFO  [BaseTest] Search PAS Product 
+2018-06-08 06:33:09,381 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:33:09,741 INFO  [BaseTest] Click on Search 
+2018-06-08 06:33:14,899 INFO  [BaseTest] Select maximum items 
+2018-06-08 06:33:14,899 INFO  [BaseTest] Select 100 items 
+2018-06-08 06:33:50,771 INFO  [BaseTest] Check Withdrawn status 
+2018-06-08 06:33:53,188 INFO  [BaseTest] Search Events 
+2018-06-08 06:33:53,188 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:33:53,421 INFO  [BaseTest] Click on Search 
+2018-06-08 06:33:58,221 INFO  [BaseTest] Select maximum items 
+2018-06-08 06:33:58,221 INFO  [BaseTest] Select 100 items 
+2018-06-08 06:34:23,835 INFO  [BaseTest] Check Withdrawn status 
+2018-06-08 06:34:24,913 INFO  [BaseTest] Search Books 
+2018-06-08 06:34:24,913 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:34:25,126 INFO  [BaseTest] Click on Search 
+2018-06-08 06:34:30,117 INFO  [BaseTest] Select maximum items 
+2018-06-08 06:34:30,118 INFO  [BaseTest] Select 100 items 
+2018-06-08 06:34:56,444 INFO  [BaseTest] Check Withdrawn status 
+2018-06-08 06:34:57,577 INFO  [BaseTest] Close Browser 
+2018-06-08 06:34:58,209 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:35:02,947 INFO  [BaseTest] Search Quality Product 
+2018-06-08 06:35:02,947 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:35:03,332 INFO  [BaseTest] Click on Search 
+2018-06-08 06:35:13,744 INFO  [BaseTest] Select maximum items 
+2018-06-08 06:35:13,744 INFO  [BaseTest] Select 100 items 
+2018-06-08 06:35:52,629 INFO  [BaseTest] Select Product Type and Verify Sorting 
+2018-06-08 06:35:52,677 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:36:19,463 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:36:25,686 INFO  [BaseTest] Click on Next 
+2018-06-08 06:36:51,513 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:36:51,576 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:36:57,827 INFO  [BaseTest] Click on Next 
+2018-06-08 06:37:21,778 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:37:21,834 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:37:28,139 INFO  [BaseTest] Click on Next 
+2018-06-08 06:37:51,249 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:37:51,301 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:37:57,601 INFO  [BaseTest] Click on Next 
+2018-06-08 06:38:22,414 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:38:22,493 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:38:29,001 INFO  [BaseTest] Click on Next 
+2018-06-08 06:38:52,630 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:38:52,694 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:38:59,039 INFO  [BaseTest] Click on Next 
+2018-06-08 06:39:24,188 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:39:24,247 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:39:30,492 INFO  [BaseTest] Click on Next 
+2018-06-08 06:40:00,689 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:40:00,775 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:40:07,069 INFO  [BaseTest] Click on Next 
+2018-06-08 06:40:34,024 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:40:34,072 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:40:40,511 INFO  [BaseTest] Click on Next 
+2018-06-08 06:41:06,668 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:41:06,740 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:41:13,159 INFO  [BaseTest] Click on Next 
+2018-06-08 06:41:46,102 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:41:46,170 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:41:52,495 INFO  [BaseTest] Click on Next 
+2018-06-08 06:42:22,308 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:42:22,376 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:42:28,666 INFO  [BaseTest] Click on Next 
+2018-06-08 06:42:55,927 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:42:55,983 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:43:02,316 INFO  [BaseTest] Click on Next 
+2018-06-08 06:43:29,283 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:43:29,337 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:43:35,665 INFO  [BaseTest] Click on Next 
+2018-06-08 06:44:01,570 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:44:01,649 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:44:07,921 INFO  [BaseTest] Click on Next 
+2018-06-08 06:44:34,060 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:44:34,162 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:44:40,457 INFO  [BaseTest] Click on Next 
+2018-06-08 06:45:05,668 INFO  [BaseTest] Select Sort By Product Type 
+2018-06-08 06:45:05,797 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:45:12,122 INFO  [BaseTest] Click on Next 
+2018-06-08 06:45:12,794 INFO  [BaseTest] Close Browser 
+2018-06-08 06:45:13,466 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:45:18,145 INFO  [BaseTest] Search Free Event 
+2018-06-08 06:45:18,146 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:45:18,852 INFO  [BaseTest] Click on Search 
+2018-06-08 06:45:20,700 INFO  [BaseTest] Checking Free Event Name in Search List 
+2018-06-08 06:45:20,950 INFO  [BaseTest] Checking Free Event Price in Search List 
+2018-06-08 06:45:21,077 INFO  [BaseTest] Checking Free Event Action Button in Search List 
+2018-06-08 06:45:21,140 INFO  [BaseTest] Checking Free Event Label in Search List 
+2018-06-08 06:45:21,187 INFO  [BaseTest] Search PAS Product 
+2018-06-08 06:45:21,187 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:45:21,312 INFO  [BaseTest] Click on Search 
+2018-06-08 06:45:27,405 INFO  [BaseTest] Checking PAS Product Name in Search List 
+2018-06-08 06:45:27,679 INFO  [BaseTest] Checking PAS Product Price in Search List 
+2018-06-08 06:45:27,810 INFO  [BaseTest] Checking PAS Product Action Button in Search List 
+2018-06-08 06:45:27,878 INFO  [BaseTest] Checking PAS Product Label in Search List 
+2018-06-08 06:45:27,920 INFO  [BaseTest] Search Paid Event 
+2018-06-08 06:45:27,920 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:45:28,151 INFO  [BaseTest] Click on Search 
+2018-06-08 06:45:29,799 INFO  [BaseTest] Checking Paid Event Name in Search List 
+2018-06-08 06:45:29,971 INFO  [BaseTest] Checking Paid Event Price in Search List 
+2018-06-08 06:45:30,085 INFO  [BaseTest] Checking Paid Event Member Price in Search List 
+2018-06-08 06:46:00,465 INFO  [BaseTest] Close Browser 
+2018-06-08 06:46:01,119 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:46:05,871 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 06:46:05,871 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 06:46:06,103 INFO  [BaseTest] Click on Search 
+2018-06-08 06:46:17,036 INFO  [BaseTest] Verfiy search result 
+2018-06-08 06:46:17,037 INFO  [BaseTest] Verify blank search result 
+2018-06-08 06:46:18,424 INFO  [BaseTest] Close Browser 
+2018-06-08 06:46:19,065 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:46:23,771 INFO  [BaseTest] Search Quality Product 
+2018-06-08 06:46:23,771 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:46:24,123 INFO  [BaseTest] Click on Search 
+2018-06-08 06:46:37,109 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 06:46:40,119 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 06:46:42,328 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 06:46:53,725 INFO  [BaseTest] Click on Add to Basket twice from Search List 
+2018-06-08 06:46:56,730 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 06:46:58,930 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 06:46:59,255 INFO  [BaseTest] Verify Alert message for adding PDF product twice 
+2018-06-08 06:47:02,402 INFO  [BaseTest] Check warning message on adding PDF product twice was successful  
+2018-06-08 06:47:02,402 INFO  [BaseTest] View Basket 
+2018-06-08 06:47:14,417 INFO  [BaseTest] Click on View Basket 
+2018-06-08 06:47:17,424 INFO  [BaseTest] Remove the Product 
+2018-06-08 06:47:30,806 INFO  [BaseTest] The Verfication message is: You have no items in your shopping basket.
+Click here to continue shopping. 
+2018-06-08 06:47:30,839 INFO  [BaseTest] Close Browser 
+2018-06-08 06:47:31,480 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:47:36,174 INFO  [BaseTest] Search PAS Product 
+2018-06-08 06:47:36,174 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 06:47:36,558 INFO  [BaseTest] Click on Search 
+2018-06-08 06:47:42,349 INFO  [BaseTest] Select maximum items 
+2018-06-08 06:47:42,350 INFO  [BaseTest] Select 100 items 
+2018-06-08 06:48:24,308 INFO  [BaseTest] Select Published Date and Verify Sorting 
+2018-06-08 06:48:24,356 INFO  [BaseTest] Select Sort By Published Date 
+2018-06-08 06:48:48,322 INFO  [BaseTest] Sort List of Products in Descending Order 
+2018-06-08 06:50:18,850 INFO  [BaseTest] Close Browser 
+2018-06-08 06:50:19,475 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:50:24,241 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 06:50:24,241 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 06:50:24,508 INFO  [BaseTest] Click on Search 
+2018-06-08 06:50:32,834 INFO  [BaseTest] Verfiy search result 
+2018-06-08 06:50:32,835 INFO  [BaseTest] Verify blank search result 
+2018-06-08 06:50:34,119 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 06:50:37,125 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 06:50:39,291 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 06:50:44,833 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-08 06:50:44,834 INFO  [BaseTest] Hover on Basket 
+2018-06-08 06:50:45,079 INFO  [BaseTest] Click Checkout 
+2018-06-08 06:50:46,682 INFO  [BaseTest] Enter Credentials and Sign In 
+2018-06-08 06:50:46,682 INFO  [BaseTest] Enter Email 
+2018-06-08 06:50:48,691 INFO  [BaseTest] Enter Password 
+2018-06-08 06:50:48,781 INFO  [BaseTest] Click SignIn 
+2018-06-08 06:50:48,924 INFO  [BaseTest] Enter Payment Details 
+2018-06-08 06:50:48,924 INFO  [BaseTest] Click on Payment Details 
+2018-06-08 06:50:51,888 INFO  [BaseTest] Click Pay by Credit Card 
+2018-06-08 06:52:54,481 INFO  [BaseTest] Select VISA Credit Card 
+2018-06-08 06:52:54,635 INFO  [BaseTest] Enter Card Number 
+2018-06-08 06:53:54,688 INFO  [BaseTest] Enter Cardholder's Name 
+2018-06-08 06:54:54,799 INFO  [BaseTest] Enter Card Expiry Month 
+2018-06-08 06:55:41,707 INFO  [BaseTest] Enter Card Expiry Year 
+2018-06-08 06:55:41,854 INFO  [BaseTest] Enter CVC Number 
+2018-06-08 06:55:41,938 INFO  [BaseTest] Click Submit 
+2018-06-08 06:55:42,117 INFO  [BaseTest] Enter Order Details 
+2018-06-08 06:55:42,123 INFO  [BaseTest] Select Country 
+2018-06-08 06:55:42,231 INFO  [BaseTest] Click Review Order 
+2018-06-08 06:56:40,954 INFO  [BaseTest] Check Terms and Conditions 
+2018-06-08 06:56:41,111 INFO  [BaseTest] Click Place Order 
+2018-06-08 06:56:41,251 INFO  [BaseTest] Confirm Order Details 
+2018-06-08 06:57:11,880 INFO  [BaseTest] Close Browser 
+2018-06-08 06:57:12,553 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:57:17,297 INFO  [BaseTest] Member Signing In 
+2018-06-08 06:57:17,297 INFO  [BaseTest] Click on login link 
+2018-06-08 06:57:18,377 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:57:18,841 INFO  [BaseTest] Enter Password 
+2018-06-08 06:57:20,931 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 06:57:25,326 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 06:57:25,326 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 06:57:25,402 INFO  [BaseTest] Click on Search 
+2018-06-08 06:57:35,684 INFO  [BaseTest] Verfiy search result 
+2018-06-08 06:57:35,684 INFO  [BaseTest] Verify blank search result 
+2018-06-08 06:57:37,030 INFO  [BaseTest] Verify Member Price in Search List 
+2018-06-08 06:57:37,417 INFO  [BaseTest] Close Browser 
+2018-06-08 06:57:38,045 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:57:42,790 INFO  [BaseTest] User Signing In 
+2018-06-08 06:57:45,797 INFO  [BaseTest] Click on login link 
+2018-06-08 06:59:00,070 INFO  [BaseTest] Enter Email ID 
+2018-06-08 06:59:22,703 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 06:59:28,210 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 06:59:28,211 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 06:59:28,439 INFO  [BaseTest] Click on Search 
+2018-06-08 06:59:37,130 INFO  [BaseTest] Verfiy search result 
+2018-06-08 06:59:37,133 INFO  [BaseTest] Verify blank search result 
+2018-06-08 06:59:38,577 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 06:59:41,579 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 06:59:43,740 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 06:59:48,738 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-08 06:59:48,739 INFO  [BaseTest] Hover on Basket 
+2018-06-08 06:59:49,006 INFO  [BaseTest] Click Checkout 
+2018-06-08 06:59:50,517 INFO  [BaseTest] Enter Credentials and Sign In 
+2018-06-08 06:59:50,518 INFO  [BaseTest] Enter Email 
+2018-06-08 06:59:52,449 INFO  [BaseTest] Enter Password 
+2018-06-08 06:59:52,538 INFO  [BaseTest] Click SignIn 
+2018-06-08 06:59:52,706 INFO  [BaseTest] Enter Payment Details 
+2018-06-08 06:59:52,706 INFO  [BaseTest] Click on Payment Details 
+2018-06-08 06:59:55,812 INFO  [BaseTest] Click Pay by Credit Card 
+2018-06-08 06:59:58,984 INFO  [BaseTest] Select VISA Credit Card 
+2018-06-08 06:59:59,150 INFO  [BaseTest] Enter Card Number 
+2018-06-08 07:00:00,075 INFO  [BaseTest] Enter Cardholder's Name 
+2018-06-08 07:00:00,216 INFO  [BaseTest] Enter Card Expiry Month 
+2018-06-08 07:00:00,309 INFO  [BaseTest] Enter Card Expiry Year 
+2018-06-08 07:00:00,405 INFO  [BaseTest] Enter CVC Number 
+2018-06-08 07:00:00,470 INFO  [BaseTest] Click Submit 
+2018-06-08 07:00:00,652 INFO  [BaseTest] Enter Order Details 
+2018-06-08 07:00:00,655 INFO  [BaseTest] Select Country 
+2018-06-08 07:00:00,754 INFO  [BaseTest] Click Review Order 
+2018-06-08 07:00:01,981 INFO  [BaseTest] Check Terms and Conditions 
+2018-06-08 07:00:02,245 INFO  [BaseTest] Click Place Order 
+2018-06-08 07:00:02,515 INFO  [BaseTest] Confirm Order Details 
+2018-06-08 07:00:33,199 INFO  [BaseTest] Close Browser 
+2018-06-08 07:00:33,807 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 07:00:38,443 INFO  [BaseTest] Member Signing In 
+2018-06-08 07:00:38,446 INFO  [BaseTest] Click on login link 
+2018-06-08 07:00:39,565 INFO  [BaseTest] Enter Email ID 
+2018-06-08 07:00:40,056 INFO  [BaseTest] Enter Password 
+2018-06-08 07:00:42,149 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 07:00:46,603 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 07:00:46,603 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 07:00:46,673 INFO  [BaseTest] Click on Search 
+2018-06-08 07:00:57,280 INFO  [BaseTest] Verfiy search result 
+2018-06-08 07:00:57,282 INFO  [BaseTest] Verify blank search result 
+2018-06-08 07:00:58,605 INFO  [BaseTest] Verify Member Price in Search List 
+2018-06-08 07:00:59,022 INFO  [BaseTest] Close Browser 
+2018-06-08 07:00:59,648 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 07:01:04,339 INFO  [BaseTest] User Signing In 
+2018-06-08 07:01:07,341 INFO  [BaseTest] Click on login link 
+2018-06-08 07:01:10,361 INFO  [BaseTest] Enter Email ID 
+2018-06-08 07:01:17,510 INFO  [BaseTest] Enter Password 
+2018-06-08 07:01:19,534 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 07:01:24,043 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 07:01:24,043 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 07:01:24,149 INFO  [BaseTest] Click on Search 
+2018-06-08 07:01:34,621 INFO  [BaseTest] Verfiy search result 
+2018-06-08 07:01:34,621 INFO  [BaseTest] Verify blank search result 
+2018-06-08 07:01:36,076 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 07:01:39,088 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 07:01:41,298 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 07:01:41,610 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-08 07:01:41,610 INFO  [BaseTest] Hover on Basket 
+2018-06-08 07:01:41,667 INFO  [BaseTest] Click Checkout 
+2018-06-08 07:03:42,287 INFO  [BaseTest] Edit Billing Address 
+2018-06-08 07:03:42,287 INFO  [BaseTest] Click on Edit Billing Address 
+2018-06-08 07:05:16,188 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 07:05:21,621 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 07:05:21,623 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 07:05:21,850 INFO  [BaseTest] Click on Search 
+2018-06-08 07:05:31,638 INFO  [BaseTest] Verfiy search result 
+2018-06-08 07:05:31,641 INFO  [BaseTest] Verify blank search result 
+2018-06-08 07:05:33,048 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 07:05:36,064 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 07:05:38,261 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 07:05:43,605 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-08 07:05:43,606 INFO  [BaseTest] Hover on Basket 
+2018-06-08 07:05:43,896 INFO  [BaseTest] Click Checkout 
+2018-06-08 07:05:45,418 INFO  [BaseTest] Enter Credentials and Sign In 
+2018-06-08 07:05:45,418 INFO  [BaseTest] Enter Email 
+2018-06-08 07:05:47,353 INFO  [BaseTest] Enter Password 
+2018-06-08 07:05:47,445 INFO  [BaseTest] Click SignIn 
+2018-06-08 07:05:47,612 INFO  [BaseTest] Enter Payment Details 
+2018-06-08 07:05:47,612 INFO  [BaseTest] Click on Payment Details 
+2018-06-08 07:05:50,555 INFO  [BaseTest] Click Pay by Credit Card 
+2018-06-08 07:05:53,724 INFO  [BaseTest] Select VISA Credit Card 
+2018-06-08 07:05:53,891 INFO  [BaseTest] Enter Card Number 
+2018-06-08 07:05:54,806 INFO  [BaseTest] Enter Cardholder's Name 
+2018-06-08 07:05:54,944 INFO  [BaseTest] Enter Card Expiry Month 
+2018-06-08 07:05:55,038 INFO  [BaseTest] Enter Card Expiry Year 
+2018-06-08 07:05:55,139 INFO  [BaseTest] Enter CVC Number 
+2018-06-08 07:05:55,212 INFO  [BaseTest] Click Submit 
+2018-06-08 07:05:55,390 INFO  [BaseTest] Enter Order Details 
+2018-06-08 07:05:55,394 INFO  [BaseTest] Select Country 
+2018-06-08 07:05:55,492 INFO  [BaseTest] Click Review Order 
+2018-06-08 07:05:57,452 INFO  [BaseTest] Check Terms and Conditions 
+2018-06-08 07:05:57,663 INFO  [BaseTest] Click Place Order 
+2018-06-08 07:05:57,796 INFO  [BaseTest] Confirm Order Details 
+2018-06-08 07:06:07,019 INFO  [BaseTest] Click Logout 
+2018-06-08 07:06:08,029 INFO  [BaseTest] Click Logout 
+2018-06-08 07:06:08,954 INFO  [BaseTest] Close Browser 
+2018-06-08 07:06:09,566 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 07:06:14,296 INFO  [BaseTest] Member Signing In 
+2018-06-08 07:06:14,300 INFO  [BaseTest] Click on login link 
+2018-06-08 07:06:15,419 INFO  [BaseTest] Enter Email ID 
+2018-06-08 07:06:15,897 INFO  [BaseTest] Enter Password 
+2018-06-08 07:06:17,984 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 07:06:22,395 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 07:06:22,395 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 07:06:22,465 INFO  [BaseTest] Click on Search 
+2018-06-08 07:06:31,339 INFO  [BaseTest] Verfiy search result 
+2018-06-08 07:06:31,340 INFO  [BaseTest] Verify blank search result 
+2018-06-08 07:06:32,754 INFO  [BaseTest] Verify Member Price in Search List 
+2018-06-08 07:06:33,848 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 07:06:36,850 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 07:06:39,016 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 07:06:44,523 INFO  [BaseTest] View Basket 
+2018-06-08 07:06:56,535 INFO  [BaseTest] Click on View Basket 
+2018-06-08 07:07:00,630 INFO  [BaseTest] Verify Member Price in Basket Page 
+2018-06-08 07:07:00,779 INFO  [BaseTest] Click Logout 
+2018-06-08 07:07:01,781 INFO  [BaseTest] Click Logout 
+2018-06-08 07:07:02,522 INFO  [BaseTest] Close Browser 
+2018-06-08 07:07:03,134 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 07:07:07,795 INFO  [BaseTest] User Signing In 
+2018-06-08 07:07:10,798 INFO  [BaseTest] Click on login link 
+2018-06-08 07:07:13,784 INFO  [BaseTest] Enter Email ID 
+2018-06-08 07:07:20,918 INFO  [BaseTest] Enter Password 
+2018-06-08 07:07:22,938 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 07:07:27,473 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 07:07:27,473 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 07:07:27,593 INFO  [BaseTest] Click on Search 
+2018-06-08 07:07:37,351 INFO  [BaseTest] Verfiy search result 
+2018-06-08 07:07:37,351 INFO  [BaseTest] Verify blank search result 
+2018-06-08 07:07:38,720 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 07:07:41,733 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 07:07:43,911 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 07:07:49,023 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-08 07:07:49,023 INFO  [BaseTest] Hover on Basket 
+2018-06-08 07:07:49,395 INFO  [BaseTest] Click Checkout 
+2018-06-08 07:07:50,642 INFO  [BaseTest] Edit Billing Address 
+2018-06-08 07:07:50,642 INFO  [BaseTest] Click on Edit Billing Address 
+2018-06-08 07:07:59,776 INFO  [BaseTest] Enter Payment Details 
+2018-06-08 07:07:59,776 INFO  [BaseTest] Click on Payment Details 
+2018-06-08 07:07:59,933 INFO  [BaseTest] Click Pay by Credit Card 
+2018-06-08 07:08:02,591 INFO  [BaseTest] Select VISA Credit Card 
+2018-06-08 07:08:02,746 INFO  [BaseTest] Enter Card Number 
+2018-06-08 07:08:03,716 INFO  [BaseTest] Enter Cardholder's Name 
+2018-06-08 07:08:03,862 INFO  [BaseTest] Enter Card Expiry Month 
+2018-06-08 07:08:03,990 INFO  [BaseTest] Enter Card Expiry Year 
+2018-06-08 07:08:04,087 INFO  [BaseTest] Enter CVC Number 
+2018-06-08 07:08:04,177 INFO  [BaseTest] Click Submit 
+2018-06-08 07:08:04,367 INFO  [BaseTest] Enter Order Details 
+2018-06-08 07:08:04,370 INFO  [BaseTest] Select Country 
+2018-06-08 07:08:04,472 INFO  [BaseTest] Click Review Order 
+2018-06-08 07:08:05,515 INFO  [BaseTest] Check Terms and Conditions 
+2018-06-08 07:08:05,712 INFO  [BaseTest] Click Place Order 
+2018-06-08 07:08:05,882 INFO  [BaseTest] Confirm Order Details 
+2018-06-08 07:08:36,317 INFO  [BaseTest] Close Browser 
+2018-06-08 07:13:09,591 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 07:13:15,131 INFO  [BaseTest] User Signing In 
+2018-06-08 07:13:18,140 INFO  [BaseTest] Click on login link 
+2018-06-08 07:13:21,219 INFO  [BaseTest] Enter Email ID 
+2018-06-08 07:13:28,356 INFO  [BaseTest] Enter Password 
+2018-06-08 07:13:30,380 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 07:13:34,940 INFO  [BaseTest] Perform Blank Search 
+2018-06-08 07:13:34,941 INFO  [BaseTest] Clear Text in Search textbox 
+2018-06-08 07:13:35,026 INFO  [BaseTest] Click on Search 
+2018-06-08 07:13:44,134 INFO  [BaseTest] Verfiy search result 
+2018-06-08 07:13:44,137 INFO  [BaseTest] Verify blank search result 
+2018-06-08 07:13:45,591 INFO  [BaseTest] Click on Add to Basket from Search List 
+2018-06-08 07:13:48,592 INFO  [BaseTest] Click on Add to Basket 
+2018-06-08 07:13:50,754 INFO  [BaseTest] Select Format and Click Ok 
+2018-06-08 07:13:51,068 INFO  [BaseTest] Click Checkout from Mini Basket 
+2018-06-08 07:13:51,070 INFO  [BaseTest] Hover on Basket 
+2018-06-08 07:13:51,149 INFO  [BaseTest] Click Checkout 
+2018-06-08 07:14:13,804 INFO  [BaseTest] Edit Billing Address 
+2018-06-08 07:14:13,804 INFO  [BaseTest] Click on Edit Billing Address 
+2018-06-08 07:14:22,337 INFO  [BaseTest] Enter Payment Details 
+2018-06-08 07:14:22,338 INFO  [BaseTest] Click on Payment Details 
+2018-06-08 07:14:22,523 INFO  [BaseTest] Click Pay by Credit Card 
+2018-06-08 07:14:25,175 INFO  [BaseTest] Select VISA Credit Card 
+2018-06-08 07:14:25,366 INFO  [BaseTest] Enter Card Number 
+2018-06-08 07:14:26,317 INFO  [BaseTest] Enter Cardholder's Name 
+2018-06-08 07:14:26,482 INFO  [BaseTest] Enter Card Expiry Month 
+2018-06-08 07:14:26,572 INFO  [BaseTest] Enter Card Expiry Year 
+2018-06-08 07:14:26,664 INFO  [BaseTest] Enter CVC Number 
+2018-06-08 07:14:26,740 INFO  [BaseTest] Click Submit 
+2018-06-08 07:14:26,915 INFO  [BaseTest] Enter Order Details 
+2018-06-08 07:14:26,919 INFO  [BaseTest] Select Country 
+2018-06-08 07:14:27,023 INFO  [BaseTest] Click Review Order 
+2018-06-08 07:14:38,784 INFO  [BaseTest] Check Terms and Conditions 
+2018-06-08 07:14:39,017 INFO  [BaseTest] Click Place Order 
+2018-06-08 07:14:39,215 INFO  [BaseTest] Confirm Order Details 
+2018-06-08 07:14:47,799 INFO  [BaseTest] Verify Billing Address 
+2018-06-08 07:14:47,799 INFO  [BaseTest] Click Logout 
+2018-06-08 07:14:48,801 INFO  [BaseTest] Click Logout 
+2018-06-08 07:14:49,825 INFO  [BaseTest] Close Browser 
+2018-06-08 09:18:58,696 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 09:19:05,834 INFO  [BaseTest] User Signing In 
+2018-06-08 09:19:08,849 INFO  [BaseTest] Click on login link 
+2018-06-08 09:19:12,326 INFO  [BaseTest] Enter Email ID 
+2018-06-08 09:19:19,477 INFO  [BaseTest] Enter Password 
+2018-06-08 09:19:21,515 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 09:19:26,631 INFO  [BaseTest] Search Paid Event 
+2018-06-08 09:19:26,631 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 09:19:26,898 INFO  [BaseTest] Click on Search 
+2018-06-08 09:19:29,192 INFO  [BaseTest] Select the Event 
+2018-06-08 09:19:56,775 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 09:19:56,775 INFO  [BaseTest] Click Book Now 
+2018-06-08 09:20:03,389 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 09:20:03,389 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 09:20:04,499 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 09:20:04,499 INFO  [BaseTest] Enter Title 
+2018-06-08 09:20:04,640 INFO  [BaseTest] Enter First Name 
+2018-06-08 09:20:04,905 INFO  [BaseTest] Enter Last Name 
+2018-06-08 09:20:05,069 INFO  [BaseTest] Enter Email ID 
+2018-06-08 09:20:05,270 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 09:20:05,418 INFO  [BaseTest] Enter Street Address 
+2018-06-08 09:20:05,655 INFO  [BaseTest] Enter City 
+2018-06-08 09:20:05,771 INFO  [BaseTest] Enter State/Province 
+2018-06-08 09:20:05,888 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 09:20:06,003 INFO  [BaseTest] Enter Country 
+2018-06-08 09:20:06,097 INFO  [BaseTest] Add Event to Basket and View Basket 
+2018-06-08 09:20:06,097 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 09:20:16,571 INFO  [BaseTest] View Basket 
+2018-06-08 09:20:25,576 INFO  [BaseTest] View Basket 
+2018-06-08 09:20:29,273 INFO  [BaseTest] Remove Event from Basket 
+2018-06-08 09:21:39,980 INFO  [BaseTest] Search Free Event 
+2018-06-08 09:21:39,980 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 09:21:40,239 INFO  [BaseTest] Click on Search 
+2018-06-08 09:21:41,936 INFO  [BaseTest] Select the Event 
+2018-06-08 09:21:44,637 INFO  [BaseTest] Click Book Now for Free Event 
+2018-06-08 09:21:44,637 INFO  [BaseTest] Click Book Now 
+2018-06-08 09:24:00,214 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 09:24:06,324 INFO  [BaseTest] User Signing In 
+2018-06-08 09:24:09,327 INFO  [BaseTest] Click on login link 
+2018-06-08 09:24:12,377 INFO  [BaseTest] Enter Email ID 
+2018-06-08 09:24:19,541 INFO  [BaseTest] Enter Password 
+2018-06-08 09:24:21,561 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 09:24:26,157 INFO  [BaseTest] Search Paid Event 
+2018-06-08 09:24:26,160 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 09:24:26,410 INFO  [BaseTest] Click on Search 
+2018-06-08 09:24:28,614 INFO  [BaseTest] Select the Event 
+2018-06-08 09:24:31,265 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 09:24:31,265 INFO  [BaseTest] Click Book Now 
+2018-06-08 09:24:36,709 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 09:24:36,709 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 09:30:16,794 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 09:30:22,578 INFO  [BaseTest] User Signing In 
+2018-06-08 09:30:25,584 INFO  [BaseTest] Click on login link 
+2018-06-08 09:30:28,656 INFO  [BaseTest] Enter Email ID 
+2018-06-08 09:30:35,771 INFO  [BaseTest] Enter Password 
+2018-06-08 09:30:37,795 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 09:30:42,510 INFO  [BaseTest] Search Paid Event 
+2018-06-08 09:30:42,510 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 09:30:42,801 INFO  [BaseTest] Click on Search 
+2018-06-08 09:30:45,023 INFO  [BaseTest] Select the Event 
+2018-06-08 09:30:47,283 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 09:30:47,283 INFO  [BaseTest] Click Book Now 
+2018-06-08 09:30:53,717 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 09:30:53,717 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 09:30:54,845 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 09:30:54,846 INFO  [BaseTest] Enter Title 
+2018-06-08 09:30:55,004 INFO  [BaseTest] Enter First Name 
+2018-06-08 09:30:55,250 INFO  [BaseTest] Enter Last Name 
+2018-06-08 09:30:55,462 INFO  [BaseTest] Enter Email ID 
+2018-06-08 09:30:55,631 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 09:30:55,759 INFO  [BaseTest] Enter Street Address 
+2018-06-08 09:30:55,982 INFO  [BaseTest] Enter City 
+2018-06-08 09:30:56,097 INFO  [BaseTest] Enter State/Province 
+2018-06-08 09:30:56,219 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 09:30:56,322 INFO  [BaseTest] Enter Country 
+2018-06-08 09:30:56,415 INFO  [BaseTest] Add Event to Basket and View Basket 
+2018-06-08 09:30:56,416 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 09:31:09,154 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 09:31:09,476 INFO  [BaseTest] Click on Search 
+2018-06-08 09:31:11,556 INFO  [BaseTest] Select the Product 
+2018-06-08 09:31:58,601 INFO  [BaseTest] Select the Format 
+2018-06-08 09:32:00,607 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 09:32:00,639 INFO  [BaseTest] Click on Add to Basket for Default Format product 
+2018-06-08 09:33:33,929 INFO  [BaseTest] Launching Chrome browser 
+2018-06-08 09:33:39,750 INFO  [BaseTest] User Signing In 
+2018-06-08 09:33:42,760 INFO  [BaseTest] Click on login link 
+2018-06-08 09:33:45,796 INFO  [BaseTest] Enter Email ID 
+2018-06-08 09:33:52,959 INFO  [BaseTest] Enter Password 
+2018-06-08 09:33:54,978 INFO  [BaseTest] Click on SignIn button 
+2018-06-08 09:33:59,613 INFO  [BaseTest] Search Paid Event 
+2018-06-08 09:33:59,615 INFO  [BaseTest] Enter event name in Search Box 
+2018-06-08 09:33:59,844 INFO  [BaseTest] Click on Search 
+2018-06-08 09:34:00,020 INFO  [BaseTest] Select the Event 
+2018-06-08 09:34:00,257 INFO  [BaseTest] Click Book Now for Paid Event 
+2018-06-08 09:34:00,257 INFO  [BaseTest] Click Book Now 
+2018-06-08 09:34:22,865 INFO  [BaseTest] Add Delegate to Event 
+2018-06-08 09:34:22,865 INFO  [BaseTest] Click Add Delegate 
+2018-06-08 09:34:24,002 INFO  [BaseTest] Add Delegate details to Event 
+2018-06-08 09:34:24,002 INFO  [BaseTest] Enter Title 
+2018-06-08 09:34:24,142 INFO  [BaseTest] Enter First Name 
+2018-06-08 09:34:24,410 INFO  [BaseTest] Enter Last Name 
+2018-06-08 09:34:24,583 INFO  [BaseTest] Enter Email ID 
+2018-06-08 09:34:24,765 INFO  [BaseTest] Enter Telephone Number 
+2018-06-08 09:34:24,902 INFO  [BaseTest] Enter Street Address 
+2018-06-08 09:34:25,132 INFO  [BaseTest] Enter City 
+2018-06-08 09:34:25,234 INFO  [BaseTest] Enter State/Province 
+2018-06-08 09:34:25,354 INFO  [BaseTest] Enter Zip Postal Code 
+2018-06-08 09:34:25,454 INFO  [BaseTest] Enter Country 
+2018-06-08 09:34:25,549 INFO  [BaseTest] Add Event to Basket and View Basket 
+2018-06-08 09:34:25,549 INFO  [BaseTest] Click Add Event to Basket 
+2018-06-08 09:35:04,564 INFO  [BaseTest] Enter product name in Search textbox 
+2018-06-08 09:35:25,608 INFO  [BaseTest] Click on Search 
+2018-06-08 09:35:31,259 INFO  [BaseTest] Select the Product 
+2018-06-08 09:35:42,414 INFO  [BaseTest] Select the Format 
+2018-06-08 09:35:55,133 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 09:36:17,654 INFO  [BaseTest] Click on Add to Basket for Default Format product 
+2018-06-08 09:39:52,743 INFO  [BaseTest] Check Visibility for Default Format product 
+2018-06-08 09:39:55,205 INFO  [BaseTest] Click on Add to Basket for Default Format product 
+2018-06-08 09:40:26,140 INFO  [BaseTest] Click on View Basket 
+2018-06-08 09:40:39,095 INFO  [BaseTest] Remove Event from Basket 
