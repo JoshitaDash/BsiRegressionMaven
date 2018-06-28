@@ -7,10 +7,10 @@
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile" /> 
 			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses" /> -->
-			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" /> -->
+			<class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" />
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket" /> -->
-			<class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket" />
-			<class name="com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode" />

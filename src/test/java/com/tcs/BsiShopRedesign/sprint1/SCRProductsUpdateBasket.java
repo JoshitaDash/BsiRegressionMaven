@@ -29,8 +29,8 @@ public class SCRProductsUpdateBasket extends BaseTest {
 		super();
 	}
 	
-	public Xls_Reader xls = new Xls_Reader(
-			"D:\\BSI_Workspace\\BsiShopRedesign\\TestData\\List_of_products_users-TCS.xls");
+	String userdir = System.getProperty("user.dir");
+	public Xls_Reader xls = new Xls_Reader(userdir + "\\TestData\\List_of_products_users-TCS.xls");
 	
 	String testCaseName = "Standard_Product_Update";
 	

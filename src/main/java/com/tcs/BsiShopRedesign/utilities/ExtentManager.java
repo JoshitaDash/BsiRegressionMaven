@@ -15,11 +15,11 @@ public class ExtentManager {
 		if (extent == null) {
 			Date d = new Date();
 			String fileName = d.toString().replace(":", "_").replace(" ", "_") + ".html";
-			//String projectPath = System.getProperty("user.dir");
-			//String reportPath = projectPath + "\\reports\\" + fileName;
+			String projectPath = System.getProperty("user.dir");
+			String reportPath = projectPath + "\\reports\\" + fileName;
 			// String demoReportPath = "C:\\Users\\529373\\Desktop\\BSI
 			// Automation Demo\\reports" + fileName;
-			String reportPath ="D:\\BSI_Workspace\\BsiShopRedesign\\reports\\" + fileName;
+			//String reportPath ="D:\\BSI_Workspace\\BsiShopRedesign\\reports\\" + fileName;
 		
 			
 			extent = new ExtentReports(reportPath, true, DisplayOrder.OLDEST_FIRST);

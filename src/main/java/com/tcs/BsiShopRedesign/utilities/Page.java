@@ -25,11 +25,11 @@ public class Page {
 		Page.driver = driver;
 
 		if (prop == null) {
-			// String userdir = System.getProperty("user.dir");
+			String userdir = System.getProperty("user.dir");
 			prop = new Properties();
 			System.out.println("Checking Properties Object");
-			// String filepath = userdir + "\\File.properties";
-			String filepath = "D:\\BSI_Workspace\\BsiShopRedesign\\File.properties";
+			String filepath = userdir + "\\File.properties";
+			//String filepath = "D:\\BSI_Workspace\\BsiShopRedesign\\File.properties";
 			System.out.println("Properties path: " + filepath);
 			// File file = new File(filepath);
 			System.out.println("Before File Input stream");
