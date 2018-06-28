@@ -52,7 +52,7 @@ public class BaseTest extends Page {
 
 				extent.addSystemInfo("User Name", "TCS").addSystemInfo("Host Name", "TCS")
 						.addSystemInfo("Selenium Version", "3.8.0").addSystemInfo("Environment", url)
-						.addSystemInfo("Browser", "Chrome 66.0.3");
+						.addSystemInfo("Browser", "Chrome 67.0");
 
 			}
 
@@ -93,7 +93,7 @@ public class BaseTest extends Page {
 
 				extent.addSystemInfo("User Name", "TCS").addSystemInfo("Host Name", "TCS")
 						.addSystemInfo("Selenium Version", "3.8.0").addSystemInfo("Environment", url)
-						.addSystemInfo("Browser", "Mozilla Firefox 59.0.3");
+						.addSystemInfo("Browser", "Mozilla Firefox 61.0");
 
 			} else if (driver == null) {
 				System.out.println("The tescase is skipped");
