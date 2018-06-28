@@ -50,7 +50,7 @@ public class SCRProductsUpdateBasket extends BaseTest {
 		try {
 			String prodName = data.get("Product_name");
 			test = extent.startTest("Sprint 1 - Search and Update Basket of SCR imported Product: " + prodName);
-
+			System.out.println("Test");
 			driver.get(url);
 			Log.info("Enter product name in Search textbox");
 			System.out.println("Enter product name in Search textbox");
