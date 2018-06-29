@@ -533,8 +533,10 @@ public class EventPage extends Page {
 			// click("editFirstEvent_xpath");
 			CommonHelper.elementToBeVisible("editFirstEvent_xpath");
 			CommonHelper.elementToBeClickable("editFirstEvent_xpath");
-			CommonHelper.clickByJS("editFirstEvent_xpath");
-			// Thread.sleep(2000);
+			click("editFirstEvent_xpath");
+			//CommonHelper.clickByJS("editFirstEvent_xpath");
+			//Thread.sleep(2000);
+			CommonHelper.elementToBeClickable("divCollapsed_xpath");
 			click("divCollapsed_xpath");
 
 			Thread.sleep(1000);
@@ -560,8 +562,8 @@ public class EventPage extends Page {
 			// ele.get(2).click();
 			CommonHelper.elementToBeVisible("editSecondEvent_xpath");
 			CommonHelper.elementToBeClickable("editSecondEvent_xpath");
-			CommonHelper.clickByJS("editSecondEvent_xpath");
-			// click("editSecondEvent_xpath");
+			//CommonHelper.clickByJS("editSecondEvent_xpath");
+			click("editSecondEvent_xpath");
 
 			Thread.sleep(1000);
 			click("divCollapsed_xpath");
