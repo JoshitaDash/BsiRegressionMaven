@@ -27,7 +27,6 @@ public class CommonHelper extends Page {
 
 	public CommonHelper() throws Exception {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	public static boolean checkVisibility(By by) {
@@ -81,10 +80,10 @@ public class CommonHelper extends Page {
 		String result = null;
 		try {
 			FileReader reader;
-			// String userdir = System.getProperty("user.dir");
-			// reader = new FileReader(userdir +
-			// "\\TestData\\TestData.properties");
-			reader = new FileReader("D:\\BSI_Workspace\\BsiShopRedesign\\TestData\\TestData.properties");
+			String userdir = System.getProperty("user.dir");
+			reader = new FileReader(userdir + "\\TestData\\TestData.properties");
+			// reader = new
+			// FileReader("D:\\BSI_Workspace\\BsiShopRedesign\\TestData\\TestData.properties");
 			Properties p = new Properties();
 			p.load(reader);
 
@@ -239,8 +238,6 @@ public class CommonHelper extends Page {
 
 	}
 
-	
-
 	public static String windowHandle() {
 		try {
 
@@ -261,9 +258,7 @@ public class CommonHelper extends Page {
 		}
 		return null;
 	}
-	
-	
-	
+
 	public static void mHover(String locator) {
 		try {
 			Actions action = new Actions(driver);
