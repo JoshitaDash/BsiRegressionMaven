@@ -86,7 +86,7 @@ public class BookEvent extends BaseTest {
 		}
 	}
 
-	@Test(priority = 3, enabled = true)
+	@Test(priority = 3, enabled = false)
 	public void BookFreeEvent() {
 
 		test = extent.startTest("Sprint 2 - Book Free Event");
