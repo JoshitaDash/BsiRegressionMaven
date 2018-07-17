@@ -51,10 +51,12 @@ public class BookEvent extends BaseTest {
 			Log.info("Click Book Now for Paid Event");
 			event.bookPaidEvent();
 
+			Thread.sleep(5000);
 			System.out.println("Add Delegate to Event");
 			Log.info("Add Delegate to Event");
 			event.clickAddDelegate();
 
+			//Thread.sleep(5000);
 			System.out.println("Add Delegate details to Event");
 			Log.info("Add Delegate details to Event");
 			event.addDelegateDetails();

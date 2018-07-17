@@ -57,10 +57,11 @@ public class BaseTest extends Page {
 			}
 
 			else if (browser.equalsIgnoreCase("IE")) {
-
+				String projectPath = System.getProperty("user.dir");
 				DesiredCapabilities cap = null;
-				System.setProperty("webdriver.ie.driver",
-						"D:\\BSI_Workspace\\BsiShopRedesign\\lib\\IEDriverServer_Win32_3.9.0\\IEDriverServer.exe");
+				System.setProperty("webdriver.ie.driver", projectPath + "\\\\lib\\\\IEDriverServer_Win32_3.9.0\\\\IEDriverServer.exe");
+				/*System.setProperty("webdriver.ie.driver",
+						"D:\\BSI_Workspace\\BsiShopRedesign\\lib\\IEDriverServer_Win32_3.9.0\\IEDriverServer.exe");*/
 				cap = DesiredCapabilities.internetExplorer();
 				cap.setCapability(CapabilityType.BROWSER_NAME, "internet explorer");
 				cap.setCapability(InternetExplorerDriver.NATIVE_EVENTS, true);

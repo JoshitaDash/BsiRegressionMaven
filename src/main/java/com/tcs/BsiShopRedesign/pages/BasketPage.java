@@ -1,6 +1,7 @@
 package com.tcs.BsiShopRedesign.pages;
 
 import java.lang.reflect.Array;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -226,8 +227,7 @@ public class BasketPage extends Page {
 			test.log(LogStatus.INFO, "Remove Product and Event from Basket");
 			for (int i = 1; i <= 2; i++) {
 				Thread.sleep(3000);
-				CommonHelper.elementToBeClickable("removeItem_id");
-				click("removeItem_id");
+				click("removeEvent_xpath");
 				// CommonHelper.clickByJS("removeEvent_xpath");
 			}
 
@@ -345,6 +345,17 @@ public class BasketPage extends Page {
 			CommonHelper.scrolltoview("quesMUNL_xpath");
 			selectFirstOption("quesMUNL_xpath");
 
+			test.log(LogStatus.INFO, "Select How would you like to be contacted?");
+			System.out.println("Enter How would you like to be contacted?");
+			Log.info("Enter How would you like to be contacted?");
+			List<WebElement> checkBox = driver.findElements(By.cssSelector("input[type='checkbox']"));
+			checkBox.get(0).click();
+
+			test.log(LogStatus.INFO, "Select Terms and Conditions");
+			System.out.println("Select Terms and Conditions");
+			Log.info("Select Terms and Conditions");
+			checkBox.get(4).click();
+
 			test.log(LogStatus.INFO, " Click on Submit");
 			System.out.println("Click on Submit");
 			Log.info("Click on Submit");
@@ -367,9 +378,9 @@ public class BasketPage extends Page {
 			test.log(LogStatus.INFO, "Verify MUNL Request");
 			System.out.println("Verify MUNL Request");
 			Log.info("Verify MUNL Request");
-			// String verifyText =
-			// CommonHelper.element("verifyMUNL_xpath").getText();
-			String verifyText = driver.findElement(By.id("pardot-form")).getText();
+  			CommonHelper.scrolltoview("verifyMUNL_xpath");
+			String verifyText = CommonHelper.element("verifyMUNL_xpath").getText();
+			// String verifyText = driver.findElement(By.id("pardot-form")).getText();
 			System.out.println("The verification message is: " + verifyText);
 			test.log(LogStatus.PASS, "The verification message is: " + verifyText);
 
@@ -390,10 +401,17 @@ public class BasketPage extends Page {
 	public void clickCheckout() {
 
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
+			test.log(LogStatus.INFO, "Click on Checkout");
+			System.out.println("Click on Checkout");
+			Log.info("Click on Checkout");
+			Thread.sleep(1000);
 			WebElement checkout = driver.findElement(By.cssSelector("button[title='Checkout Now']"));
 			if (checkout.isDisplayed() || checkout.isEnabled()) {
-				checkout.click();
+				Thread.sleep(1000);
+			CommonHelper.clickJS(checkout);
+				//checkout.click();
+				Thread.sleep(2000);
 			}
 		}
 
@@ -415,11 +433,11 @@ public class BasketPage extends Page {
 			String priceText = unitPrice.getText();
 			String finalPriceText = finalPrice.getText();
 			String totalPriceText = totalPrice.getText();
-			
+
 			String memPrice1 = memPrice.getText();
 			String[] splitMemPrice = memPrice1.split(" ", 3);
 			String memPriceText = splitMemPrice[2];
-		
+
 			priceText = priceText.substring(1);
 			finalPriceText = finalPriceText.substring(1);
 			memPriceText = memPriceText.substring(1);

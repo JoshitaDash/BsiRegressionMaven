@@ -20,7 +20,7 @@ public class CheckWarningMsgAddtoBasket extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void checkWarningMsgPDF() {
 
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 
 		try {
 
