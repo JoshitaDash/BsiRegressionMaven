@@ -1,8 +1,11 @@
 package com.tcs.BsiShopRedesign.pages;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -22,20 +25,21 @@ public class DownloadMMPage extends Page {
 			Log.info("Click on Download Now");
 			System.out.println("Click on Download Now");
 			test.log(LogStatus.INFO, "Click on Download Now");
-			CommonHelper.elementToBeClickable("downloadNow_xpath");	
-			//click("downloadNow_xpath");
-			CommonHelper.clickByJS("downloadNow_xpath");
-
+			CommonHelper.elementToBeClickable("downloadNow_xpath");
+			Thread.sleep(1000);
+			click("downloadNow_xpath");
+			// CommonHelper.clickByJS("downloadNow_xpath");
+			/*Thread.sleep(2000);
 			System.out.println("Switch to 2nd tab");
 			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-			driver.switchTo().window(tabs2.get(1));	
-			//CommonHelper.windowHandle();
-			Thread.sleep(5000);
-			System.out.println("Switched to 2nd tab");
-			System.out.println("Switch iFrame");
-			Thread.sleep(10000);
-			driver.switchTo().frame(0);
+			driver.switchTo().window(tabs2.get(1));
+			// CommonHelper.windowHandle();
 			Thread.sleep(2000);
+			System.out.println("Switched to 2nd tab");*/
+			System.out.println("Switch iFrame");
+			Thread.sleep(1000);
+			driver.switchTo().frame(0);
+			Thread.sleep(1000);
 			System.out.println("iframe switched");
 
 		} catch (Exception e) {
@@ -50,8 +54,8 @@ public class DownloadMMPage extends Page {
 		try {
 			/*
 			 * if (CommonHelper.element("clickHere_xpath").isDisplayed() ||
-			 * CommonHelper.element("clickHere_xpath") != null) {
-			 * test.log(LogStatus.INFO, "Click on the Click Here link");
+			 * CommonHelper.element("clickHere_xpath") != null) { test.log(LogStatus.INFO,
+			 * "Click on the Click Here link");
 			 * System.out.println("Click on the Click Here link"); Log.info(
 			 * "Click on the Click Here link"); click("clickHere_xpath");
 			 * CommonHelper.isVisisble("titlePAS_xpath");
@@ -119,6 +123,17 @@ public class DownloadMMPage extends Page {
 			Log.info("Enter Job Title");
 			enterText("jobtitleGR_xpath", "GR Job Title");
 
+			test.log(LogStatus.INFO, "Select How would you like to be contacted?");
+			System.out.println("Enter How would you like to be contacted?");
+			Log.info("Enter How would you like to be contacted?");
+			List<WebElement> checkBox = driver.findElements(By.cssSelector("input[type='checkbox']"));
+			checkBox.get(0).click();
+
+			test.log(LogStatus.INFO, "Select Terms and Conditions");
+			System.out.println("Select Terms and Conditions");
+			Log.info("Select Terms and Conditions");
+			checkBox.get(4).click();
+
 			test.log(LogStatus.INFO, "Click on Submit");
 			System.out.println("Click on Submit");
 			Log.info("Click on Submit");
@@ -134,6 +149,8 @@ public class DownloadMMPage extends Page {
 
 	public void verifyPdf() {
 		try {
+			
+			Thread.sleep(2000);
 			test.log(LogStatus.INFO, "Verify Governance Resilience Pdf");
 			System.out.println("Verify Governance Resilience Pdf");
 			Log.info("Verify Governance Resilience Pdf");
@@ -145,11 +162,10 @@ public class DownloadMMPage extends Page {
 				System.out.println(urlText);
 				test.log(LogStatus.PASS, urlText);
 			}
-			driver.close();
+			/*driver.close();
 			System.out.println("Switch back to 1st tab");
 			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-			driver.switchTo().window(tabs2.get(0));
-			
+			driver.switchTo().window(tabs2.get(0));*/
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Governance Resilience Pdf was unsuccessful");
@@ -174,15 +190,14 @@ public class DownloadMMPage extends Page {
 	 * PDFParser(file);
 	 * 
 	 * parser.parse(); cosDoc = parser.getDocument(); pdfStripper = new
-	 * PDFTextStripper(); pdfStripper.setStartPage(1);
-	 * pdfStripper.setEndPage(1);
+	 * PDFTextStripper(); pdfStripper.setStartPage(1); pdfStripper.setEndPage(1);
 	 * 
-	 * pdDoc = new PDDocument(cosDoc); parsedText = pdfStripper.getText(pdDoc);
-	 * } catch (MalformedURLException e2) { System.err.println(
-	 * "URL string could not be parsed "+e2.getMessage()); } catch (IOException
-	 * e) { System.err.println("Unable to open PDF Parser. " + e.getMessage());
-	 * try { if (cosDoc != null) cosDoc.close(); if (pdDoc != null)
-	 * pdDoc.close(); } catch (Exception e1) { e.printStackTrace(); } }
+	 * pdDoc = new PDDocument(cosDoc); parsedText = pdfStripper.getText(pdDoc); }
+	 * catch (MalformedURLException e2) { System.err.println(
+	 * "URL string could not be parsed "+e2.getMessage()); } catch (IOException e) {
+	 * System.err.println("Unable to open PDF Parser. " + e.getMessage()); try { if
+	 * (cosDoc != null) cosDoc.close(); if (pdDoc != null) pdDoc.close(); } catch
+	 * (Exception e1) { e.printStackTrace(); } }
 	 * 
 	 * System.out.println("+++++++++++++++++"); System.out.println(parsedText);
 	 * System.out.println("+++++++++++++++++");

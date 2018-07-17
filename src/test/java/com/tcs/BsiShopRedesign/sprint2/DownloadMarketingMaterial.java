@@ -20,7 +20,7 @@ public class DownloadMarketingMaterial extends BaseTest {
 		super();
 	}
 
-	@Test(priority = 1, enabled = true)
+	@Test(priority = 1, enabled = false)
 	public void signIn() {
 
 		try {
@@ -81,10 +81,10 @@ public class DownloadMarketingMaterial extends BaseTest {
 			System.out.println("Verify Governance Resilience pdf download");
 			down.verifyPdf();
 
-			System.out.println("Click Logout");
+			/*System.out.println("Click Logout");
 			Log.info("Click Logout");
 			HomePage event = new HomePage(driver);
-			event.clickLogout();
+			event.clickLogout();*/
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Download Materials for Governance Resilience product was unsuccessful");

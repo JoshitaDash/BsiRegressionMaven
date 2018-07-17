@@ -11,9 +11,9 @@ import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
-public class EditCheckoutAddress extends BaseTest {
+public class EditCheckoutBillingAddress extends BaseTest {
 
-	public EditCheckoutAddress() throws Exception {
+	public EditCheckoutBillingAddress() throws Exception {
 		super();
 	}
 
@@ -67,9 +67,9 @@ public class EditCheckoutAddress extends BaseTest {
 			CheckoutPage checkOut = new CheckoutPage(driver);
 			checkOut.clickMiniCartCheckout();
 
-			System.out.println("Edit Billing Address");
-			Log.info("Edit Billing Address");
-			test.log(LogStatus.INFO, "Edit Billing Address");
+			System.out.println("Edit Checkout Billing Address");
+			Log.info("Edit Checkout Billing Address");
+			test.log(LogStatus.INFO, "Edit Checkout Billing Address");
 			String bllingAddress = checkOut.editBillingAddress();
 
 			System.out.println("Enter Payment Details");

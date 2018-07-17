@@ -9,14 +9,17 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -269,5 +272,30 @@ public class CommonHelper extends Page {
 			e.printStackTrace();
 
 		}
+	}
+
+	public static boolean isElementHiddenNow(String xpath) {
+		turnOffImplicitWaits();
+		boolean result = ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)).apply(driver);
+		turnOnImplicitWaits();
+		return result;
+	}
+
+	public static void turnOffImplicitWaits() {
+		driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+	}
+
+	public static void turnOnImplicitWaits() {
+		driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
+	}
+
+	public static void waitForLoad(WebDriver driver) {
+		ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
+			public Boolean apply(WebDriver driver) {
+				return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+			}
+		};
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(pageLoadCondition);
 	}
 }
