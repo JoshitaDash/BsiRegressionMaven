@@ -13,7 +13,6 @@ public class MyProfileMemberPage extends Page {
 
 	public MyProfileMemberPage(WebDriver driver) throws Exception {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	public void clickMemberTab() {

@@ -44,11 +44,6 @@ public class SubscriptionsPage extends Page {
 			Log.info("Click on Request a Quote");
 			click("requestQuote_css");
 
-			System.out.println("Switch iFrame");
-			driver.switchTo().frame(0);
-			Thread.sleep(3000);
-			System.out.println("iframe switched");
-
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Click on Request a Quote was unsuccessful");
 			e.printStackTrace();
@@ -63,15 +58,23 @@ public class SubscriptionsPage extends Page {
 			test.log(LogStatus.INFO, "Enter BSOL Pardot form details");
 			System.out.println("Enter BSOL Pardot form details");
 			Log.info("Enter BSOL Pardot form details");
-
 			/*
-			 * if (CommonHelper.element("clickHere_xpath").isDisplayed() ||
-			 * CommonHelper.element("clickHere_xpath") != null) { click("clickHere_xpath");
-			 * CommonHelper.isVisisble("title_css");
+			 * boolean clickHere =
+			 * driver.findElement(By.xpath("//*[@id='pardot-form']/p[1]/span/a")).
+			 * isDisplayed(); if (clickHere) { click("clickHere_xpath");
+			 * System.out.println("Switch iFrame"); driver.switchTo().frame(0);
+			 * Thread.sleep(3000); System.out.println("iframe switched");
+			 * CommonHelper.isElementVisible("title_css");
 			 * CommonHelper.elementToBeClickable("title_css"); enterBSOLPardotFormDetails();
 			 * 
 			 * } else {
 			 */
+
+			System.out.println("Switch iFrame");
+			driver.switchTo().frame(0);
+			Thread.sleep(3000);
+			System.out.println("iframe switched");
+
 			CommonHelper.isElementVisible("title_css");
 			CommonHelper.elementToBeClickable("title_css");
 			enterBSOLPardotFormDetails();
@@ -249,32 +252,39 @@ public class SubscriptionsPage extends Page {
 	}
 
 	public void enterCNPardotDetails() {
-
 		try {
+			System.out.println("Switch iFrame");
+			driver.switchTo().frame(0);
+			Thread.sleep(3000);
+			System.out.println("iframe switched");
 
-			/*if (CommonHelper.element("clickHere_xpath") != null
-					|| CommonHelper.element("clickHere_xpath").isDisplayed()) {
-				test.log(LogStatus.INFO, "Click on the Click Here link");
-				System.out.println("Click on the Click Here link");
-				Log.info("Click on the Click Here link");
-				click("clickHere_xpath");
-				CommonHelper.elementToBeClickable("firstNameCN_xpath");
-				CommonHelper.isVisisble("firstNameCN_xpath");
+			boolean clickHere = driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
 
-				test.log(LogStatus.INFO, "Enter Compliance Navigator Pardot Form Details");
-				System.out.println("Enter Compliance Navigator Pardot Form Details");
-				Log.info("Enter Compliance Navigator Pardot Form Details");
-				enterCNPardotFormDetails();
+			if (clickHere)
+				if (CommonHelper.element("clickHere_xpath") != null
+						|| CommonHelper.element("clickHere_xpath").isDisplayed()) {
+					test.log(LogStatus.INFO, "Click on the Click Here link");
+					System.out.println("Click on the Click Here link");
+					Log.info("Click on the Click Here link");
+					driver.findElement(By.xpath("//*[@id='pardot-form']/p[1]/span/a")).click();
+					// click("clickHere_xpath");
+					CommonHelper.elementToBeClickable("firstNameCN_xpath");
+					CommonHelper.isElementVisible("firstNameCN_xpath");
 
-			} else {
+					test.log(LogStatus.INFO, "Enter Compliance Navigator Pardot Form Details");
+					System.out.println("Enter Compliance Navigator Pardot Form Details");
+					Log.info("Enter Compliance Navigator Pardot Form Details");
+					enterCNPardotFormDetails();
 
-				test.log(LogStatus.INFO, "Enter Compliance Navigator Pardot Form Details");
-				System.out.println("Enter Compliance Navigator Pardot Form Details");
-				Log.info("Enter Compliance Navigator Pardot Form Details");*/
-				// CommonHelper.isVisisble("title_css");
-				// CommonHelper.elementToBeClickable("title_css");
-				enterCNPardotFormDetails();
-			//}
+				} else {
+
+					test.log(LogStatus.INFO, "Enter Compliance Navigator Pardot Form Details");
+					System.out.println("Enter Compliance Navigator Pardot Form Details");
+					Log.info("Enter Compliance Navigator Pardot Form Details");
+					// CommonHelper.isVisisble("title_css");
+					// CommonHelper.elementToBeClickable("title_css");
+					enterCNPardotFormDetails();
+				}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Pardot Form details was unsuccessful");
 			Assert.fail(e.getMessage());

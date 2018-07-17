@@ -28,24 +28,18 @@ public class SearchPage extends Page {
 	public boolean countPAS() {
 
 		boolean isNextButtonDisplayed = false;
-		int counter = 0;
+		int counter = 1;
 		int productLink = 0;
 		String productLinkText;
 		int numOfProducts = 0;
 
 		try {
-			// isNextButtonDisplayed = CommonHelper.isVisisble("next_xpath");
-			driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
-			isNextButtonDisplayed = true;
-		} catch (Exception e) {
-			isNextButtonDisplayed = false;
-			e.printStackTrace();
-		}
-
-		try {
 
 			do {
 
+				isNextButtonDisplayed = !CommonHelper.isElementHiddenNow("(//span[text()='Next'])[2]");
+
+				selectMaxItems();
 				test.log(LogStatus.INFO, "Count product on the Search List");
 				Log.info("Count product on the Search List");
 				System.out.println("Count product on the Search List");
@@ -54,28 +48,22 @@ public class SearchPage extends Page {
 				productLink = driver.findElements(By.cssSelector("a[class='product-item-link']")).size();
 				productLinkText = Integer.toString(productLink);
 
-				if (isNextButtonDisplayed) {
-					counter = 1;
+				if (isNextButtonDisplayed) {					
 					CommonHelper.elementToBeVisible("next_xpath");
 					CommonHelper.scrolltoview("next_xpath");
-					test.log(LogStatus.INFO, "Click on Next" + "The current page is: " + counter);
+					test.log(LogStatus.INFO, "Click on Next" + "The current page is: " + counter++);
 					System.out.println("Click on Next");
 					Log.info("Click on Next");
 					driver.findElement(By.xpath("(//span[text()='Next'])[2]")).click();
-					try {
-						// isNextButtonDisplayed =
-						// CommonHelper.isVisisble("next_xpath");
-						driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
-						isNextButtonDisplayed = true;
-					} catch (Exception e) {
-						isNextButtonDisplayed = false;
-						e.printStackTrace();
-					}
-
+					Thread.sleep(30000);
+					isNextButtonDisplayed = !CommonHelper.isElementHiddenNow("(//span[text()='Next'])[2]");
+					
 				}
+				Thread.sleep(2000);
 				numOfProducts += productLink;
+				
 			} while (isNextButtonDisplayed);
-
+			
 			if (counter != 0) {
 				test.log(LogStatus.INFO, "Count product");
 				Log.info("Count product");
@@ -85,6 +73,7 @@ public class SearchPage extends Page {
 				productLink = driver.findElements(By.cssSelector("a[class='product-item-link']")).size();
 				productLinkText = Integer.toString(productLink);
 				numOfProducts += productLink;
+				Thread.sleep(2000);
 			}
 
 			String searchCount = CommonHelper.element("productTextCount_xpath").getText();
@@ -210,8 +199,8 @@ public class SearchPage extends Page {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.visibilityOfAllElements(
-					driver.findElements(By.xpath("//*[@id='search_price_layout']/div[1]/div[2]"))));
-			List<WebElement> statusDate = driver.findElements(By.xpath("//*[@id='search_price_layout']/div[1]/div[2]"));
+					driver.findElements(By.xpath("//div[contains(@class,'search_price_layout')]//div[1]/div[2]"))));
+			List<WebElement> statusDate = driver.findElements(By.xpath("//div[contains(@class,'search_price_layout')]//div[1]/div[2]"));
 			// System.out.println("The status and date is: " + statusDate);
 
 			ArrayList<Date> obtainedList = new ArrayList<Date>();
@@ -338,11 +327,11 @@ public class SearchPage extends Page {
 	public void checkSortingByPublishedDate() {
 
 		boolean isNextButtonDisplayed = false;
-		int counter = 0;
+		int counter = 1;
 
 		try {
-			// isNextButtonDisplayed = CommonHelper.isVisisble("next_xpath");
-			driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
+			 isNextButtonDisplayed = CommonHelper.isElementHiddenNow("next_xpath");
+			//driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
 			isNextButtonDisplayed = true;
 		} catch (Exception e) {
 			isNextButtonDisplayed = false;
@@ -351,27 +340,30 @@ public class SearchPage extends Page {
 		try {
 
 			do {
+				selectMaxItems();
+				Thread.sleep(5000);
 				test.log(LogStatus.INFO, "Select Sort By Published Date");
 				System.out.println("Select Sort By Published Date");
 				Log.info("Select Sort By Published Date");
 				selectSortByPublishedDate();
+				Thread.sleep(5000);
 				test.log(LogStatus.INFO, "Sort List of Products in Descending Order");
 				System.out.println("Sort List of Products in Descending Order");
 				Log.info("Sort List of Products in Descending Order");
 				publishedDateSorting();
 
 				if (isNextButtonDisplayed) {
-					counter = 1;
 					CommonHelper.elementToBeVisible("next_xpath");
 					CommonHelper.scrolltoview("next_xpath");
-					test.log(LogStatus.INFO, "Click on Next" + "The current page is: " + counter + 1);
+					test.log(LogStatus.INFO, "Click on Next" + "The current page is: " + counter++);
 					System.out.println("Click on Next");
 					Log.info("Click on Next");
 					driver.findElement(By.xpath("(//span[text()='Next'])[2]")).click();
+					Thread.sleep(20000);
 					try {
-						// isNextButtonDisplayed =
-						// CommonHelper.isVisisble("next_xpath");
-						driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
+						 isNextButtonDisplayed=CommonHelper.isElementHiddenNow("next_xpath");
+						//driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
+						
 						isNextButtonDisplayed = true;
 					} catch (Exception e) {
 						isNextButtonDisplayed = false;
@@ -379,6 +371,7 @@ public class SearchPage extends Page {
 					}
 
 				}
+				Thread.sleep(2000);
 			} while (isNextButtonDisplayed);
 
 			if (counter != 0) {

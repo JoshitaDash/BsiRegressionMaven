@@ -108,14 +108,14 @@ public class RegisterSubscriptions extends BaseTest {
 			Log.info("Enter Pardot Form details");
 			compNav.enterEurocodePardotDetails();
 
-			System.out.println("Verify Complaince Navigator Pardot Form");
-			Log.info("Verify Complaince Navigator Pardot Form");
+			System.out.println("Verify Eurocode Pardot Form");
+			Log.info("Verify Eurocode Pardot Form");
 			compNav.verifyPardotForm();
 			Thread.sleep(2000);
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Register Complaince Navigator Quote was unsuccessful");
-			CommonHelper.reportFailure("Register Complaince Navigator Quote was unsuccessful");
+			test.log(LogStatus.FATAL, "Register Eurocode Quote was unsuccessful");
+			CommonHelper.reportFailure("Register Eurocode Quote was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

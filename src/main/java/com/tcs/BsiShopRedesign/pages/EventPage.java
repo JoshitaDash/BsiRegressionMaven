@@ -86,6 +86,7 @@ public class EventPage extends Page {
 			System.out.println("Click Book Now");
 			CommonHelper.scrolltoview("addEventCart_id");
 			click("addEventCart_id");
+			Thread.sleep(2000);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Click Book Now was unsuccessful");
@@ -101,10 +102,11 @@ public class EventPage extends Page {
 			test.log(LogStatus.INFO, "Click Add Delegate");
 			Log.info("Click Add Delegate");
 			System.out.println("Click Add Delegate");
-			// click("addDelegate_id");
 			Thread.sleep(1000);
-			driver.findElement(By.cssSelector("input[class='addDelegate']")).click();
-			// click("addFirstDelegate_xpath");
+			click("addDelegate_css");
+			Thread.sleep(1000);
+			//driver.findElement(By.cssSelector("input[class='addDelegate']")).click();
+			//click("addFirstDelegate_xpath");
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Click Add Delegate was unsuccessful");
@@ -152,6 +154,7 @@ public class EventPage extends Page {
 	public void addDelegateDetails() {
 
 		try {
+			Thread.sleep(2000);
 			test.log(LogStatus.INFO, "Enter Title");
 			Log.info("Enter Title");
 			System.out.println("Enter Title");
@@ -326,7 +329,8 @@ public class EventPage extends Page {
 			Thread.sleep(3000);
 			CommonHelper.elementToBeVisible("removeEvent_xpath");
 			CommonHelper.elementToBeClickable("removeEvent_xpath");
-			click("removeEvent_xpath");
+			//click("removeEvent_xpath");
+			CommonHelper.clickByJS("removeEvent_xpath");
 
 			Thread.sleep(5000);
 			test.log(LogStatus.INFO, "Verify Remove Basket");
@@ -535,7 +539,7 @@ public class EventPage extends Page {
 			CommonHelper.elementToBeClickable("editFirstEvent_xpath");
 			click("editFirstEvent_xpath");
 			//CommonHelper.clickByJS("editFirstEvent_xpath");
-			//Thread.sleep(2000);
+			Thread.sleep(3000);
 			CommonHelper.elementToBeClickable("divCollapsed_xpath");
 			click("divCollapsed_xpath");
 
@@ -556,17 +560,18 @@ public class EventPage extends Page {
 			// click("updateEvent_css");
 
 			Thread.sleep(2000);
-			test.log(LogStatus.INFO, "Click on Second First Event");
-			Log.info("Click on Second First Event");
-			System.out.println("Click on Edit Second Event");
+			test.log(LogStatus.INFO, "Click Edit for Second  Event");
+			Log.info("Click Edit for Second Event");
+			System.out.println("Click Edit for Second Event");
 			// ele.get(2).click();
 			CommonHelper.elementToBeVisible("editSecondEvent_xpath");
 			CommonHelper.elementToBeClickable("editSecondEvent_xpath");
 			//CommonHelper.clickByJS("editSecondEvent_xpath");
 			click("editSecondEvent_xpath");
 
-			Thread.sleep(1000);
-			click("divCollapsed_xpath");
+			Thread.sleep(3000);
+			CommonHelper.elementToBeClickable("divCollapsed_css");
+			click("divCollapsed_css");
 			test.log(LogStatus.INFO, "Edit Second Event Delegate Details");
 			Log.info("Edit Second Event Delegate Details");
 			System.out.println("Edit Second Event Delegate Details");

@@ -34,6 +34,7 @@ public class SearchSortOrderByPublishedDate extends BaseTest {
 			System.out.println("Select Published Date and Verify Sorting");
 			Log.info("Select Published Date and Verify Sorting");
 			test.log(LogStatus.INFO, "Select Published Date and Verify Sorting");
+			//SearchPage search = new SearchPage(driver);
 			search.checkSortingByPublishedDate();
 
 		} catch (Exception e) {

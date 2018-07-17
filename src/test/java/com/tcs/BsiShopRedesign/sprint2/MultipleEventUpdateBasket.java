@@ -15,7 +15,7 @@ public class MultipleEventUpdateBasket extends BaseTest {
 		super();
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1, enabled = true)
 	public void signIn() {
 
 		try {
@@ -48,6 +48,7 @@ public class MultipleEventUpdateBasket extends BaseTest {
 			Log.info("Click Book Now for Paid Event");
 			event.bookPaidEvent();
 
+			Thread.sleep(5000);
 			System.out.println("Add Delegate to Event");
 			Log.info("Add Delegate to Event");
 			event.clickAddDelegate();
@@ -68,10 +69,12 @@ public class MultipleEventUpdateBasket extends BaseTest {
 			Log.info("Click Book Now for Paid Event");
 			event.bookPaidEvent();
 
+			Thread.sleep(5000);
 			System.out.println("Add Delegate to Event");
 			Log.info("Add Delegate to Event");
 			event.clickAddDelegate();
 
+			//Thread.sleep(5000);
 			System.out.println("Add Delegate details to Event");
 			Log.info("Add Delegate details to Event");
 			event.addDelegateDetails();

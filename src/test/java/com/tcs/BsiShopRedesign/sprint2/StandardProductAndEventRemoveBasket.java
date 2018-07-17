@@ -58,11 +58,14 @@ public class StandardProductAndEventRemoveBasket extends BaseTest {
 			Log.info("Click Book Now for Paid Event");
 			event.bookPaidEvent();
 
+			
 			// test = extent.startTest("Add Delegate to Event");
+			Thread.sleep(5000);
 			System.out.println("Add Delegate to Event");
 			Log.info("Add Delegate to Event");
 			event.clickAddDelegate();
 
+			
 			System.out.println("Add Delegate details to Event");
 			Log.info("Add Delegate details to Event");
 			event.addDelegateDetails();

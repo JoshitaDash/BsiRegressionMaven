@@ -2,6 +2,7 @@ package com.tcs.BsiShopRedesign.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -56,8 +57,10 @@ public class ProductPage extends Page {
 				wait.until(
 						ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span")))
 						.click();
-				status = wait.until(ExpectedConditions.elementToBeClickable(
-						By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]"))).getText();
+				status = wait
+						.until(ExpectedConditions.elementToBeClickable(
+								By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+						.getText();
 				System.out.println("The status of the product is: " + status);
 				test.log(LogStatus.INFO, "The status of the product is: " + status);
 				// Thread.sleep(3000);
@@ -150,13 +153,16 @@ public class ProductPage extends Page {
 
 	public String addPDFProductToBasket() {
 
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		try {
 			for (int i = 0; i <= 1; i++) {
-				Thread.sleep(5000);
-				Log.info("Check Visibility for Default Format product");
-				System.out.println("Check Visibility for Default Format product");
-				boolean defaultFormat = CommonHelper.checkVisibility(By.cssSelector("h3[class='simple-prod-head']"));
+				Thread.sleep(1000);
+				/*
+				 * Log.info("Check Visibility for Default Format product");
+				 * System.out.println("Check Visibility for Default Format product"); boolean
+				 * defaultFormat =
+				 * CommonHelper.checkVisibility(By.cssSelector("h3[class='simple-prod-head']"));
+				 */
 
 				Log.info("Check Visibility for Existing Format product");
 				System.out.println("Check Visibility for Existing Format product");
@@ -173,22 +179,25 @@ public class ProductPage extends Page {
 				// license:']//following-sibling::div[@id='r']//label[contains(.,'1
 				// License')]"));
 
-				if (defaultFormat) {
-					Log.info("Click on Add to Basket for Default Format product");
-					System.out.println("Click on Add to Basket for Default Format product");
-					test.log(LogStatus.INFO, "Click on Add to Basket for Default Format product");
-					wait.until(ExpectedConditions
-							.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).click();
-					status = wait
-							.until(ExpectedConditions.elementToBeClickable(
-									By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]")))
-							.getText();
-
-					System.out.println("The status of the product is: " + status);
-					test.log(LogStatus.INFO, "The status of the product is: " + status);
-
-				} else if (existingFormat /* && !withdrawnText */) {
-					Thread.sleep(3000);
+				/*
+				 * if (defaultFormat) {
+				 * Log.info("Click on Add to Basket for Default Format product");
+				 * System.out.println("Click on Add to Basket for Default Format product");
+				 * test.log(LogStatus.INFO,
+				 * "Click on Add to Basket for Default Format product");
+				 * wait.until(ExpectedConditions
+				 * .elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).
+				 * click(); status = wait .until(ExpectedConditions.elementToBeClickable(
+				 * By.xpath(
+				 * "//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+				 * .getText();
+				 * 
+				 * System.out.println("The status of the product is: " + status);
+				 * test.log(LogStatus.INFO, "The status of the product is: " + status);
+				 * 
+				 * } else
+				 */if (existingFormat /* && !withdrawnText */) {
+					Thread.sleep(1000);
 					System.out.println("Select PDF format");
 					test.log(LogStatus.INFO, "Select PDF format");
 					Log.info("Select PDF format");
@@ -204,8 +213,8 @@ public class ProductPage extends Page {
 							.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).click();
 
 					status = wait
-							.until(ExpectedConditions.elementToBeClickable(
-									By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]")))
+							.until(ExpectedConditions.elementToBeClickable(By
+									.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
 							.getText();
 
 					System.out.println("The status of the product is: " + status);
@@ -301,11 +310,13 @@ public class ProductPage extends Page {
 				wait.until(
 						ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span")))
 						.click();
-				status = wait.until(ExpectedConditions.elementToBeClickable(
-						By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]"))).getText();
+				status = wait
+						.until(ExpectedConditions.elementToBeClickable(
+								By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+						.getText();
 				System.out.println("The status of the product is: " + status);
 				test.log(LogStatus.INFO, "The status of the product is: " + status);
-				//Thread.sleep(5000);
+				// Thread.sleep(5000);
 
 				viewBasket();
 			}
@@ -315,5 +326,40 @@ public class ProductPage extends Page {
 			Assert.fail(e.getMessage());
 		}
 		return status;
+	}
+
+	public void applyMembership() {
+
+		Log.info("Check Visibility for Member Price");
+		System.out.println("Check Visibility for Member Price");
+		boolean memLink = CommonHelper
+				.checkVisibility(By.xpath("//*[@id='search_results_display']/li[1]/div[1]/div/div[2]/div[1]/span[2]"));
+
+		if (memLink) {
+			try {
+
+				test.log(LogStatus.INFO, ("Click product on the Search List"));
+				Log.info("Click product on the Search List");
+				System.out.println("Click product on the Search List");
+				CommonHelper.elementToBeVisible("productLinkCount_css");
+				CommonHelper.elementToBeClickable("productLinkCount_css");
+				driver.findElement(By.cssSelector("a[class='product-item-link']")).click();
+				WebDriverWait wait = new WebDriverWait(driver, 10);
+				wait.until(ExpectedConditions.elementToBeClickable(
+						By.xpath("//*[@id='prod-main-new']/div[1]/div[1]/span[2]/span/span[2]/a/p/span")));
+				
+				test.log(LogStatus.INFO, ("Click on Become a Member"));
+				Log.info("Click on Become a Member");
+				System.out.println("Click on Become a Member");
+				driver.findElement(By.xpath("//*[@id='prod-main-new']/div[1]/div[1]/span[2]/span/span[2]/a/p/span"))
+						.click();
+
+			} catch (Exception e) {
+				CommonHelper.reportFailure("Apply Membership was unsuccessful");
+				e.printStackTrace();
+				Assert.fail(e.getMessage());
+			}
+
+		}
 	}
 }
