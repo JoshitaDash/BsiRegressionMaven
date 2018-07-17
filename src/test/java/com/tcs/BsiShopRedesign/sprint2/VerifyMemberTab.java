@@ -36,7 +36,7 @@ public class VerifyMemberTab extends BaseTest {
 	@Test(priority = 2, enabled = true)
 	public void verifyStatus() {
 
-		test = extent.startTest("Sprint 2 - Verify Member Member Status");
+		test = extent.startTest("Sprint 2 - Verify Member Status");
 		try {
 			// test = extent.startTest("Click on Member Tab");
 			System.out.println("Click on Member Tab");
