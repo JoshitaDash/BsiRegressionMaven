@@ -330,36 +330,59 @@ public class ProductPage extends Page {
 
 	public void applyMembership() {
 
-		Log.info("Check Visibility for Member Price");
-		System.out.println("Check Visibility for Member Price");
-		boolean memLink = CommonHelper
-				.checkVisibility(By.xpath("//*[@id='search_results_display']/li[1]/div[1]/div/div[2]/div[1]/span[2]"));
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 10);
+			wait.until(ExpectedConditions.elementToBeClickable(
+					By.xpath("//*[@id='prod-main-new']/div[1]/div[1]/span[2]/span/span[2]/a/p/span")));
 
-		if (memLink) {
+			test.log(LogStatus.INFO, ("Click on Become a Member"));
+			Log.info("Click on Become a Member");
+			System.out.println("Click on Become a Member");
+			driver.findElement(By.xpath("//*[@id='prod-main-new']/div[1]/div[1]/span[2]/span/span[2]/a/p/span"))
+					.click();
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Apply Membership was unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	public void verifyMemberLink() {
+
+		boolean memberLink = false;
+
+		try {
+
+			test.log(LogStatus.INFO, ("Verify Member Link"));
+			Log.info("Verify Member Link");
+			System.out.println("Verify Member Link");
+
 			try {
-
-				test.log(LogStatus.INFO, ("Click product on the Search List"));
-				Log.info("Click product on the Search List");
-				System.out.println("Click product on the Search List");
-				CommonHelper.elementToBeVisible("productLinkCount_css");
-				CommonHelper.elementToBeClickable("productLinkCount_css");
-				driver.findElement(By.cssSelector("a[class='product-item-link']")).click();
-				WebDriverWait wait = new WebDriverWait(driver, 10);
-				wait.until(ExpectedConditions.elementToBeClickable(
-						By.xpath("//*[@id='prod-main-new']/div[1]/div[1]/span[2]/span/span[2]/a/p/span")));
-				
-				test.log(LogStatus.INFO, ("Click on Become a Member"));
-				Log.info("Click on Become a Member");
-				System.out.println("Click on Become a Member");
-				driver.findElement(By.xpath("//*[@id='prod-main-new']/div[1]/div[1]/span[2]/span/span[2]/a/p/span"))
-						.click();
-
+				memberLink = driver
+						.findElement(By.xpath("//*[@id='prod-main-new']/div[1]/div[1]/span[2]/span/span[2]/a/p/span"))
+						.isDisplayed();
 			} catch (Exception e) {
-				CommonHelper.reportFailure("Apply Membership was unsuccessful");
 				e.printStackTrace();
-				Assert.fail(e.getMessage());
 			}
 
+			if (memberLink) {
+				Log.info("Member link is visible in Member Account");
+				System.out.println("Member link is visible in Member Account");
+				test.log(LogStatus.FAIL, "Member link is visible in Member Account");
+				CommonHelper.reportFailure("Member link is visible in Member Account");
+			}
+
+			else {
+				Log.info("Member link is not visible in Member Account");
+				System.out.println("Member link is not visible in Member Account");
+				test.log(LogStatus.PASS, "Member link is not visible in Member Account");
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Member link is visible in Member Account");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 	}
 }

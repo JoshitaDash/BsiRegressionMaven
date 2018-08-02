@@ -20,7 +20,7 @@ public class RegisterSubscriptions extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void regBSOLQuote() {
 
-		test = extent.startTest("Sprint 2 - Register BSOL");
+		test = extent.startTest("Sprint 2 - Ecom-02 AC#07 ___ Register BSOL");
 		try {
 			// test = extent.startTest("Click on Subscriptions BSOL");
 			System.out.println("Click on Subscriptions BSOL");
@@ -55,7 +55,7 @@ public class RegisterSubscriptions extends BaseTest {
 	@Test(priority = 2, enabled = true)
 	public void regCNQuote() {
 
-		test = extent.startTest("Sprint 2 - Register Compliance Navigator");
+		test = extent.startTest("Sprint 2 - Ecom-02 AC#07 ___Register Compliance Navigator");
 		try {
 
 			System.out.println("Fetching the URL");
@@ -88,7 +88,7 @@ public class RegisterSubscriptions extends BaseTest {
 
 	@Test(priority = 3, enabled = true)
 	public void regEurocodes() {
-		test = extent.startTest("Sprint 2 - Register Eurocodes");
+		test = extent.startTest("Sprint 2 - Ecom-02 AC#07 ___Register Eurocodes");
 
 		try {
 

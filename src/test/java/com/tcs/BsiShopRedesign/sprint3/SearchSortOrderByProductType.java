@@ -18,7 +18,7 @@ public class SearchSortOrderByProductType extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void checkSortingOrderQuality() {
 
-		test = extent.startTest("Sprint 3 - Check Sorting order for Products with Product Type in Search List");
+		test = extent.startTest("Sprint 3 - Ecom-47 AC#35 ___ Check Sorting order for Products with Product Type in Search List");
 		try {
 
 			System.out.println("Search Quality Product");

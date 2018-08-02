@@ -11,13 +11,12 @@ import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 public class SearchSortOrderByPublishedDate extends BaseTest {
 
 	public SearchSortOrderByPublishedDate() throws Exception {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test(priority = 1, enabled = true)
 	public void checkSortingOrderQuality() {
 
-		test = extent.startTest("Sprint 3 - Verify Sorting order for Products by Published Date in Search List");
+		test = extent.startTest("Sprint 3 - Ecom-49 AC#47 ____ Verify Sorting order for Products by Published Date in Search List");
 		try {
 
 			System.out.println("Search PAS Product");

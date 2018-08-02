@@ -18,7 +18,7 @@ public class AddPDFToBasketTwiceFromSearchList extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void addToBasketSearchList() {
 
-		test = extent.startTest("Sprint 3 - Add PDF product twice to Basket from Search List");
+		test = extent.startTest("Sprint 3 - Ecom-47 AC#38 ___ Add PDF product twice to Basket from Search List");
 		try {
 
 			System.out.println("Search Quality Product");
@@ -36,7 +36,7 @@ public class AddPDFToBasketTwiceFromSearchList extends BaseTest {
 
 			System.out.println("Select Format and Click Ok");
 			Log.info("Select Format and Click Ok");
-			search.defaultFormatClickOK();
+			search.selectFormatClickOK();
 			/*
 			 * System.out.println("Select Format"); Log.info("Select Format");
 			 * search.selectFormat();
@@ -50,7 +50,7 @@ public class AddPDFToBasketTwiceFromSearchList extends BaseTest {
 
 			System.out.println("Select Format and Click Ok");
 			Log.info("Select Format and Click Ok");
-			search.defaultFormatClickOK();
+			search.selectFormatClickOK();
 
 			/*
 			 * System.out.println("Select Format"); Log.info("Select Format");

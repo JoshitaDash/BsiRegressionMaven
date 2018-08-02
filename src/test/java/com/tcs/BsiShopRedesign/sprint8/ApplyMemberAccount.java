@@ -14,9 +14,9 @@ import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
-public class VerifyMembershipManagement extends BaseTest{
+public class ApplyMemberAccount extends BaseTest {
 
-	public VerifyMembershipManagement() throws Exception {
+	public ApplyMemberAccount() throws Exception {
 		super();
 	}
 
@@ -38,13 +38,12 @@ public class VerifyMembershipManagement extends BaseTest{
 			Assert.fail(e.getMessage());
 		}
 	}
-	
-	
+
 	@Test(priority = 2, enabled = true)
-	public void applyMemberAccount() {
-		
+	public void applyMemberAccountBelowBandNine() {
+
 		try {
-			test = extent.startTest("Sprint 8 - Apply for Membership account");
+			test = extent.startTest("Sprint 8 - Ecom-05 AC#14,15,18,19 __ Apply for Membership account below Band 9");
 			System.out.println("Perform Blank Search");
 			Log.info("Perform Blank Search");
 			HomePage home = new HomePage(driver);
@@ -55,50 +54,55 @@ public class VerifyMembershipManagement extends BaseTest{
 			SearchPage search = new SearchPage(driver);
 			search.verifySearchResultforBlankSearch();
 			
+			System.out.println("Click on Product");
+			Log.info("Click on Product");
+			search.clickProductOnSearchList();
+
 			System.out.println("Apply for Membership");
 			Log.info("Apply for Membership");
 			ProductPage prod = new ProductPage(driver);
 			prod.applyMembership();
-			
+
 			System.out.println("Enter Membership Details");
 			Log.info("Enter Membership Details");
 			MembershipPage member = new MembershipPage(driver);
 			member.enterMembershipDetails();
-			
+
 			System.out.println("Add Product to Basket");
 			Log.info("Add Product to Basket");
 			member.addToBasket();
-			
+
 			System.out.println("Click Checkout Now");
 			Log.info("Click Checkout Now");
 			BasketPage checkout = new BasketPage(driver);
 			checkout.clickCheckout();
-			
+
 			System.out.println("Verify Membership Details in Checkout Page");
 			Log.info("Verify Membership Details in Checkout Page");
 			CheckoutPage memDetails = new CheckoutPage(driver);
-			memDetails.verifyMemberDetails(); 
-			
+			memDetails.verifyMemberDetails();
+
 			System.out.println("Click Continue Shopping");
 			Log.info("Click Continue Shopping");
-			memDetails.clickContinueShopping(); 
-			
+			memDetails.clickContinueShopping();
+
 			System.out.println("Remove Membership from Basket");
 			Log.info("Remove Membership from Basket");
 			checkout.removeProduct();
-			
+				
+
 		} catch (Exception e) {
-			CommonHelper.reportFailure("Membership Application was unsuccessful");
+			CommonHelper.reportFailure("Membership Application for below Band 9 was unsuccessful");
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test(priority = 3, enabled = true)
-	public void membershipBandNineAbove() {
-		
+	public void applyMemberAccountBandNineAbove() {
+
 		try {
-			test = extent.startTest("Sprint 8 - Apply for Membership account above Band 9");
+			test = extent.startTest("Sprint 8 - Ecom-05 AC#16 __ Apply for Membership account above Band 9");
 			System.out.println("Perform Blank Search");
 			Log.info("Perform Blank Search");
 			HomePage home = new HomePage(driver);
@@ -108,26 +112,32 @@ public class VerifyMembershipManagement extends BaseTest{
 			Log.info("Verfiy search result");
 			SearchPage search = new SearchPage(driver);
 			search.verifySearchResultforBlankSearch();
+
+			System.out.println("Click on Product");
+			Log.info("Click on Product");
+			search.clickProductOnSearchList();
 			
 			System.out.println("Verfiy Member Price");
 			Log.info("Verfiy Member Price");
 			ProductPage prod = new ProductPage(driver);
 			prod.applyMembership();
-			
+
 			System.out.println("Enter Membership Details");
 			Log.info("Enter Membership Details");
 			MembershipPage member = new MembershipPage(driver);
 			member.enterMembershipDetailsAboveBandNine();
-			
+
 			System.out.println("Verify Membership Message for Band 9 and above");
 			Log.info("Verify Membership Message for Band 9 and above");
 			member.verifyMemberMessage();
 			
-			
+			System.out.println("Click Logout");
+			Log.info("Click Logout");
+			home.clickLogout();
+
 		} catch (Exception e) {
+			CommonHelper.reportFailure("Membership Application for above Band 9 was unsuccessful");
 			e.printStackTrace();
 		}
-		
-		
 	}
 }

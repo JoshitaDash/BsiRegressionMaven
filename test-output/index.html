@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 10 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>D:\BSI_Workspace\BsiShopRedesign\src\test\resources\DemoChrome.xml</span>
+                    <span>C:\Users\shopqa\git\BsiRegressionMaven\src\test\resources\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,66 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">20 methods, 10 failed,   10 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout" hash-for-method="CheckLoginAlertOnChekout">CheckLoginAlertOnChekout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.RenewMembership" hash-for-method="addRenewMembershipToBasket">addRenewMembershipToBasket</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount" hash-for-method="applyMemberAccountBelowBandNine">applyMemberAccountBelowBandNine</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads" hash-for-method="downloadSoftCopyfromOrderCofirmationPage">downloadSoftCopyfromOrderCofirmationPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads" hash-for-method="downloadSoftCopyfromOrderHistoryPage">downloadSoftCopyfromOrderHistoryPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress" hash-for-method="editBillingAddress">editBillingAddress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress" hash-for-method="editBillingAddress">editBillingAddress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress" hash-for-method="signIn">signIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" hash-for-method="verifyHardCopyDeliveryDetails">verifyHardCopyDeliveryDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" hash-for-method="verifyMemberPrice">verifyMemberPrice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +160,52 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress" hash-for-method="editBillingAddress">editBillingAddress</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount" hash-for-method="applyMemberAccountBandNineAbove">applyMemberAccountBandNineAbove</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress" hash-for-method="signIn">signIn</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" hash-for-method="enterEmailID">enterEmailID</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" hash-for-method="signIn">signIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress" hash-for-method="signIn">signIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount" hash-for-method="signIn">signIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads" hash-for-method="signIn">signIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" hash-for-method="signInMember">signInMember</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.RenewMembership" hash-for-method="signInMember">signInMember</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" hash-for-method="signInMember">signInMember</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" hash-for-method="verifyMemberLink">verifyMemberLink</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,10 +220,128 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloadSoftCopyfromOrderCofirmationPage">
+                  </a> <!-- downloadSoftCopyfromOrderCofirmationPage -->
+                  <span class="method-name">downloadSoftCopyfromOrderCofirmationPage</span>
+                  <div class="stack-trace">java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.pages.CheckoutPage.confirmOrderDetails(CheckoutPage.java:163)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderCofirmationPage(SoftCopyDownloads.java:104)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloadSoftCopyfromOrderHistoryPage">
+                  </a> <!-- downloadSoftCopyfromOrderHistoryPage -->
+                  <span class="method-name">downloadSoftCopyfromOrderHistoryPage</span>
+                  <div class="stack-trace">java.lang.AssertionError: SoftCopy Download was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.pages.OrderHistoryPage.downloadAndVerifySoftCopy(OrderHistoryPage.java:106)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderHistoryPage(SoftCopyDownloads.java:152)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.RenewMembership</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addRenewMembershipToBasket">
+                  </a> <!-- addRenewMembershipToBasket -->
+                  <span class="method-name">addRenewMembershipToBasket</span>
+                  <div class="stack-trace">java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.pages.CheckoutPage.confirmOrderDetails(CheckoutPage.java:163)
+	at com.tcs.BsiShopRedesign.sprint8.RenewMembership.addRenewMembershipToBasket(RenewMembership.java:76)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyMemberPrice">
+                  </a> <!-- verifyMemberPrice -->
+                  <span class="method-name">verifyMemberPrice</span>
+                  <div class="stack-trace">java.lang.AssertionError: The member price in the Basket Page is incorrect
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.verifyMemPriceBasket(BasketPage.java:465)
+	at com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount.verifyMemberPrice(VerifyMemberDiscount.java:82)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="applyMemberAccountBelowBandNine">
+                  </a> <!-- applyMemberAccountBelowBandNine -->
+                  <span class="method-name">applyMemberAccountBelowBandNine</span>
+                  <div class="stack-trace">java.lang.AssertionError: Remove product from Basket was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.removeProduct(BasketPage.java:216)
+	at com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount.applyMemberAccountBelowBandNine(ApplyMemberAccount.java:91)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckLoginAlertOnChekout">
+                  </a> <!-- CheckLoginAlertOnChekout -->
+                  <span class="method-name">CheckLoginAlertOnChekout</span>
+                  <div class="stack-trace">java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.pages.CheckoutPage.confirmOrderDetails(CheckoutPage.java:163)
+	at com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout.CheckLoginAlertOnChekout(UnregisteredUserCheckout.java:67)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -132,8 +349,187 @@
                   <a name="editBillingAddress">
                   </a> <!-- editBillingAddress -->
                   <span class="method-name">editBillingAddress</span>
+                  <div class="stack-trace">java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.pages.CheckoutPage.confirmOrderDetails(CheckoutPage.java:163)
+	at com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress.editBillingAddress(CreateCheckoutBillingAddress.java:89)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="editBillingAddress">
+                  </a> <!-- editBillingAddress -->
+                  <span class="method-name">editBillingAddress</span>
+                  <div class="stack-trace">java.lang.AssertionError: Edit Address in Checkout Page was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress.editBillingAddress(EditCheckoutBillingAddress.java:102)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signIn">
+                  </a> <!-- signIn -->
+                  <span class="method-name">signIn</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login UnSuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.pages.SignInPage.login(SignInPage.java:71)
+	at com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress.signIn(EditCheckoutBillingAddress.java:28)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyHardCopyDeliveryDetails">
+                  </a> <!-- verifyHardCopyDeliveryDetails -->
+                  <span class="method-name">verifyHardCopyDeliveryDetails</span>
+                  <div class="stack-trace">java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:67)
+	at com.tcs.BsiShopRedesign.pages.CheckoutPage.confirmOrderDetails(CheckoutPage.java:163)
+	at com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails.verifyHardCopyDeliveryDetails(VerifyHardCopyDetails.java:97)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterEmailID">
+                  </a> <!-- enterEmailID -->
+                  <span class="method-name">enterEmailID</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signInMember">
+                  </a> <!-- signInMember -->
+                  <span class="method-name">signInMember</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyMemberLink">
+                  </a> <!-- verifyMemberLink -->
+                  <span class="method-name">verifyMemberLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signIn">
+                  </a> <!-- signIn -->
+                  <span class="method-name">signIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.RenewMembership</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signInMember">
+                  </a> <!-- signInMember -->
+                  <span class="method-name">signInMember</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signInMember">
+                  </a> <!-- signInMember -->
+                  <span class="method-name">signInMember</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="applyMemberAccountBandNineAbove">
+                  </a> <!-- applyMemberAccountBandNineAbove -->
+                  <span class="method-name">applyMemberAccountBandNineAbove</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signIn">
+                  </a> <!-- signIn -->
+                  <span class="method-name">signIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signIn">
+                  </a> <!-- signIn -->
+                  <span class="method-name">signIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="signIn">
@@ -146,19 +542,27 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\BSI_Workspace\BsiShopRedesign\src\test\resources\DemoChrome.xml</span>
+            <span class="header-content">C:\Users\shopqa\git\BsiRegressionMaven\src\test\resources\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;test name=&quot;Chrome Browser&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;test name=&quot;Internet Explorer Browser&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;IE&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint8.RenewMembership&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Chrome Browser --&gt;
+  &lt;/test&gt; &lt;!-- Internet Explorer Browser --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -170,7 +574,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Chrome Browser (1 class)</span>
+                <span class="test-name">Internet Explorer Browser (9 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,20 +600,92 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(20);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editBillingAddress')
-data.setCell(0, 2, 'com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress')
-data.setCell(0, 3, 74508);
+data.setCell(0, 1, 'downloadSoftCopyfromOrderCofirmationPage')
+data.setCell(0, 2, 'com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads')
+data.setCell(0, 3, 336417);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'signIn')
-data.setCell(1, 2, 'com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress')
-data.setCell(1, 3, 19820);
+data.setCell(1, 1, 'verifyHardCopyDeliveryDetails')
+data.setCell(1, 2, 'com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails')
+data.setCell(1, 3, 328929);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'editBillingAddress')
+data.setCell(2, 2, 'com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress')
+data.setCell(2, 3, 315437);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'downloadSoftCopyfromOrderHistoryPage')
+data.setCell(3, 2, 'com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads')
+data.setCell(3, 3, 308550);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'CheckLoginAlertOnChekout')
+data.setCell(4, 2, 'com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout')
+data.setCell(4, 3, 305223);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'addRenewMembershipToBasket')
+data.setCell(5, 2, 'com.tcs.BsiShopRedesign.sprint8.RenewMembership')
+data.setCell(5, 3, 297402);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'applyMemberAccountBelowBandNine')
+data.setCell(6, 2, 'com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount')
+data.setCell(6, 3, 222900);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'editBillingAddress')
+data.setCell(7, 2, 'com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress')
+data.setCell(7, 3, 156444);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyMemberLink')
+data.setCell(8, 2, 'com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails')
+data.setCell(8, 3, 61750);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'applyMemberAccountBandNineAbove')
+data.setCell(9, 2, 'com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount')
+data.setCell(9, 3, 54880);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyMemberPrice')
+data.setCell(10, 2, 'com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount')
+data.setCell(10, 3, 47338);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'signIn')
+data.setCell(11, 2, 'com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress')
+data.setCell(11, 3, 43157);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'signIn')
+data.setCell(12, 2, 'com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount')
+data.setCell(12, 3, 24673);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'signIn')
+data.setCell(13, 2, 'com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails')
+data.setCell(13, 3, 23869);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'signIn')
+data.setCell(14, 2, 'com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress')
+data.setCell(14, 3, 23304);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'signIn')
+data.setCell(15, 2, 'com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads')
+data.setCell(15, 3, 23294);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'enterEmailID')
+data.setCell(16, 2, 'com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails')
+data.setCell(16, 3, 18272);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'signInMember')
+data.setCell(17, 2, 'com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount')
+data.setCell(17, 3, 15754);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'signInMember')
+data.setCell(18, 2, 'com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails')
+data.setCell(18, 3, 14016);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'signInMember')
+data.setCell(19, 2, 'com.tcs.BsiShopRedesign.sprint8.RenewMembership')
+data.setCell(19, 3, 13268);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 43 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -224,9 +700,65 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getDriverInstance</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getDriverInstance</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tcs.BsiShopRedesign.sprint8.RenewMembership</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getDriverInstance</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getDriverInstance</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getDriverInstance</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getDriverInstance</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getDriverInstance</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getDriverInstance</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -235,26 +767,206 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint7.EditCheckoutAddress</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">getDriverInstance</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">launchBrowser(chrome)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-name">launchBrowser(IE)</span>
+                <span class="method-start">16 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">signIn</span>
-                <span class="method-start">5543 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">editBillingAddress</span>
-                <span class="method-start">25365 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CheckLoginAlertOnChekout</span>
+                <span class="method-start">17190 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">99874 ms</span>
+                <span class="method-start">322413 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchBrowser(IE)</span>
+                <span class="method-start">323267 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signInMember</span>
+                <span class="method-start">336659 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyMemberPrice</span>
+                <span class="method-start">352413 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">399751 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchBrowser(IE)</span>
+                <span class="method-start">400360 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">signIn</span>
+                <span class="method-start">408063 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">editBillingAddress</span>
+                <span class="method-start">451220 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">607664 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchBrowser(IE)</span>
+                <span class="method-start">608286 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signIn</span>
+                <span class="method-start">624730 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">editBillingAddress</span>
+                <span class="method-start">648034 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">963471 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchBrowser(IE)</span>
+                <span class="method-start">964068 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signIn</span>
+                <span class="method-start">971829 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">applyMemberAccountBelowBandNine</span>
+                <span class="method-start">996502 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">applyMemberAccountBandNineAbove</span>
+                <span class="method-start">1219403 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">1274283 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchBrowser(IE)</span>
+                <span class="method-start">1274877 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signInMember</span>
+                <span class="method-start">1282598 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyMemberLink</span>
+                <span class="method-start">1296614 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterEmailID</span>
+                <span class="method-start">1358365 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">1376637 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint8.RenewMembership</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchBrowser(IE)</span>
+                <span class="method-start">1377233 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signInMember</span>
+                <span class="method-start">1384883 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addRenewMembershipToBasket</span>
+                <span class="method-start">1398151 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">1695553 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchBrowser(IE)</span>
+                <span class="method-start">1696139 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signIn</span>
+                <span class="method-start">1713548 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">downloadSoftCopyfromOrderCofirmationPage</span>
+                <span class="method-start">1736842 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">downloadSoftCopyfromOrderHistoryPage</span>
+                <span class="method-start">2073259 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">2381809 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchBrowser(IE)</span>
+                <span class="method-start">2382403 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signIn</span>
+                <span class="method-start">2390415 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyHardCopyDeliveryDetails</span>
+                <span class="method-start">2414284 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">2743213 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

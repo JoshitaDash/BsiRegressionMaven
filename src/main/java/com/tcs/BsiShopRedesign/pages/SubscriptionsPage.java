@@ -58,28 +58,34 @@ public class SubscriptionsPage extends Page {
 			test.log(LogStatus.INFO, "Enter BSOL Pardot form details");
 			System.out.println("Enter BSOL Pardot form details");
 			Log.info("Enter BSOL Pardot form details");
+
 			/*
-			 * boolean clickHere =
-			 * driver.findElement(By.xpath("//*[@id='pardot-form']/p[1]/span/a")).
-			 * isDisplayed(); if (clickHere) { click("clickHere_xpath");
 			 * System.out.println("Switch iFrame"); driver.switchTo().frame(0);
 			 * Thread.sleep(3000); System.out.println("iframe switched");
+			 * 
+			 * boolean clickHere =
+			 * driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
+			 * 
+			 * if (clickHere) if (CommonHelper.element("clickHere_xpath") != null ||
+			 * CommonHelper.element("clickHere_xpath").isDisplayed()) {
+			 * test.log(LogStatus.INFO, "Click on the Click Here link");
+			 * System.out.println("Click on the Click Here link");
+			 * Log.info("Click on the Click Here link");
+			 * driver.findElement(By.xpath("//*[@id='pardot-form']/p[1]/span/a")).click();
 			 * CommonHelper.isElementVisible("title_css");
 			 * CommonHelper.elementToBeClickable("title_css"); enterBSOLPardotFormDetails();
-			 * 
-			 * } else {
-			 */
+			 * } else
+			 */ {
+				System.out.println("Switch iFrame");
+				driver.switchTo().frame(0);
+				Thread.sleep(3000);
+				System.out.println("iframe switched");
 
-			System.out.println("Switch iFrame");
-			driver.switchTo().frame(0);
-			Thread.sleep(3000);
-			System.out.println("iframe switched");
+				CommonHelper.isElementVisible("title_css");
+				CommonHelper.elementToBeClickable("title_css");
+				enterBSOLPardotFormDetails();
 
-			CommonHelper.isElementVisible("title_css");
-			CommonHelper.elementToBeClickable("title_css");
-			enterBSOLPardotFormDetails();
-
-			// }
+			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter BSOL Pardot form details was unsuccessful");
 			e.printStackTrace();
@@ -387,30 +393,37 @@ public class SubscriptionsPage extends Page {
 
 		try {
 
-			/*
-			 * if (CommonHelper.element("clickHere_xpath") != null ||
-			 * CommonHelper.element("clickHere_xpath").isDisplayed()) {
-			 * test.log(LogStatus.INFO, "Click on the Click Here link");
-			 * System.out.println("Click on the Click Here link"); Log.info(
-			 * "Click on the Click Here link"); click("clickHere_xpath"); //
-			 * CommonHelper.isVisisble("title_css"); //
-			 * CommonHelper.elementToBeClickable("title_css");
-			 * 
-			 * test.log(LogStatus.INFO, "Enter Eurocode Pardot Form Details");
-			 * System.out.println("Enter Eurocode Pardot Form Details");
-			 * Log.info("Enter Eurocode Pardot Form Details");
-			 * enterEurocodePardotFormDetails();
-			 * 
-			 * } else {
-			 */
+			System.out.println("Switch iFrame");
+			driver.switchTo().frame(0);
+			Thread.sleep(3000);
+			System.out.println("iframe switched");
 
-			test.log(LogStatus.INFO, "Enter Eurocode Pardot Form Details");
-			System.out.println("Enter Eurocode Pardot Form Details");
-			Log.info("Enter Eurocode Pardot Form Details");
-			// CommonHelper.isVisisble("title_css");
-			// CommonHelper.elementToBeClickable("title_css");
-			enterEurocodePardotFormDetails();
-			// }
+			boolean clickHere = driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
+
+			if (clickHere)
+				if (CommonHelper.element("clickHere_xpath") != null
+						|| CommonHelper.element("clickHere_xpath").isDisplayed()) {
+					test.log(LogStatus.INFO, "Click on the Click Here link");
+					System.out.println("Click on the Click Here link");
+					Log.info("Click on the Click Here link");
+					click("clickHere_xpath");
+					CommonHelper.isElementVisible("firstNameEC_xpath");
+					CommonHelper.elementToBeClickable("firstNameEC_xpath");
+
+					test.log(LogStatus.INFO, "Enter Eurocode Pardot Form Details");
+					System.out.println("Enter Eurocode Pardot Form Details");
+					Log.info("Enter Eurocode Pardot Form Details");
+					enterEurocodePardotFormDetails();
+
+				} else {
+
+					test.log(LogStatus.INFO, "Enter Eurocode Pardot Form Details");
+					System.out.println("Enter Eurocode Pardot Form Details");
+					Log.info("Enter Eurocode Pardot Form Details");
+					CommonHelper.isElementVisible("firstNameEC_xpath");
+					CommonHelper.elementToBeClickable("firstNameEC_xpath");
+					enterEurocodePardotFormDetails();
+				}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Eurocode Pardot Form details was unsuccessful");
 			Assert.fail(e.getMessage());

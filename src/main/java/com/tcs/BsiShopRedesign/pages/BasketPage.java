@@ -181,9 +181,7 @@ public class BasketPage extends Page {
 	public void removeProduct() {
 		boolean removeProd = false;
 		WebDriverWait wait = new WebDriverWait(driver, 120);
-		// WebElement removeItemValue =
-		// driver.findElement(By.xpath("//*[@id='cart_remove_button']/span/img"));
-		// String remove = removeItemValue.getAttribute("alt");
+		
 		try {
 			Thread.sleep(5000);
 			removeProd = driver.findElement(By.xpath("//img[@alt='delete']")).isDisplayed();
@@ -201,7 +199,7 @@ public class BasketPage extends Page {
 				Thread.sleep(2000);
 				System.out.println("Get the text of the remove basket message");
 				test.log(LogStatus.INFO, "Get the text of the remove basket message");
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='cart-empty']")));
 				String basketVerify = wait
 						.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='cart-empty']")))
@@ -223,11 +221,17 @@ public class BasketPage extends Page {
 
 	public void removeProductAndEvent() {
 
+		WebDriverWait wait = new WebDriverWait(driver, 120);
 		try {
 			test.log(LogStatus.INFO, "Remove Product and Event from Basket");
 			for (int i = 1; i <= 2; i++) {
-				Thread.sleep(3000);
-				click("removeEvent_xpath");
+				WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
+				Thread.sleep(5000);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
+				remove.click();
+				//Thread.sleep(5000);
+				//click("removeEvent_xpath");
 				// CommonHelper.clickByJS("removeEvent_xpath");
 			}
 

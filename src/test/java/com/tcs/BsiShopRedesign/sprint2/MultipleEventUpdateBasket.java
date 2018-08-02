@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.EventPage;
+import com.tcs.BsiShopRedesign.pages.HomePage;
+import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
@@ -36,7 +38,7 @@ public class MultipleEventUpdateBasket extends BaseTest {
 
 	@Test(priority = 2, enabled = true)
 	public void addAndUpdateMultipleEvents() {
-		test = extent.startTest("Sprint 2 - Add and Update Basket for Multiple Events");
+		test = extent.startTest("Sprint 2 - Ecom-06 AC#26,28,29 ___ Add and Update Basket for Multiple Events");
 		try {
 			
 			System.out.println("Search Paid Event");
@@ -94,6 +96,11 @@ public class MultipleEventUpdateBasket extends BaseTest {
 			System.out.println("Remove Multiple Event from Basket");
 			Log.info("Remove Multiple Event from Basket");
 			event.removeMultipleEvent();
+			
+			System.out.println("Click Logout");
+			Log.info("Click Logout");
+			HomePage logout = new HomePage(driver);
+			logout.clickLogout();
 
 		}
 

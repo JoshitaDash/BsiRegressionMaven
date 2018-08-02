@@ -39,7 +39,7 @@ public class BookEvent extends BaseTest {
 	@Test(priority = 2, enabled = true)
 	public void BookPaidEvent() {
 
-		test = extent.startTest("Sprint 2 - Book Paid Event");
+		test = extent.startTest("Sprint 2 - Ecom-06 AC#26 ___ Book Paid Event");
 		try {
 
 			System.out.println("Search Paid Event");
@@ -91,7 +91,7 @@ public class BookEvent extends BaseTest {
 	@Test(priority = 3, enabled = true)
 	public void BookFreeEvent() {
 
-		test = extent.startTest("Sprint 2 - Book Free Event");
+		test = extent.startTest("Sprint 2 - Ecom-06 AC#27 ___Book Free Event");
 		try {
 
 			Thread.sleep(2000);

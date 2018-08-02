@@ -39,7 +39,7 @@ public class MyProfileAddTenAddresses extends BaseTest {
 	public void addTenBillingAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Add Ten Billing Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#30 ___ Add Ten Billing Address");
 			System.out.println("Add Ten Billing Address");
 			Log.info("Add Ten Billing Address");
 			BillingAddressPage billTen = new BillingAddressPage(driver);
@@ -59,7 +59,7 @@ public class MyProfileAddTenAddresses extends BaseTest {
 	public void deleteTenBillingAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Delete Ten Billing Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#30 ___ Delete Ten Billing Address");
 			System.out.println("Delete Ten Billing Address");
 			Log.info("Delete Ten Billing Address");
 			BillingAddressPage billTen = new BillingAddressPage(driver);
@@ -78,7 +78,7 @@ public class MyProfileAddTenAddresses extends BaseTest {
 	public void addTenDeliveryAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Add Ten Delivery Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#29 ___ Add Ten Delivery Address");
 			System.out.println("Add Ten Delivery Address");
 			Log.info("Add Ten Delivery Address");
 			DeliveryAddressPage deliveryTen = new DeliveryAddressPage(driver);
@@ -98,7 +98,7 @@ public class MyProfileAddTenAddresses extends BaseTest {
 	public void deleteTenDeliveryAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Delete Ten Delivery Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#29 ___ Delete Ten Delivery Address");
 			System.out.println("Delete Ten Delivery Address");
 			Log.info("Delete Ten Delivery Address");
 			DeliveryAddressPage deliveryTen = new DeliveryAddressPage(driver);

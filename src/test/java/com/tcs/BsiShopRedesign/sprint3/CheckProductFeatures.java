@@ -19,7 +19,7 @@ public class CheckProductFeatures extends BaseTest {
 	public void checkFreeEvent() {
 
 		try {
-			test = extent.startTest("Sprint 3 - Checking Free Event Features in Search List");
+			test = extent.startTest("Sprint 3 - Ecom-47 AC#36,42 ___ Checking Free Event Features in Search List");
 
 			System.out.println("Search Free Event");
 			Log.info("Search Free Event");
@@ -56,7 +56,7 @@ public class CheckProductFeatures extends BaseTest {
 	public void checkPASProduct() {
 
 		try {
-			test = extent.startTest("Sprint 3 - Checking PAS Product Features in Search List");
+			test = extent.startTest("Sprint 3 - Ecom-47 AC#36,42 ___Checking PAS Product Features in Search List");
 
 			System.out.println("Search PAS Product");
 			Log.info("Search PAS Product");
@@ -93,7 +93,7 @@ public class CheckProductFeatures extends BaseTest {
 	public void checkPaidEvent() {
 
 		try {
-			test = extent.startTest("Sprint 3 - Checking Paid Event Features in Search List");
+			test = extent.startTest("Sprint 3 - Ecom-47 AC#36,42 ___Checking Paid Event Features in Search List");
 
 			System.out.println("Search Paid Event");
 			Log.info("Search Paid Event");

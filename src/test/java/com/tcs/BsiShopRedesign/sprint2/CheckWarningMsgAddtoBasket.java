@@ -24,13 +24,13 @@ public class CheckWarningMsgAddtoBasket extends BaseTest {
 
 		try {
 
-			test = extent.startTest("Sprint 2 - Add PDF Product twice to check warning message");
+			test = extent.startTest("Sprint 2 - Ecom-01 AC#04 ___ Add PDF Product twice to check warning message");
 			Log.info("Enter product name in Search textbox");
 			System.out.println("Enter product name in Search textbox");
 			test.log(LogStatus.INFO, "Enter product name in Search textbox");
 			WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
 			search.clear();
-			search.sendKeys("BS 6070-1:1981");
+			search.sendKeys("BS 6070-0:1981");
 
 			Log.info("Click on Search");
 			System.out.println("Click on Search");
@@ -41,7 +41,8 @@ public class CheckWarningMsgAddtoBasket extends BaseTest {
 			Log.info("Select the Product");
 			System.out.println("Select the Product");
 			test.log(LogStatus.INFO, "Select the Product");
-			WebElement product = driver.findElement(By.linkText("BS 6070-1:1981"));
+			//driver.findElement(By.linkText("BS 6070-1:1981")).click();
+			WebElement product = driver.findElement(By.linkText("BS 6070-0:1981"));
 			String name = product.toString();
 			CommonHelper.elementToBeClickable(name);
 			product.click();

@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.BasketPage;
+import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
@@ -37,7 +38,7 @@ public class AddInvoiceToBasketFromMemTab extends BaseTest {
 	@Test(priority = 2, enabled = true)
 	public void AddInvoiceToBasket() {
 
-		test = extent.startTest("Sprint 4&5 - Add invoice to Basket from Member Tab");
+		test = extent.startTest("Sprint 4&5 - Ecom-27 AC#24; Ecom-44 AC#63 ___ Add invoice to Basket from Member Tab");
 		try {
 			// test = extent.startTest("Click on Member Tab");
 			System.out.println("Click on Member Tab");
@@ -45,23 +46,24 @@ public class AddInvoiceToBasketFromMemTab extends BaseTest {
 			MyProfileMemberPage mem = new MyProfileMemberPage(driver);
 			mem.clickMemberTab();
 
-			System.out.println("Click on Member Tab");
-			Log.info("Click on Member Tab");
+			System.out.println("Add Invoice to Basket");
+			Log.info("Add Invoice to Basket");
 			mem.addToBasketFromMemTab();
 
-			Log.info("Remove the Product");
-			System.out.println("Remove the Product");
-			test.log(LogStatus.INFO, "Remove the Product");
+			Log.info("Remove Invoice from Basket");
+			System.out.println("Remove Invoice from Basket");
+			test.log(LogStatus.INFO, "Remove Invoice from Basket");
 			BasketPage basket = new BasketPage(driver);
 			basket.removeProduct();
 
 			System.out.println("Click Logout");
 			Log.info("Click Logout");
-			mem.clickLogout();
+			HomePage logout = new HomePage(driver);
+			logout.clickLogout();
 			
 			
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Verify Member tab was unsuccessful");
+			test.log(LogStatus.FATAL, "Add invoice to Basket from Member Tab was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

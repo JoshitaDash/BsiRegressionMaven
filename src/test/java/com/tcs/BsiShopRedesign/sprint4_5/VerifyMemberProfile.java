@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
+import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
@@ -35,7 +36,7 @@ public class VerifyMemberProfile extends BaseTest{
 	@Test(priority = 2, enabled = true)
 	public void verifyMemberTab() {
 
-		test = extent.startTest("Sprint 4&5 - Verify Member Member Tab");
+		test = extent.startTest("Sprint 4&5 - Ecom-44 AC#26; Ecom-39 AC#19; Ecom-36 AC#14 ___ Verify Member Member Tab");
 		try {
 			//test = extent.startTest("Click on Member Tab");
 			System.out.println("Click on Member Tab");
@@ -56,14 +57,15 @@ public class VerifyMemberProfile extends BaseTest{
 			Log.info("Verify Member Status");
 			mem.verifyMemberStatus();
 			
-			System.out.println("Verify Member Credit Amount");
+			/*System.out.println("Verify Member Credit Amount");
 			Log.info("Verify Member Credit Amount");
-			mem.verifyMemberCreditAmnt();
+			mem.verifyMemberCreditAmnt();*/
 
 			//test = extent.startTest("Click Logout");
 			System.out.println("Click Logout");
 			Log.info("Click Logout");
-			mem.clickLogout();
+			HomePage logout = new HomePage(driver);
+			logout.clickLogout();
 		}
 
 		catch (Exception e) {

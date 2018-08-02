@@ -39,7 +39,7 @@ public class MyProfile extends BaseTest {
 	public void addNewBillingAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Add Billing Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#28 ___ Add Billing Address");
 			System.out.println("Add Billing Address");
 			Log.info("Add Billing Address");
 			BillingAddressPage bill = new BillingAddressPage(driver);
@@ -59,7 +59,7 @@ public class MyProfile extends BaseTest {
 	public void makeDefaultBillingAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Make Default Billing Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#28 ___ Make Default Billing Address");
 			System.out.println("Make Default Billing Address");
 			Log.info("Make Default  Billing Address");
 			BillingAddressPage bill = new BillingAddressPage(driver);
@@ -78,7 +78,7 @@ public class MyProfile extends BaseTest {
 	public void editBillingAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Edit Billing Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#28 ___ Edit Billing Address");
 			System.out.println("Edit Billing Address");
 			Log.info("Edit Billing Address");
 			BillingAddressPage bill = new BillingAddressPage(driver);
@@ -98,7 +98,7 @@ public class MyProfile extends BaseTest {
 	public void deleteBillingAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Delete Billing Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#28 ___ Delete Billing Address");
 			System.out.println("Delete Billing Address");
 			Log.info("Delete Billing Address");
 			BillingAddressPage bill = new BillingAddressPage(driver);
@@ -118,7 +118,7 @@ public class MyProfile extends BaseTest {
 	public void addDeliveryAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Add Delivery Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#28 ___ Add Delivery Address");
 			System.out.println("Add Delivery Address");
 			Log.info("Add Delivery Address");
 			DeliveryAddressPage delivery = new DeliveryAddressPage(driver);
@@ -136,7 +136,7 @@ public class MyProfile extends BaseTest {
 	public void makeDefaultDeliveryAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Make Default Delivery Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#28 ___ Make Default Delivery Address");
 			System.out.println("Make Default Delivery Address");
 			Log.info("Make Default Delivery Address");
 			DeliveryAddressPage delivery = new DeliveryAddressPage(driver);
@@ -154,7 +154,7 @@ public class MyProfile extends BaseTest {
 	public void editDeliveryAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Edit Delivery Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#28 ___ Edit Delivery Address");
 			System.out.println("Edit Delivery Address");
 			Log.info("Edit Delivery Address");
 			DeliveryAddressPage delivery = new DeliveryAddressPage(driver);
@@ -172,7 +172,7 @@ public class MyProfile extends BaseTest {
 	public void deleteDeliveryAddress() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Delete Delivery Address");
+			test = extent.startTest("Sprint 1 - Ecom-45_46A AC#28 ___ Delete Delivery Address");
 			System.out.println("Delete Delivery Address");
 			Log.info("Delete Delivery Address");
 			DeliveryAddressPage delivery = new DeliveryAddressPage(driver);
@@ -190,7 +190,7 @@ public class MyProfile extends BaseTest {
 	public void resetPassword() {
 
 		try {
-			test = extent.startTest("Sprint 1 - Reset Password");
+			test = extent.startTest("Sprint 1 - Ecom-38A AC#18 ___ Reset Password");
 			System.out.println("Reset Password");
 			Log.info("Reset Password");
 			SignInPage signIn = new SignInPage(driver);

@@ -141,7 +141,7 @@ public class SignInPage extends Page {
 			System.out.println("Enter Email ID");
 			Log.info("Enter Email ID");
 			test.log(LogStatus.INFO, "Enter Email ID");
-			enterText("enterEmail_id", BsiConstants.getEnvDetails().get("username"));
+			enterText("enterEmail_id", BsiConstants.getEnvDetails().get("ten_address_username"));
 
 			System.out.println("Enter Password");
 			Log.info("Enter Password");

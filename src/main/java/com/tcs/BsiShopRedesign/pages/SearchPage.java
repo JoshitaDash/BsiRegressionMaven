@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -48,22 +49,24 @@ public class SearchPage extends Page {
 				productLink = driver.findElements(By.cssSelector("a[class='product-item-link']")).size();
 				productLinkText = Integer.toString(productLink);
 
-				if (isNextButtonDisplayed) {					
+				if (isNextButtonDisplayed) {
 					CommonHelper.elementToBeVisible("next_xpath");
 					CommonHelper.scrolltoview("next_xpath");
 					test.log(LogStatus.INFO, "Click on Next" + "The current page is: " + counter++);
 					System.out.println("Click on Next");
 					Log.info("Click on Next");
+					/*JavascriptExecutor executor = (JavascriptExecutor) driver;
+					executor.executeScript("arguments[0].click();", By.xpath("(//span[text()='Next'])[2]"));*/
 					driver.findElement(By.xpath("(//span[text()='Next'])[2]")).click();
 					Thread.sleep(30000);
 					isNextButtonDisplayed = !CommonHelper.isElementHiddenNow("(//span[text()='Next'])[2]");
-					
+
 				}
 				Thread.sleep(2000);
 				numOfProducts += productLink;
-				
+
 			} while (isNextButtonDisplayed);
-			
+
 			if (counter != 0) {
 				test.log(LogStatus.INFO, "Count product");
 				Log.info("Count product");
@@ -164,6 +167,8 @@ public class SearchPage extends Page {
 			 */
 			List<WebElement> imgLabels = driver.findElements(By.xpath("//div[@class='category_div']/img"));
 
+			// CommonHelper.scrolltoview("imgLabelsProductType_xpath");
+
 			ArrayList<String> obtainedList = new ArrayList<String>();
 			for (int i = 0; i < imgLabels.size(); i++) {
 				String altValue = imgLabels.get(i).getAttribute("alt");
@@ -200,7 +205,8 @@ public class SearchPage extends Page {
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.visibilityOfAllElements(
 					driver.findElements(By.xpath("//div[contains(@class,'search_price_layout')]//div[1]/div[2]"))));
-			List<WebElement> statusDate = driver.findElements(By.xpath("//div[contains(@class,'search_price_layout')]//div[1]/div[2]"));
+			List<WebElement> statusDate = driver
+					.findElements(By.xpath("//div[contains(@class,'search_price_layout')]//div[1]/div[2]"));
 			// System.out.println("The status and date is: " + statusDate);
 
 			ArrayList<Date> obtainedList = new ArrayList<Date>();
@@ -314,6 +320,7 @@ public class SearchPage extends Page {
 				System.out.println("Sort List of Products in Descending Order");
 				Log.info("Sort List of Products in Descending Order");
 				productTypeSorting();
+				CommonHelper.scrolltoview("paginationLastPageProductType_xpath");
 			}
 
 		} catch (Exception e) {
@@ -330,8 +337,8 @@ public class SearchPage extends Page {
 		int counter = 1;
 
 		try {
-			 isNextButtonDisplayed = CommonHelper.isElementHiddenNow("next_xpath");
-			//driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
+			// isNextButtonDisplayed = CommonHelper.isElementHiddenNow("next_xpath");
+			driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
 			isNextButtonDisplayed = true;
 		} catch (Exception e) {
 			isNextButtonDisplayed = false;
@@ -340,7 +347,7 @@ public class SearchPage extends Page {
 		try {
 
 			do {
-				selectMaxItems();
+				// selectMaxItems();
 				Thread.sleep(5000);
 				test.log(LogStatus.INFO, "Select Sort By Published Date");
 				System.out.println("Select Sort By Published Date");
@@ -361,15 +368,17 @@ public class SearchPage extends Page {
 					driver.findElement(By.xpath("(//span[text()='Next'])[2]")).click();
 					Thread.sleep(20000);
 					try {
-						 isNextButtonDisplayed=CommonHelper.isElementHiddenNow("next_xpath");
-						//driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
-						
+						// isNextButtonDisplayed = CommonHelper.isElementHiddenNow("next_xpath");
+						driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
 						isNextButtonDisplayed = true;
 					} catch (Exception e) {
 						isNextButtonDisplayed = false;
 						e.printStackTrace();
 					}
 
+				} else {
+					System.out.println("The date field is missing");
+					test.log(LogStatus.FAIL, "The date field is missing");
 				}
 				Thread.sleep(2000);
 			} while (isNextButtonDisplayed);
@@ -379,10 +388,14 @@ public class SearchPage extends Page {
 				System.out.println("Select Sort By Published Date");
 				Log.info("Select Sort By Published Date");
 				selectSortByPublishedDate();
+				test.log(LogStatus.INFO, "The current page is: " + counter++);
 				test.log(LogStatus.INFO, "Sort List of Products in Descending Order");
 				System.out.println("Sort List of Products in Descending Order");
 				Log.info("Sort List of Products in Descending Order");
 				publishedDateSorting();
+			} else {
+				System.out.println("The date field is missing");
+				test.log(LogStatus.FAIL, "The date field is missing");
 			}
 
 		} catch (Exception e) {
@@ -793,6 +806,26 @@ public class SearchPage extends Page {
 
 	}
 
+	public void clickAddToBasketAgain() {
+
+		try {
+			Thread.sleep(3000);
+			test.log(LogStatus.INFO, "Add Second PDF product to Basket");
+			Log.info("Add Second PDF product to Basket");
+			System.out.println("Add Second PDF product to Basket");
+			WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
+			CommonHelper.elementToBeClickable("addToBasket_css");
+			addToBasket.click();
+			Thread.sleep(2000);
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Add Second PDF product to Basket was unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
 	public void selectFormat() {
 
 		try {
@@ -811,7 +844,7 @@ public class SearchPage extends Page {
 
 	}
 
-	public void defaultFormatClickOK() {
+	public void selectFormatClickOK() {
 		List<WebElement> okButtons = driver.findElements(By.xpath("//button[text()='Ok']"));
 		for (WebElement okButton : okButtons) {
 			try {
@@ -822,6 +855,28 @@ public class SearchPage extends Page {
 				CommonHelper.reportFailure("Click OK was unsuccessful");
 				e.printStackTrace();
 				Assert.fail(e.getMessage());
+			}
+		}
+	}
+
+	public void selectHardCopyFormat() {
+
+		test.log(LogStatus.INFO, "Select HardCopy Format");
+		Log.info("Select HardCopy Format");
+		System.out.println("Select HardCopy Format");
+		List<WebElement> hardcopys = driver.findElements(By.cssSelector("select[id*='sel']"));
+		for (WebElement hardcopy : hardcopys) {
+			try {
+				if (hardcopy.isDisplayed()) {
+					Select dpdwn = new Select(hardcopy);
+					dpdwn.selectByVisibleText("Hard copy");
+					
+				}
+			} catch (Exception e) {
+				CommonHelper.reportFailure("Select Hardcopy Format was unsuccessful");
+				e.printStackTrace();
+				Assert.fail(e.getMessage());
+
 			}
 		}
 	}
@@ -907,6 +962,33 @@ public class SearchPage extends Page {
 			e.printStackTrace();
 		}
 		return false;
+
+	}
+
+	public void clickProductOnSearchList() {
+
+		Log.info("Check Visibility for Member Price");
+		System.out.println("Check Visibility for Member Price");
+		boolean memLink = CommonHelper
+				.checkVisibility(By.xpath("//*[@id='search_results_display']/li[1]/div[1]/div/div[2]/div[1]/span[2]"));
+
+		if (memLink) {
+			try {
+
+				test.log(LogStatus.INFO, ("Click product on the Search List"));
+				Log.info("Click product on the Search List");
+				System.out.println("Click product on the Search List");
+				CommonHelper.elementToBeVisible("productLinkCount_css");
+				CommonHelper.elementToBeClickable("productLinkCount_css");
+				driver.findElement(By.cssSelector("a[class='product-item-link']")).click();
+
+			} catch (Exception e) {
+				CommonHelper.reportFailure("Product search was unsuccessful");
+				e.printStackTrace();
+				Assert.fail(e.getMessage());
+			}
+
+		}
 
 	}
 }

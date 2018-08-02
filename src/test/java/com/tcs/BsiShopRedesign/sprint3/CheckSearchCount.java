@@ -20,7 +20,7 @@ public class CheckSearchCount extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void searchPASCount() {
 
-		test = extent.startTest("Sprint 3 - Check Product Count in Search List");
+		test = extent.startTest("Sprint 3 - Ecom-47 AC#33 ___ Check Product Count in Search List");
 		try {
 
 			System.out.println("Search PAS Product");

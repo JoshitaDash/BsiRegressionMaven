@@ -22,7 +22,7 @@ public class RegisterMUNLCode extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void registerMUNL() {
 
-		test = extent.startTest("Sprint 2 - Register MUNL code");
+		test = extent.startTest("Sprint 2 - Ecom-02 AC#07 ___Register MUNL code");
 		try {
 
 			WebDriverWait wait = new WebDriverWait(driver, 120);

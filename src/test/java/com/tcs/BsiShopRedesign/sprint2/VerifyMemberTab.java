@@ -3,6 +3,7 @@ package com.tcs.BsiShopRedesign.sprint2;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.LogStatus;
+import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
@@ -36,7 +37,7 @@ public class VerifyMemberTab extends BaseTest {
 	@Test(priority = 2, enabled = true)
 	public void verifyStatus() {
 
-		test = extent.startTest("Sprint 2 - Verify Member Status");
+		test = extent.startTest("Sprint 2 - Ecom-36 AC#14 ___Verify Member Status");
 		try {
 			// test = extent.startTest("Click on Member Tab");
 			System.out.println("Click on Member Tab");
@@ -51,7 +52,8 @@ public class VerifyMemberTab extends BaseTest {
 			// test = extent.startTest("Click Logout");
 			System.out.println("Click Logout");
 			Log.info("Click Logout");
-			mem.clickLogout();
+			HomePage logout = new HomePage(driver);
+			logout.clickLogout();
 		}
 
 		catch (Exception e) {

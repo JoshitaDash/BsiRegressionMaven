@@ -145,13 +145,18 @@ public class MembershipPage extends Page {
 
 	public void verifyMemberMessage() {
 
-		String bandNineMsg = driver.findElement(By.id("message")).getText();
-		if (bandNineMsg.contains("higher membership bandings and may qualify for additional benefits.")) {
-			test.log(LogStatus.INFO, "The verification message is: " + bandNineMsg);
-			test.log(LogStatus.PASS, "Verification was successful.");
-		} else {
-			test.log(LogStatus.FAIL, "Verification was successful.");
-			CommonHelper.reportFailure("Verification was successful.");
+		try {
+			String bandNineMsg = driver.findElement(By.id("message")).getText();
+			if (bandNineMsg.contains("higher membership bandings and may qualify for additional benefits.")) {
+				test.log(LogStatus.INFO, "The verification message is: " + bandNineMsg);
+				test.log(LogStatus.PASS, "Membership Application for above Band 9 was successful");
+			} else {
+				test.log(LogStatus.FAIL, "Membership Application for above Band 9 was unsuccessful");
+				CommonHelper.reportFailure("Membership Application for above Band 9 was unsuccessful");
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Membership Application for above Band 9 was unsuccessful");
+			e.printStackTrace();
 		}
 
 	}

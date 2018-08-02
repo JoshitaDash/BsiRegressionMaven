@@ -12,6 +12,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -25,6 +26,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
+
 
 public class CommonHelper extends Page {
 
@@ -297,5 +299,22 @@ public class CommonHelper extends Page {
 		};
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(pageLoadCondition);
+	}
+
+	public static void handleAlert() {
+		if (isAlertPresent()) {
+			Alert alert = driver.switchTo().alert();
+			System.out.println(alert.getText());
+			alert.accept();
+		}
+	}
+
+	public static boolean isAlertPresent() {
+		try {
+			driver.switchTo().alert();
+			return true;
+		} catch (org.openqa.selenium.NoAlertPresentException ex) {
+			return false;
+		}
 	}
 }

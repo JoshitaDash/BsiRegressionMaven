@@ -18,7 +18,6 @@ public class DeliveryAddressPage extends Page {
 	public DeliveryAddressPage(WebDriver driver) throws Exception {
 		super(driver);
 		// BaseTest.driver = driver;
-		// TODO Auto-generated constructor stub
 	}
 
 	public void addNewDeliveryAddress() {
@@ -72,10 +71,10 @@ public class DeliveryAddressPage extends Page {
 			test.log(LogStatus.INFO, "Enter Telephone Number");
 			driver.findElement(By.id("register-phn-no")).sendKeys("123456790");
 
-			Thread.sleep(1000);
+			/*Thread.sleep(1000);
 			System.out.println("Enter Fax Number");
 			test.log(LogStatus.INFO, "Enter Fax Number");
-			driver.findElement(By.id("fax")).sendKeys("0123456789");
+			driver.findElement(By.id("fax")).sendKeys("0123456789");*/
 
 			/*
 			 * Thread.sleep(1000); System.out.println("Enter Street Address");
@@ -214,10 +213,10 @@ public class DeliveryAddressPage extends Page {
 				test.log(LogStatus.INFO, "Edit Telephone Number");
 				driver.findElement(By.id("register-phn-no")).sendKeys("0123456789");
 
-				Thread.sleep(1000);
+				/*Thread.sleep(1000);
 				System.out.println("Edit Fax Number");
 				test.log(LogStatus.INFO, "Edit Fax Number");
-				driver.findElement(By.id("fax")).sendKeys("9874563210");
+				driver.findElement(By.id("fax")).sendKeys("9874563210");*/
 
 				/*
 				 * Thread.sleep(1000); System.out.println("Edit Street Address"
@@ -306,11 +305,11 @@ public class DeliveryAddressPage extends Page {
 				test.log(LogStatus.INFO, "Edit Telephone Number");
 				driver.findElement(By.id("register-phn-no")).sendKeys("0123456789");
 
-				Thread.sleep(1000);
+				/*Thread.sleep(1000);
 				System.out.println("Edit Fax Number");
 				test.log(LogStatus.INFO, "Edit Fax Number");
 				driver.findElement(By.id("fax")).sendKeys("9874563210");
-
+*/
 				/*
 				 * Thread.sleep(1000); System.out.println("Edit Street Address"
 				 * ); test.log(LogStatus.INFO, "Edit Street Address");

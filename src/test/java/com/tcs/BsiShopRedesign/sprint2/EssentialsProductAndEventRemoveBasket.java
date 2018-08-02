@@ -45,7 +45,7 @@ public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 		WebDriverWait wait = new WebDriverWait(driver, 120);
 
 		try {
-			test = extent.startTest("Sprint 2 - Add Paid Event to Basket");
+			test = extent.startTest("Sprint 2 - Ecom-06 AC#26 __ Add Paid Event to Basket");
 			// test = extent.startTest("Search Paid Event");
 			System.out.println("Search Paid Event");
 			Log.info("Search Paid Event");
@@ -70,7 +70,7 @@ public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 			Log.info("Add Event to Basket and View Basket");
 			event.addEventToBasket();
 
-			test = extent.startTest("Sprint 2 - Add Essentials Product to Basket");
+			test = extent.startTest("Sprint 2 - Ecom-06 AC#26 __ Add Essentials Product to Basket");
 			Log.info("Enter product name in Search textbox");
 			System.out.println("Enter product name in Search textbox");
 			test.log(LogStatus.INFO, "Enter product name in Search textbox");

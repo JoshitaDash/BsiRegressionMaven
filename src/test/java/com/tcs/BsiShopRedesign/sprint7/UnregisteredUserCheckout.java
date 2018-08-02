@@ -18,7 +18,7 @@ public class UnregisteredUserCheckout extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void CheckLoginAlertOnChekout() {
 
-		test = extent.startTest("Sprint 7 - Verify Login Alert for Unregistered User on Clicking Checkout");
+		test = extent.startTest("Sprint 7 - Ecom-52 AC#32,38; Ecom-25 AC#56,58 __ Verify Login Alert for Unregistered User on Clicking Checkout");
 		try {
 
 			System.out.println("Perform Blank Search");
@@ -38,7 +38,7 @@ public class UnregisteredUserCheckout extends BaseTest {
 
 			System.out.println("Select Format and Click Ok");
 			Log.info("Select Format and Click Ok");
-			search.defaultFormatClickOK();
+			search.selectFormatClickOK();
 
 			System.out.println("Click Checkout from Mini Basket");
 			Log.info("Click Checkout from Mini Basket");

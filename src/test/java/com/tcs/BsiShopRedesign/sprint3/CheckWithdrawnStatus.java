@@ -18,7 +18,7 @@ public class CheckWithdrawnStatus extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void checkProductStatus() {
 
-		test = extent.startTest("Sprint 3 - Check Withdrawn Status for Standard Products");
+		test = extent.startTest("Sprint 3 - Ecom-47 AC#34 ___ Check Withdrawn Status for Standard Products");
 		try {
 
 			System.out.println("Search PAS Product");
@@ -49,7 +49,7 @@ public class CheckWithdrawnStatus extends BaseTest {
 	@Test(priority = 2, enabled = true)
 	public void checkEventStatus() {
 
-		test = extent.startTest("Sprint 3 - Check Withdrawn Status for Events");
+		test = extent.startTest("Sprint 3 - Ecom-47 AC#34 ___Check Withdrawn Status for Events");
 		try {
 
 			System.out.println("Search Events");
@@ -80,7 +80,7 @@ public class CheckWithdrawnStatus extends BaseTest {
 	@Test(priority = 3, enabled = true)
 	public void checkBookStatus() {
 
-		test = extent.startTest("Sprint 3 - Check Withdrawn Status for Books");
+		test = extent.startTest("Sprint 3 - Ecom-47 AC#34 ___Check Withdrawn Status for Books");
 		try {
 
 			System.out.println("Search Books");

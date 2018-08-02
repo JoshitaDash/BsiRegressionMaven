@@ -46,7 +46,7 @@ public class DownloadMarketingMaterial extends BaseTest {
 
 		try {
 
-			test = extent.startTest("Sprint 2 - Search product and Download MM");
+			test = extent.startTest("Sprint 2 - Ecom-59 AC#77 ___Search product and Download Marketing Material");
 			Log.info("Enter product name in Search textbox");
 			System.out.println("Enter product name in Search textbox");
 			test.log(LogStatus.INFO, "Enter product name in Search textbox");

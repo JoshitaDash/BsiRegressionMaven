@@ -18,7 +18,7 @@ public class CheckBlankSearchResult extends BaseTest {
 	@Test(priority = 1, enabled = true)
 	public void blankSearch() {
 
-		test = extent.startTest("Sprint 3 - Check Product details for Blank Search");
+		test = extent.startTest("Sprint 3 - Ecom-48 AC#46 ___ Check Product details for Blank Search");
 		try {
 
 			System.out.println("Perform Blank Search");

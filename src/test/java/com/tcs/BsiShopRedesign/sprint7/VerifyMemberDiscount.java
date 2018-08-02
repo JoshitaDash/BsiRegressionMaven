@@ -40,7 +40,8 @@ public class VerifyMemberDiscount extends BaseTest {
 	@Test(priority = 2, enabled = true)
 	public void verifyMemberPrice() {
 
-		test = extent.startTest("Sprint 7 - Verify Member Price/Discount");
+		test = extent.startTest(
+				"Sprint 7 - Ecom-52 AC#31 __ Verify Member Price/Discount in Search List, Basket Page and Checkout Page");
 		try {
 
 			test.log(LogStatus.INFO, "Perform Blank Search");
@@ -68,7 +69,7 @@ public class VerifyMemberDiscount extends BaseTest {
 
 			System.out.println("Select Format and Click Ok");
 			Log.info("Select Format and Click Ok");
-			search.defaultFormatClickOK();
+			search.selectFormatClickOK();
 
 			System.out.println("View Basket");
 			Log.info("View Basket");

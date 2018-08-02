@@ -40,7 +40,7 @@ public class CreateCheckoutBillingAddress extends BaseTest{
 	@Test(priority = 2, enabled = true)
 	public void editBillingAddress() {
 		
-		test = extent.startTest("Sprint 7 - Create New Checkout Billing Address in Checkout Page");
+		test = extent.startTest("Sprint 7 - Ecom 10 AC#48; Ecom-15 AC#44; Ecom-52 AC#28,30,38; Ecom-25 AC#56,58__ Create New Checkout Billing Address in Checkout Page");
 
 		try {
 			System.out.println("Perform Blank Search");
@@ -60,7 +60,7 @@ public class CreateCheckoutBillingAddress extends BaseTest{
 
 			System.out.println("Select Format and Click Ok");
 			Log.info("Select Format and Click Ok");
-			search.defaultFormatClickOK();
+			search.selectFormatClickOK();
 
 			System.out.println("Click Checkout from Mini Basket");
 			Log.info("Click Checkout from Mini Basket");

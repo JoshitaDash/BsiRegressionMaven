@@ -122,9 +122,9 @@ public class MyProfileMemberPage extends Page {
 	public void addToBasketFromMemTab() {
 
 		try {
-			test.log(LogStatus.INFO, "Add to Basket from Member Benefits Tab");
-			System.out.println("Add to Basket from Member Benefits Tab");
-			Log.info("Add to Basket from Member Benefits Tab");
+			test.log(LogStatus.INFO, "Add Invoice to Basket from Member Benefits Tab");
+			System.out.println("Add Invoice to Basket from Member Benefits Tab");
+			Log.info("Add Invoice to Basket from Member Benefits Tab");
 
 			WebElement addToBasket = driver.findElements(By.cssSelector("input[value='Add to Basket']")).get(1);
 			addToBasket.click();
@@ -142,21 +142,101 @@ public class MyProfileMemberPage extends Page {
 		}
 	}
 
-	public void clickLogout() {
+	public void clickRenewMembership() {
 
 		try {
-			Thread.sleep(1000);
-			Log.info("Click Logout");
-			System.out.println("Click Logout");
-			test.log(LogStatus.INFO, "Click Logout");
-			click("logoutButton_xpath");
+			test.log(LogStatus.INFO, "Click Renew Membership");
+			System.out.println("Click Renew Membership");
+			Log.info("Click Renew Membership");
+			WebElement renewMembership = driver.findElements(By.cssSelector("a[title*='Renew Membership']")).get(1);
+			String renewMemText = renewMembership.getText();
+			test.log(LogStatus.INFO, "The Membership number is: " + renewMemText);
+		    System.out.println("The Membership number is: " + renewMemText);
+			renewMembership.click();
+		} catch (Exception e) {
+
+			CommonHelper.reportFailure("Click Renew Membership was unsuccessful");
+			Assert.fail(e.getMessage());
+			e.printStackTrace();
+		}
+
+	}
+
+	public void renewMembershipToBasket() {
+
+		try {
+			test.log(LogStatus.INFO, "Add Renew Membership to Basket");
+			System.out.println("Add Renew Membership to Basket");
+			Log.info("Add Renew Membership to Basket");
+			click("addToBasketMembership_id");
+
 			Thread.sleep(2000);
-			test.log(LogStatus.PASS, "Logged Out Successfully");
+			System.out.println("Click on View Basket");
+			test.log(LogStatus.INFO, "Click on View Basket ");
+			Log.info("Click on View Basket");
+			driver.findElement(By.xpath("//*[@id='basket']/div/a")).click();
 
 		} catch (Exception e) {
-			CommonHelper.reportFailure("Click Logout was unsuccessful");
+			CommonHelper.reportFailure("Add Renew Membership to Basket was unsuccessful");
 			Assert.fail(e.getMessage());
 			e.printStackTrace();
 		}
 	}
+
+	public void enterEmailID() {
+		try {
+			Thread.sleep(1000);
+			Log.info("Enter Email ID");
+			System.out.println("Enter Email ID");
+			test.log(LogStatus.INFO, "Enter Email ID");
+			enterText("memEmail_id", "abc@tcs.com");
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Enter Email ID was unsuccessful");
+			Assert.fail(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+
+	public void clickSend() {
+		try {
+			Thread.sleep(1000);
+			Log.info("Click on Send Email");
+			System.out.println("Click on Send Email");
+			test.log(LogStatus.INFO, "Click on Send Email");
+			click("emailSend_id");
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Click on Send Email was unsuccessful");
+			Assert.fail(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+
+	public void verifySuccessMsg() {
+		try {
+			Thread.sleep(1000);
+			Log.info("Verify Success Message");
+			System.out.println("Verify Success Message");
+			test.log(LogStatus.INFO, "Verify Success Message");
+			String successMsg = driver.findElement(By.id("successmessage")).getText();
+			if (successMsg.contains("Thank you")) {
+				System.out.println("The Success Message is: " + successMsg);
+				test.log(LogStatus.PASS, "The Success Message is: " + successMsg);
+			} else {
+				System.out.println("The Verification of Success Message failed");
+				test.log(LogStatus.FAIL, "The Verification of Success Message failed");
+			}
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Success Message was unsuccessful");
+			Assert.fail(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+
+	
+	
+
+	
 }

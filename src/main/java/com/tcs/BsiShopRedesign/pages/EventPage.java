@@ -3,7 +3,9 @@ package com.tcs.BsiShopRedesign.pages;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -105,8 +107,8 @@ public class EventPage extends Page {
 			Thread.sleep(1000);
 			click("addDelegate_css");
 			Thread.sleep(1000);
-			//driver.findElement(By.cssSelector("input[class='addDelegate']")).click();
-			//click("addFirstDelegate_xpath");
+			// driver.findElement(By.cssSelector("input[class='addDelegate']")).click();
+			// click("addFirstDelegate_xpath");
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Click Add Delegate was unsuccessful");
@@ -323,22 +325,26 @@ public class EventPage extends Page {
 	}
 
 	public void removeEvent() {
+		WebDriverWait wait = new WebDriverWait(driver, 120);
 
 		try {
+			WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
 			test.log(LogStatus.INFO, "Remove Event from Basket");
 			Thread.sleep(3000);
-			CommonHelper.elementToBeVisible("removeEvent_xpath");
-			CommonHelper.elementToBeClickable("removeEvent_xpath");
-			//click("removeEvent_xpath");
-			CommonHelper.clickByJS("removeEvent_xpath");
-
+			wait.until(ExpectedConditions.visibilityOf(remove));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
+			// CommonHelper.elementToBeVisible("removeEvent_xpath");
+			// CommonHelper.elementToBeClickable("removeEvent_xpath");
+			// click("removeEvent_xpath");
+			// CommonHelper.clickByJS("removeEvent_xpath");
+			remove.click();
 			Thread.sleep(5000);
 			test.log(LogStatus.INFO, "Verify Remove Basket");
 			CommonHelper.elementToBeClickable("verifyBasket_css");
 			String verifyBasket = CommonHelper.element("verifyBasket_css").getText();
-			System.out.println("The Verfication message is: " + verifyBasket);
-			Log.info("The Verfication message is: " + verifyBasket);
-			test.log(LogStatus.PASS, "Event has been removed from Basket successfully");
+			System.out.println("The Verification message is: " + verifyBasket);
+			Log.info("The Verification message is: " + verifyBasket);
+			test.log(LogStatus.PASS, "The Verification message is: " + verifyBasket);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Remove Event from Basket was unsuccessful");
@@ -350,12 +356,18 @@ public class EventPage extends Page {
 
 	public void removeMultipleEvent() {
 
+		WebDriverWait wait = new WebDriverWait(driver, 120);
 		test.log(LogStatus.INFO, "Remove Multiple Event from Basket");
 
 		try {
+			
 			for (int i = 1; i <= 2; i++) {
-				Thread.sleep(3000);
-				click("removeEvent_xpath");
+				WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
+				Thread.sleep(5000);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
+				remove.click();
+				// click("removeEvent_xpath");
 			}
 
 			Thread.sleep(5000);
@@ -538,7 +550,7 @@ public class EventPage extends Page {
 			CommonHelper.elementToBeVisible("editFirstEvent_xpath");
 			CommonHelper.elementToBeClickable("editFirstEvent_xpath");
 			click("editFirstEvent_xpath");
-			//CommonHelper.clickByJS("editFirstEvent_xpath");
+			// CommonHelper.clickByJS("editFirstEvent_xpath");
 			Thread.sleep(3000);
 			CommonHelper.elementToBeClickable("divCollapsed_xpath");
 			click("divCollapsed_xpath");
@@ -566,7 +578,7 @@ public class EventPage extends Page {
 			// ele.get(2).click();
 			CommonHelper.elementToBeVisible("editSecondEvent_xpath");
 			CommonHelper.elementToBeClickable("editSecondEvent_xpath");
-			//CommonHelper.clickByJS("editSecondEvent_xpath");
+			// CommonHelper.clickByJS("editSecondEvent_xpath");
 			click("editSecondEvent_xpath");
 
 			Thread.sleep(3000);

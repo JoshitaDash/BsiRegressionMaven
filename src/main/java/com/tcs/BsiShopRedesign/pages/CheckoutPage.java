@@ -102,11 +102,12 @@ public class CheckoutPage extends Page {
 			Log.info("Enter CVC Number");
 			enterText("payCvc_id", "000");
 
+			Thread.sleep(2000);
 			System.out.println("Click Submit");
 			test.log(LogStatus.INFO, "Click Submit");
 			Log.info("Click Submit");
-			CommonHelper.clickByJS("paySubmit_id");
-			//click("paySubmit_id");
+			//CommonHelper.clickByJS("paySubmit_id");
+			click("paySubmit_id");
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Card Details was unsuccessful");
@@ -275,15 +276,15 @@ public class CheckoutPage extends Page {
 
 			String orderSummary = CommonHelper.element("memberDetails_xpath").getText();
 			if (orderSummary.contains("Membership")) {
-				System.out.println("Membership Application was successful");
+				System.out.println("Membership Application below Band 9 was successful");
 				test.log(LogStatus.INFO, "The Order Summary is: " + orderSummary);
-				test.log(LogStatus.PASS, "Membership Application was successful");
+				test.log(LogStatus.PASS, "Membership Application below Band 9 was successful");
 			} else {
-				System.out.println("Membership Application was unsuccessful");
-				test.log(LogStatus.FAIL, "Membership Application was unsuccessful");
+				System.out.println("Membership Application below Band 9was unsuccessful");
+				test.log(LogStatus.FAIL, "Membership Application below Band 9 was unsuccessful");
 			}
 		} catch (InterruptedException e) {
-			CommonHelper.reportFailure("Membership Application was unsuccessful");
+			CommonHelper.reportFailure("Membership Application below Band 9 was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 			e.printStackTrace();
