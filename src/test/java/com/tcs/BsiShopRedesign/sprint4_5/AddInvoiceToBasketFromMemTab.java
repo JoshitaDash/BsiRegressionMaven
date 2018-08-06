@@ -38,7 +38,7 @@ public class AddInvoiceToBasketFromMemTab extends BaseTest {
 	@Test(priority = 2, enabled = true)
 	public void AddInvoiceToBasket() {
 
-		test = extent.startTest("Sprint 4&5 - Ecom-27 AC#24; Ecom-44 AC#63 ___ Add invoice to Basket from Member Tab");
+		test = extent.startTest("Sprint 4&5 - Ecom-27 AC#24 ___ Add invoice to Basket from Member Tab");
 		try {
 			// test = extent.startTest("Click on Member Tab");
 			System.out.println("Click on Member Tab");
