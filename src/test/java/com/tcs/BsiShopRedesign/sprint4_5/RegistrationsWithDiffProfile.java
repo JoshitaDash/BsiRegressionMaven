@@ -41,7 +41,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 		}
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = false)
 	public void createRegUserNonUKProfile() {
 
 		test = extent.startTest("Sprint 4&5 - Ecom-35 AC#1,6,7 ___Create registered user with Non-UK profile without using Postcode");
