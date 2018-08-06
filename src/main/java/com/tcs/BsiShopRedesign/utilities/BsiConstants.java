@@ -28,11 +28,11 @@ public class BsiConstants {
 
 	// URLs-UAT
 	public static final String UAT_URL = "https://staging-standards.bsigroup.com/";
-	public static final String UAT_USERNAME = "autoTest@tcs.com";
+	public static final String UAT_USERNAME = "dash.joshita@tcs.com";
 	public static final String UAT_PASSWORD = "Test@1234";
 	public static final String UAT_MEM_USERNAME = "subhrateja.satapathy@tcs.com";
 	public static final String UAT_MEM_PASSWORD = "Test@1234";
-	public static final String UAT_REG_USERNAME = "dash.joshita@tcs.com";
+	public static final String UAT_REG_USERNAME = "autoTest@tcs.com";
 	public static final String UAT_MEM_SEC_USERNAME = "sharmileemohapatra@gmail.com";
 	public static final String UAT_MEM_SEC_PASSWORD = "June@2018";
 	public static final String UAT_TEN_USERNAME = "tenAddress@tcs.com";
