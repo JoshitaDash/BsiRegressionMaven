@@ -179,7 +179,7 @@ public class EventPage extends Page {
 
 			test.log(LogStatus.INFO, "Enter Telephone Number");
 			Log.info("Enter Telephone Number");
-			System.out.println("Enter Telephone Number");
+			System.out.println("Enter Telephone Number ");
 			enterText("phoneNum_css", "123456789");
 
 			test.log(LogStatus.INFO, "Enter Street Address");
@@ -206,7 +206,7 @@ public class EventPage extends Page {
 			Log.info("Enter Country");
 			System.out.println("Enter Country");
 			// selectFirstOption("country_css");
-			WebElement country = driver.findElement(By.cssSelector("select[title='Choose'][class*='selectcountry']"));
+			WebElement country = driver.findElement(By.cssSelector("select[title='Country']"));
 			Select dpdwn = new Select(country);
 			dpdwn.selectByVisibleText("United Kingdom");
 
@@ -270,7 +270,7 @@ public class EventPage extends Page {
 			clearText("editState_css");
 			enterText("editState_css", "England EDIT");
 
-			test.log(LogStatus.INFO, "Edit Zip Postal Code");
+			/*test.log(LogStatus.INFO, "Edit Zip Postal Code");
 			Log.info("Edit Zip Postal Code");
 			System.out.println("Edit Zip Postal Code");
 			clearText("postalCode_css");
@@ -279,7 +279,7 @@ public class EventPage extends Page {
 			test.log(LogStatus.INFO, "Edit Country");
 			Log.info("Edit Country");
 			System.out.println("Edit Country");
-			selectFirstOption("country_css");
+			selectFirstOption("country_css");*/
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Editing Delegate details was unsuccessful");

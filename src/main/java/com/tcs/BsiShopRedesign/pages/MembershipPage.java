@@ -3,6 +3,7 @@ package com.tcs.BsiShopRedesign.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -45,14 +46,41 @@ public class MembershipPage extends Page {
 			test.log(LogStatus.INFO, "Select Membership Address ");
 			Log.info("Select Membership Address ");
 			selectFirstOption("memberAddress_id");
+			
+			Thread.sleep(1000);
+			/*System.out.println("Enter Postal Code");
+			test.log(LogStatus.INFO, "Enter Postal Code");
+			driver.findElement(By.id("zip")).sendKeys("AA11AA");
 
-			/*
+			Thread.sleep(1000);
+			System.out.println("Click Find Address");
+			test.log(LogStatus.INFO, "Click Find Address");
+			driver.findElement(By.cssSelector("button[class='action primary']")).click();
+
+			Thread.sleep(1000);
+			System.out.println("Select Address");
+			test.log(LogStatus.INFO, "Select Address");
+			Select address = new Select(driver.findElement(By.xpath("//*[@id='m2_address']/div/div/div[2]/select")));
+			address.selectByIndex(1);
+				
+			Thread.sleep(1000);
+			System.out.println("Select Country");
+			test.log(LogStatus.INFO, "Select Country");
+			Select country = new Select(driver.findElement(By.id("country")));
+			country.selectByVisibleText("United Kingdom");
+			
+			
 			 * System.out.println("Enter Company Billing Email"); test.log(LogStatus.INFO,
 			 * "Enter Company Billing Email"); Log.info("Enter Company Billing Email");
 			 * clearText("compBillEmail_id"); enterText("compBillEmail_id",
 			 * "compBill@tcs.com");
-			 */
+			 
 
+			System.out.println("Enter Member Telephone Number");
+			test.log(LogStatus.INFO, "Enter Member Telephone Number");
+			Log.info("Enter Member Telephone Number");
+			enterText("memberPhone_id", "23135456786");*/
+			
 			System.out.println("Enter Company Billing Email");
 			test.log(LogStatus.INFO, "Enter Company Billing Email");
 			Log.info("Enter Company Billing Email");

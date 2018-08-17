@@ -20,7 +20,6 @@ public class SignInPage extends Page {
 	// String newPassword;
 	public SignInPage(WebDriver driver) throws Exception {
 		super(driver);
-		// BaseTest.driver = driver;
 	}
 
 	public void login() {
@@ -39,7 +38,7 @@ public class SignInPage extends Page {
 			System.out.println("Enter Email ID");
 			Log.info("Enter Email ID");
 			test.log(LogStatus.INFO, "Enter Email ID");
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			driver.findElement(By.id("bsi_email")).sendKeys(BsiConstants.getEnvDetails().get("username"));
 
 			Thread.sleep(2000);

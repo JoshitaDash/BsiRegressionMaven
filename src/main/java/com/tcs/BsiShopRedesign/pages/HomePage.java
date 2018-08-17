@@ -263,7 +263,8 @@ public class HomePage extends BaseTest {
 		System.out.println("Click on Register");
 		test.log(LogStatus.INFO, "Click on Register");
 		CommonHelper.elementToBeClickable("register_xpath");
-		click("register_xpath");
+		CommonHelper.clickByJS("register_xpath");
+		//click("register_xpath");
 
 	}
 

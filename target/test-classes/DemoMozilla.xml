@@ -8,15 +8,15 @@
 			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" /> -->
-			<class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket" />
-			<class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial" /> -->
-			<class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab" /> -->
-			<class name="com.tcs.BsiShopRedesign.sprint3.CheckSearchCount" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint3.CheckSearchCount" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures" />
@@ -26,13 +26,13 @@
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile" />
 			<class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile" />
 			<class name="com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab" /> -->
-			<class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout" />
 			<class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" />
 			<class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress" />	
-			<class name="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress" />
-			<!-- <class name="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount" />
-			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" /> 
-			<class name="com.tcs.BsiShopRedesign.sprint8.RenewMembership" /> -->
+			<class name="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress" /> -->
+			<class name="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" /> --> 
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint8.RenewMembership" /> -->
 		</classes>
 	</test>
 </suite>

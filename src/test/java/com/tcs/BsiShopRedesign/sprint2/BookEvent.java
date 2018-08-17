@@ -21,6 +21,7 @@ public class BookEvent extends BaseTest {
 	public void signIn() {
 
 		try {
+			
 			test = extent.startTest("Sprint 2 - Registered User Sign In");
 			System.out.println("User Signing In");
 			Log.info("User Signing In");

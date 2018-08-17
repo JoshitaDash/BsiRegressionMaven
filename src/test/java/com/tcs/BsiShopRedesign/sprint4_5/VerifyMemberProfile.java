@@ -57,9 +57,9 @@ public class VerifyMemberProfile extends BaseTest{
 			Log.info("Verify Member Status");
 			mem.verifyMemberStatus();
 			
-			/*System.out.println("Verify Member Credit Amount");
+			System.out.println("Verify Member Credit Amount");
 			Log.info("Verify Member Credit Amount");
-			mem.verifyMemberCreditAmnt();*/
+			mem.verifyMemberCreditAmnt();
 
 			//test = extent.startTest("Click Logout");
 			System.out.println("Click Logout");

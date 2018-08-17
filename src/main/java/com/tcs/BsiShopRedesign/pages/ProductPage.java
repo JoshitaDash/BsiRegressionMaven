@@ -15,7 +15,6 @@ public class ProductPage extends Page {
 
 	public ProductPage(WebDriver driver) throws Exception {
 		super(driver);
-		// Page.driver = driver;
 	}
 
 	static String status;

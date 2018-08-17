@@ -71,26 +71,35 @@ public class EditOrderDetailsFromCheckout extends BaseTest {
 			Log.info("View Basket");
 			test.log(LogStatus.INFO, "View Basket");
 			search.viewBasket();
+			
+			/*System.out.println("Click Alert");
+			Log.info("Click Alert");
+			BasketPage checkout = new BasketPage(driver);
+			checkout.clickOtherFormatOKAlert();*/
 
 			System.out.println("Click Checkout Now");
 			Log.info("Click Checkout Now");
 			BasketPage checkout = new BasketPage(driver);
 			checkout.clickCheckout();
-			
+
 			System.out.println("Click Edit on Checkout Page");
 			Log.info("Click Edit on Checkout Page");
 			CheckoutPage editOrder = new CheckoutPage(driver);
 			editOrder.clickEditOrder();
-			
+
 			Log.info("Edit the Basket with Update Quantity");
 			System.out.println("Edit the Basket with Update Quantity");
 			test.log(LogStatus.INFO, "Edit the Basket with Update Quantity");
-			//BasketPage basket = new BasketPage(driver);
+			// BasketPage basket = new BasketPage(driver);
 			checkout.editBasketUpdateQuantity();
 			
+			System.out.println("Click Alert");
+			Log.info("Click Alert");
+			checkout.clickOtherFormatOKAlert();
+
 			System.out.println("Click Checkout Now");
 			Log.info("Click Checkout Now");
-			//BasketPage checkout = new BasketPage(driver);
+			// BasketPage checkout = new BasketPage(driver);
 			checkout.clickCheckout();
 
 			System.out.println("Enter Payment Details");

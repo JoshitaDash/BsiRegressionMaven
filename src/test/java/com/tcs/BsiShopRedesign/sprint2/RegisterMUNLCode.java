@@ -31,7 +31,7 @@ public class RegisterMUNLCode extends BaseTest {
 			test.log(LogStatus.INFO, "Enter product name in Search textbox");
 			WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
 			search.clear();
-			search.sendKeys("PAS 1192-5:2015");
+			search.sendKeys("ASTM G78 - 15");
 
 			Log.info("Click on Search");
 			System.out.println("Click on Search");
@@ -42,7 +42,7 @@ public class RegisterMUNLCode extends BaseTest {
 			Log.info("Select the Product");
 			System.out.println("Select the Product");
 			test.log(LogStatus.INFO, "Select the Product");
-			WebElement product = driver.findElement(By.linkText("PAS 1192-5:2015"));
+			WebElement product = driver.findElement(By.linkText("ASTM G78 - 15"));
 			String name = product.toString();
 			CommonHelper.elementToBeClickable(name);
 			Thread.sleep(1000);

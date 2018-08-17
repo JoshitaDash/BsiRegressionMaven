@@ -28,8 +28,8 @@ public class BillingAddressPage extends Page {
 			System.out.println("Click on Add new Billing Address");
 			test.log(LogStatus.INFO, "Click on Add new Billing Address");
 			// driver.findElement(By.cssSelector(".primary")).click();
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("> Add new billing address")));
-			driver.findElement(By.linkText("> Add new billing address")).click();
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("> Add New Billing Address")));
+			driver.findElement(By.linkText("> Add New Billing Address")).click();
 
 			Thread.sleep(2000);
 			Log.info("Adding Billing Address Details");

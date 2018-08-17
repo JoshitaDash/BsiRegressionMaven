@@ -20,7 +20,7 @@ public class DownloadMarketingMaterial extends BaseTest {
 		super();
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1, enabled = true)
 	public void signIn() {
 
 		try {

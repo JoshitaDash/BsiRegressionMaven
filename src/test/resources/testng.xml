@@ -35,6 +35,8 @@
 			<class name="com.tcs.BsiShopRedesign.sprint8.RenewMembership" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" />
+			<class name="com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout" />
+			<class name="com.tcs.BsiShopRedesign.sprint8.ValidateCheckoutDetails" />
 		</classes>
 	</test>
 

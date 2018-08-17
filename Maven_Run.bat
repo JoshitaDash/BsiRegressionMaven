@@ -1,1 +1,0 @@
-mvn clean & mvn test-compile & mvn test

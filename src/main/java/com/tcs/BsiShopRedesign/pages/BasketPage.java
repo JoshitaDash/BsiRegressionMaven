@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -181,7 +182,7 @@ public class BasketPage extends Page {
 	public void removeProduct() {
 		boolean removeProd = false;
 		WebDriverWait wait = new WebDriverWait(driver, 120);
-		
+
 		try {
 			Thread.sleep(5000);
 			removeProd = driver.findElement(By.xpath("//img[@alt='delete']")).isDisplayed();
@@ -230,8 +231,8 @@ public class BasketPage extends Page {
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
 				remove.click();
-				//Thread.sleep(5000);
-				//click("removeEvent_xpath");
+				// Thread.sleep(5000);
+				// click("removeEvent_xpath");
 				// CommonHelper.clickByJS("removeEvent_xpath");
 			}
 
@@ -269,7 +270,7 @@ public class BasketPage extends Page {
 			System.out.println("Switch iFrame");
 			Thread.sleep(2000);
 			driver.switchTo().frame(munlFrame_xpath);
-			driver.switchTo().frame(0);
+			//driver.switchTo().frame(0);
 			Thread.sleep(2000);
 			System.out.println("iframe switched");
 
@@ -382,7 +383,7 @@ public class BasketPage extends Page {
 			test.log(LogStatus.INFO, "Verify MUNL Request");
 			System.out.println("Verify MUNL Request");
 			Log.info("Verify MUNL Request");
-  			CommonHelper.scrolltoview("verifyMUNL_xpath");
+			CommonHelper.scrolltoview("verifyMUNL_xpath");
 			String verifyText = CommonHelper.element("verifyMUNL_xpath").getText();
 			// String verifyText = driver.findElement(By.id("pardot-form")).getText();
 			System.out.println("The verification message is: " + verifyText);
@@ -413,8 +414,8 @@ public class BasketPage extends Page {
 			WebElement checkout = driver.findElement(By.cssSelector("button[title='Checkout Now']"));
 			if (checkout.isDisplayed() || checkout.isEnabled()) {
 				Thread.sleep(1000);
-			CommonHelper.clickJS(checkout);
-				//checkout.click();
+				CommonHelper.clickJS(checkout);
+				// checkout.click();
 				Thread.sleep(2000);
 			}
 		}
@@ -426,8 +427,33 @@ public class BasketPage extends Page {
 
 	}
 
-	public boolean verifyMemPriceBasket() {
+	public void clickOtherFormatOKAlert() {
+		
+		try {
+			boolean otherFormat = driver.findElement(By.id("OtherFormatFlag")).isDisplayed();
+			//driver.switchTo().activeElement();
+			driver.switchTo().frame(0);
+			// CommonHelper.handleAlert();
+			System.out.println(" ");
+			if (otherFormat) {
+				//WebElement otherForm = driver.findElement(By.id("otherFormat"));
+				/*JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].click();", driver.findElement(By.id("otherFormat")));*/
+				driver.findElement(By.id("otherFormat")).click();
+				System.out.println("Other Foramt Flag exists");
+			} else {
+				System.out.println("Other Foramt Flag does not exists");
+			}
 
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Other Foramt Flag does not exists");
+			e.printStackTrace();
+		}
+	}
+
+	public String verifyMemPriceBasket() {
+
+		String memDiscount = null;
 		try {
 			WebElement unitPrice = driver.findElements(By.cssSelector("td[data-th='Price']>div")).get(0);
 			WebElement finalPrice = driver.findElement(By.cssSelector("span[class='cart-price']"));
@@ -452,25 +478,27 @@ public class BasketPage extends Page {
 			double finalMemPrice = Double.parseDouble(memPriceText);
 			double finalTotalPrice = Double.parseDouble(totalPriceText);
 			double memberPrice = finalUnitPrice / 2;
+			memDiscount = Double.toString(memberPrice);
 
 			if (finalFinalPrice == memberPrice && finalMemPrice == memberPrice && finalTotalPrice == memberPrice) {
 				System.out.println("The unit price of the product in the Basket Page is: " + finalUnitPrice
 						+ " & The member price of the product in the Basket Page is: " + memberPrice);
 				test.log(LogStatus.PASS, "The unit price of the product in the Basket Page is: " + finalUnitPrice
 						+ " & The member price of the product in the Basket Page is: " + memberPrice);
-				return true;
+				//return true;
 			} else {
 				System.out.println("The member price in the Basket Page is incorrect");
 				test.log(LogStatus.FAIL, "The member price in the Basket Page is incorrect");
 				CommonHelper.reportFailure("The member price in the Basket Page is incorrect");
 			}
-			return false;
+			//return false;
 
 		} catch (NumberFormatException e) {
 			CommonHelper.reportFailure("The member price in the Basket Page is incorrect");
 			e.printStackTrace();
 		}
-		return false;
+		return memDiscount;
+		
 
 	}
 

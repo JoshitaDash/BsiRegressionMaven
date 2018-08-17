@@ -1,5 +1,9 @@
 package com.tcs.BsiShopRedesign.sprint8;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -44,9 +48,12 @@ public class SoftCopyDownloads extends BaseTest {
 
 	@Test(priority = 2, enabled = true)
 	public void downloadSoftCopyfromOrderCofirmationPage() {
+		WebDriverWait wait = new WebDriverWait(driver, 120);
 
 		try {
-			test = extent.startTest("Sprint 8 - Ecom-16 AC#78,80; Ecom-18 AC#82 __ Download and Verify SoftCopy from Order Confirmation Page");
+			test = extent.startTest(
+					"Sprint 8 - Ecom-16 AC#78,80; Ecom-18 AC#82 __ Download and Verify SoftCopy from Order Confirmation Page");
+
 			System.out.println("Perform Blank Search");
 			Log.info("Perform Blank Search");
 			HomePage home = new HomePage(driver);
@@ -57,10 +64,25 @@ public class SoftCopyDownloads extends BaseTest {
 			SearchPage search = new SearchPage(driver);
 			search.verifySearchResultforBlankSearch();
 
+			/*Log.info("Enter product name in Search textbox");
+			System.out.println("Enter product name in Search textbox");
+			test.log(LogStatus.INFO, "Enter product name in Search textbox");
+			WebElement searchProd = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
+			searchProd.clear();
+			searchProd.sendKeys("BS EN 62464-1:2007");
+
+			Log.info("Click on Search");
+			System.out.println("Click on Search");
+			test.log(LogStatus.INFO, "Click on Search");
+			CommonHelper.elementToBeClickable("searchButton_css");
+			// driver.findElement(By.cssSelector("button[title='Search']")).click();
+			click("searchButton_css");*/
+
 			Thread.sleep(1000);
 			System.out.println("Click on Add to Basket from Search List");
 			Log.info("Click on Add to Basket from Search List");
 			test.log(LogStatus.INFO, "Click on Add to Basket from Search List");
+			//SearchPage search = new SearchPage(driver);
 			search.clickAddToBasket();
 
 			System.out.println("Select PDF Format and Click Ok");
@@ -127,7 +149,8 @@ public class SoftCopyDownloads extends BaseTest {
 	public void downloadSoftCopyfromOrderHistoryPage() {
 
 		try {
-			test = extent.startTest("Sprint 8 - Ecom-16 AC#78,80; Ecom-18 AC#82 __ Download and Verify SoftCopy from Order History Page");
+			test = extent.startTest(
+					"Sprint 8 - Ecom-16 AC#78,80; Ecom-18 AC#82 __ Download and Verify SoftCopy from Order History Page");
 
 			System.out.println("Fetching the URL");
 			driver.get(url);

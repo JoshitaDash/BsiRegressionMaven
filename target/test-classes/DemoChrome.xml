@@ -4,7 +4,7 @@
 	<test name="Chrome Browser">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
 			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" />
@@ -32,9 +32,11 @@
 			<class name="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" /> 
-			<class name="com.tcs.BsiShopRedesign.sprint8.RenewMembership" />
+			<class name="com.tcs.BsiShopRedesign.sprint8.RenewMembership" /> -->
 			<class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads" />
-			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" />
+			<class name="com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint8.ValidateCheckoutDetails" />	 -->
 		</classes>
 	</test>
 </suite>

@@ -1,8 +1,10 @@
 package com.tcs.BsiShopRedesign.pages;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.http.impl.client.EntityEnclosingRequestWrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
@@ -106,8 +108,9 @@ public class CheckoutPage extends Page {
 			System.out.println("Click Submit");
 			test.log(LogStatus.INFO, "Click Submit");
 			Log.info("Click Submit");
-			//CommonHelper.clickByJS("paySubmit_id");
+			// CommonHelper.clickByJS("paySubmit_id");
 			click("paySubmit_id");
+			driver.switchTo().defaultContent();
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Card Details was unsuccessful");
@@ -119,7 +122,7 @@ public class CheckoutPage extends Page {
 	public void enterOrderDetails() {
 
 		try {
-			driver.switchTo().defaultContent();
+			//driver.switchTo().defaultContent();
 			System.out.println("Select Country");
 			test.log(LogStatus.INFO, "Select Country");
 			Log.info("Select Country");
@@ -162,6 +165,73 @@ public class CheckoutPage extends Page {
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Placing of order was unsuccesful");
 			e.printStackTrace();
+		}
+
+	}
+
+	public void enterNonUKOrderDetails() {
+
+		try {
+			//driver.switchTo().defaultContent();
+			System.out.println("Select Country");
+			test.log(LogStatus.INFO, "Select Country");
+			Log.info("Select Country");
+			selectDpdwnText("country_xpath", "Singapore");
+
+			System.out.println("Click Review Order");
+			test.log(LogStatus.INFO, "Click Review Order");
+			Log.info("Click Review Order");
+			click("reviewOrder_xpath");
+			Thread.sleep(2000);
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Enter Non-UK Order Details was unsuccesful");
+			e.printStackTrace();
+		}
+	}
+
+	public void enterUKOrderDetails() {
+
+		try {
+			//driver.switchTo().defaultContent();
+			System.out.println("Select Country");
+			test.log(LogStatus.INFO, "Select Country");
+			Log.info("Select Country");
+			selectDpdwnText("country_xpath", "United Kingdom");
+
+			System.out.println("Click Review Order");
+			test.log(LogStatus.INFO, "Click Review Order");
+			Log.info("Click Review Order");
+			click("reviewOrder_xpath");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Enter UK Order Details was unsuccesful");
+			e.printStackTrace();
+		}
+	}
+
+	public void validateEvidenceErrorMessage() {
+
+		String addressErrorMsg = driver.findElement(By.cssSelector("span[class='error-message']")).getText();
+		if (addressErrorMsg.contains("Evidence does not match.")) {
+			test.log(LogStatus.PASS, addressErrorMsg);
+			System.out.println(addressErrorMsg);
+		} else {
+			test.log(LogStatus.FAIL, "Validation of Checkout Address was unsuccessful");
+			System.out.println("Validation of Checkout Address was unsuccessful");
+		}
+
+	}
+
+	public void validateBlockedCountryErrorMessage() {
+
+		String addressErrorMsg = driver.findElement(By.cssSelector("div[class='error-message']")).getText();
+		if (addressErrorMsg.contains("The electronic sale is restricted to the selected country")) {
+			test.log(LogStatus.PASS, addressErrorMsg);
+			System.out.println(addressErrorMsg);
+		} else {
+			test.log(LogStatus.FAIL, "Validation of Checkout Address was unsuccessful");
+			System.out.println("Validation of Checkout Address was unsuccessful");
 		}
 
 	}
@@ -263,6 +333,79 @@ public class CheckoutPage extends Page {
 
 	}
 
+	public void createSouthAfricanBillingAddress() {
+
+		try {
+			System.out.println("Add New Billing Address");
+			test.log(LogStatus.INFO, "Add New Billing Address");
+			Log.info("Add New Billing Address");
+			selectDpdwnText("selectBillingAddress_id", "New Address");
+
+			Thread.sleep(1000);
+			System.out.println("Enter Address Name");
+			test.log(LogStatus.INFO, "Enter Address Name");
+			String randomString = RandomStringUtils.randomAlphabetic(5);
+			String uniqueAddressName = "South Africa" + randomString;
+			driver.findElement(By.cssSelector("input[name='custom_attributes[address_name]']")).clear();
+			driver.findElement(By.cssSelector("input[name='custom_attributes[address_name]']"))
+					.sendKeys(uniqueAddressName);
+			// driver.findElement(By.cssSelector("input[name='unique_name']")).sendKeys(uniqueAddressName);
+
+			Thread.sleep(1000);
+			System.out.println("Select Title");
+			test.log(LogStatus.INFO, "Select Title");
+			Select titleDpdwn = new Select(driver.findElement(By.cssSelector("select[name='prefix']")));
+			titleDpdwn.selectByIndex(1);
+
+			Thread.sleep(1000);
+			System.out.println("Enter Street Address Line One");
+			test.log(LogStatus.INFO, "Enter Street Address Line One");
+			clearText("streetAddressLineOne_css");
+			enterText("streetAddressLineOne_css", "300 Kempston Road");
+
+			Thread.sleep(1000);
+			System.out.println("Enter Street Address Line Two");
+			test.log(LogStatus.INFO, "Enter Street Address Line Two");
+			clearText("streetAddressLineTwo_css");
+			enterText("streetAddressLineTwo_css", "Ferguson");
+
+			Thread.sleep(1000);
+			System.out.println("Enter Town/City");
+			test.log(LogStatus.INFO, "Enter Town/City");
+			clearText("checkoutAddressCity_css");
+			enterText("checkoutAddressCity_css", "Port Elizabeth");
+
+			Thread.sleep(1000);
+			System.out.println("Select Country");
+			test.log(LogStatus.INFO, "Select Country");
+			selectDpdwnText("checkoutAddressCountry_css", "South Africa");
+
+			Thread.sleep(1000);
+			System.out.println("Enter Post Code");
+			test.log(LogStatus.INFO, "Enter Post Code");
+			clearText("checkoutAddressPostcode_css");
+			enterText("checkoutAddressPostcode_css", "6020");
+
+			Thread.sleep(1000);
+			System.out.println("Enter Telephone Number");
+			test.log(LogStatus.INFO, "Enter Telephone Number");
+			driver.findElement(By.cssSelector("input[name='telephone']")).clear();
+			driver.findElement(By.cssSelector("input[name='telephone']")).sendKeys("123456790");
+
+			Thread.sleep(3000);
+			System.out.println("Click Save");
+			test.log(LogStatus.INFO, "Click Save");
+			click("saveNewBillingAddress_css");
+			test.log(LogStatus.PASS, "South African Billing Address was saved successfully");
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Add South African Address in Checkout Page was unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
 	public void verifyBillingAddress(String bllingAddress) {
 
 	}
@@ -294,10 +437,12 @@ public class CheckoutPage extends Page {
 	public void clickContinueShopping() {
 
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			System.out.println("Click Continue Shopping");
 			test.log(LogStatus.INFO, "Click Continue Shopping");
-			click("continueShopping_xpath");
+			CommonHelper.scrolltoview("continueShopping_xpath");
+			CommonHelper.clickByJS("continueShopping_xpath");
+			// click("continueShopping_xpath");
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("Click Continue Shopping was unsuccessful");
@@ -317,5 +462,32 @@ public class CheckoutPage extends Page {
 			CommonHelper.reportFailure("Click Edit Order on Checkout Page was unsuccessful");
 			e.printStackTrace();
 		}
+	}
+
+	public boolean verifyMemPriceCheckout(String memDisc) {
+
+		try {
+			WebElement cartPrice = driver.findElement(By.cssSelector("span[class='cart-price']"));
+			String price = cartPrice.getText();
+			price = price.substring(1);
+			double finalUnitPrice = Double.parseDouble(price);
+			String finalPrice = Double.toString(finalUnitPrice);
+
+			if (finalPrice.equals(memDisc)) {
+				System.out.println("The member price of the product in the Checkout Page is: " + memDisc);
+				test.log(LogStatus.PASS, "The member price of the product in the Checkout Page is: " + memDisc);
+				return true;
+			} else {
+				System.out.println("The member price of the product in the Checkout Page is incorrect");
+				test.log(LogStatus.FAIL, "The member price of the product in the Checkout Page is incorrect");
+			}
+			return false;
+
+		} catch (NumberFormatException e) {
+			CommonHelper.reportFailure("The member price in the Checkout Page list is incorrect");
+			e.printStackTrace();
+		}
+		return false;
+
 	}
 }

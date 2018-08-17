@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.BasketPage;
+import com.tcs.BsiShopRedesign.pages.CheckoutPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
@@ -80,13 +81,27 @@ public class VerifyMemberDiscount extends BaseTest {
 			System.out.println("Verify Member Price in Basket Page");
 			Log.info("Verify Member Price in Basket Page");
 			BasketPage basketMemPrice = new BasketPage(driver);
-			basketMemPrice.verifyMemPriceBasket();
+			String memberDiscount = basketMemPrice.verifyMemPriceBasket();
 
-			/*
-			 * Log.info("Remove the Product"); System.out.println("Remove the Product");
-			 * test.log(LogStatus.INFO, "Remove the Product");
-			 * basketMemPrice.removeProduct();
-			 */
+			System.out.println("Click Checkout Now");
+			Log.info("Click Checkout Now");
+			BasketPage checkout = new BasketPage(driver);
+			checkout.clickCheckout();
+
+			test.log(LogStatus.INFO, "Verify Member Price in Checkout Page");
+			System.out.println("Verify Member Price in Checkout Page");
+			Log.info("Verify Member Price in Checkout Page");
+			CheckoutPage checkoutMemPrice = new CheckoutPage(driver);
+			checkoutMemPrice.verifyMemPriceCheckout(memberDiscount);
+			
+			System.out.println("Click Continue Shopping");
+			Log.info("Click Continue Shopping");
+			checkoutMemPrice.clickContinueShopping();
+
+			Log.info("Remove the Product");
+			System.out.println("Remove the Product");
+			test.log(LogStatus.INFO, "Remove the Product");
+			basketMemPrice.removeProduct();
 
 			System.out.println("Click Logout");
 			Log.info("Click Logout");
