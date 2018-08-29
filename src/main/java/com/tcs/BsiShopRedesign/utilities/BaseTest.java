@@ -32,11 +32,11 @@ public class BaseTest extends Page {
 	@Parameters("browser")
 	@BeforeClass
 	// *** Passing Browser parameter from TestNG xml
-	public void launchBrowser(String browser) throws InterruptedException, IOException {
+	public String launchBrowser(String browser) throws InterruptedException, IOException {
 
 		try {
 			DOMConfigurator.configure("log4j.xml");
-
+			setBrowser(browser);
 			if (browser.equalsIgnoreCase("Chrome")) {
 
 				Log.info("Launching Chrome browser");
@@ -111,7 +111,12 @@ public class BaseTest extends Page {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
 		}
+		return browser;
 
+	}
+
+	private void setBrowser(String browser) {
+		this.browser=browser;
 	}
 
 	@AfterClass

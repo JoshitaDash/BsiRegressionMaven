@@ -6,12 +6,12 @@ import java.util.Properties;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.ui.Select;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 
 public class Page {
 
@@ -20,6 +20,7 @@ public class Page {
 	public static ExtentReports extent = ExtentManager.getInstance();
 	public static ExtentTest test;
 	public static Properties prop;
+	public static String browser;
 
 	public Page(WebDriver driver) throws Exception {
 		Page.driver = driver;
@@ -29,7 +30,7 @@ public class Page {
 			prop = new Properties();
 			System.out.println("Checking Properties Object");
 			String filepath = userdir + "\\File.properties";
-			//String filepath = "D:\\BSI_Workspace\\BsiShopRedesign\\File.properties";
+			// String filepath = "D:\\BSI_Workspace\\BsiShopRedesign\\File.properties";
 			System.out.println("Properties path: " + filepath);
 			// File file = new File(filepath);
 			System.out.println("Before File Input stream");
@@ -42,10 +43,31 @@ public class Page {
 
 	public void click(String locator) {
 		try {
-			if (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
+			/*
+			 * if (browser.equals("IE")) { if (!locator.isEmpty() &&
+			 * CommonHelper.isElementVisible(locator))
+			 * CommonHelper.elementToBeVisible(locator);
+			 * CommonHelper.elementToBeClickable(locator); CommonHelper.clickByJS(locator);
+			 * } else
+			 */
+			/*
+			 * if (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
+			 * CommonHelper.elementToBeVisible(locator);
+			 * CommonHelper.elementToBeClickable(locator);
+			 * CommonHelper.element(locator).click();
+			 */
+
+			if (BaseTest.browser.equals("IE")) {
+				System.out.println("");
+				if (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
+					CommonHelper.elementToBeVisible(locator);
+				CommonHelper.elementToBeClickable(locator);
+				CommonHelper.clickByJS(locator);
+			} else {// (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
 				CommonHelper.elementToBeVisible(locator);
-			CommonHelper.elementToBeClickable(locator);
-			CommonHelper.element(locator).click();
+				CommonHelper.elementToBeClickable(locator);
+				CommonHelper.element(locator).click();
+			}
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, locator + " Click Element Not Found");
 			e.printStackTrace();
@@ -94,6 +116,7 @@ public class Page {
 	public void selectDpdwnValue(String locator, String value) {
 		try {
 			CommonHelper.elementToBeVisible(locator);
+			CommonHelper.element(locator).click();
 			Select dpdwn = new Select(CommonHelper.element(locator));
 			dpdwn.selectByValue(value);
 		} catch (Exception e) {

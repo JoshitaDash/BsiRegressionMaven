@@ -195,7 +195,8 @@ public class BasketPage extends Page {
 
 				// CommonHelper.clickByJS("remoeItem_id");
 				System.out.println("removing product");
-				driver.findElement(By.xpath("//img[@alt='delete']")).click();
+				click("removeProduct_xpath");
+				//driver.findElement(By.xpath("//img[@alt='delete']")).click();
 
 				Thread.sleep(2000);
 				System.out.println("Get the text of the remove basket message");
@@ -442,11 +443,11 @@ public class BasketPage extends Page {
 				driver.findElement(By.id("otherFormat")).click();
 				System.out.println("Other Foramt Flag exists");
 			} else {
-				System.out.println("Other Foramt Flag does not exists");
+				System.out.println("Other Format Flag does not exists");
 			}
 
 		} catch (Exception e) {
-			CommonHelper.reportFailure("Other Foramt Flag does not exists");
+			CommonHelper.reportFailure("Other Format Flag does not exists");
 			e.printStackTrace();
 		}
 	}

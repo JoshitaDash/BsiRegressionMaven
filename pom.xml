@@ -36,7 +36,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>src/test/resources/DemoChrome.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>src/test/resources/DemoMozilla.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile> -->
 					</suiteXmlFiles>

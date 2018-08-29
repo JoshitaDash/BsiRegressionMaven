@@ -537,7 +537,7 @@ public class HomePage extends BaseTest {
 			Log.info("Click Logout");
 			System.out.println("Click Logout");
 			test.log(LogStatus.INFO, "Click Logout");
-			click("logoutButton_xpath");
+			click("logoutButton_id");
 			Thread.sleep(2000);
 			test.log(LogStatus.PASS, "Logged Out Successfully");
 

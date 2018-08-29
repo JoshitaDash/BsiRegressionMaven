@@ -57,10 +57,10 @@ public class SearchPage extends Page {
 					Log.info("Click on Next");
 					/*JavascriptExecutor executor = (JavascriptExecutor) driver;
 					executor.executeScript("arguments[0].click();", By.xpath("(//span[text()='Next'])[2]"));*/
-					driver.findElement(By.xpath("(//span[text()='Next'])[2]")).click();
+					//driver.findElement(By.xpath("(//span[text()='Next'])[2]")).click();
+					click("next_xpath");
 					Thread.sleep(30000);
 					isNextButtonDisplayed = !CommonHelper.isElementHiddenNow("(//span[text()='Next'])[2]");
-
 				}
 				Thread.sleep(2000);
 				numOfProducts += productLink;
@@ -793,7 +793,7 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, "Click on Add to Basket");
 			Log.info("Click on Add to Basket");
 			System.out.println("Click on Add to Basket");
-			WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(0);
+			WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
 			CommonHelper.elementToBeClickable("addToBasket_css");
 			addToBasket.click();
 			Thread.sleep(2000);

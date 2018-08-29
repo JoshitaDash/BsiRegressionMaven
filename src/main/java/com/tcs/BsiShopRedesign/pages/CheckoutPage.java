@@ -453,10 +453,13 @@ public class CheckoutPage extends Page {
 	public void clickEditOrder() {
 
 		try {
+			
 			Thread.sleep(1000);
 			System.out.println("Click Edit Order on Checkout Page");
 			test.log(LogStatus.INFO, "Click Edit Order on Checkout Page");
-			click("editOrder_id");
+			driver.findElement(By.id("edit-button")).click();
+			//CommonHelper.scrolltoview("editOrder_id");
+			//click("editOrder_id");
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("Click Edit Order on Checkout Page was unsuccessful");

@@ -137,7 +137,8 @@ public class DownloadMMPage extends Page {
 			test.log(LogStatus.INFO, "Click on Submit");
 			System.out.println("Click on Submit");
 			Log.info("Click on Submit");
-			click("submitGR_css");
+			//driver.findElement(By.cssSelector("input[value='Submit']")).click();
+		    click("submitGR_css");
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter PAS Pardot Form details was unsuccessful");

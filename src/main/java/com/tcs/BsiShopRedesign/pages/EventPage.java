@@ -449,10 +449,10 @@ public class EventPage extends Page {
 	public void enterPardotDetails() {
 
 		try {
-			test.log(LogStatus.INFO, "Select Pardot Title");
+			/*test.log(LogStatus.INFO, "Select Pardot Title");
 			Log.info("Select Pardot Title");
 			System.out.println("Select Pardot Title");
-			selectFirstOption("pardotTitle_id");
+			selectFirstOption("pardotTitle_id");*/
 
 			test.log(LogStatus.INFO, "Enter Pardot First Name");
 			Log.info("Enter Pardot First Name");

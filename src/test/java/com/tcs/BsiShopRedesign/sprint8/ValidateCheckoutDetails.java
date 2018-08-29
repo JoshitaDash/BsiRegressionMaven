@@ -27,6 +27,7 @@ public class ValidateCheckoutDetails extends BaseTest {
 			Log.info("User Signing In");
 			SignInPage signIn = new SignInPage(driver);
 			signIn.login();
+			
 		}
 
 		catch (Exception e) {
