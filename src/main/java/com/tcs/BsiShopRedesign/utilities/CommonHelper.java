@@ -27,7 +27,6 @@ import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
 
-
 public class CommonHelper extends Page {
 
 	public CommonHelper() throws Exception {
@@ -306,6 +305,14 @@ public class CommonHelper extends Page {
 			Alert alert = driver.switchTo().alert();
 			System.out.println(alert.getText());
 			alert.accept();
+		}
+	}
+
+	public static void dismissAlert() {
+		if (isAlertPresent()) {
+			Alert alert = driver.switchTo().alert();
+			System.out.println(alert.getText());
+			alert.dismiss();
 		}
 	}
 

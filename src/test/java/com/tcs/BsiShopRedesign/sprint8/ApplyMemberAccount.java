@@ -8,6 +8,7 @@ import com.tcs.BsiShopRedesign.pages.BasketPage;
 import com.tcs.BsiShopRedesign.pages.CheckoutPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.MembershipPage;
+import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
 import com.tcs.BsiShopRedesign.pages.ProductPage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
@@ -39,7 +40,7 @@ public class ApplyMemberAccount extends BaseTest {
 		}
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = false)
 	public void applyMemberAccountBelowBandNine() {
 
 		try {
@@ -53,7 +54,7 @@ public class ApplyMemberAccount extends BaseTest {
 			Log.info("Verfiy search result");
 			SearchPage search = new SearchPage(driver);
 			search.verifySearchResultforBlankSearch();
-			
+
 			System.out.println("Click on Product");
 			Log.info("Click on Product");
 			search.clickProductOnSearchList();
@@ -89,7 +90,6 @@ public class ApplyMemberAccount extends BaseTest {
 			System.out.println("Remove Membership from Basket");
 			Log.info("Remove Membership from Basket");
 			checkout.removeProduct();
-				
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Membership Application for below Band 9 was unsuccessful");
@@ -116,7 +116,7 @@ public class ApplyMemberAccount extends BaseTest {
 			System.out.println("Click on Product");
 			Log.info("Click on Product");
 			search.clickProductOnSearchList();
-			
+
 			System.out.println("Verfiy Member Price");
 			Log.info("Verfiy Member Price");
 			ProductPage prod = new ProductPage(driver);
@@ -130,14 +130,39 @@ public class ApplyMemberAccount extends BaseTest {
 			System.out.println("Verify Membership Message for Band 9 and above");
 			Log.info("Verify Membership Message for Band 9 and above");
 			member.verifyMemberMessage();
-			
-			System.out.println("Click Logout");
-			Log.info("Click Logout");
-			home.clickLogout();
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Membership Application for above Band 9 was unsuccessful");
 			e.printStackTrace();
 		}
+	}
+
+	@Test(priority = 4, enabled = true)
+	public void validateErrorMsgMemberNumber() {
+
+		try {
+			test = extent.startTest("Sprint 8 - Ecom-39 AC#20 __ Validate Error Message for Membership Number");
+			System.out.println("Click on My Profile");
+			Log.info("Click on My Profile");
+			HomePage myProfile = new HomePage(driver);
+			myProfile.clickMyProfile();
+
+			System.out.println("Enter Membership Number");
+			Log.info("Enter Membership Number");
+			MyProfileMemberPage mem = new MyProfileMemberPage(driver);
+			mem.enterMemNum();
+
+			System.out.println("Verify Member Number Error Message");
+			Log.info("Verify Member Number Error Message");
+			mem.verifyErrorMsg();
+
+			System.out.println("Click Logout");
+			Log.info("Click Logout");
+			myProfile.clickLogout();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 }

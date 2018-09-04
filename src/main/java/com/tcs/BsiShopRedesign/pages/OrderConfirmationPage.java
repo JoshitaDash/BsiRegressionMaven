@@ -20,12 +20,12 @@ public class OrderConfirmationPage extends Page {
 
 	}
 
-	public void downloadVerifySoftCopyDocuments() {
+	public void downloadVerifySoftCopyDocuments(String downloadDoc) {
 
 		String allDocs = null;
 		String firstSoftCopy = null;
 		String secondSoftCopy = null;
-		//List<String> docName = new ArrayList<String>();
+		// List<String> docName = new ArrayList<String>();
 
 		try {
 
@@ -37,19 +37,31 @@ public class OrderConfirmationPage extends Page {
 			Thread.sleep(2000);
 			test.log(LogStatus.INFO, ("Download First SoftCopy Document"));
 			Log.info("Download First SoftCopy Document");
-			System.out.println("Download First SoftCopy Document");	
+			System.out.println("Download First SoftCopy Document");
 			downloadSoftCopy.get(0).click();
-			Thread.sleep(2000);	
+			Thread.sleep(2000);
 			CommonHelper.handleAlert();
 			test.log(LogStatus.PASS, "First Document Download is Successful");
 			Thread.sleep(2000);
 			CommonHelper.handleAlert();
 			firstSoftCopy = softCopyName.get(0).getText();
 			firstSoftCopy = firstSoftCopy.replace(":", "_");
-			//docName.add(firstSoftCopy);
-			verifyExpectedFileName(firstSoftCopy);
+			// docName.add(firstSoftCopy);
+			//verifyExpectedFileName(firstSoftCopy);
+			//try {
+				if (verifyExpectedFileName(firstSoftCopy) != null) {
+					test.log(LogStatus.PASS, "Verificatiion of First Document Download is Successful");
+					System.out.println("Verificatiion of First Document Download is Successful");
 
-			Thread.sleep(2000);
+				} else {
+					test.log(LogStatus.FAIL, "Verificatiion of First Document Download was unSuccessful");
+					System.out.println("Verificatiion of First Document Download was unSuccessful");
+				}
+			//} catch (Exception e) {
+				//e.printStackTrace();
+			//}
+
+			Thread.sleep(5000);
 			test.log(LogStatus.INFO, ("Download Second SoftCopy Document"));
 			Log.info("Download Second SoftCopy Document");
 			System.out.println("Download Second SoftCopy Document");
@@ -60,10 +72,22 @@ public class OrderConfirmationPage extends Page {
 			secondSoftCopy = softCopyName.get(1).getText();
 			CommonHelper.handleAlert();
 			secondSoftCopy = secondSoftCopy.replace(":", "_");
-			//docName.add(secondSoftCopy);
-			verifyExpectedFileName(secondSoftCopy);
+			// docName.add(secondSoftCopy);
+			//verifyExpectedFileName(secondSoftCopy);
+		//	try {
+				if (verifyExpectedFileName(secondSoftCopy) != null) {
+					test.log(LogStatus.PASS, "Verificatiion of Second Document Download is Successful");
+					System.out.println("Verificatiion of Second Document Download is Successful");
 
-			Thread.sleep(2000);
+				} else {
+					test.log(LogStatus.FAIL, "Verificatiion of Second Document Download was unSuccessful");
+					System.out.println("Verificatiion of Second Document Download was unSuccessful");
+				}
+			//} catch (Exception e) {
+				//e.printStackTrace();
+			//}
+
+			Thread.sleep(5000);
 			test.log(LogStatus.INFO, ("Download All SoftCopy Documents"));
 			Log.info("Download All SoftCopy Documents");
 			System.out.println("Download All SoftCopy Documents");
@@ -74,8 +98,20 @@ public class OrderConfirmationPage extends Page {
 			Thread.sleep(5000);
 			test.log(LogStatus.PASS, "All Documents Download is Successful");
 			allDocs = firstSoftCopy + "," + secondSoftCopy;
-			verifyExpectedFileName(allDocs);
+			//verifyExpectedFileName(allDocs);
 			Thread.sleep(2000);
+			//try {
+				if (verifyExpectedFileName(allDocs) != null) {
+					test.log(LogStatus.PASS, "Verificatiion of All Documents Download is Successful");
+					System.out.println("Verificatiion of All Documents Download is Successful");
+
+				} else {
+					test.log(LogStatus.FAIL, "Verificatiion of All Documents Download was unSuccessful");
+					System.out.println("Verificatiion of All Documents Download was unSuccessful");
+				}
+			//} catch (Exception e) {
+			//	e.printStackTrace();
+		//	}
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("SoftCopy Download was unsuccessful");
@@ -138,18 +174,22 @@ public class OrderConfirmationPage extends Page {
 
 	}
 
-	public void verifyExpectedFileName(String downloadDoc) {
+	public String verifyExpectedFileName(String downloadDoc) {
 		try {
+
 			File getLatestFile = getLatestFilefromDir("C:\\Users\\shopqa\\Downloads");
 			String fileName = getLatestFile.getName();
 			Assert.assertTrue(fileName.contains(downloadDoc),
 					"Downloaded file name is not matching with expected file name");
+
 			test.log(LogStatus.INFO, "The downloaded file name is: " + fileName);
 			test.log(LogStatus.PASS, "Verification of File Name was successful");
+
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Soft Copy Document Name Verification was unsuccessful");
 			e.printStackTrace();
 		}
+		return downloadDoc;
 	}
 
 	/* Get the latest file from a specific directory */

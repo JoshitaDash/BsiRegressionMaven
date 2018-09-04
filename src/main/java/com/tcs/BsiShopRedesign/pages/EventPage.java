@@ -105,6 +105,7 @@ public class EventPage extends Page {
 			Log.info("Click Add Delegate");
 			System.out.println("Click Add Delegate");
 			Thread.sleep(1000);
+			// driver.findElements(By.cssSelector("input[class='addDelegate']")).get(0).click();
 			click("addDelegate_css");
 			Thread.sleep(1000);
 			// driver.findElement(By.cssSelector("input[class='addDelegate']")).click();
@@ -270,16 +271,14 @@ public class EventPage extends Page {
 			clearText("editState_css");
 			enterText("editState_css", "England EDIT");
 
-			/*test.log(LogStatus.INFO, "Edit Zip Postal Code");
-			Log.info("Edit Zip Postal Code");
-			System.out.println("Edit Zip Postal Code");
-			clearText("postalCode_css");
-			enterText("postalCode_css", "132465");
-
-			test.log(LogStatus.INFO, "Edit Country");
-			Log.info("Edit Country");
-			System.out.println("Edit Country");
-			selectFirstOption("country_css");*/
+			/*
+			 * test.log(LogStatus.INFO, "Edit Zip Postal Code");
+			 * Log.info("Edit Zip Postal Code"); System.out.println("Edit Zip Postal Code");
+			 * clearText("postalCode_css"); enterText("postalCode_css", "132465");
+			 * 
+			 * test.log(LogStatus.INFO, "Edit Country"); Log.info("Edit Country");
+			 * System.out.println("Edit Country"); selectFirstOption("country_css");
+			 */
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Editing Delegate details was unsuccessful");
@@ -330,15 +329,16 @@ public class EventPage extends Page {
 		try {
 			WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
 			test.log(LogStatus.INFO, "Remove Event from Basket");
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			wait.until(ExpectedConditions.visibilityOf(remove));
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
 			// CommonHelper.elementToBeVisible("removeEvent_xpath");
 			// CommonHelper.elementToBeClickable("removeEvent_xpath");
 			// click("removeEvent_xpath");
 			// CommonHelper.clickByJS("removeEvent_xpath");
-			remove.click();
-			Thread.sleep(5000);
+			click("removeEvent_xpath");
+			//remove.click();
+			Thread.sleep(3000);
 			test.log(LogStatus.INFO, "Verify Remove Basket");
 			CommonHelper.elementToBeClickable("verifyBasket_css");
 			String verifyBasket = CommonHelper.element("verifyBasket_css").getText();
@@ -360,7 +360,7 @@ public class EventPage extends Page {
 		test.log(LogStatus.INFO, "Remove Multiple Event from Basket");
 
 		try {
-			
+
 			for (int i = 1; i <= 2; i++) {
 				WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
 				Thread.sleep(5000);
@@ -395,7 +395,7 @@ public class EventPage extends Page {
 			System.out.println("Enter event name in Search Box");
 			CommonHelper.elementToBeClickable("searchBox_id");
 			enterText("searchBox_id", "Sustainability Performance and Reporting Event – 2016");
-			// Thread.sleep(5000);
+			Thread.sleep(2000);
 			// driver.findElement(By.id("search")).sendKeys("BSI�s BIM
 			// Conference");
 
@@ -410,7 +410,6 @@ public class EventPage extends Page {
 			click("freeEvent_linkText");
 
 		} catch (Exception e) {
-
 			CommonHelper.reportFailure("Search Free Event was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
@@ -429,13 +428,14 @@ public class EventPage extends Page {
 			CommonHelper.elementToBeClickable("bookFreeEvent_css");
 			click("bookFreeEvent_css");
 
+			/*
+			 * Thread.sleep(5000); ArrayList<String> tabs2 = new
+			 * ArrayList<String>(driver.getWindowHandles());
+			 * driver.switchTo().window(tabs2.get(1)); System.out.println("tab switched");
+			 */
 			Thread.sleep(5000);
-			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-			driver.switchTo().window(tabs2.get(1));
-			System.out.println("tab switched");
-			Thread.sleep(3000);
 			driver.switchTo().frame(0);
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			System.out.println("iframe switched");
 
 		} catch (Exception e) {
@@ -446,48 +446,68 @@ public class EventPage extends Page {
 
 	}
 
-	public void enterPardotDetails() {
+	public void enterFreeEventPardotDetails() {
 
 		try {
-			/*test.log(LogStatus.INFO, "Select Pardot Title");
-			Log.info("Select Pardot Title");
-			System.out.println("Select Pardot Title");
-			selectFirstOption("pardotTitle_id");*/
+			/*
+			 * test.log(LogStatus.INFO, "Select Pardot Title");
+			 * Log.info("Select Pardot Title"); System.out.println("Select Pardot Title");
+			 * selectFirstOption("pardotTitle_id");
+			 */
 
 			test.log(LogStatus.INFO, "Enter Pardot First Name");
 			Log.info("Enter Pardot First Name");
 			System.out.println("Enter Pardot First Name");
-			enterText("pardotFirstName_id", "Pardot First Name");
+			enterText("pardotFreeEventFirstName_xpath", "Pardot First Name");
 
 			test.log(LogStatus.INFO, "Enter Pardot Last Name");
 			Log.info("Enter Pardot Last Name");
 			System.out.println("Enter Pardot Last Name");
-			enterText("pardotLastName_id", "Pardot Last Name");
+			enterText("pardotFreeEventLastName_xpath", "Pardot Last Name");
 
-			test.log(LogStatus.INFO, "Enter Pardot Job Title");
-			Log.info("Enter Pardot Job Title");
-			System.out.println("Enter Pardot Job Title");
-			enterText("pardotJobTitle_id", "Pardot Job Title");
+			/*
+			 * test.log(LogStatus.INFO, "Enter Pardot Job Title");
+			 * Log.info("Enter Pardot Job Title");
+			 * System.out.println("Enter Pardot Job Title"); enterText("pardotJobTitle_id",
+			 * "Pardot Job Title");
+			 */
 
 			test.log(LogStatus.INFO, "Enter Pardot Company");
 			Log.info("Enter Pardot Company");
 			System.out.println("Enter Pardot Company");
-			enterText("pardotCompany_id", "Pardot Company");
+			enterText("pardotFreeEventCompany_xpath", "Pardot Company");
 
 			test.log(LogStatus.INFO, "Enter Pardot Email");
 			Log.info("Enter Pardot Email");
 			System.out.println("Enter Pardot Email");
-			enterText("pardotEmail_id", "pardot.company@tcs.com");
+			enterText("pardotFreeEventEmail_xpath", "pardot.company@tcs.com");
 
-			test.log(LogStatus.INFO, "Enter Pardot Phone");
-			Log.info("Enter Pardot Phone");
-			System.out.println("Enter Pardot Phone");
-			enterText("pardotPhone_id", "123456789");
+			/*
+			 * test.log(LogStatus.INFO, "Enter Pardot Phone");
+			 * Log.info("Enter Pardot Phone"); System.out.println("Enter Pardot Phone");
+			 * enterText("pardotPhone_id", "123456789");
+			 */
+
+			test.log(LogStatus.INFO, "Select How would you like to be contacted?");
+			System.out.println("Enter How would you like to be contacted?");
+			Log.info("Enter How would you like to be contacted?");
+			List<WebElement> checkBox = driver.findElements(By.cssSelector("input[type='checkbox']"));
+			checkBox.get(0).click();
+
+			test.log(LogStatus.INFO, "Select Terms and Conditions");
+			System.out.println("Select Terms and Conditions");
+			Log.info("Select Terms and Conditions");
+			checkBox.get(4).click();
 
 			test.log(LogStatus.INFO, "Click Submit");
 			Log.info("Click Submit");
 			System.out.println("Click Submit");
-			click("pardotSubmit_xpath");
+			click("pardotSubmit_css");
+
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			System.out.println("tab switched");
+			driver.manage().window().maximize();
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Adding Pardot Details was unsucessful");
@@ -497,10 +517,10 @@ public class EventPage extends Page {
 
 	}
 
-	public void verifyPardotForm() {
+	public void verifyFreeEventPardotForm() {
 
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			test.log(LogStatus.INFO, "Verify Pardot Form");
 			Log.info("Verify Pardot Form");
 			System.out.println("Verify Pardot Form");
@@ -510,21 +530,22 @@ public class EventPage extends Page {
 
 			List<WebElement> verificationMsg = driver.findElements(By.xpath("//div[@id='CenterContent']/h1"));
 			Thread.sleep(5000);
-			test.log(LogStatus.INFO, "Verify BSOL Pardot Form");
-			Log.info("Verify BSOL Pardot Form");
-			System.out.println("Verify BSOL Pardot Form");
+			test.log(LogStatus.INFO, "Verify Pardot Form");
+			Log.info("Verify Pardot Form");
+			System.out.println("Verify Pardot Form");
 			CommonHelper.elementToBeVisible("verifyPardotSubmit_xpath");
 
 			CommonHelper.element("verifyPardotSubmit_xpath").getText();
 			String verifyPardotSubmit = verificationMsg.get(3).getText() + verificationMsg.get(4).getText();
 			Log.info("The Verfication message is: " + verifyPardotSubmit);
 			System.out.println("The Verfication message is: " + verifyPardotSubmit);
-			test.log(LogStatus.PASS, "Verification of BSOL Pardot Form successful");
+			test.log(LogStatus.PASS, "The Verfication message is: " + verifyPardotSubmit);
 
-			Log.info("The Verfication message is: " + verifyPardotSubmit);
-			System.out.println("The Verfication message is: " + verifyPardotSubmit);
-			test.log(LogStatus.PASS, "Verification of Pardot Form successful");
-
+			if (verifyPardotSubmit.contains("Thank you for contacting us")) {
+				Log.info("The Verfication message is: " + verifyPardotSubmit);
+				System.out.println("The Verfication message is: " + verifyPardotSubmit);
+				test.log(LogStatus.PASS, "Verification of Pardot Form successful");
+			}
 			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
 			driver.close();
 			driver.switchTo().window(tabs2.get(0));

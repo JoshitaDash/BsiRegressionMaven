@@ -53,11 +53,13 @@ public class CheckoutPage extends Page {
 	public void enterPaymentDetails() throws InterruptedException {
 
 		try {
-			System.out.println("Click on Payment Details");
-			test.log(LogStatus.INFO, "Click on Payment Details");
-			Log.info("Click on Payment Details");
+			Thread.sleep(1000);
+			System.out.println("Click Enter Payment Details");
+			test.log(LogStatus.INFO, "Click Enter Payment Details");
+			Log.info("Click Enter Payment Details");
 			CommonHelper.scrolltoview("paymentDetails_id");
-			click("paymentDetails_id");
+			//click("paymentDetails_id");
+			driver.findElement(By.id("opc-shipping-btn")).click();
 
 			System.out.println("Click Pay by Credit Card");
 			test.log(LogStatus.INFO, "Click Pay by Credit Card");
@@ -122,7 +124,7 @@ public class CheckoutPage extends Page {
 	public void enterOrderDetails() {
 
 		try {
-			//driver.switchTo().defaultContent();
+			// driver.switchTo().defaultContent();
 			System.out.println("Select Country");
 			test.log(LogStatus.INFO, "Select Country");
 			Log.info("Select Country");
@@ -133,17 +135,20 @@ public class CheckoutPage extends Page {
 			Log.info("Click Review Order");
 			click("reviewOrder_xpath");
 
-			// Thread.sleep(10000);
+			 Thread.sleep(3000);
 			System.out.println("Check Terms and Conditions");
 			test.log(LogStatus.INFO, "Check Terms and Conditions");
 			Log.info("Check Terms and Conditions");
+			CommonHelper.scrolltoview("termsCond_xpath");
 			CommonHelper.elementToBeVisible("termsCond_xpath");
 			click("termsCond_xpath");
 
-			System.out.println("Click Place Order");
-			test.log(LogStatus.INFO, "Click Place Order");
+			System.out.println("Click Complete Your Order");
+			test.log(LogStatus.INFO, "Click Complete Your Order");
 			Log.info("Click Place Order");
-			click("placeOrder_id");
+			//CommonHelper.scrolltoview("completeOrder_id");
+			click("completeOrder_id");
+			//driver.findElement(By.id("place-order-trigger")).click();
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Order Details was unsuccesful");
@@ -172,7 +177,7 @@ public class CheckoutPage extends Page {
 	public void enterNonUKOrderDetails() {
 
 		try {
-			//driver.switchTo().defaultContent();
+			// driver.switchTo().defaultContent();
 			System.out.println("Select Country");
 			test.log(LogStatus.INFO, "Select Country");
 			Log.info("Select Country");
@@ -193,7 +198,7 @@ public class CheckoutPage extends Page {
 	public void enterUKOrderDetails() {
 
 		try {
-			//driver.switchTo().defaultContent();
+			// driver.switchTo().defaultContent();
 			System.out.println("Select Country");
 			test.log(LogStatus.INFO, "Select Country");
 			Log.info("Select Country");
@@ -453,13 +458,13 @@ public class CheckoutPage extends Page {
 	public void clickEditOrder() {
 
 		try {
-			
-			Thread.sleep(1000);
+
+			Thread.sleep(5000);
 			System.out.println("Click Edit Order on Checkout Page");
 			test.log(LogStatus.INFO, "Click Edit Order on Checkout Page");
 			driver.findElement(By.id("edit-button")).click();
-			//CommonHelper.scrolltoview("editOrder_id");
-			//click("editOrder_id");
+			// CommonHelper.scrolltoview("editOrder_id");
+			// click("editOrder_id");
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("Click Edit Order on Checkout Page was unsuccessful");
@@ -481,8 +486,8 @@ public class CheckoutPage extends Page {
 				test.log(LogStatus.PASS, "The member price of the product in the Checkout Page is: " + memDisc);
 				return true;
 			} else {
-				System.out.println("The member price of the product in the Checkout Page is incorrect");
-				test.log(LogStatus.FAIL, "The member price of the product in the Checkout Page is incorrect");
+				System.out.println("The member price of the product in the Checkout Page is: " + memDisc);
+				test.log(LogStatus.FAIL, "The member price of the product in the Checkout Page is: " + memDisc);
 			}
 			return false;
 

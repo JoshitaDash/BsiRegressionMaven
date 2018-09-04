@@ -21,7 +21,7 @@ public class BookEvent extends BaseTest {
 	public void signIn() {
 
 		try {
-			
+
 			test = extent.startTest("Sprint 2 - Registered User Sign In");
 			System.out.println("User Signing In");
 			Log.info("User Signing In");
@@ -57,7 +57,7 @@ public class BookEvent extends BaseTest {
 			Log.info("Add Delegate to Event");
 			event.clickAddDelegate();
 
-			//Thread.sleep(5000);
+			// Thread.sleep(5000);
 			System.out.println("Add Delegate details to Event");
 			Log.info("Add Delegate details to Event");
 			event.addDelegateDetails();
@@ -74,11 +74,6 @@ public class BookEvent extends BaseTest {
 			Log.info("Remove Event from Basket");
 			event.removeEvent();
 
-			System.out.println("Click Logout");
-			Log.info("Click Logout");
-			HomePage paidEvent = new HomePage(driver);
-			paidEvent.clickLogout();
-
 		}
 
 		catch (Exception e) {
@@ -89,7 +84,7 @@ public class BookEvent extends BaseTest {
 		}
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void BookFreeEvent() {
 
 		test = extent.startTest("Sprint 2 - Ecom-06 AC#27 ___Book Free Event");
@@ -107,11 +102,11 @@ public class BookEvent extends BaseTest {
 
 			System.out.println("Enter Pardot Details");
 			Log.info("Enter Pardot Details");
-			event.enterPardotDetails();
+			event.enterFreeEventPardotDetails();
 
 			System.out.println("Verify Pardot Details");
 			Log.info("Verify Pardot Details");
-			event.verifyPardotForm();
+			event.verifyFreeEventPardotForm();
 
 			System.out.println("Click Logout");
 			Log.info("Click Logout");

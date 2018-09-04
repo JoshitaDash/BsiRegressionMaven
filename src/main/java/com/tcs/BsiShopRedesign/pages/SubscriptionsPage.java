@@ -1,5 +1,6 @@
 package com.tcs.BsiShopRedesign.pages;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -43,6 +44,7 @@ public class SubscriptionsPage extends Page {
 			System.out.println("Click on Request a Quote");
 			Log.info("Click on Request a Quote");
 			click("requestQuote_css");
+			Thread.sleep(2000);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Click on Request a Quote was unsuccessful");
@@ -76,9 +78,10 @@ public class SubscriptionsPage extends Page {
 			 * CommonHelper.elementToBeClickable("title_css"); enterBSOLPardotFormDetails();
 			 * } else
 			 */ {
+				Thread.sleep(3000);
 				System.out.println("Switch iFrame");
 				driver.switchTo().frame(0);
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 				System.out.println("iframe switched");
 
 				CommonHelper.isElementVisible("title_css");
@@ -182,11 +185,17 @@ public class SubscriptionsPage extends Page {
 	public void verifyPardotForm() {
 
 		try {
-
-			// ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(2000);
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			driver.manage().window().maximize();
 			// String text = driver.findElement(By.id("HeadSection")).toString();
-			// driver.switchTo().window("https://www.bsigroup.com/en-GB/standards/british-standards-online-database/find-out-more/thank-you-for-your-enquiry/");
-			// System.out.println("switched to 2nd tab");
+			/*
+			 * driver.switchTo().window(
+			 * "https://www.bsigroup.com/en-GB/standards/british-standards-online-database/find-out-more/thank-you-for-your-enquiry/"
+			 * );
+			 */
+			System.out.println("switched to 2nd tab");
 
 			test.log(LogStatus.INFO, "Verify Pardot Form");
 			Log.info("Verify Pardot Form");
@@ -224,10 +233,10 @@ public class SubscriptionsPage extends Page {
 			 * "Verification of BSOL Pardot Form successful");
 			 */
 
-			/*
-			 * driver.close(); driver.switchTo().window(tabs2.get(0));
-			 * System.out.println("switched back to to 1st tab"); Thread.sleep(2000);
-			 */
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+			System.out.println("switched back to to 1st tab");
+			Thread.sleep(2000);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Pardot Form was unsuccessful");
@@ -265,6 +274,7 @@ public class SubscriptionsPage extends Page {
 			System.out.println("iframe switched");
 
 			boolean clickHere = driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
+			Thread.sleep(2000);
 
 			if (clickHere)
 				if (CommonHelper.element("clickHere_xpath") != null
@@ -307,7 +317,7 @@ public class SubscriptionsPage extends Page {
 			 * test.log(LogStatus.INFO, "Select title"); System.out.println(
 			 * "Select title"); Log.info("Select title"); selectFirstOption("title_css");
 			 */
-
+			Thread.sleep(2000);
 			test.log(LogStatus.INFO, "Enter First Name");
 			System.out.println("Enter First Name");
 			Log.info("Enter First Name");

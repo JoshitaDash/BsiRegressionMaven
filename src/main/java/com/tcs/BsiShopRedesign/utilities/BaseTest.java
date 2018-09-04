@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -105,6 +106,9 @@ public class BaseTest extends Page {
 			System.out.println("Fetching the URL");
 			driver.get(url);
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			Thread.sleep(2000);
+			driver.findElement(By.id("cookiePolicyBtn")).click();
+			Thread.sleep(2000);
 		}
 
 		catch (WebDriverException e) {

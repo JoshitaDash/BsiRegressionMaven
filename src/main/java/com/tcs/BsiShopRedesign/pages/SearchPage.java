@@ -347,7 +347,7 @@ public class SearchPage extends Page {
 		try {
 
 			do {
-				// selectMaxItems();
+				selectMaxItems();
 				Thread.sleep(5000);
 				test.log(LogStatus.INFO, "Select Sort By Published Date");
 				System.out.println("Select Sort By Published Date");
@@ -548,10 +548,11 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, "Check PAS Product Name");
 			PAS = CommonHelper.element("productLinkCount_css").isDisplayed();
 			if (PAS) {
-				String eventName = CommonHelper.element("productLinkCount_css").getText();
-				if (eventName.contains("PAS")) {
-					System.out.println("PAS Product Name is: " + eventName);
-					test.log(LogStatus.INFO, "PAS Product Name is: " + eventName);
+				Thread.sleep(2000);
+				String prodName = CommonHelper.element("productLinkCount_css").getText();
+				if (prodName.contains("PAS")|| prodName.contains("Pas")) {
+					System.out.println("PAS Product Name is: " + prodName);
+					test.log(LogStatus.INFO, "PAS Product Name is: " + prodName);
 					test.log(LogStatus.PASS, "PAS Product Name match is successful");
 				} else {
 					System.out.println("PAS Product Name match is unsuccessful");
@@ -663,10 +664,12 @@ public class SearchPage extends Page {
 		String prodName = "Fire Safety Conference";
 
 		try {
+			Thread.sleep(2000);
 			System.out.println("Check Paid Event Name");
 			test.log(LogStatus.INFO, "Check Paid Event Name");
 			paidEvent = CommonHelper.element("productLinkCount_css").isDisplayed();
 			if (paidEvent) {
+				Thread.sleep(2000);
 				String paidEventText = CommonHelper.element("productLinkCount_css").getText();
 				if (paidEventText.equals(prodName)) {
 					System.out.println("Paid Event Name is: " + paidEventText);
@@ -692,11 +695,14 @@ public class SearchPage extends Page {
 		String eventPrice = "£800.00";
 
 		try {
+			Thread.sleep(2000);
 			System.out.println("Check Paid Event Price");
 			test.log(LogStatus.INFO, "Check Paid Event Price");
 			paidEvent = CommonHelper.element("eventPrice_css").isDisplayed();
 			if (paidEvent) {
+				Thread.sleep(2000);
 				String paidEventText = CommonHelper.element("eventPrice_css").getText();
+				Thread.sleep(2000);
 				if (paidEventText.equals(eventPrice)) {
 					System.out.println("Paid Event Price is: " + paidEventText);
 					test.log(LogStatus.INFO, "Paid Event Price is: " + paidEventText);
@@ -793,9 +799,10 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, "Click on Add to Basket");
 			Log.info("Click on Add to Basket");
 			System.out.println("Click on Add to Basket");
-			WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
+			//WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
 			CommonHelper.elementToBeClickable("addToBasket_css");
-			addToBasket.click();
+			click("addToBasket_css");
+			//addToBasket.click();
 			Thread.sleep(2000);
 
 		} catch (Exception e) {
@@ -813,7 +820,7 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, "Add Second PDF product to Basket");
 			Log.info("Add Second PDF product to Basket");
 			System.out.println("Add Second PDF product to Basket");
-			WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
+			WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(2);
 			CommonHelper.elementToBeClickable("addToBasket_css");
 			addToBasket.click();
 			Thread.sleep(2000);
@@ -845,6 +852,7 @@ public class SearchPage extends Page {
 	}
 
 	public void selectFormatClickOK() {
+		System.out.println("");
 		List<WebElement> okButtons = driver.findElements(By.xpath("//button[text()='Ok']"));
 		for (WebElement okButton : okButtons) {
 			try {
@@ -888,7 +896,7 @@ public class SearchPage extends Page {
 			System.out.println("Click on View Basket");
 			test.log(LogStatus.INFO, "Click on View Basket ");
 			Log.info("Click on View Basket");
-			driver.findElement(By.xpath("//*[@id='basket']/div/a")).click();
+			driver.findElement(By.xpath("//*[@id='basket']/div/a/span[1]")).click();
 
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -947,13 +955,14 @@ public class SearchPage extends Page {
 
 			if (finalMemPrice == memberPrice) {
 				System.out.println("The price of the first product in the search list is: " + finalPrice
-						+ " & The member price of the first product in the search list is: " + memberPrice);
+						+ " & The member price of the first product in the search list is: " + finalMemPrice);
 				test.log(LogStatus.PASS, "The price of the first product in the search list is: " + finalPrice
-						+ " & The member price of the first product in the search list is: " + memberPrice);
+						+ " & The member price of the first product in the search list is: " + finalMemPrice);
 				return true;
 			} else {
 				System.out.println("The member price in the search list is incorrect");
-				test.log(LogStatus.FAIL, "The member price in the search list is incorrect");
+				test.log(LogStatus.FAIL, "The price of the first product in the search list is: " + finalPrice
+						+ " & The member price of the first product in the search list is: " + finalMemPrice);
 			}
 			return false;
 

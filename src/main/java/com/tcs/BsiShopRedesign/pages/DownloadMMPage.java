@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
+import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 import com.tcs.BsiShopRedesign.utilities.Page;
 
@@ -28,19 +30,21 @@ public class DownloadMMPage extends Page {
 			CommonHelper.elementToBeClickable("downloadNow_xpath");
 			Thread.sleep(1000);
 			click("downloadNow_xpath");
+
+			// CommonHelper.dismissAlert();
 			// CommonHelper.clickByJS("downloadNow_xpath");
-			/*Thread.sleep(2000);
-			System.out.println("Switch to 2nd tab");
-			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-			driver.switchTo().window(tabs2.get(1));
-			// CommonHelper.windowHandle();
-			Thread.sleep(2000);
-			System.out.println("Switched to 2nd tab");*/
+			/*
+			 * Thread.sleep(2000); System.out.println("Switch to 2nd tab");
+			 * ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			 * driver.switchTo().window(tabs2.get(1)); // CommonHelper.windowHandle();
+			 * Thread.sleep(2000); System.out.println("Switched to 2nd tab");
+			 */
 			System.out.println("Switch iFrame");
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			driver.switchTo().frame(0);
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			System.out.println("iframe switched");
+			Thread.sleep(2000);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Click on Download Now was unsuccessful");
@@ -137,8 +141,8 @@ public class DownloadMMPage extends Page {
 			test.log(LogStatus.INFO, "Click on Submit");
 			System.out.println("Click on Submit");
 			Log.info("Click on Submit");
-			//driver.findElement(By.cssSelector("input[value='Submit']")).click();
-		    click("submitGR_css");
+			// driver.findElement(By.cssSelector("input[value='Submit']")).click();
+			click("submitGR_css");
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter PAS Pardot Form details was unsuccessful");
@@ -150,11 +154,42 @@ public class DownloadMMPage extends Page {
 
 	public void verifyPdf() {
 		try {
-			
-			Thread.sleep(2000);
+
+			Thread.sleep(5000);
 			test.log(LogStatus.INFO, "Verify Governance Resilience Pdf");
 			System.out.println("Verify Governance Resilience Pdf");
 			Log.info("Verify Governance Resilience Pdf");
+
+			if (BaseTest.browser.equals("IE")) {
+
+				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+				driver.switchTo().window(tabs2.get(1));
+				System.out.println("tab switched");
+				driver.manage().window().maximize();
+
+				String getURL = driver.getCurrentUrl();
+				System.out.println("The URL is: " + getURL);
+				test.log(LogStatus.INFO, "The URL is: " + getURL);
+				Thread.sleep(3000);
+
+				driver.switchTo().frame(0);
+				// WebElement popup = driver.findElement(By.name("popup"));
+				// popup.click();
+				String alertText = driver.switchTo().alert().getText();
+				System.out.println("Text in the alert is: " + alertText);
+				test.log(LogStatus.INFO, "Text in the alert is: " + alertText);
+				if (alertText.contains(".pdf")) {
+					test.log(LogStatus.PASS, alertText);
+				} else {
+					test.log(LogStatus.FAIL, alertText);
+				}
+
+				// ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+				driver.close();
+				driver.switchTo().window(tabs2.get(0));
+			}
+
+			// }
 
 			String getURL = driver.getCurrentUrl();
 			if (getURL.contains(".pdf")) {
@@ -163,10 +198,11 @@ public class DownloadMMPage extends Page {
 				System.out.println(urlText);
 				test.log(LogStatus.PASS, urlText);
 			}
-			/*driver.close();
-			System.out.println("Switch back to 1st tab");
-			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-			driver.switchTo().window(tabs2.get(0));*/
+			/*
+			 * driver.close(); System.out.println("Switch back to 1st tab");
+			 * ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			 * driver.switchTo().window(tabs2.get(0));
+			 */
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Governance Resilience Pdf was unsuccessful");

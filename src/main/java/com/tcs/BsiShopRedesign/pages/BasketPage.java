@@ -1,6 +1,7 @@
 package com.tcs.BsiShopRedesign.pages;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -13,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.utilities.Page;
+import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class BasketPage extends Page {
@@ -195,8 +197,8 @@ public class BasketPage extends Page {
 
 				// CommonHelper.clickByJS("remoeItem_id");
 				System.out.println("removing product");
-				click("removeProduct_xpath");
-				//driver.findElement(By.xpath("//img[@alt='delete']")).click();
+				//click("removeProduct_xpath");
+				driver.findElement(By.xpath("//img[@alt='delete']")).click();
 
 				Thread.sleep(2000);
 				System.out.println("Get the text of the remove basket message");
@@ -271,7 +273,7 @@ public class BasketPage extends Page {
 			System.out.println("Switch iFrame");
 			Thread.sleep(2000);
 			driver.switchTo().frame(munlFrame_xpath);
-			//driver.switchTo().frame(0);
+			// driver.switchTo().frame(0);
 			Thread.sleep(2000);
 			System.out.println("iframe switched");
 
@@ -365,10 +367,10 @@ public class BasketPage extends Page {
 			test.log(LogStatus.INFO, " Click on Submit");
 			System.out.println("Click on Submit");
 			Log.info("Click on Submit");
-			// CommonHelper.scrolltoview("submitMUNL_css");
-			CommonHelper.clickByJS("submitMUNL_css");
-			// click("submitMUNL_css");
-			Thread.sleep(1000);
+			CommonHelper.scrolltoview("submitMUNL_css");
+			// CommonHelper.clickByJS("submitMUNL_css");
+			click("submitMUNL_css");
+			Thread.sleep(3000);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Request MUNL Details was unsuccessful");
@@ -380,22 +382,50 @@ public class BasketPage extends Page {
 
 	public void verifyMUNL() {
 		try {
-			Thread.sleep(1000);
-			test.log(LogStatus.INFO, "Verify MUNL Request");
-			System.out.println("Verify MUNL Request");
-			Log.info("Verify MUNL Request");
-			CommonHelper.scrolltoview("verifyMUNL_xpath");
-			String verifyText = CommonHelper.element("verifyMUNL_xpath").getText();
-			// String verifyText = driver.findElement(By.id("pardot-form")).getText();
-			System.out.println("The verification message is: " + verifyText);
-			test.log(LogStatus.PASS, "The verification message is: " + verifyText);
+		//	if (BaseTest.browser.equals("IE")) {
+				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+				driver.switchTo().window(tabs2.get(1));
+				driver.switchTo().activeElement();
+				driver.manage().window().maximize();
 
-			Thread.sleep(1000);
-			test.log(LogStatus.INFO, "Click on Close MUNL Form");
-			System.out.println("Click on Close MUNL Form");
-			Log.info("Click on Close MUNL Form");
-			driver.switchTo().defaultContent();
-			click("closeMUNLform_xpath");
+				Thread.sleep(1000);
+				test.log(LogStatus.INFO, "Verify MUNL Request");
+				System.out.println("Verify MUNL Request");
+				Log.info("Verify MUNL Request");
+				CommonHelper.scrolltoview("verifyMUNL_xpath");
+				String verifyText = CommonHelper.element("verifyMUNL_xpath").getText();
+				// String verifyText = driver.findElement(By.id("pardot-form")).getText();
+				System.out.println("The verification message is: " + verifyText);
+				test.log(LogStatus.PASS, "The verification message is: " + verifyText);
+
+				driver.close();
+				driver.switchTo().window(tabs2.get(0));
+
+				Thread.sleep(1000);
+				test.log(LogStatus.INFO, "Click on Close MUNL Form");
+				System.out.println("Click on Close MUNL Form");
+				Log.info("Click on Close MUNL Form");
+				driver.switchTo().defaultContent();
+				click("closeMUNLform_xpath");
+
+		//	} else {
+				/*Thread.sleep(1000);
+				test.log(LogStatus.INFO, "Verify MUNL Request");
+				System.out.println("Verify MUNL Request");
+				Log.info("Verify MUNL Request");
+				CommonHelper.scrolltoview("verifyMUNL_xpath");
+				String verifyText = CommonHelper.element("verifyMUNL_xpath").getText();
+				// String verifyText = driver.findElement(By.id("pardot-form")).getText();
+				System.out.println("The verification message is: " + verifyText);
+				test.log(LogStatus.PASS, "The verification message is: " + verifyText);
+
+				Thread.sleep(1000);
+				test.log(LogStatus.INFO, "Click on Close MUNL Form");
+				System.out.println("Click on Close MUNL Form");
+				Log.info("Click on Close MUNL Form");
+				driver.switchTo().defaultContent();
+				click("closeMUNLform_xpath");*/
+			//}
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("VerifyRequest MUNL Details was unsuccessful");
@@ -408,20 +438,23 @@ public class BasketPage extends Page {
 
 		try {
 			Thread.sleep(2000);
-			test.log(LogStatus.INFO, "Click on Checkout");
-			System.out.println("Click on Checkout");
-			Log.info("Click on Checkout");
+			test.log(LogStatus.INFO, "Click Checkout");
+			System.out.println("Click Checkout");
+			Log.info("Click Checkout");
 			Thread.sleep(1000);
 			WebElement checkout = driver.findElement(By.cssSelector("button[title='Checkout Now']"));
 			if (checkout.isDisplayed() || checkout.isEnabled()) {
 				Thread.sleep(1000);
 				CommonHelper.clickJS(checkout);
-				// checkout.click();
+				//checkout.click();
 				Thread.sleep(2000);
+			} else {
+				test.log(LogStatus.FAIL, "Click Checkout was unsuccessful");
 			}
 		}
 
 		catch (Exception e) {
+			CommonHelper.reportFailure("Click Checkout was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -429,17 +462,20 @@ public class BasketPage extends Page {
 	}
 
 	public void clickOtherFormatOKAlert() {
-		
+
 		try {
 			boolean otherFormat = driver.findElement(By.id("OtherFormatFlag")).isDisplayed();
-			//driver.switchTo().activeElement();
+			// driver.switchTo().activeElement();
 			driver.switchTo().frame(0);
 			// CommonHelper.handleAlert();
 			System.out.println(" ");
 			if (otherFormat) {
-				//WebElement otherForm = driver.findElement(By.id("otherFormat"));
-				/*JavascriptExecutor executor = (JavascriptExecutor) driver;
-				executor.executeScript("arguments[0].click();", driver.findElement(By.id("otherFormat")));*/
+				// WebElement otherForm = driver.findElement(By.id("otherFormat"));
+				/*
+				 * JavascriptExecutor executor = (JavascriptExecutor) driver;
+				 * executor.executeScript("arguments[0].click();",
+				 * driver.findElement(By.id("otherFormat")));
+				 */
 				driver.findElement(By.id("otherFormat")).click();
 				System.out.println("Other Foramt Flag exists");
 			} else {
@@ -486,20 +522,21 @@ public class BasketPage extends Page {
 						+ " & The member price of the product in the Basket Page is: " + memberPrice);
 				test.log(LogStatus.PASS, "The unit price of the product in the Basket Page is: " + finalUnitPrice
 						+ " & The member price of the product in the Basket Page is: " + memberPrice);
-				//return true;
+				// return true;
 			} else {
-				System.out.println("The member price in the Basket Page is incorrect");
-				test.log(LogStatus.FAIL, "The member price in the Basket Page is incorrect");
+				System.out.println("The unit price of the product in the Basket Page is: " + finalUnitPrice
+						+ " & The member price of the product in the Basket Page is: " + memberPrice);
+				test.log(LogStatus.FAIL, "The unit price of the product in the Basket Page is: " + finalUnitPrice
+						+ " & The member price of the product in the Basket Page is: " + memberPrice);
 				CommonHelper.reportFailure("The member price in the Basket Page is incorrect");
 			}
-			//return false;
+			// return false;
 
 		} catch (NumberFormatException e) {
 			CommonHelper.reportFailure("The member price in the Basket Page is incorrect");
 			e.printStackTrace();
 		}
 		return memDiscount;
-		
 
 	}
 

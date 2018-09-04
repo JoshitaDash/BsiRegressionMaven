@@ -48,7 +48,7 @@ public class SoftCopyDownloads extends BaseTest {
 
 	@Test(priority = 2, enabled = true)
 	public void downloadSoftCopyfromOrderCofirmationPage() {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		//WebDriverWait wait = new WebDriverWait(driver, 120);
 
 		try {
 			test = extent.startTest(
@@ -129,7 +129,7 @@ public class SoftCopyDownloads extends BaseTest {
 			Log.info("Download SoftCopy from Order Confirmation Page");
 			test.log(LogStatus.INFO, "Download SoftCopy from Order Confirmation Page");
 			OrderConfirmationPage softcopy = new OrderConfirmationPage(driver);
-			softcopy.downloadVerifySoftCopyDocuments();
+			softcopy.downloadVerifySoftCopyDocuments(null);
 
 			/*
 			 * System.out.println("Verify SoftCopy Download Document Name");

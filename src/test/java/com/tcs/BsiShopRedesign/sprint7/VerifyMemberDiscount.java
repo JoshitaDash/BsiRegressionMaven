@@ -94,9 +94,14 @@ public class VerifyMemberDiscount extends BaseTest {
 			CheckoutPage checkoutMemPrice = new CheckoutPage(driver);
 			checkoutMemPrice.verifyMemPriceCheckout(memberDiscount);
 			
-			System.out.println("Click Continue Shopping");
+			/*System.out.println("Click Continue Shopping");
 			Log.info("Click Continue Shopping");
-			checkoutMemPrice.clickContinueShopping();
+			checkoutMemPrice.clickContinueShopping();*/
+			
+			System.out.println("Click Edit on Checkout Page");
+			Log.info("Click Edit on Checkout Page");
+			CheckoutPage editOrder = new CheckoutPage(driver);
+			editOrder.clickEditOrder();
 
 			Log.info("Remove the Product");
 			System.out.println("Remove the Product");

@@ -499,7 +499,7 @@ public class HomePage extends BaseTest {
 
 	public void clickMyProfile() {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			Log.info("Click on My Profile");
 			System.out.println("Click on My Profile");
 			test.log(LogStatus.INFO, "Click on My Profile");

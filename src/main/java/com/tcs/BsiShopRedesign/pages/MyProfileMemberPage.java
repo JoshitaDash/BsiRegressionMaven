@@ -126,7 +126,7 @@ public class MyProfileMemberPage extends Page {
 			System.out.println("Add Invoice to Basket from Member Benefits Tab");
 			Log.info("Add Invoice to Basket from Member Benefits Tab");
 
-			WebElement addToBasket = driver.findElements(By.cssSelector("input[value='Add to Basket']")).get(1);
+			WebElement addToBasket = driver.findElements(By.cssSelector("input[value='Add to Basket']")).get(0);
 			addToBasket.click();
 
 			Thread.sleep(2000);
@@ -148,10 +148,10 @@ public class MyProfileMemberPage extends Page {
 			test.log(LogStatus.INFO, "Click Renew Membership");
 			System.out.println("Click Renew Membership");
 			Log.info("Click Renew Membership");
-			WebElement renewMembership = driver.findElements(By.cssSelector("a[title*='Renew Membership']")).get(1);
+			WebElement renewMembership = driver.findElements(By.cssSelector("a[title*='Renew Membership']")).get(0);
 			String renewMemText = renewMembership.getText();
 			test.log(LogStatus.INFO, "The Membership number is: " + renewMemText);
-		    System.out.println("The Membership number is: " + renewMemText);
+			System.out.println("The Membership number is: " + renewMemText);
 			renewMembership.click();
 		} catch (Exception e) {
 
@@ -235,8 +235,45 @@ public class MyProfileMemberPage extends Page {
 		}
 	}
 
-	
-	
+	public void enterMemNum() {
 
-	
+		String memNumText = "65478915";
+		try {
+			Log.info("Enter Membership Number");
+			System.out.println("Enter Membership Number");
+			test.log(LogStatus.INFO, "Enter Membership Number");
+			enterText("memNumber_id", memNumText);
+			test.log(LogStatus.INFO, "The Membership number entered is: " + memNumText);
+
+			System.out.println("Click Update");
+			Log.info("Click Update");
+			test.log(LogStatus.INFO, "Click Update");
+			click("profileUpdate_id");
+			Thread.sleep(2000);
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Enter Membership Number was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyErrorMsg() {
+
+		try {
+			Log.info("Verify Error Message for Member Number");
+			System.out.println("Verify Error Message for Member Number ");
+			test.log(LogStatus.INFO, "Verify Error Message for Member Number");
+			String memNumErrorMsg = driver.findElements(By.id("member-error-message")).get(0).getText();
+			if (memNumErrorMsg.contains("Membership Number and Billing Address don't match")) {
+				System.out.println("The Error Message is: " + memNumErrorMsg);
+				test.log(LogStatus.PASS, "The Error Message is: " + memNumErrorMsg);
+			} else {
+				System.out.println("The Error Message is: " + memNumErrorMsg);
+				test.log(LogStatus.FAIL, "The Error Message is: " + memNumErrorMsg);
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Member Number Error Message was unsuccessful");
+			e.printStackTrace();
+		}
+	}
 }

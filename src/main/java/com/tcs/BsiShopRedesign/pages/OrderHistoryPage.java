@@ -144,7 +144,7 @@ public class OrderHistoryPage extends Page {
 
 		try {
 			String status = driver.findElements(By.cssSelector("td[data-th='Status']")).get(0).getText();
-			if (status.equals("Processing")) {
+			if (status.equals("In Progress")) {
 				test.log(LogStatus.PASS, "The Status is: " + status);
 				System.out.println("The Status is: " + status);
 			} else {
@@ -156,20 +156,59 @@ public class OrderHistoryPage extends Page {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void verifyHardCopyDetails() {
 
 		try {
 			Thread.sleep(1000);
-			Log.info("");
-			System.out.println("");
-			test.log(LogStatus.INFO, "");
-			
+			Log.info("Verify HardCopy Details in Order History Page");
+			System.out.println("Verify HardCopy Details in Order History Page");
+			test.log(LogStatus.INFO, "Verify HardCopy Details in Order History Page");
+			String orderDate = driver.findElement(By.id("order-date-css")).getText();
+			if (orderDate.contains("Order")) {
+				test.log(LogStatus.PASS, "The Order ID and Date is: " + orderDate);
+				System.out.println("The Order ID and Date is: " + orderDate);
+			} else {
+				test.log(LogStatus.FAIL, "The Order ID and Date is: " + orderDate);
+				System.out.println("The Order ID and Date is: " + orderDate);
+			}
+
+			String orderDetails = driver
+					.findElement(By.cssSelector("div[class='table-wrapper order-items order-margin-allignment']"))
+					.getText();
+			if (orderDetails.contains("Hardcopy")) {
+				test.log(LogStatus.PASS, "The Order detials for Hardcopy Product is: " + orderDetails);
+				System.out.println("The Order detials for Hardcopy Product is: " + orderDetails);
+
+			} else {
+				test.log(LogStatus.FAIL, "The Order detials for Hardcopy Product is: " + orderDetails);
+				System.out.println("The Order detials for Hardcopy Product is: " + orderDetails);
+
+			}
+
+			String paymentMethod = driver.findElement(By.cssSelector("div[class='box box-order-billing-method']"))
+					.getText();
+			if (paymentMethod.contains("Payment")) {
+				test.log(LogStatus.PASS, "The Payment Details for Harcopy Product is: " + paymentMethod);
+				System.out.println("The Payment detials for Hardcopy Product is: " + paymentMethod);
+
+			} else {
+				test.log(LogStatus.FAIL, "The Payment Details for Harcopy Product is: " + paymentMethod);
+				System.out.println("The Payment detials for Hardcopy Product is: " + paymentMethod);
+			}
+
+			String address = driver.findElement(By.xpath("//*[@id='maincontent']/div[5]/div[1]/div[2]/div[2]"))
+					.getText();
+			if (address.contains("address")) {
+				test.log(LogStatus.PASS, "The Address Details for Harcopy Product is: " + address);
+				System.out.println("The Address detials for Hardcopy Product is: " + address);
+			}
+
 		} catch (InterruptedException e) {
-			CommonHelper.reportFailure("Verify Hardcopy Details was unsuccessful");
+			CommonHelper.reportFailure("Verification of Hardcopy Details on Order History Page was unsuccessful");
 			Assert.fail(e.getMessage());
 			e.printStackTrace();
 		}
 	}
-	
+
 }
