@@ -16,7 +16,7 @@
 		<jdk.level>1.8</jdk.level>
 		<jdk.level>1.8</jdk.level>
 	</properties>
-<build>
+	<build>
 		<plugins>
 			<!-- Compiler plug-in -->
 			<plugin>
@@ -37,8 +37,8 @@
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
 						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-						<!-- <suiteXmlFile>src/test/resources/DemoMozilla.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile> -->
+						<!-- <suiteXmlFile>src/test/resources/DemoMozilla.xml</suiteXmlFile> 
+							<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
@@ -108,6 +108,12 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/httpclient -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 	</dependencies>
 </project>

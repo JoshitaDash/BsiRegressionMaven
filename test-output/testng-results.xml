@@ -1,42 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="161823" started-at="2018-09-05T12:21:58Z" finished-at="2018-09-05T12:24:40Z">
+  <suite name="Suite" duration-ms="81448" started-at="2018-09-05T14:03:46Z" finished-at="2018-09-05T14:05:07Z">
     <groups>
     </groups>
-    <test name="Chrome Browser" duration-ms="161823" started-at="2018-09-05T12:21:58Z" finished-at="2018-09-05T12:24:40Z">
-      <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@23fe1d71]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-09-05T12:21:58Z" finished-at="2018-09-05T12:21:58Z">
+    <test name="Internet Explorer Browser" duration-ms="81448" started-at="2018-09-05T14:03:46Z" finished-at="2018-09-05T14:05:07Z">
+      <class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@23fe1d71]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-09-05T14:03:46Z" finished-at="2018-09-05T14:03:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@23fe1d71]" name="launchBrowser" is-config="true" duration-ms="9903" started-at="2018-09-05T12:21:58Z" finished-at="2018-09-05T12:22:08Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@23fe1d71]" name="launchBrowser" is-config="true" duration-ms="5110" started-at="2018-09-05T14:03:46Z" finished-at="2018-09-05T14:03:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[IE]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@23fe1d71]" name="signIn" duration-ms="17270" started-at="2018-09-05T12:22:08Z" finished-at="2018-09-05T12:22:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signIn -->
-        <test-method status="FAIL" signature="downloadPASMM()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@23fe1d71]" name="downloadPASMM" duration-ms="133718" started-at="2018-09-05T12:22:25Z" finished-at="2018-09-05T12:24:39Z">
+        <test-method status="FAIL" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@23fe1d71]" name="signIn" duration-ms="18643" started-at="2018-09-05T14:03:51Z" finished-at="2018-09-05T14:04:09Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Click on Download Now was unsuccessful]]>
+              <![CDATA[Login UnSuccessful]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Click on Download Now was unsuccessful
+              <![CDATA[java.lang.AssertionError: Login UnSuccessful
 	at org.testng.Assert.fail(Assert.java:94)
 	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:66)
-	at com.tcs.BsiShopRedesign.pages.DownloadMMPage.clickDownloadNow(DownloadMMPage.java:50)
-	at com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial.downloadPASMM(DownloadMarketingMaterial.java:74)
+	at com.tcs.BsiShopRedesign.pages.SignInPage.login(SignInPage.java:66)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.signIn(SoftCopyDownloads.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,12 +62,94 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- downloadPASMM -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@23fe1d71]" name="tearDown" is-config="true" duration-ms="900" started-at="2018-09-05T12:24:39Z" finished-at="2018-09-05T12:24:40Z">
+        </test-method> <!-- signIn -->
+        <test-method status="FAIL" signature="downloadSoftCopyfromOrderCofirmationPage()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@23fe1d71]" name="downloadSoftCopyfromOrderCofirmationPage" duration-ms="45789" started-at="2018-09-05T14:04:09Z" finished-at="2018-09-05T14:04:55Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Click Checkout was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Click Checkout was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:66)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.clickCheckout(BasketPage.java:457)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderCofirmationPage(SoftCopyDownloads.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadSoftCopyfromOrderCofirmationPage -->
+        <test-method status="FAIL" signature="downloadSoftCopyfromOrderHistoryPage()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@23fe1d71]" name="downloadSoftCopyfromOrderHistoryPage" duration-ms="11000" started-at="2018-09-05T14:04:55Z" finished-at="2018-09-05T14:05:06Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[SoftCopy Download was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: SoftCopy Download was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:66)
+	at com.tcs.BsiShopRedesign.pages.OrderHistoryPage.downloadAndVerifySoftCopy(OrderHistoryPage.java:106)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderHistoryPage(SoftCopyDownloads.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadSoftCopyfromOrderHistoryPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@23fe1d71]" name="tearDown" is-config="true" duration-ms="875" started-at="2018-09-05T14:05:06Z" finished-at="2018-09-05T14:05:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial -->
-    </test> <!-- Chrome Browser -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads -->
+    </test> <!-- Internet Explorer Browser -->
   </suite> <!-- Suite -->
 </testng-results>
