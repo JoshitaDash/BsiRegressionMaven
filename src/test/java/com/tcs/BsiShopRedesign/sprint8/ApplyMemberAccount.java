@@ -40,7 +40,7 @@ public class ApplyMemberAccount extends BaseTest {
 		}
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void applyMemberAccountBelowBandNine() {
 
 		try {
@@ -137,7 +137,7 @@ public class ApplyMemberAccount extends BaseTest {
 		}
 	}
 
-	@Test(priority = 4, enabled = true)
+	@Test(priority = 4, enabled = false)
 	public void validateErrorMsgMemberNumber() {
 
 		try {

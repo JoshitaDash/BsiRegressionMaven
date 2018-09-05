@@ -43,19 +43,6 @@ public class Page {
 
 	public void click(String locator) {
 		try {
-			/*
-			 * if (browser.equals("IE")) { if (!locator.isEmpty() &&
-			 * CommonHelper.isElementVisible(locator))
-			 * CommonHelper.elementToBeVisible(locator);
-			 * CommonHelper.elementToBeClickable(locator); CommonHelper.clickByJS(locator);
-			 * } else
-			 */
-			/*
-			 * if (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
-			 * CommonHelper.elementToBeVisible(locator);
-			 * CommonHelper.elementToBeClickable(locator);
-			 * CommonHelper.element(locator).click();
-			 */
 
 			if (BaseTest.browser.equals("IE")) {
 				System.out.println("");

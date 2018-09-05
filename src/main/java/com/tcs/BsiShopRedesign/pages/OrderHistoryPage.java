@@ -176,7 +176,7 @@ public class OrderHistoryPage extends Page {
 			String orderDetails = driver
 					.findElement(By.cssSelector("div[class='table-wrapper order-items order-margin-allignment']"))
 					.getText();
-			if (orderDetails.contains("Hardcopy")) {
+			if (orderDetails.contains("Hard")) {
 				test.log(LogStatus.PASS, "The Order detials for Hardcopy Product is: " + orderDetails);
 				System.out.println("The Order detials for Hardcopy Product is: " + orderDetails);
 

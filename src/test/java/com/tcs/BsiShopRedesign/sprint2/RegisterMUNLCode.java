@@ -42,10 +42,14 @@ public class RegisterMUNLCode extends BaseTest {
 			Log.info("Select the Product");
 			System.out.println("Select the Product");
 			test.log(LogStatus.INFO, "Select the Product");
+			//driver.findElement(By.linkText("ASTM G78 - 15")).click();
 			WebElement product = driver.findElement(By.linkText("ASTM G78 - 15"));
 			String name = product.toString();
+			String nameText = product.getText();
+			System.out.println(nameText);
 			CommonHelper.elementToBeClickable(name);
 			Thread.sleep(1000);
+			//click("astmProd_linktext");
 			product.click();
 
 			Log.info("Select Format and Add to Basket");

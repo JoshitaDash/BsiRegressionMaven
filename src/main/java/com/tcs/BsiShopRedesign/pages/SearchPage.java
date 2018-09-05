@@ -546,20 +546,22 @@ public class SearchPage extends Page {
 		try {
 			System.out.println("Check PAS Product Name");
 			test.log(LogStatus.INFO, "Check PAS Product Name");
-			PAS = CommonHelper.element("productLinkCount_css").isDisplayed();
+			Thread.sleep(2000);
+			PAS = driver.findElement(By.cssSelector("a[class='product-item-link']")).isDisplayed();
+			//PAS = CommonHelper.element("productLinkCount_css").isDisplayed();
 			if (PAS) {
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				String prodName = CommonHelper.element("productLinkCount_css").getText();
 				if (prodName.contains("PAS")|| prodName.contains("Pas")) {
 					System.out.println("PAS Product Name is: " + prodName);
 					test.log(LogStatus.INFO, "PAS Product Name is: " + prodName);
 					test.log(LogStatus.PASS, "PAS Product Name match is successful");
 				} else {
-					System.out.println("PAS Product Name match is unsuccessful");
-					test.log(LogStatus.FAIL, "PAS Product Name match is unsuccessful");
+					System.out.println("PAS Product Name match is unsuccessful" + prodName);
+					test.log(LogStatus.FAIL, "PAS Product Name match is unsuccessful" + prodName);
 				}
 			} else {
-				CommonHelper.reportFailure("PAS Product Name match is unsuccessful");
+				CommonHelper.reportFailure("PAS Product Name match is unsuccessful" );
 			}
 
 		} catch (Exception e) {

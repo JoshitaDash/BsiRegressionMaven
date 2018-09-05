@@ -53,7 +53,7 @@ public class CheckoutPage extends Page {
 	public void enterPaymentDetails() throws InterruptedException {
 
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			System.out.println("Click Enter Payment Details");
 			test.log(LogStatus.INFO, "Click Enter Payment Details");
 			Log.info("Click Enter Payment Details");
@@ -139,9 +139,9 @@ public class CheckoutPage extends Page {
 			System.out.println("Check Terms and Conditions");
 			test.log(LogStatus.INFO, "Check Terms and Conditions");
 			Log.info("Check Terms and Conditions");
-			CommonHelper.scrolltoview("termsCond_xpath");
-			CommonHelper.elementToBeVisible("termsCond_xpath");
-			click("termsCond_xpath");
+			CommonHelper.scrolltoview("termsCond_css");
+			CommonHelper.elementToBeVisible("termsCond_css");
+			click("termsCond_css");
 
 			System.out.println("Click Complete Your Order");
 			test.log(LogStatus.INFO, "Click Complete Your Order");
