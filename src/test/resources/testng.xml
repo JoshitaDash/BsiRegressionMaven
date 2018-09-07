@@ -5,7 +5,7 @@
 		<parameter name="browser" value="IE" />
 		<classes>
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
-			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket" />
@@ -36,7 +36,7 @@
 			<class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout" />
-			<class name="com.tcs.BsiShopRedesign.sprint8.ValidateCheckoutDetails" />
+			<class name="com.tcs.BsiShopRedesign.sprint8.ValidateCheckoutDetails" /> -->
 		</classes>
 	</test>
 
