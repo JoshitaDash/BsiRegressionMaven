@@ -187,32 +187,35 @@ public class BasketPage extends Page {
 
 		try {
 			Thread.sleep(5000);
-			removeProd = driver.findElement(By.xpath("//img[@alt='delete']")).isDisplayed();
-			if (removeProd) {
-				System.out.println("Click on Remove Item");
-				test.log(LogStatus.INFO, "Click on Remove Item");
-				Thread.sleep(3000);
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
+			// removeProd =
+			// driver.findElement(By.xpath("//img[@alt='delete']")).isDisplayed();
+			// if (removeProd) {
+			WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
+			System.out.println("Click on Remove Item");
+			test.log(LogStatus.INFO, "Click on Remove Item");
+			Thread.sleep(5000);
+			wait.until(ExpectedConditions.visibilityOf(remove));
+			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
 
-				// CommonHelper.clickByJS("remoeItem_id");
-				System.out.println("removing product");
-				//click("removeProduct_xpath");
-				driver.findElement(By.xpath("//img[@alt='delete']")).click();
+			// CommonHelper.clickByJS("remoeItem_id");
+			System.out.println("removing product");
+			click("removeProduct_xpath");
+			// driver.findElement(By.xpath("///*[@id='shopping-cart-table']/tbody/tr/td[1]/div/div/a/span/img")).click();
 
-				Thread.sleep(2000);
-				System.out.println("Get the text of the remove basket message");
-				test.log(LogStatus.INFO, "Get the text of the remove basket message");
-				Thread.sleep(5000);
-				wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='cart-empty']")));
-				String basketVerify = wait
-						.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='cart-empty']")))
-						.getText();
-				System.out.println("The Verfication message is: " + basketVerify);
-				Log.info("The Verfication message is: " + basketVerify);
-				test.log(LogStatus.PASS, "The Verfication message is: " + basketVerify);
+			Thread.sleep(2000);
+			System.out.println("Get the text of the remove basket message");
+			test.log(LogStatus.INFO, "Get the text of the remove basket message");
+			Thread.sleep(5000);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='cart-empty']")));
+			String basketVerify = wait
+					.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='cart-empty']")))
+					.getText();
+			System.out.println("The Verfication message is: " + basketVerify);
+			Log.info("The Verfication message is: " + basketVerify);
+			test.log(LogStatus.PASS, "The Verfication message is: " + basketVerify);
 
-			}
+			// }
 		}
 
 		catch (Exception e) {
@@ -382,50 +385,48 @@ public class BasketPage extends Page {
 
 	public void verifyMUNL() {
 		try {
-		//	if (BaseTest.browser.equals("IE")) {
-				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-				driver.switchTo().window(tabs2.get(1));
-				driver.switchTo().activeElement();
-				driver.manage().window().maximize();
+			// if (BaseTest.browser.equals("IE")) {
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			driver.switchTo().activeElement();
+			driver.manage().window().maximize();
 
-				Thread.sleep(1000);
-				test.log(LogStatus.INFO, "Verify MUNL Request");
-				System.out.println("Verify MUNL Request");
-				Log.info("Verify MUNL Request");
-				CommonHelper.scrolltoview("verifyMUNL_xpath");
-				String verifyText = CommonHelper.element("verifyMUNL_xpath").getText();
-				// String verifyText = driver.findElement(By.id("pardot-form")).getText();
-				System.out.println("The verification message is: " + verifyText);
-				test.log(LogStatus.PASS, "The verification message is: " + verifyText);
+			Thread.sleep(1000);
+			test.log(LogStatus.INFO, "Verify MUNL Request");
+			System.out.println("Verify MUNL Request");
+			Log.info("Verify MUNL Request");
+			CommonHelper.scrolltoview("verifyMUNL_xpath");
+			String verifyText = CommonHelper.element("verifyMUNL_xpath").getText();
+			// String verifyText = driver.findElement(By.id("pardot-form")).getText();
+			System.out.println("The verification message is: " + verifyText);
+			test.log(LogStatus.PASS, "The verification message is: " + verifyText);
 
-				driver.close();
-				driver.switchTo().window(tabs2.get(0));
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
 
-				Thread.sleep(1000);
-				test.log(LogStatus.INFO, "Click on Close MUNL Form");
-				System.out.println("Click on Close MUNL Form");
-				Log.info("Click on Close MUNL Form");
-				driver.switchTo().defaultContent();
-				click("closeMUNLform_xpath");
+			Thread.sleep(1000);
+			test.log(LogStatus.INFO, "Click on Close MUNL Form");
+			System.out.println("Click on Close MUNL Form");
+			Log.info("Click on Close MUNL Form");
+			driver.switchTo().defaultContent();
+			click("closeMUNLform_xpath");
 
-		//	} else {
-				/*Thread.sleep(1000);
-				test.log(LogStatus.INFO, "Verify MUNL Request");
-				System.out.println("Verify MUNL Request");
-				Log.info("Verify MUNL Request");
-				CommonHelper.scrolltoview("verifyMUNL_xpath");
-				String verifyText = CommonHelper.element("verifyMUNL_xpath").getText();
-				// String verifyText = driver.findElement(By.id("pardot-form")).getText();
-				System.out.println("The verification message is: " + verifyText);
-				test.log(LogStatus.PASS, "The verification message is: " + verifyText);
-
-				Thread.sleep(1000);
-				test.log(LogStatus.INFO, "Click on Close MUNL Form");
-				System.out.println("Click on Close MUNL Form");
-				Log.info("Click on Close MUNL Form");
-				driver.switchTo().defaultContent();
-				click("closeMUNLform_xpath");*/
-			//}
+			// } else {
+			/*
+			 * Thread.sleep(1000); test.log(LogStatus.INFO, "Verify MUNL Request");
+			 * System.out.println("Verify MUNL Request"); Log.info("Verify MUNL Request");
+			 * CommonHelper.scrolltoview("verifyMUNL_xpath"); String verifyText =
+			 * CommonHelper.element("verifyMUNL_xpath").getText(); // String verifyText =
+			 * driver.findElement(By.id("pardot-form")).getText();
+			 * System.out.println("The verification message is: " + verifyText);
+			 * test.log(LogStatus.PASS, "The verification message is: " + verifyText);
+			 * 
+			 * Thread.sleep(1000); test.log(LogStatus.INFO, "Click on Close MUNL Form");
+			 * System.out.println("Click on Close MUNL Form");
+			 * Log.info("Click on Close MUNL Form"); driver.switchTo().defaultContent();
+			 * click("closeMUNLform_xpath");
+			 */
+			// }
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("VerifyRequest MUNL Details was unsuccessful");
@@ -446,7 +447,7 @@ public class BasketPage extends Page {
 			if (checkout.isDisplayed() || checkout.isEnabled()) {
 				Thread.sleep(1000);
 				CommonHelper.clickJS(checkout);
-				//checkout.click();
+				// checkout.click();
 				Thread.sleep(2000);
 			} else {
 				test.log(LogStatus.FAIL, "Click Checkout was unsuccessful");

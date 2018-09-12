@@ -1,72 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="188459" started-at="2018-09-07T08:23:17Z" finished-at="2018-09-07T08:26:25Z">
+  <suite name="Suite" duration-ms="66679" started-at="2018-09-12T08:34:26Z" finished-at="2018-09-12T08:35:33Z">
     <groups>
     </groups>
-    <test name="Internet Explorer Browser" duration-ms="188459" started-at="2018-09-07T08:23:17Z" finished-at="2018-09-07T08:26:25Z">
-      <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="getDriverInstance" is-config="true" duration-ms="16" started-at="2018-09-07T08:23:17Z" finished-at="2018-09-07T08:23:17Z">
+    <test name="Chrome Browser" duration-ms="66679" started-at="2018-09-12T08:34:26Z" finished-at="2018-09-12T08:35:33Z">
+      <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="16" started-at="2018-09-12T08:34:26Z" finished-at="2018-09-12T08:34:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="launchBrowser" is-config="true" duration-ms="10936" started-at="2018-09-07T08:23:17Z" finished-at="2018-09-07T08:23:28Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="launchBrowser" is-config="true" duration-ms="9938" started-at="2018-09-12T08:34:26Z" finished-at="2018-09-12T08:34:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[IE]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="signIn" duration-ms="15836" started-at="2018-09-07T08:23:28Z" finished-at="2018-09-07T08:23:44Z">
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="signIn" duration-ms="17419" started-at="2018-09-12T08:34:36Z" finished-at="2018-09-12T08:34:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="addNewBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="addNewBillingAddress" duration-ms="25281" started-at="2018-09-07T08:23:44Z" finished-at="2018-09-07T08:24:09Z">
+        <test-method status="PASS" signature="downloadPASMM()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="downloadPASMM" duration-ms="38409" started-at="2018-09-12T08:34:54Z" finished-at="2018-09-12T08:35:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewBillingAddress -->
-        <test-method status="PASS" signature="makeDefaultBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="makeDefaultBillingAddress" duration-ms="6560" started-at="2018-09-07T08:24:09Z" finished-at="2018-09-07T08:24:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- makeDefaultBillingAddress -->
-        <test-method status="PASS" signature="editBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="editBillingAddress" duration-ms="25310" started-at="2018-09-07T08:24:15Z" finished-at="2018-09-07T08:24:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editBillingAddress -->
-        <test-method status="PASS" signature="deleteBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="deleteBillingAddress" duration-ms="11258" started-at="2018-09-07T08:24:41Z" finished-at="2018-09-07T08:24:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBillingAddress -->
-        <test-method status="PASS" signature="addDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="addDeliveryAddress" duration-ms="23679" started-at="2018-09-07T08:24:52Z" finished-at="2018-09-07T08:25:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addDeliveryAddress -->
-        <test-method status="PASS" signature="makeDefaultDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="makeDefaultDeliveryAddress" duration-ms="5664" started-at="2018-09-07T08:25:16Z" finished-at="2018-09-07T08:25:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- makeDefaultDeliveryAddress -->
-        <test-method status="PASS" signature="editDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="editDeliveryAddress" duration-ms="23135" started-at="2018-09-07T08:25:21Z" finished-at="2018-09-07T08:25:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editDeliveryAddress -->
-        <test-method status="PASS" signature="deleteDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="deleteDeliveryAddress" duration-ms="11535" started-at="2018-09-07T08:25:44Z" finished-at="2018-09-07T08:25:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteDeliveryAddress -->
-        <test-method status="PASS" signature="resetPassword()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="resetPassword" duration-ms="28435" started-at="2018-09-07T08:25:56Z" finished-at="2018-09-07T08:26:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetPassword -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@4e718207]" name="tearDown" is-config="true" duration-ms="822" started-at="2018-09-07T08:26:24Z" finished-at="2018-09-07T08:26:25Z">
+        </test-method> <!-- downloadPASMM -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="tearDown" is-config="true" duration-ms="912" started-at="2018-09-12T08:35:32Z" finished-at="2018-09-12T08:35:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint1.MyProfile -->
-    </test> <!-- Internet Explorer Browser -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial -->
+    </test> <!-- Chrome Browser -->
   </suite> <!-- Suite -->
 </testng-results>

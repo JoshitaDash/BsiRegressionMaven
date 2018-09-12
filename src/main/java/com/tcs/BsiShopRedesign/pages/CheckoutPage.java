@@ -34,20 +34,29 @@ public class CheckoutPage extends Page {
 
 	public void signIn() {
 
-		System.out.println("Enter Email");
-		test.log(LogStatus.INFO, "Enter Email");
-		Log.info("Enter Email");
-		enterText("email_id", BsiConstants.getEnvDetails().get("username"));
+		try {
+			System.out.println("Enter Email");
+			test.log(LogStatus.INFO, "Enter Email");
+			Log.info("Enter Email");
+			enterText("email_id", BsiConstants.getEnvDetails().get("username"));
+			System.out.println(BsiConstants.getEnvDetails().get("username"));
+			Thread.sleep(2000);
 
-		System.out.println("Enter Password");
-		test.log(LogStatus.INFO, "Enter Password");
-		Log.info("Enter Password");
-		enterText("password_id", BsiConstants.getEnvDetails().get("password"));
+			System.out.println("Enter Password");
+			test.log(LogStatus.INFO, "Enter Password");
+			Log.info("Enter Password");
+			enterText("password_id", BsiConstants.getEnvDetails().get("password"));
+			System.out.println(BsiConstants.getEnvDetails().get("password"));
+			Thread.sleep(2000);
 
-		System.out.println("Click SignIn");
-		test.log(LogStatus.INFO, "Click SignIn");
-		Log.info("Click SignIn");
-		click("signIn_css");
+			System.out.println("Click SignIn");
+			test.log(LogStatus.INFO, "Click SignIn");
+			Log.info("Click SignIn");
+			click("signIn_css");
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Sign In was unsuccessful");
+			e.printStackTrace();
+		}
 	}
 
 	public void enterPaymentDetails() throws InterruptedException {
@@ -58,7 +67,7 @@ public class CheckoutPage extends Page {
 			test.log(LogStatus.INFO, "Click Enter Payment Details");
 			Log.info("Click Enter Payment Details");
 			CommonHelper.scrolltoview("paymentDetails_id");
-			//click("paymentDetails_id");
+			// click("paymentDetails_id");
 			driver.findElement(By.id("opc-shipping-btn")).click();
 
 			System.out.println("Click Pay by Credit Card");
@@ -135,7 +144,7 @@ public class CheckoutPage extends Page {
 			Log.info("Click Review Order");
 			click("reviewOrder_xpath");
 
-			 Thread.sleep(3000);
+			Thread.sleep(3000);
 			System.out.println("Check Terms and Conditions");
 			test.log(LogStatus.INFO, "Check Terms and Conditions");
 			Log.info("Check Terms and Conditions");
@@ -146,9 +155,9 @@ public class CheckoutPage extends Page {
 			System.out.println("Click Complete Your Order");
 			test.log(LogStatus.INFO, "Click Complete Your Order");
 			Log.info("Click Place Order");
-			//CommonHelper.scrolltoview("completeOrder_id");
+			// CommonHelper.scrolltoview("completeOrder_id");
 			click("completeOrder_id");
-			//driver.findElement(By.id("place-order-trigger")).click();
+			// driver.findElement(By.id("place-order-trigger")).click();
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Order Details was unsuccesful");

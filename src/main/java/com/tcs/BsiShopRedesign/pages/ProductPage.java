@@ -141,7 +141,8 @@ public class ProductPage extends Page {
 			test.log(LogStatus.INFO, "Click on View Basket ");
 			Log.info("Click on View Basket");
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='basket']/div/a/span[1]")));
-			driver.findElement(By.xpath("//*[@id='basket']/div/a/span[1]")).click();
+			// driver.findElement(By.xpath("//*[@id='basket']/div/a/span[1]")).click();
+			click("viewBasket_xpath");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 			CommonHelper.reportFailure("Click on View Basket was unsuccessful");
@@ -382,6 +383,120 @@ public class ProductPage extends Page {
 			CommonHelper.reportFailure("Member link is visible in Member Account");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
+		}
+	}
+
+	public void clickLookInside() {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("prevSubmit")));
+
+		test.log(LogStatus.INFO, ("Click on Look Inside"));
+		Log.info("Click on Look Inside");
+		System.out.println("Click on Look Inside");
+		click("lookInside_id");
+	}
+
+	public void verifyPDFPreview() throws InterruptedException {
+
+		try {
+			test.log(LogStatus.INFO, ("Verify PDF Preview image"));
+			Log.info("Verify PDF Preview image");
+			System.out.println("Verify PDF Preview image");
+
+			System.out.println("Switch iFrame");
+			// Thread.sleep(2000);
+			driver.switchTo().activeElement();
+			WebElement pdf = driver.findElement(By.xpath("//*[@id='prevNo-1']/img"));
+			String altValue = pdf.getAttribute("alt");
+			Thread.sleep(2000);
+			CommonHelper.takeScreenShot();
+			// String pdfText = driver.findElement(By.id("prevNo-1")).getText();
+			System.out.println("The pdf text is: " + altValue);
+			test.log(LogStatus.INFO, "The pdf text is: " + altValue);
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verify PDF Preview image was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPDFZoomIn() {
+
+		try {
+			test.log(LogStatus.INFO, ("Verify PDF Preview Zoom In"));
+			Log.info("Verify PDF Preview Zoom In");
+			System.out.println("Verify PDF Preview Zoom In");
+			CommonHelper.elementToBeClickable("pdfZoomIn_css");
+			click("pdfZoomIn_css");
+			test.log(LogStatus.PASS, "Verify PDF Preview Zoom In was successful");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verify PDF Preview Zoom In was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPDFZoomOut() {
+
+		try {
+			test.log(LogStatus.INFO, ("Verify PDF Preview Zoom Out"));
+			Log.info("Verify PDF Preview Zoom Out");
+			System.out.println("Verify PDF Preview Zoom Out");
+			CommonHelper.elementToBeClickable("pdfZoomOut_css");
+			click("pdfZoomOut_css");
+			test.log(LogStatus.PASS, "Verify PDF Preview Zoom Out was successful");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verify PDF Preview Zoom Out was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPDFSave() {
+
+		try {
+			test.log(LogStatus.INFO, ("Verify PDF Preview Save"));
+			Log.info("Verify PDF Preview Save");
+			System.out.println("Verify PDF Preview Save");
+			CommonHelper.elementToBeClickable("pdfSave_css");
+			click("pdfSave_css");
+			test.log(LogStatus.PASS, "Verify PDF Preview Save was successful");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verify PDF Preview Save was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPDFPrint() {
+
+		try {
+			test.log(LogStatus.INFO, ("Verify PDF Preview Print"));
+			Log.info("Verify PDF Preview Print");
+			System.out.println("Verify PDF Preview Print");
+			CommonHelper.elementToBeClickable("pdfPrint_css");
+			click("pdfPrint_css");
+			test.log(LogStatus.PASS, "Verify PDF Preview Print was successful");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verify PDF Preview Print was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPDFCloseWindow() {
+
+		try {
+
+			test.log(LogStatus.INFO, ("Verify PDF Preview Close Window"));
+			Log.info("Verify PDF Preview Close Window");
+			System.out.println("Verify PDF Preview Close Window");
+			CommonHelper.elementToBeClickable("pdfClose_id");
+			click("pdfClose_id");
+			test.log(LogStatus.PASS, "Verify PDF Preview Close Window was successful");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verify PDF Preview Close Window was unsuccessful");
+			e.printStackTrace();
 		}
 	}
 }

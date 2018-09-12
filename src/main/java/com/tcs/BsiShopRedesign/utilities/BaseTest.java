@@ -52,7 +52,7 @@ public class BaseTest extends Page {
 
 				extent.addSystemInfo("User Name", "TCS").addSystemInfo("Host Name", "TCS")
 						.addSystemInfo("Selenium Version", "3.8.0").addSystemInfo("Environment", url)
-						.addSystemInfo("Browser", "Chrome 67.0");
+						.addSystemInfo("Browser", "Chrome 69.0");
 
 			}
 

@@ -59,8 +59,13 @@ public class DownloadMarketingMaterial extends BaseTest {
 			test.log(LogStatus.INFO, "Click on Search");
 			CommonHelper.elementToBeClickable("searchButton_css");
 			click("searchButton_css");
-
-			Log.info("Select the Product");
+			
+			Log.info("Click Download Now");
+			System.out.println("Click Download Now");
+			DownloadMMPage down = new DownloadMMPage(driver);
+			down.clickDownloadNow();
+			
+			/*Log.info("Select the Product");
 			System.out.println("Select the Product");
 			test.log(LogStatus.INFO, "Select the Product");
 			WebElement product = driver.findElement(By.linkText("Governance & Resilience"));
@@ -71,7 +76,7 @@ public class DownloadMarketingMaterial extends BaseTest {
 			Log.info("Click Download Now");
 			System.out.println("Click Download Now");
 			DownloadMMPage down = new DownloadMMPage(driver);
-			down.clickDownloadNow();
+			down.clickDownloadNow();*/
 			
 			Log.info("Enter Pardot Details");
 			System.out.println("Enter Pardot Details");

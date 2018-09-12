@@ -209,7 +209,7 @@ public class CommonHelper extends Page {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 120);
 			// wait.until(ExpectedConditions.visibilityOf(element));
-			wait.until(ExpectedConditions.visibilityOfElementLocated((By) element));
+			wait.until(ExpectedConditions.visibilityOf(element));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

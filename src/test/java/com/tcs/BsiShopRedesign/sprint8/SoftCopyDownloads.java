@@ -129,8 +129,8 @@ public class SoftCopyDownloads extends BaseTest {
 			Log.info("Download SoftCopy from Order Confirmation Page");
 			test.log(LogStatus.INFO, "Download SoftCopy from Order Confirmation Page");
 			OrderConfirmationPage softcopy = new OrderConfirmationPage(driver);
-			softcopy.downloadVerifySoftCopyDocuments(null);
-
+			softcopy.downloadVerifySoftCopyDocuments();
+			
 			/*
 			 * System.out.println("Verify SoftCopy Download Document Name");
 			 * Log.info("Verify SoftCopy Download Document Name"); test.log(LogStatus.INFO,

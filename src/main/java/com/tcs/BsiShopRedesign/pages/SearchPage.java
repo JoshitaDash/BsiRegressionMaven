@@ -55,9 +55,12 @@ public class SearchPage extends Page {
 					test.log(LogStatus.INFO, "Click on Next" + "The current page is: " + counter++);
 					System.out.println("Click on Next");
 					Log.info("Click on Next");
-					/*JavascriptExecutor executor = (JavascriptExecutor) driver;
-					executor.executeScript("arguments[0].click();", By.xpath("(//span[text()='Next'])[2]"));*/
-					//driver.findElement(By.xpath("(//span[text()='Next'])[2]")).click();
+					/*
+					 * JavascriptExecutor executor = (JavascriptExecutor) driver;
+					 * executor.executeScript("arguments[0].click();",
+					 * By.xpath("(//span[text()='Next'])[2]"));
+					 */
+					// driver.findElement(By.xpath("(//span[text()='Next'])[2]")).click();
 					click("next_xpath");
 					Thread.sleep(30000);
 					isNextButtonDisplayed = !CommonHelper.isElementHiddenNow("(//span[text()='Next'])[2]");
@@ -548,11 +551,11 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, "Check PAS Product Name");
 			Thread.sleep(2000);
 			PAS = driver.findElement(By.cssSelector("a[class='product-item-link']")).isDisplayed();
-			//PAS = CommonHelper.element("productLinkCount_css").isDisplayed();
+			// PAS = CommonHelper.element("productLinkCount_css").isDisplayed();
 			if (PAS) {
 				Thread.sleep(5000);
 				String prodName = CommonHelper.element("productLinkCount_css").getText();
-				if (prodName.contains("PAS")|| prodName.contains("Pas")) {
+				if (prodName.contains("PAS") || prodName.contains("Pas")) {
 					System.out.println("PAS Product Name is: " + prodName);
 					test.log(LogStatus.INFO, "PAS Product Name is: " + prodName);
 					test.log(LogStatus.PASS, "PAS Product Name match is successful");
@@ -561,7 +564,7 @@ public class SearchPage extends Page {
 					test.log(LogStatus.FAIL, "PAS Product Name match is unsuccessful" + prodName);
 				}
 			} else {
-				CommonHelper.reportFailure("PAS Product Name match is unsuccessful" );
+				CommonHelper.reportFailure("PAS Product Name match is unsuccessful");
 			}
 
 		} catch (Exception e) {
@@ -801,10 +804,11 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, "Click on Add to Basket");
 			Log.info("Click on Add to Basket");
 			System.out.println("Click on Add to Basket");
-			//WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
+			// WebElement addToBasket =
+			// driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
 			CommonHelper.elementToBeClickable("addToBasket_css");
 			click("addToBasket_css");
-			//addToBasket.click();
+			// addToBasket.click();
 			Thread.sleep(2000);
 
 		} catch (Exception e) {
@@ -880,7 +884,7 @@ public class SearchPage extends Page {
 				if (hardcopy.isDisplayed()) {
 					Select dpdwn = new Select(hardcopy);
 					dpdwn.selectByVisibleText("Hard copy");
-					
+
 				}
 			} catch (Exception e) {
 				CommonHelper.reportFailure("Select Hardcopy Format was unsuccessful");
@@ -898,7 +902,9 @@ public class SearchPage extends Page {
 			System.out.println("Click on View Basket");
 			test.log(LogStatus.INFO, "Click on View Basket ");
 			Log.info("Click on View Basket");
-			driver.findElement(By.xpath("//*[@id='basket']/div/a/span[1]")).click();
+			CommonHelper.elementToBeClickable("viewBasket_xpath");
+			click("viewBasket_xpath");
+			//driver.findElement(By.xpath("//*[@id='basket']/div/a/span[1]")).click();
 
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -940,11 +946,13 @@ public class SearchPage extends Page {
 		}
 	}
 
-	public boolean verifyMemPriceSearchList() {
+	public boolean verifyMemPriceSearchList() throws InterruptedException {
 
 		try {
+			Thread.sleep(2000);
 			WebElement priceList = driver.findElements(By.cssSelector("span[id*='product-price']")).get(0);
-			WebElement memPriceList = driver.findElements(By.cssSelector("span[class='price']")).get(1);
+			//WebElement memPriceList = driver.findElements(By.cssSelector("span[class='price']")).get(1);
+			WebElement memPriceList = driver.findElement(By.xpath("//*[@id='search_results_display']/li[1]/div[1]/div/div[2]/div[1]/span[2]/span/span[1]"));
 			String price = priceList.getText();
 			String memPrice = memPriceList.getText();
 
@@ -955,6 +963,7 @@ public class SearchPage extends Page {
 			double finalMemPrice = Double.parseDouble(memPrice);
 			double memberPrice = finalPrice / 2;
 
+			Thread.sleep(2000);
 			if (finalMemPrice == memberPrice) {
 				System.out.println("The price of the first product in the search list is: " + finalPrice
 						+ " & The member price of the first product in the search list is: " + finalMemPrice);

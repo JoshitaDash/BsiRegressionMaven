@@ -3,7 +3,7 @@ package com.tcs.BsiShopRedesign.utilities;
 import java.util.Hashtable;
 
 public class BsiConstants {
-	public static final String ENV = "STOREQA"; // QA,PROD,STAGE
+	public static final String ENV = "UAT"; // QA,PROD,STAGE
 
 	// URLs-QA5
 	public static final String QA5_URL = "";
@@ -13,11 +13,6 @@ public class BsiConstants {
 	public static final String QA5_MEM_PASSWORD = "Test@1234";
 
 	// URLs-Store QA
-	/*public static final String STORE_QA_URL = "https://standards-storeqa.bsigroup.com/";
-	public static final String STORE_QA_USERNAME = "sharmileemohapatra@gmail.com";
-	public static final String STORE_QA_PASSWORD = "Test@1234";
-	public static final String STORE_QA_MEM_USERNAME = "subhrateja.satapathy@tcs.com";
-	public static final String STORE_QA_MEM_PASSWORD = "Test@1234";*/
 	public static final String STORE_QA_URL = "https://standards-storeqa.bsigroup.com/";
 	public static final String STORE_QA_USERNAME = "sharmilee.mohapatra@tcs.com";
 	public static final String STORE_QA_PASSWORD = "Test@1234";

@@ -82,10 +82,15 @@ public class ApplyMemberAccount extends BaseTest {
 			Log.info("Verify Membership Details in Checkout Page");
 			CheckoutPage memDetails = new CheckoutPage(driver);
 			memDetails.verifyMemberDetails();
+			
+			System.out.println("Click Edit on Checkout Page");
+			Log.info("Click Edit on Checkout Page");
+			CheckoutPage editOrder = new CheckoutPage(driver);
+			editOrder.clickEditOrder();
 
-			System.out.println("Click Continue Shopping");
+			/*System.out.println("Click Continue Shopping");
 			Log.info("Click Continue Shopping");
-			memDetails.clickContinueShopping();
+			memDetails.clickContinueShopping();*/
 
 			System.out.println("Remove Membership from Basket");
 			Log.info("Remove Membership from Basket");

@@ -113,10 +113,14 @@ public class OrderHistoryPage extends Page {
 		try {
 			File getLatestFile = getLatestFilefromDir("C:\\Users\\shopqa\\Downloads");
 			String fileName = getLatestFile.getName();
-			Assert.assertTrue(fileName.contains(downloadDoc),
-					"Downloaded file name is not matching with expected file name");
-			test.log(LogStatus.INFO, "The downloaded file name is: " + fileName);
-			test.log(LogStatus.PASS, "Verification of File Name was successful");
+			if (fileName.contains(downloadDoc)) {
+				// Assert.assertTrue(fileName.contains(downloadDoc),"Downloaded file name is not
+				// matching with expected file name");
+				test.log(LogStatus.INFO, "The downloaded file name is: " + fileName);
+				test.log(LogStatus.PASS, "Verification of File Name was successful");
+			} else {
+				CommonHelper.reportFailure("File Not Found");
+			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Soft Copy Document Name Verification was unsuccessful");
 			e.printStackTrace();

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -27,18 +26,23 @@ public class DownloadMMPage extends Page {
 			Log.info("Click on Download Now");
 			System.out.println("Click on Download Now");
 			test.log(LogStatus.INFO, "Click on Download Now");
-			CommonHelper.elementToBeClickable("downloadNow_xpath");
-			Thread.sleep(1000);
-			click("downloadNow_xpath");
+			// CommonHelper.elementToBeClickable("downloadNow_xpath");
+			// Thread.sleep(1000);
+			// click("downloadNow_xpath");
+			driver.findElement(By.cssSelector("button[type='submit'][class='redbutton']")).click();
 
 			// CommonHelper.dismissAlert();
 			// CommonHelper.clickByJS("downloadNow_xpath");
-			/*
-			 * Thread.sleep(2000); System.out.println("Switch to 2nd tab");
-			 * ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-			 * driver.switchTo().window(tabs2.get(1)); // CommonHelper.windowHandle();
-			 * Thread.sleep(2000); System.out.println("Switched to 2nd tab");
-			 */
+
+			Thread.sleep(2000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			driver.manage().window().maximize();
+			// CommonHelper.windowHandle();
+			Thread.sleep(2000);
+			System.out.println("Switched to 2nd tab");
+
 			System.out.println("Switch iFrame");
 			Thread.sleep(3000);
 			driver.switchTo().frame(0);
@@ -77,9 +81,23 @@ public class DownloadMMPage extends Page {
 			// CommonHelper.isVisisble("titlePAS_xpath");
 			// CommonHelper.elementToBeClickable("titlePAS_xpath");
 			enterPardotFormDetails();
+			driver.close();
+			Thread.sleep(2000);
 
+			System.out.println("Switch to 3rd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1)); // driver.switchTo().activeElement();
+			driver.manage().window().maximize();
+
+			/*
+			 * Settings.OcrTextSearch=true; Settings.OcrTextRead=true;
+			 * 
+			 * Screen dm = new Screen(); String dmText =
+			 * dm.find("C:\\Users\\shopqa\\Desktop\\DM_Sikuli.jpg\\").text(); dmText =
+			 * dmText.trim(); System.out.println(dmText); test.log(LogStatus.INFO, dmText);
+			 */
 		} catch (Exception e) {
-			CommonHelper.reportFailure("Enter PAS Pardot details was unsuccessful");
+			CommonHelper.reportFailure("Enter Pardot details was unsuccessful");
 			Assert.fail(e.getMessage());
 			e.printStackTrace();
 		}
@@ -144,8 +162,15 @@ public class DownloadMMPage extends Page {
 			// driver.findElement(By.cssSelector("input[value='Submit']")).click();
 			click("submitGR_css");
 
+			System.out.println("Switch iFrame");
+			Thread.sleep(3000);
+			driver.switchTo().defaultContent();
+			// Thread.sleep(2000);
+			System.out.println("iframe switched back to window");
+			Thread.sleep(2000);
+
 		} catch (Exception e) {
-			CommonHelper.reportFailure("Enter PAS Pardot Form details was unsuccessful");
+			CommonHelper.reportFailure("Enter Pardot Form details was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -162,29 +187,27 @@ public class DownloadMMPage extends Page {
 
 			if (BaseTest.browser.equals("IE")) {
 
-				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-				driver.switchTo().window(tabs2.get(1));
-				System.out.println("tab switched");
-				driver.manage().window().maximize();
+				/*
+				 * ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+				 * driver.switchTo().window(tabs2.get(1)); driver.switchTo().activeElement();
+				 * System.out.println("tab switched"); driver.manage().window().maximize();
+				 */
 
 				String getURL = driver.getCurrentUrl();
 				System.out.println("The URL is: " + getURL);
 				test.log(LogStatus.INFO, "The URL is: " + getURL);
 				Thread.sleep(3000);
 
-				driver.switchTo().frame(0);
-				// WebElement popup = driver.findElement(By.name("popup"));
-				// popup.click();
-				String alertText = driver.switchTo().alert().getText();
-				System.out.println("Text in the alert is: " + alertText);
-				test.log(LogStatus.INFO, "Text in the alert is: " + alertText);
-				if (alertText.contains(".pdf")) {
-					test.log(LogStatus.PASS, alertText);
-				} else {
-					test.log(LogStatus.FAIL, alertText);
-				}
-
-				// ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+				/*
+				 * driver.switchTo().frame(0); // WebElement popup =
+				 * driver.findElement(By.name("popup")); // popup.click(); String alertText =
+				 * driver.switchTo().alert().getText();
+				 * System.out.println("Text in the alert is: " + alertText);
+				 * test.log(LogStatus.INFO, "Text in the alert is: " + alertText); if
+				 * (alertText.contains(".pdf")) { test.log(LogStatus.PASS, alertText); } else {
+				 * test.log(LogStatus.FAIL, alertText); }
+				 */
+				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
 				driver.close();
 				driver.switchTo().window(tabs2.get(0));
 			}

@@ -1,6 +1,7 @@
 package com.tcs.BsiShopRedesign.pages;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
+import com.tcs.BsiShopRedesign.utilities.FileDownloader;
 import com.tcs.BsiShopRedesign.utilities.Page;
 
 public class OrderConfirmationPage extends Page {
@@ -20,7 +22,7 @@ public class OrderConfirmationPage extends Page {
 
 	}
 
-	public void downloadVerifySoftCopyDocuments(String downloadDoc) {
+	public void downloadVerifySoftCopyDocuments() {
 
 		String allDocs = null;
 		String firstSoftCopy = null;
@@ -47,19 +49,19 @@ public class OrderConfirmationPage extends Page {
 			firstSoftCopy = softCopyName.get(0).getText();
 			firstSoftCopy = firstSoftCopy.replace(":", "_");
 			// docName.add(firstSoftCopy);
-			//verifyExpectedFileName(firstSoftCopy);
-			//try {
-				if (verifyExpectedFileName(firstSoftCopy) != null) {
-					test.log(LogStatus.PASS, "Verificatiion of First Document Download is Successful");
-					System.out.println("Verificatiion of First Document Download is Successful");
+			// verifyExpectedFileName(firstSoftCopy);
+			// try {
+			if (verifyExpectedFileName(firstSoftCopy) != null) {
+				test.log(LogStatus.PASS, "Verificatiion of First Document Download is Successful");
+				System.out.println("Verificatiion of First Document Download is Successful");
 
-				} else {
-					test.log(LogStatus.FAIL, "Verificatiion of First Document Download was unSuccessful");
-					System.out.println("Verificatiion of First Document Download was unSuccessful");
-				}
-			//} catch (Exception e) {
-				//e.printStackTrace();
-			//}
+			} else {
+				test.log(LogStatus.FAIL, "Verificatiion of First Document Download was unSuccessful");
+				System.out.println("Verificatiion of First Document Download was unSuccessful");
+			}
+			// } catch (Exception e) {
+			// e.printStackTrace();
+			// }
 
 			Thread.sleep(5000);
 			test.log(LogStatus.INFO, ("Download Second SoftCopy Document"));
@@ -72,20 +74,20 @@ public class OrderConfirmationPage extends Page {
 			secondSoftCopy = softCopyName.get(1).getText();
 			CommonHelper.handleAlert();
 			secondSoftCopy = secondSoftCopy.replace(":", "_");
-			// docName.add(secondSoftCopy);
-			//verifyExpectedFileName(secondSoftCopy);
-		//	try {
-				if (verifyExpectedFileName(secondSoftCopy) != null) {
-					test.log(LogStatus.PASS, "Verificatiion of Second Document Download is Successful");
-					System.out.println("Verificatiion of Second Document Download is Successful");
+			 //docName.add(secondSoftCopy);
+			 //verifyExpectedFileName(secondSoftCopy);
+			// try {
+			if (verifyExpectedFileName(secondSoftCopy) != null) {
+				test.log(LogStatus.PASS, "Verificatiion of Second Document Download is Successful");
+				System.out.println("Verificatiion of Second Document Download is Successful");
 
-				} else {
-					test.log(LogStatus.FAIL, "Verificatiion of Second Document Download was unSuccessful");
-					System.out.println("Verificatiion of Second Document Download was unSuccessful");
-				}
-			//} catch (Exception e) {
-				//e.printStackTrace();
-			//}
+			} else {
+				test.log(LogStatus.FAIL, "Verificatiion of Second Document Download was unSuccessful");
+				System.out.println("Verificatiion of Second Document Download was unSuccessful");
+			}
+			// } catch (Exception e) {
+			// e.printStackTrace();
+			// }
 
 			Thread.sleep(5000);
 			test.log(LogStatus.INFO, ("Download All SoftCopy Documents"));
@@ -98,20 +100,20 @@ public class OrderConfirmationPage extends Page {
 			Thread.sleep(5000);
 			test.log(LogStatus.PASS, "All Documents Download is Successful");
 			allDocs = firstSoftCopy + "," + secondSoftCopy;
-			//verifyExpectedFileName(allDocs);
+			// verifyExpectedFileName(allDocs);
 			Thread.sleep(2000);
-			//try {
-				if (verifyExpectedFileName(allDocs) != null) {
-					test.log(LogStatus.PASS, "Verificatiion of All Documents Download is Successful");
-					System.out.println("Verificatiion of All Documents Download is Successful");
+			// try {
+			if (verifyExpectedFileName(allDocs) != null) {
+				test.log(LogStatus.PASS, "Verificatiion of All Documents Download is Successful");
+				System.out.println("Verificatiion of All Documents Download is Successful");
 
-				} else {
-					test.log(LogStatus.FAIL, "Verificatiion of All Documents Download was unSuccessful");
-					System.out.println("Verificatiion of All Documents Download was unSuccessful");
-				}
-			//} catch (Exception e) {
-			//	e.printStackTrace();
-		//	}
+			} else {
+				test.log(LogStatus.FAIL, "Verificatiion of All Documents Download was unSuccessful");
+				System.out.println("Verificatiion of All Documents Download was unSuccessful");
+			}
+			// } catch (Exception e) {
+			// e.printStackTrace();
+			// }
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("SoftCopy Download was unsuccessful");
@@ -179,11 +181,14 @@ public class OrderConfirmationPage extends Page {
 
 			File getLatestFile = getLatestFilefromDir("C:\\Users\\shopqa\\Downloads");
 			String fileName = getLatestFile.getName();
-			Assert.assertTrue(fileName.contains(downloadDoc),
-					"Downloaded file name is not matching with expected file name");
-
-			test.log(LogStatus.INFO, "The downloaded file name is: " + fileName);
-			test.log(LogStatus.PASS, "Verification of File Name was successful");
+			
+			if(fileName.contains(downloadDoc)) {
+				test.log(LogStatus.INFO, "The downloaded file name is: " + fileName);
+				test.log(LogStatus.PASS, "Verification of File Name was successful");
+			}else
+				CommonHelper.reportFailure("File Not Found");
+			
+			
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Soft Copy Document Name Verification was unsuccessful");
@@ -207,5 +212,20 @@ public class OrderConfirmationPage extends Page {
 			}
 		}
 		return lastModifiedFile;
+	}
+
+	public void verifySoftCopy() throws NullPointerException, IOException {
+		try {
+			FileDownloader file=new FileDownloader(driver, System.getProperty("user.dir")+"//Files");
+			
+			List<WebElement> documents = driver.findElements(By.xpath("//a[contains(.,'Document')]"));
+			for(WebElement document:documents) {			
+				file.downloader(document.getAttribute("url"));
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
