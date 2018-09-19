@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.CheckoutPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
+import com.tcs.BsiShopRedesign.pages.OrderConfirmationPage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
@@ -75,17 +76,23 @@ public class EditCheckoutBillingAddress extends BaseTest {
 			System.out.println("Enter Payment Details");
 			Log.info("Enter Payment Details");
 			test.log(LogStatus.INFO, "Enter Payment Details");
-			checkOut.enterPaymentDetails();
+			checkOut.enterCardPaymentDetails();
 
 			System.out.println("Enter Order Details");
 			Log.info("Enter Order Details");
 			test.log(LogStatus.INFO, "Enter Order Details");
 			checkOut.enterOrderDetails();
 
-			System.out.println("Confirm Order Details");
+			/*System.out.println("Confirm Order Details");
 			Log.info("Confirm Order Details");
 			test.log(LogStatus.INFO, "Confirm Order Details");
-			checkOut.confirmOrderDetails();
+			checkOut.confirmOrderDetails();*/
+			
+			System.out.println("Verify Success Message on Order Confirmation Page");
+			Log.info("Verify Success Message on Order Confirmation Page");
+			test.log(LogStatus.INFO, "Verify Success Message on Order Confirmation Page");
+			OrderConfirmationPage verifyMsg = new OrderConfirmationPage(driver);
+			verifyMsg.verifyOrderSuccessMessage();
 			
 			System.out.println("Verify Billing Address");
 			Log.info("Verify Billing Address");

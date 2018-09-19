@@ -1,5 +1,7 @@
 package com.tcs.BsiShopRedesign.pages;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -386,17 +388,51 @@ public class ProductPage extends Page {
 		}
 	}
 
-	public void clickLookInside() {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("prevSubmit")));
+	public void verifyPDFPreview() {
 
-		test.log(LogStatus.INFO, ("Click on Look Inside"));
-		Log.info("Click on Look Inside");
-		System.out.println("Click on Look Inside");
-		click("lookInside_id");
+		try {
+			// boolean noPreview = driver.findElement(By.id("no_preview")).isDisplayed();
+			boolean lookInside = false;
+			try {
+				lookInside = driver.findElement(By.cssSelector("a[class='prod-look-inside-btn']")).isDisplayed();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			if (lookInside) {
+				// WebDriverWait wait = new WebDriverWait(driver, 10);
+				// wait.until(ExpectedConditions.elementToBeClickable(By.id("prevSubmit")));
+				test.log(LogStatus.INFO, ("Click on Look Inside"));
+				Log.info("Click on Look Inside");
+				System.out.println("Click on Look Inside");
+				CommonHelper.elementToBeClickable("lookInside_id");
+				click("lookInside_id");
+
+				pdfPreview();
+
+				pdfZoomIn();
+
+				pdfZoomOut();
+
+				pdfSave();
+
+				pdfPrint();
+
+				pdfCloseWindow();
+
+			} else /* if (noPreview.isDisplayed()) */ {
+				test.log(LogStatus.INFO, ("No PDF Preview available for this product"));
+				Log.info("No PDF Preview available for this product");
+				System.out.println("No PDF Preview available for this product");
+			}
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("PDF Previweing was unsuccessful");
+			e.printStackTrace();
+		}
+
 	}
 
-	public void verifyPDFPreview() throws InterruptedException {
+	public void pdfPreview() throws InterruptedException {
 
 		try {
 			test.log(LogStatus.INFO, ("Verify PDF Preview image"));
@@ -419,7 +455,7 @@ public class ProductPage extends Page {
 		}
 	}
 
-	public void verifyPDFZoomIn() {
+	public void pdfZoomIn() {
 
 		try {
 			test.log(LogStatus.INFO, ("Verify PDF Preview Zoom In"));
@@ -435,7 +471,7 @@ public class ProductPage extends Page {
 		}
 	}
 
-	public void verifyPDFZoomOut() {
+	public void pdfZoomOut() {
 
 		try {
 			test.log(LogStatus.INFO, ("Verify PDF Preview Zoom Out"));
@@ -451,7 +487,7 @@ public class ProductPage extends Page {
 		}
 	}
 
-	public void verifyPDFSave() {
+	public void pdfSave() {
 
 		try {
 			test.log(LogStatus.INFO, ("Verify PDF Preview Save"));
@@ -459,15 +495,29 @@ public class ProductPage extends Page {
 			System.out.println("Verify PDF Preview Save");
 			CommonHelper.elementToBeClickable("pdfSave_css");
 			click("pdfSave_css");
+			Thread.sleep(1000);
+			CommonHelper.handleAlert();
 			test.log(LogStatus.PASS, "Verify PDF Preview Save was successful");
+			Thread.sleep(1000);
+			String productName = driver.findElement(By.cssSelector("span[itemprop='name']")).getText();
+			productName = productName.replace(":", "_");
+			Thread.sleep(1000);
+			if (verifyExpectedFileName(productName) != null) {
+				test.log(LogStatus.PASS, "Verification of PDF Preview file name is Successful");
+				System.out.println("Verification of PDF Preview file name is Successful");
+
+			} else {
+				test.log(LogStatus.FAIL, "Verification of PDF Preview file name was unSuccessful");
+				System.out.println("Verification of PDF Preview file name was unSuccessful");
+			}
 
 		} catch (Exception e) {
-			CommonHelper.reportFailure("Verify PDF Preview Save was unsuccessful");
+			CommonHelper.reportFailure("Verify PDF Preview Save and File Name was unsuccessful");
 			e.printStackTrace();
 		}
 	}
 
-	public void verifyPDFPrint() {
+	public void pdfPrint() {
 
 		try {
 			test.log(LogStatus.INFO, ("Verify PDF Preview Print"));
@@ -483,7 +533,7 @@ public class ProductPage extends Page {
 		}
 	}
 
-	public void verifyPDFCloseWindow() {
+	public void pdfCloseWindow() {
 
 		try {
 
@@ -498,5 +548,41 @@ public class ProductPage extends Page {
 			CommonHelper.reportFailure("Verify PDF Preview Close Window was unsuccessful");
 			e.printStackTrace();
 		}
+	}
+
+	public String verifyExpectedFileName(String downloadDoc) {
+		try {
+
+			File getLatestFile = getLatestFilefromDir("C:\\Users\\shopqa\\Downloads");
+			String fileName = getLatestFile.getName();
+
+			if (fileName.contains(downloadDoc)) {
+				test.log(LogStatus.INFO, "The downloaded file name is: " + fileName);
+				test.log(LogStatus.PASS, "Verification of File Name was successful");
+			} else
+				CommonHelper.reportFailure("File Not Found");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("PDF Preview Name Verification was unsuccessful");
+			e.printStackTrace();
+		}
+		return downloadDoc;
+	}
+
+	/* Get the latest file from a specific directory */
+	private File getLatestFilefromDir(String dirPath) {
+		File dir = new File(dirPath);
+		File[] files = dir.listFiles();
+		if (files == null || files.length == 0) {
+			return null;
+		}
+
+		File lastModifiedFile = files[0];
+		for (int i = 1; i < files.length; i++) {
+			if (lastModifiedFile.lastModified() < files[i].lastModified()) {
+				lastModifiedFile = files[i];
+			}
+		}
+		return lastModifiedFile;
 	}
 }

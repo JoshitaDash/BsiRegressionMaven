@@ -36,7 +36,7 @@ public class VerifyMemberProfile extends BaseTest{
 	@Test(priority = 2, enabled = true)
 	public void verifyMemberTab() {
 
-		test = extent.startTest("Sprint 4&5 - Ecom-44 AC#26; Ecom-39 AC#19; Ecom-36 AC#14 ___ Verify Member Member Tab");
+		test = extent.startTest("Sprint 4&5 - Ecom-44 AC#26; Ecom-39 AC#19; Ecom-36 AC#14; Ecom-27 AC#68 ___ Verify Member Member Tab");
 		try {
 			//test = extent.startTest("Click on Member Tab");
 			System.out.println("Click on Member Tab");

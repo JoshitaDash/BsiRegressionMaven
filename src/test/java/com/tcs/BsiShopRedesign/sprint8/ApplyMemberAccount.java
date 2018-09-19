@@ -103,7 +103,7 @@ public class ApplyMemberAccount extends BaseTest {
 
 	}
 
-	@Test(priority = 3, enabled = true)
+	@Test(priority = 3, enabled = false)
 	public void applyMemberAccountBandNineAbove() {
 
 		try {

@@ -64,20 +64,7 @@ public class SoftCopyDownloads extends BaseTest {
 			SearchPage search = new SearchPage(driver);
 			search.verifySearchResultforBlankSearch();
 
-			/*Log.info("Enter product name in Search textbox");
-			System.out.println("Enter product name in Search textbox");
-			test.log(LogStatus.INFO, "Enter product name in Search textbox");
-			WebElement searchProd = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
-			searchProd.clear();
-			searchProd.sendKeys("BS EN 62464-1:2007");
-
-			Log.info("Click on Search");
-			System.out.println("Click on Search");
-			test.log(LogStatus.INFO, "Click on Search");
-			CommonHelper.elementToBeClickable("searchButton_css");
-			// driver.findElement(By.cssSelector("button[title='Search']")).click();
-			click("searchButton_css");*/
-
+			
 			Thread.sleep(1000);
 			System.out.println("Click on Add to Basket from Search List");
 			Log.info("Click on Add to Basket from Search List");
@@ -113,22 +100,22 @@ public class SoftCopyDownloads extends BaseTest {
 			Log.info("Enter Payment Details");
 			test.log(LogStatus.INFO, "Enter Payment Details");
 			CheckoutPage order = new CheckoutPage(driver);
-			order.enterPaymentDetails();
+			order.enterCardPaymentDetails();
 
 			System.out.println("Enter Order Details");
 			Log.info("Enter Order Details");
 			test.log(LogStatus.INFO, "Enter Order Details");
 			order.enterOrderDetails();
 
-			System.out.println("Confirm Order Details");
-			Log.info("Confirm Order Details");
-			test.log(LogStatus.INFO, "Confirm Order Details");
-			order.confirmOrderDetails();
+			System.out.println("Verify Success Message on Order Confirmation Page");
+			Log.info("Verify Success Message on Order Confirmation Page");
+			test.log(LogStatus.INFO, "Verify Success Message on Order Confirmation Page");
+			OrderConfirmationPage softcopy = new OrderConfirmationPage(driver);
+			softcopy.verifyOrderSuccessMessage();
 
 			System.out.println("Download SoftCopy from Order Confirmation Page");
 			Log.info("Download SoftCopy from Order Confirmation Page");
-			test.log(LogStatus.INFO, "Download SoftCopy from Order Confirmation Page");
-			OrderConfirmationPage softcopy = new OrderConfirmationPage(driver);
+			test.log(LogStatus.INFO, "Download SoftCopy from Order Confirmation Page");	
 			softcopy.downloadVerifySoftCopyDocuments();
 			
 			/*

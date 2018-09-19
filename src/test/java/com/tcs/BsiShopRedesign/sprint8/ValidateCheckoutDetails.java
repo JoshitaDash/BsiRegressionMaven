@@ -88,7 +88,7 @@ public class ValidateCheckoutDetails extends BaseTest {
 			Log.info("Enter Payment Details");
 			test.log(LogStatus.INFO, "Enter Payment Details");
 			CheckoutPage checkoutOrder = new CheckoutPage(driver);
-			checkoutOrder.enterPaymentDetails();
+			checkoutOrder.enterCardPaymentDetails();
 
 			System.out.println("Enter Order Details");
 			Log.info("Enter Order Details");
@@ -171,7 +171,7 @@ public class ValidateCheckoutDetails extends BaseTest {
 			Log.info("Enter Payment Details");
 			test.log(LogStatus.INFO, "Enter Payment Details");
 			CheckoutPage checkoutOrder = new CheckoutPage(driver);
-			checkoutOrder.enterPaymentDetails();
+			checkoutOrder.enterCardPaymentDetails();
 
 			/*
 			 * System.out.println("Enter Order Details"); Log.info("Enter Order Details");

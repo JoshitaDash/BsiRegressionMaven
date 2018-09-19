@@ -44,7 +44,7 @@ public class Page {
 	public void click(String locator) {
 		try {
 
-			if (BaseTest.browser.equals("IE")) {
+			if (BaseTest.browser.equals("IE") /*|| BaseTest.browser.equals("firefox")*/) {
 				System.out.println("");
 				if (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
 					CommonHelper.elementToBeVisible(locator);

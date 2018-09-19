@@ -443,11 +443,13 @@ public class BasketPage extends Page {
 			System.out.println("Click Checkout");
 			Log.info("Click Checkout");
 			Thread.sleep(1000);
+			CommonHelper.scrolltoview("checkoutNow_css");
 			WebElement checkout = driver.findElement(By.cssSelector("button[title='Checkout Now']"));
 			if (checkout.isDisplayed() || checkout.isEnabled()) {
 				Thread.sleep(1000);
-				CommonHelper.clickJS(checkout);
+				//CommonHelper.clickJS(checkout);
 				// checkout.click();
+				click("checkoutNow_css");
 				Thread.sleep(2000);
 			} else {
 				test.log(LogStatus.FAIL, "Click Checkout was unsuccessful");

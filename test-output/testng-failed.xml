@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="browser" value="IE"/>
-  <test name="Internet Explorer Browser(failed)">
-    <parameter name="browser" value="IE"/>
+  <parameter name="browser" value="chrome"/>
+  <test name="Chrome Browser(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial">
+      <class name="com.tcs.BsiShopRedesign.sprint9.PayByInvoice">
         <methods>
-          <include name="downloadPASMM"/>
           <include name="launchBrowser"/>
+          <include name="verifyHardCopyDeliveryDetails"/>
           <include name="getDriverInstance"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.PayByInvoice -->
     </classes>
-  </test> <!-- Internet Explorer Browser(failed) -->
+  </test> <!-- Chrome Browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

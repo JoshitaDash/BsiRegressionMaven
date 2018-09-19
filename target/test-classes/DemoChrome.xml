@@ -11,9 +11,9 @@
 			<class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket" />
-			<class name="com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions" /> -->
+			<class name="com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial" />
-			<!-- <class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode" />
+			<class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab" />
 			<class name="com.tcs.BsiShopRedesign.sprint3.CheckSearchCount" />
@@ -38,6 +38,8 @@
 			<class name="com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.ValidateCheckoutDetails" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing" /> -->	
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder" /> -->
+			<class name="com.tcs.BsiShopRedesign.sprint9.PayByInvoice" />
 		</classes>
 	</test>
 </suite>

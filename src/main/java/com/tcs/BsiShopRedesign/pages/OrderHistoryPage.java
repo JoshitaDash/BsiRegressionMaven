@@ -206,6 +206,8 @@ public class OrderHistoryPage extends Page {
 			if (address.contains("address")) {
 				test.log(LogStatus.PASS, "The Address Details for Harcopy Product is: " + address);
 				System.out.println("The Address detials for Hardcopy Product is: " + address);
+				test.log(LogStatus.PASS, "Verification of Hardcopy Details on Order History Page was successful");
+				System.out.println("Verification of Hardcopy Details on Order History Page was successful");
 			}
 
 		} catch (InterruptedException e) {

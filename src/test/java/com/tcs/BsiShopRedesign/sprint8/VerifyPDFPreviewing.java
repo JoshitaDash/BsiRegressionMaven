@@ -19,7 +19,7 @@ public class VerifyPDFPreviewing extends BaseTest {
 	public void verifyMemberLink() {
 
 		try {
-			test = extent.startTest("Sprint 8 - Ecom-55 AC#66, 68__ PDF Reviewing");
+			test = extent.startTest("Sprint 8 - Ecom-55 AC#66, 68__ PDF Previewing");
 			System.out.println("Perform Blank Search");
 			Log.info("Perform Blank Search");
 			HomePage home = new HomePage(driver);
@@ -34,13 +34,14 @@ public class VerifyPDFPreviewing extends BaseTest {
 			Log.info("Click on Product");
 			search.clickProductOnSearchList();
 
-			System.out.println("Click on Product");
+			/*System.out.println("Click on Product");
 			Log.info("Click on Product");
 			ProductPage prod = new ProductPage(driver);
-			prod.clickLookInside();
+			prod.clickLookInside();*/
 
-			System.out.println("Verify PDF Previewing Image");
-			Log.info("Verify PDF Previewing Image");
+			System.out.println("Verify PDF Previewing");
+			Log.info("Verify PDF Previewing");
+			ProductPage prod = new ProductPage(driver);
 			prod.verifyPDFPreview();
 
 		} catch (Exception e) {
@@ -51,36 +52,30 @@ public class VerifyPDFPreviewing extends BaseTest {
 		}
 	}
 
-	@Test(priority = 2, enabled = true)
-	public void verifyPDFPreviewFeatures() {
-
-		try {
-			System.out.println("Verify PDF Previewing Zoom In");
-			Log.info("Verify PDF Previewing Zoom In");
-			ProductPage prod = new ProductPage(driver);
-			prod.verifyPDFZoomIn();
-
-			System.out.println("Verify PDF Previewing Zoom Out");
-			Log.info("Verify PDF Previewing Zoom Out");
-			prod.verifyPDFZoomOut();
-
-			System.out.println("Verify PDF Previewing Save");
-			Log.info("Verify PDF Previewing Save");
-			prod.verifyPDFSave();
-
-			System.out.println("Verify PDF Previewing Print");
-			Log.info("Verify PDF Previewing Print");
-			prod.verifyPDFPrint();
-
-			System.out.println("Verify PDF Previewing Close Window");
-			Log.info("Verify PDF Previewing Close Window");
-			prod.verifyPDFCloseWindow();
-
-		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Verify PDF Previewing was unsuccessful");
-			CommonHelper.reportFailure("Verify PDF Previewing was unsuccessful");
-			e.printStackTrace();
-		}
-
-	}
+	/*
+	 * @Test(priority = 2, enabled = true) public void verifyPDFPreviewFeatures() {
+	 * 
+	 * try { System.out.println("Verify PDF Previewing Zoom In");
+	 * Log.info("Verify PDF Previewing Zoom In"); ProductPage prod = new
+	 * ProductPage(driver); prod.verifyPDFZoomIn();
+	 * 
+	 * System.out.println("Verify PDF Previewing Zoom Out");
+	 * Log.info("Verify PDF Previewing Zoom Out"); prod.verifyPDFZoomOut();
+	 * 
+	 * System.out.println("Verify PDF Previewing Save");
+	 * Log.info("Verify PDF Previewing Save"); prod.verifyPDFSave();
+	 * 
+	 * System.out.println("Verify PDF Previewing Print");
+	 * Log.info("Verify PDF Previewing Print"); prod.verifyPDFPrint();
+	 * 
+	 * System.out.println("Verify PDF Previewing Close Window");
+	 * Log.info("Verify PDF Previewing Close Window"); prod.verifyPDFCloseWindow();
+	 * 
+	 * } catch (Exception e) { test.log(LogStatus.FATAL,
+	 * "Verify PDF Previewing was unsuccessful");
+	 * CommonHelper.reportFailure("Verify PDF Previewing was unsuccessful");
+	 * e.printStackTrace(); }
+	 * 
+	 * }
+	 */
 }

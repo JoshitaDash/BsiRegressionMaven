@@ -7,6 +7,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.BasketPage;
 import com.tcs.BsiShopRedesign.pages.CheckoutPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
+import com.tcs.BsiShopRedesign.pages.OrderConfirmationPage;
 import com.tcs.BsiShopRedesign.pages.OrderHistoryPage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
@@ -19,9 +20,9 @@ public class VerifyHardCopyDetails extends BaseTest {
 	public VerifyHardCopyDetails() throws Exception {
 		super();
 	}
-	
+
 	String url = BsiConstants.getEnvDetails().get("url");
-	
+
 	@Test(priority = 1, enabled = true)
 	public void signIn() {
 
@@ -45,7 +46,8 @@ public class VerifyHardCopyDetails extends BaseTest {
 	public void verifyHardCopyDeliveryDetails() {
 
 		try {
-			test = extent.startTest("Sprint 8 - ECom-20,ECom- 21,Ecom-24 -AC# 84; Ecom-52 AC#33,41 __ Verify HardCopy Delivery Details from Order History Page and Order Confirmation Page");
+			test = extent.startTest(
+					"Sprint 8 - ECom-20,ECom- 21,Ecom-24 -AC# 84; Ecom-52 AC#33,41 __ Verify HardCopy Delivery Details from Order History Page and Order Confirmation Page");
 			System.out.println("Perform Blank Search");
 			Log.info("Perform Blank Search");
 			HomePage home = new HomePage(driver);
@@ -62,12 +64,12 @@ public class VerifyHardCopyDetails extends BaseTest {
 			test.log(LogStatus.INFO, "Click on Add to Basket from Search List");
 			search.clickAddToBasket();
 
-			System.out.println("Select PDF Format and Click Ok");
-			Log.info("Select PDF Format and Click Ok");
+			System.out.println("Select Hardcopy Format and Click Ok");
+			Log.info("Select Hardcopy Format and Click Ok");
 			search.selectHardCopyFormat();
-			
-			System.out.println("Select PDF Format and Click Ok");
-			Log.info("Select PDF Format and Click Ok");
+
+			System.out.println("Click Ok");
+			Log.info("Click Ok");
 			search.selectFormatClickOK();
 
 			System.out.println("View Basket");
@@ -84,20 +86,29 @@ public class VerifyHardCopyDetails extends BaseTest {
 			Log.info("Enter Payment Details");
 			test.log(LogStatus.INFO, "Enter Payment Details");
 			CheckoutPage checkoutOrder = new CheckoutPage(driver);
-			checkoutOrder.enterPaymentDetails();
+			checkoutOrder.enterCardPaymentDetails();
 
 			System.out.println("Enter Order Details");
 			Log.info("Enter Order Details");
 			test.log(LogStatus.INFO, "Enter Order Details");
 			checkoutOrder.enterOrderDetails();
 
-			System.out.println("Confirm Order Details");
-			Log.info("Confirm Order Details");
-			test.log(LogStatus.INFO, "Confirm Order Details");
-			checkoutOrder.confirmOrderDetails();
+			System.out.println("Verify Success Message on Order Confirmation Page");
+			Log.info("Verify Success Message on Order Confirmation Page");
+			test.log(LogStatus.INFO, "Verify Success Message on Order Confirmation Page");
+			OrderConfirmationPage verifyMsg = new OrderConfirmationPage(driver);
+			verifyMsg.verifyOrderSuccessMessage();
+
 			
-		/*	System.out.println("Fetching the URL");
-			driver.get(url);*/
+			 System.out.println("Verify Hard Copy Details in Order Confirmation Page");
+			 Log.info("Verify Hard Copy Details in Order Confirmation Page");
+			 OrderConfirmationPage hardCopy = new OrderConfirmationPage(driver);
+			 hardCopy.verifyHardCopyDetails();
+			 
+
+			/*
+			 * System.out.println("Fetching the URL"); driver.get(url);
+			 */
 
 			System.out.println("Click on My Profile");
 			Log.info("Click on My Profile");
@@ -108,15 +119,15 @@ public class VerifyHardCopyDetails extends BaseTest {
 			Log.info("Click on Order History Tab");
 			OrderHistoryPage order = new OrderHistoryPage(driver);
 			order.clickOrderHistoryTab();
-			
+
 			System.out.println("Verify Order Status");
 			Log.info("Verify Order Status");
 			order.verifyOrderStatus();
-			
+
 			System.out.println("Click on View Order");
 			Log.info("Click on View Order");
 			order.clickViewOrder();
-			
+
 			System.out.println("Verify Hard Copy Details in Order History Page");
 			Log.info("Verify Hard Copy Details in Order History Page");
 			order.verifyHardCopyDetails();

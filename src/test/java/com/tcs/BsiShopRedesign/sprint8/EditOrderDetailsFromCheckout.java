@@ -7,6 +7,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.BasketPage;
 import com.tcs.BsiShopRedesign.pages.CheckoutPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
+import com.tcs.BsiShopRedesign.pages.OrderConfirmationPage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
@@ -71,11 +72,11 @@ public class EditOrderDetailsFromCheckout extends BaseTest {
 			Log.info("View Basket");
 			test.log(LogStatus.INFO, "View Basket");
 			search.viewBasket();
-			
-			/*System.out.println("Click Alert");
-			Log.info("Click Alert");
-			BasketPage checkout = new BasketPage(driver);
-			checkout.clickOtherFormatOKAlert();*/
+
+			/*
+			 * System.out.println("Click Alert"); Log.info("Click Alert"); BasketPage
+			 * checkout = new BasketPage(driver); checkout.clickOtherFormatOKAlert();
+			 */
 
 			System.out.println("Click Checkout Now");
 			Log.info("Click Checkout Now");
@@ -92,7 +93,7 @@ public class EditOrderDetailsFromCheckout extends BaseTest {
 			test.log(LogStatus.INFO, "Edit the Basket with Update Quantity");
 			// BasketPage basket = new BasketPage(driver);
 			checkout.editBasketUpdateQuantity();
-			
+
 			System.out.println("Click Alert");
 			Log.info("Click Alert");
 			checkout.clickOtherFormatOKAlert();
@@ -106,17 +107,24 @@ public class EditOrderDetailsFromCheckout extends BaseTest {
 			Log.info("Enter Payment Details");
 			test.log(LogStatus.INFO, "Enter Payment Details");
 			CheckoutPage checkoutOrder = new CheckoutPage(driver);
-			checkoutOrder.enterPaymentDetails();
+			checkoutOrder.enterCardPaymentDetails();
 
 			System.out.println("Enter Order Details");
 			Log.info("Enter Order Details");
 			test.log(LogStatus.INFO, "Enter Order Details");
 			checkoutOrder.enterOrderDetails();
 
-			System.out.println("Confirm Order Details");
-			Log.info("Confirm Order Details");
-			test.log(LogStatus.INFO, "Confirm Order Details");
-			checkoutOrder.confirmOrderDetails();
+			/*
+			 * System.out.println("Confirm Order Details");
+			 * Log.info("Confirm Order Details"); test.log(LogStatus.INFO,
+			 * "Confirm Order Details"); checkoutOrder.confirmOrderDetails();
+			 */
+
+			System.out.println("Verify Success Message on Order Confirmation Page");
+			Log.info("Verify Success Message on Order Confirmation Page");
+			test.log(LogStatus.INFO, "Verify Success Message on Order Confirmation Page");
+			OrderConfirmationPage verifyMsg = new OrderConfirmationPage(driver);
+			verifyMsg.verifyOrderSuccessMessage();
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Edit Order for Hardcopy product from Checkout Page was unsuccessful");

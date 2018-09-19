@@ -987,8 +987,8 @@ public class SearchPage extends Page {
 
 	public void clickProductOnSearchList() {
 
-		Log.info("Check Visibility for Member Price");
-		System.out.println("Check Visibility for Member Price");
+		//Log.info("Check Visibility for Member Price");
+		//System.out.println("Check Visibility for Member Price");
 		boolean memLink = CommonHelper
 				.checkVisibility(By.xpath("//*[@id='search_results_display']/li[1]/div[1]/div/div[2]/div[1]/span[2]"));
 

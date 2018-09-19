@@ -74,8 +74,8 @@ public class OrderConfirmationPage extends Page {
 			secondSoftCopy = softCopyName.get(1).getText();
 			CommonHelper.handleAlert();
 			secondSoftCopy = secondSoftCopy.replace(":", "_");
-			 //docName.add(secondSoftCopy);
-			 //verifyExpectedFileName(secondSoftCopy);
+			// docName.add(secondSoftCopy);
+			// verifyExpectedFileName(secondSoftCopy);
 			// try {
 			if (verifyExpectedFileName(secondSoftCopy) != null) {
 				test.log(LogStatus.PASS, "Verificatiion of Second Document Download is Successful");
@@ -181,14 +181,12 @@ public class OrderConfirmationPage extends Page {
 
 			File getLatestFile = getLatestFilefromDir("C:\\Users\\shopqa\\Downloads");
 			String fileName = getLatestFile.getName();
-			
-			if(fileName.contains(downloadDoc)) {
+
+			if (fileName.contains(downloadDoc)) {
 				test.log(LogStatus.INFO, "The downloaded file name is: " + fileName);
 				test.log(LogStatus.PASS, "Verification of File Name was successful");
-			}else
+			} else
 				CommonHelper.reportFailure("File Not Found");
-			
-			
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Soft Copy Document Name Verification was unsuccessful");
@@ -216,16 +214,93 @@ public class OrderConfirmationPage extends Page {
 
 	public void verifySoftCopy() throws NullPointerException, IOException {
 		try {
-			FileDownloader file=new FileDownloader(driver, System.getProperty("user.dir")+"//Files");
-			
+			FileDownloader file = new FileDownloader(driver, System.getProperty("user.dir") + "//Files");
+
 			List<WebElement> documents = driver.findElements(By.xpath("//a[contains(.,'Document')]"));
-			for(WebElement document:documents) {			
+			for (WebElement document : documents) {
 				file.downloader(document.getAttribute("url"));
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
+	}
+
+	public void verifyOrderSuccessMessage() {
+
+		try {
+
+			System.out.println("Verify Success Message on Order Confirmation Page");
+			test.log(LogStatus.INFO, "Verify Success Message on Order Confirmation Page");
+			Log.info("Verify Success Message on Order Confirmation Page");
+
+			String confirmOrder = CommonHelper.element("confirmOrder_xpath").getText();
+			if (confirmOrder.contains("Thank you for your order")) {
+				test.log(LogStatus.PASS, confirmOrder);
+				System.out.println(confirmOrder);
+			} else {
+				test.log(LogStatus.FAIL, "Placing of order was unsuccesful");
+				System.out.println("Placing of order was unsuccesful");
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Placing of order was unsuccesful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyOrderDetailsDiscount() {
+
+		try {
+			Thread.sleep(2000);
+			System.out.println("Verify Order Deatils for Discount on Order Confirmation Page");
+			test.log(LogStatus.INFO, "Verify Order Deatils for Discount on Order Confirmation Page");
+
+			CommonHelper.scrolltoview("orderConfirmationPageDetails_xpath");
+			String orderDetails = CommonHelper.element("orderConfirmationPageDetails_xpath").getText();
+			if (orderDetails.contains("Discount")) {
+				Thread.sleep(2000);
+				System.out.println("Discount applied successfully on Order Confirmation Page");
+				test.log(LogStatus.INFO, "The Review Order is: " + orderDetails);
+				test.log(LogStatus.PASS, "Discount applied successfully on Order Confirmation Page");
+				CommonHelper.takeScreenShot();
+			} else {
+				System.out.println("Discount applied was unsuccesful on Order Confirmation Page");
+				test.log(LogStatus.INFO, "The Review Order is: " + orderDetails);
+				test.log(LogStatus.FAIL, "Discount applied was unsuccesful on Order Confirmation Page");
+				CommonHelper.takeScreenShot();
+			}
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Discount applied on Order Confirmation Page was unsuccesful");
+			Assert.fail(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyHardCopyDetails() {
+
+		try {
+			Thread.sleep(2000);
+			System.out.println("Verify Order Deatils for Harcopy Product on Order Confirmation Page");
+			test.log(LogStatus.INFO, "Verify Order Deatils for Harcopy Product on Order Confirmation Page");
+
+			String orderDetails = CommonHelper.element("orderConfirmationPageDetails_xpath").getText();
+			if (orderDetails.contains("Hard")) {
+				Thread.sleep(2000);
+				System.out.println("Verification of Hardcopy Details on Order Confirmation Page was successful");
+				test.log(LogStatus.INFO, "The Order Detail is: " + orderDetails);
+				test.log(LogStatus.PASS, "Verification of Hardcopy Details on Order Confirmation Page was successful");
+			} else {
+				System.out.println("Verification of Hardcopy Details on Order Confirmation Page was unsuccessful");
+				test.log(LogStatus.INFO, "The Order Details is: " + orderDetails);
+				test.log(LogStatus.FAIL,
+						"Verification of Hardcopy Details on Order Confirmation Page was unsuccessful");
+			}
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verification of Hardcopy Details on Order Confirmation Page was unsuccessful");
+			Assert.fail(e.getMessage());
+			e.printStackTrace();
+		}
 	}
 }
