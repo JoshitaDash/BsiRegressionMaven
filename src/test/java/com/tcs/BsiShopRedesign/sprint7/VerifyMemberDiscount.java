@@ -106,7 +106,7 @@ public class VerifyMemberDiscount extends BaseTest {
 			Log.info("Remove the Product");
 			System.out.println("Remove the Product");
 			test.log(LogStatus.INFO, "Remove the Product");
-			basketMemPrice.removeProduct();
+			basketMemPrice.removeMultipleProduct();
 
 			System.out.println("Click Logout");
 			Log.info("Click Logout");

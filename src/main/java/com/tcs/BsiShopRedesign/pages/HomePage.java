@@ -412,7 +412,7 @@ public class HomePage extends BaseTest {
 			Thread.sleep(2000);
 			String manualAddressText = CommonHelper.element("manualAddressMsg_xpath").getText();
 			System.out.println("The message is: " + manualAddressText);
-			test.log(LogStatus.INFO, "The message is: " + manualAddressText);
+			test.log(LogStatus.PASS, "The message is: " + manualAddressText);
 
 			Log.info("Click Find Address");
 			System.out.println("Click Find Address");

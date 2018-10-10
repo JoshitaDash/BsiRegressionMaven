@@ -94,7 +94,7 @@ public class ApplyMemberAccount extends BaseTest {
 
 			System.out.println("Remove Membership from Basket");
 			Log.info("Remove Membership from Basket");
-			checkout.removeProduct();
+			checkout.removeMultipleProduct();
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Membership Application for below Band 9 was unsuccessful");
@@ -103,7 +103,7 @@ public class ApplyMemberAccount extends BaseTest {
 
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void applyMemberAccountBandNineAbove() {
 
 		try {

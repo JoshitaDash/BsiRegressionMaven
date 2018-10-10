@@ -10,6 +10,7 @@ import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.BsiConstants;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class ValidateCheckoutDetails extends BaseTest {
@@ -17,6 +18,7 @@ public class ValidateCheckoutDetails extends BaseTest {
 	public ValidateCheckoutDetails() throws Exception {
 		super();
 	}
+	String url = BsiConstants.getEnvDetails().get("url");
 
 	@Test(priority = 1, enabled = true)
 	public void signIn() {
@@ -27,7 +29,7 @@ public class ValidateCheckoutDetails extends BaseTest {
 			Log.info("User Signing In");
 			SignInPage signIn = new SignInPage(driver);
 			signIn.login();
-			
+
 		}
 
 		catch (Exception e) {
@@ -39,7 +41,7 @@ public class ValidateCheckoutDetails extends BaseTest {
 	}
 
 	@Test(priority = 2, enabled = true)
-	public void validateCheckoutNonUKDetails() {
+	public void validateCheckoutNonUKDetailsHardCopy() {
 
 		try {
 			test = extent.startTest(
@@ -93,11 +95,11 @@ public class ValidateCheckoutDetails extends BaseTest {
 			System.out.println("Enter Order Details");
 			Log.info("Enter Order Details");
 			test.log(LogStatus.INFO, "Enter Order Details");
-			checkoutOrder.enterNonUKOrderDetails();
+			checkoutOrder.enterUKOrderDetailsHarcopy();
 
-			System.out.println("Validate Error Message for Evidence does not match");
-			Log.info("Validate Error Message for Evidence does not match");
-			test.log(LogStatus.INFO, "Validate Error Message for Evidence does not match");
+			System.out.println("Validate Error Message for Hardcopy Product");
+			Log.info("Validate Error Message for Hardcopy Product");
+			test.log(LogStatus.INFO, "Validate Error Message for Hardcopy Product");
 			checkoutOrder.validateEvidenceErrorMessage();
 
 			System.out.println("Click Edit on Checkout Page");
@@ -126,11 +128,15 @@ public class ValidateCheckoutDetails extends BaseTest {
 	}
 
 	@Test(priority = 3, enabled = true)
-	public void validateCheckoutUKDetails() {
+	public void validateCheckoutUKDetailsSoftCopy() {
 
 		try {
 			test = extent.startTest(
 					"Sprint 8 - Ecom-29 AC#52 __ Validate Checkout Details with Billing as Non - UK Country for PDF product on Checkout Page");
+			
+			System.out.println("Fetching the URL");
+			driver.get(url);		
+			
 			System.out.println("Perform Blank Search");
 			Log.info("Perform Blank Search");
 			HomePage home = new HomePage(driver);
@@ -167,21 +173,15 @@ public class ValidateCheckoutDetails extends BaseTest {
 			CheckoutPage checkOut = new CheckoutPage(driver);
 			checkOut.createSouthAfricanBillingAddress();
 
-			System.out.println("Enter Payment Details");
-			Log.info("Enter Payment Details");
-			test.log(LogStatus.INFO, "Enter Payment Details");
+			System.out.println("Enter Order Details");
+			Log.info("Enter Order Details");
+			test.log(LogStatus.INFO, "Enter Order Details");
 			CheckoutPage checkoutOrder = new CheckoutPage(driver);
-			checkoutOrder.enterCardPaymentDetails();
+			checkoutOrder.enterNonUKOrderDetails();
 
-			/*
-			 * System.out.println("Enter Order Details"); Log.info("Enter Order Details");
-			 * test.log(LogStatus.INFO, "Enter Order Details");
-			 * checkoutOrder.enterUKOrderDetails();
-			 */
-
-			System.out.println("Validate Error Message");
-			Log.info("Validate Error Message");
-			test.log(LogStatus.INFO, "Validate Error Message");
+			System.out.println("Validate Error Message for SoftCopy Product");
+			Log.info("Validate Error Message for SoftCopy Product");
+			test.log(LogStatus.INFO, "Validate Error Message for SoftCopy Product");
 			checkoutOrder.validateBlockedCountryErrorMessage();
 
 			System.out.println("Click Edit on Checkout Page");
@@ -192,7 +192,7 @@ public class ValidateCheckoutDetails extends BaseTest {
 			Log.info("Remove the Product");
 			System.out.println("Remove the Product");
 			test.log(LogStatus.INFO, "Remove the Product");
-			checkout.removeProduct();
+			checkout.removeMultipleProduct();
 
 			System.out.println("Click Logout");
 			Log.info("Click Logout");

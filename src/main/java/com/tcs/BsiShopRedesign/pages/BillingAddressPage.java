@@ -1,4 +1,5 @@
 package com.tcs.BsiShopRedesign.pages;
+
 import org.apache.commons.lang3.RandomStringUtils;
 
 import org.openqa.selenium.By;
@@ -11,7 +12,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 import com.tcs.BsiShopRedesign.utilities.Page;
 
-
 public class BillingAddressPage extends Page {
 
 	public BillingAddressPage(WebDriver driver) throws Exception {
@@ -23,7 +23,7 @@ public class BillingAddressPage extends Page {
 	public void addNewBillingAddress() {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			Log.info("Click on Add new Billing Address");
 			System.out.println("Click on Add new Billing Address");
 			test.log(LogStatus.INFO, "Click on Add new Billing Address");
@@ -71,16 +71,16 @@ public class BillingAddressPage extends Page {
 			test.log(LogStatus.INFO, "Enter Telephone Number");
 			driver.findElement(By.id("register-phn-no")).sendKeys("123456790");
 
-			/*Thread.sleep(1000);
-			System.out.println("Enter Fax Number");
-			test.log(LogStatus.INFO, "Enter Fax Number");
-			driver.findElement(By.id("fax")).sendKeys("0123456789");*/
+			/*
+			 * Thread.sleep(1000); System.out.println("Enter Fax Number");
+			 * test.log(LogStatus.INFO, "Enter Fax Number");
+			 * driver.findElement(By.id("fax")).sendKeys("0123456789");
+			 */
 
 			/*
 			 * Thread.sleep(1000); System.out.println("Enter Street Address");
 			 * test.log(LogStatus.INFO, "Enter Street Address");
-			 * driver.findElement(By.id("street-address")).sendKeys(
-			 * "London Street");
+			 * driver.findElement(By.id("street-address")).sendKeys( "London Street");
 			 * 
 			 * Thread.sleep(1000); System.out.println("Enter City");
 			 * test.log(LogStatus.INFO, "Enter City");
@@ -179,20 +179,19 @@ public class BillingAddressPage extends Page {
 				test.log(LogStatus.INFO, "Edit Telephone Number");
 				driver.findElement(By.id("register-phn-no")).sendKeys("0123456789");
 
-				/*Thread.sleep(1000);
-				System.out.println("Edit Fax Number");
-				test.log(LogStatus.INFO, "Edit Fax Number");
-				driver.findElement(By.id("fax")).sendKeys("9874563210");*/
+				/*
+				 * Thread.sleep(1000); System.out.println("Edit Fax Number");
+				 * test.log(LogStatus.INFO, "Edit Fax Number");
+				 * driver.findElement(By.id("fax")).sendKeys("9874563210");
+				 */
 
 				/*
-				 * Thread.sleep(1000); System.out.println("Edit Street Address"
-				 * ); test.log(LogStatus.INFO, "Edit Street Address");
-				 * driver.findElement(By.id("street-address")).sendKeys(
-				 * " EDITED");
+				 * Thread.sleep(1000); System.out.println("Edit Street Address" );
+				 * test.log(LogStatus.INFO, "Edit Street Address");
+				 * driver.findElement(By.id("street-address")).sendKeys( " EDITED");
 				 * 
-				 * Thread.sleep(1000); System.out.println("Edit City");
-				 * test.log(LogStatus.INFO, "Edit City");
-				 * driver.findElement(By.id("city")).sendKeys(" EDITED");
+				 * Thread.sleep(1000); System.out.println("Edit City"); test.log(LogStatus.INFO,
+				 * "Edit City"); driver.findElement(By.id("city")).sendKeys(" EDITED");
 				 * 
 				 * Thread.sleep(1000); System.out.println("Edit State");
 				 * test.log(LogStatus.INFO, "Edit State");
@@ -273,20 +272,19 @@ public class BillingAddressPage extends Page {
 				test.log(LogStatus.INFO, "Edit Telephone Number");
 				driver.findElement(By.id("register-phn-no")).sendKeys("0123456789");
 
-				/*Thread.sleep(1000);
-				System.out.println("Edit Fax Number");
-				test.log(LogStatus.INFO, "Edit Fax Number");
-				driver.findElement(By.id("fax")).sendKeys("9874563210");*/
+				/*
+				 * Thread.sleep(1000); System.out.println("Edit Fax Number");
+				 * test.log(LogStatus.INFO, "Edit Fax Number");
+				 * driver.findElement(By.id("fax")).sendKeys("9874563210");
+				 */
 
 				/*
-				 * Thread.sleep(1000); System.out.println("Edit Street Address"
-				 * ); test.log(LogStatus.INFO, "Edit Street Address");
-				 * driver.findElement(By.id("street-address")).sendKeys(
-				 * " EDITED");
+				 * Thread.sleep(1000); System.out.println("Edit Street Address" );
+				 * test.log(LogStatus.INFO, "Edit Street Address");
+				 * driver.findElement(By.id("street-address")).sendKeys( " EDITED");
 				 * 
-				 * Thread.sleep(1000); System.out.println("Edit City");
-				 * test.log(LogStatus.INFO, "Edit City");
-				 * driver.findElement(By.id("city")).sendKeys(" EDITED");
+				 * Thread.sleep(1000); System.out.println("Edit City"); test.log(LogStatus.INFO,
+				 * "Edit City"); driver.findElement(By.id("city")).sendKeys(" EDITED");
 				 * 
 				 * Thread.sleep(1000); System.out.println("Edit State");
 				 * test.log(LogStatus.INFO, "Edit State");
@@ -427,7 +425,7 @@ public class BillingAddressPage extends Page {
 
 			for (int i = 1; i <= 9; i++) {
 
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				Log.info("Adding Billing Address Details");
 				System.out.println("Adding Billing Address Details");
 
@@ -445,13 +443,14 @@ public class BillingAddressPage extends Page {
 
 			if (billingMsg.contains("You have reached the maximum of 10 billing addresses attached to your profile.")) {
 				test.log(LogStatus.PASS, billingMsg);
+				System.out.println(billingMsg);
 			}
 
-			else {
-				Log.info("Adding Ten Billing Address was unsuccessful");
-				System.out.println("Adding Ten Billing Address was unsuccessful");
-				test.log(LogStatus.FAIL, "Adding Ten Billing Address was unsuccessful");
-			}
+			/*
+			 * else { Log.info("Adding Ten Billing Address was unsuccessful");
+			 * System.out.println("Adding Ten Billing Address was unsuccessful");
+			 * CommonHelper.reportFailure("Adding Ten Billing Address was unsuccessful"); }
+			 */
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -463,7 +462,7 @@ public class BillingAddressPage extends Page {
 	public void deleteTenBillingAddress() {
 
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			boolean deleteAddress = CommonHelper.checkVisibility(By.cssSelector(".action.edit.deletebtn>span"));
 
 			if (deleteAddress) {
@@ -487,14 +486,14 @@ public class BillingAddressPage extends Page {
 				test.log(LogStatus.PASS, "Billing Address has been deleted successfully");
 				System.out.println("Billing Address has been deleted successfully");
 
-			} else {
-				test.log(LogStatus.FAIL, "There is no Delete Address link available");
-				System.out.println("There is no Delete Address link available");
-			}
+			} /*
+				 * else { test.log(LogStatus.FAIL, "There is no Delete Address link available");
+				 * System.out.println("There is no Delete Address link available"); }
+				 */
 		} catch (Exception e) {
+			CommonHelper.reportFailure("Delete Ten Billing Address was unsuccessful");
 			e.printStackTrace();
-			Log.error("Billing Address has not been deleted");
-			test.log(LogStatus.FAIL, "Billing Address has not been deleted");
+			Log.error("Delete Ten Billing Address was unsuccessful");
 			Assert.fail(e.getMessage());
 		}
 

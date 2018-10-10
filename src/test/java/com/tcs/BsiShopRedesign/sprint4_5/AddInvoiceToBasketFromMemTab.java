@@ -10,7 +10,6 @@ import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 
-
 public class AddInvoiceToBasketFromMemTab extends BaseTest {
 
 	public AddInvoiceToBasketFromMemTab() throws Exception {
@@ -54,14 +53,13 @@ public class AddInvoiceToBasketFromMemTab extends BaseTest {
 			System.out.println("Remove Invoice from Basket");
 			test.log(LogStatus.INFO, "Remove Invoice from Basket");
 			BasketPage basket = new BasketPage(driver);
-			basket.removeProduct();
+			basket.removeMultipleProduct();
 
 			System.out.println("Click Logout");
 			Log.info("Click Logout");
 			HomePage logout = new HomePage(driver);
 			logout.clickLogout();
-			
-			
+
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Add invoice to Basket from Member Tab was unsuccessful");
 			e.printStackTrace();

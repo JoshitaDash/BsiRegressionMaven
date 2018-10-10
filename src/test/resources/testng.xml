@@ -3,6 +3,7 @@
 <suite name="Suite">
 	<test name="Internet Explorer Browser">
 		<parameter name="browser" value="IE" />
+		<parameter name="isAdmin" value="No" />
 		<classes>
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
 			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
@@ -34,12 +35,19 @@
 			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" /> 
 			<class name="com.tcs.BsiShopRedesign.sprint8.RenewMembership" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads" />
-			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" />
-			<class name="com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout" />
+			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" />	
 			<class name="com.tcs.BsiShopRedesign.sprint8.ValidateCheckoutDetails" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing" />
+			<class name="com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder" />
+			<class name="com.tcs.BsiShopRedesign.sprint9.PayByInvoice" />		
 		</classes>
+	  </test>
+      <test name="BSI Admin">
+		<parameter name="browser" value="IE" />
+		<parameter name="isAdmin" value="Yes" />
+		<classes>
+			<class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails" />
+	    </classes>
 	</test>
-
 </suite> 

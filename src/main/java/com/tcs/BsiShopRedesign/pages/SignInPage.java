@@ -40,6 +40,7 @@ public class SignInPage extends Page {
 			test.log(LogStatus.INFO, "Enter Email ID");
 			Thread.sleep(2000);
 			driver.findElement(By.id("bsi_email")).sendKeys(BsiConstants.getEnvDetails().get("username"));
+			// driver.findElement(By.id("bsi_email")).sendKeys("saurabh.verma@bsigroup.com");
 
 			Thread.sleep(2000);
 			System.out.println("Enter Password");
@@ -66,7 +67,6 @@ public class SignInPage extends Page {
 				CommonHelper.reportFailure("Login UnSuccessful");
 
 		} catch (Exception e) {
-
 			CommonHelper.reportFailure("Login UnSuccessful");
 			e.printStackTrace();
 		}
@@ -302,4 +302,56 @@ public class SignInPage extends Page {
 
 	}
 
+	public void adminLogin() {
+
+		//boolean closeAlert = false;
+
+		try {
+
+			System.out.println("Enter Admin Username");
+			Log.info("Enter Admin Username");
+			test.log(LogStatus.INFO, "Enter Admin Username");
+			enterText("adminUsername_id", BsiConstants.getEnvDetails().get("admin_username"));
+			System.out.println(BsiConstants.getEnvDetails().get("admin_username"));
+
+			System.out.println("Enter Admin Password");
+			Log.info("Enter Admin Password");
+			test.log(LogStatus.INFO, "Enter Admin Password");
+			enterText("adminPassword_id", BsiConstants.getEnvDetails().get("admin_password"));
+			System.out.println(BsiConstants.getEnvDetails().get("admin_password"));
+
+			Thread.sleep(2000);
+			System.out.println("Click on SignIn button");
+			Log.info("Click on SignIn button");
+			test.log(LogStatus.INFO, "Click on SignIn button");
+			CommonHelper.elementToBeClickable("adminSignin_xpath");
+			click("adminSignin_xpath");
+			Thread.sleep(3000);
+
+			CommonHelper.isElementVisible("closeAlert_css");
+			click("closeAlert_css");
+			Thread.sleep(1000);
+
+			String pageTitle = driver.getTitle();
+			System.out.println(pageTitle);
+			if (pageTitle.contains("Magento Admin")) {
+				System.out.println("Admin User Sign In Successful");
+				test.log(LogStatus.PASS, "Admin User Sign In Successful");
+			}
+
+			/*
+			 * closeAlert =
+			 * driver.findElement(By.cssSelector("button[data-role='closeBtn']")).
+			 * isDisplayed(); if (closeAlert) { test.log(LogStatus.INFO, "Close Alert");
+			 * System.out.println("Close Alert"); click("closeAlert_css");
+			 * Thread.sleep(1000); }
+			 */
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Admin Login Unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
 }

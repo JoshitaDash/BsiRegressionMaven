@@ -515,11 +515,13 @@ public class SearchPage extends Page {
 		String productPrice = "Event";
 
 		try {
+			Thread.sleep(2000);
 			System.out.println("Check Event Label");
 			test.log(LogStatus.INFO, "Check Event Label");
 			freeEvent = CommonHelper.element("eventLabel_xpath").isDisplayed();
 
 			if (freeEvent) {
+				Thread.sleep(2000);
 				WebElement imgLabel = CommonHelper.element("eventLabel_xpath");
 				String altValue = imgLabel.getAttribute("alt").replace("Events Category", "Event");
 
@@ -553,7 +555,7 @@ public class SearchPage extends Page {
 			PAS = driver.findElement(By.cssSelector("a[class='product-item-link']")).isDisplayed();
 			// PAS = CommonHelper.element("productLinkCount_css").isDisplayed();
 			if (PAS) {
-				Thread.sleep(5000);
+				Thread.sleep(3000);
 				String prodName = CommonHelper.element("productLinkCount_css").getText();
 				if (prodName.contains("PAS") || prodName.contains("Pas")) {
 					System.out.println("PAS Product Name is: " + prodName);
@@ -637,6 +639,7 @@ public class SearchPage extends Page {
 		// String productLabel = "PAS";
 
 		try {
+			Thread.sleep(2000);
 			System.out.println("Check PAS Product Label");
 			test.log(LogStatus.INFO, "Check PAS Product Label");
 			PAS = CommonHelper.element("eventLabel_xpath").isDisplayed();
@@ -644,7 +647,7 @@ public class SearchPage extends Page {
 			if (PAS) {
 				WebElement imgLabel = CommonHelper.element("eventLabel_xpath");
 				String altValue = imgLabel.getAttribute("alt").replace("PAS Category", "PAS");
-
+				Thread.sleep(2000);
 				if (altValue.contains("Standard")) {
 					System.out.println("PAS Product Label is: " + altValue);
 					test.log(LogStatus.INFO, "PAS Product Label is: " + altValue);
@@ -674,7 +677,7 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, "Check Paid Event Name");
 			paidEvent = CommonHelper.element("productLinkCount_css").isDisplayed();
 			if (paidEvent) {
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				String paidEventText = CommonHelper.element("productLinkCount_css").getText();
 				if (paidEventText.equals(prodName)) {
 					System.out.println("Paid Event Name is: " + paidEventText);
@@ -682,6 +685,7 @@ public class SearchPage extends Page {
 					test.log(LogStatus.PASS, "Paid Event Name match is successful");
 				} else {
 					System.out.println("Paid Event Name match is unsuccessful");
+					test.log(LogStatus.INFO, "Paid Event Name is: " + paidEventText);
 					test.log(LogStatus.FAIL, "Paid Event Name match is unsuccessful");
 				}
 			} else {

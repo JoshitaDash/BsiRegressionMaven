@@ -71,7 +71,7 @@ public class AddPDFToBasketTwiceFromSearchList extends BaseTest {
 			System.out.println("Remove the Product");
 			test.log(LogStatus.INFO, "Remove the Product");
 			BasketPage basket = new BasketPage(driver);
-			basket.removeProduct();
+			basket.removeMultipleProduct();
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Add to Basket from Search List was unsuccessful");

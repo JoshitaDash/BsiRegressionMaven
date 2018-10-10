@@ -189,7 +189,7 @@ public class CommonHelper extends Page {
 
 	public static void explicitWaitClickable(WebElement element) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 120);
+			WebDriverWait wait = new WebDriverWait(driver, 30);
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -207,7 +207,7 @@ public class CommonHelper extends Page {
 
 	public static void explicitWaitVisible(WebElement element) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 120);
+			WebDriverWait wait = new WebDriverWait(driver, 30);
 			// wait.until(ExpectedConditions.visibilityOf(element));
 			wait.until(ExpectedConditions.visibilityOf(element));
 		} catch (Exception e) {

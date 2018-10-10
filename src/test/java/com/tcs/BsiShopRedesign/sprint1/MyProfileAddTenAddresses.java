@@ -49,8 +49,8 @@ public class MyProfileAddTenAddresses extends BaseTest {
 
 		catch (Exception e) {
 			e.printStackTrace();
-			test.log(LogStatus.FATAL, "Billing Address addition was unsuccessful");
-			CommonHelper.reportFailure("Billing Address addition was unsuccessful");
+			test.log(LogStatus.FATAL, "Adding Ten Billing Address was unsuccessful");
+			CommonHelper.reportFailure("Adding Ten Billing Address was unsuccessful");
 			Assert.fail(e.getMessage());
 		}
 	}

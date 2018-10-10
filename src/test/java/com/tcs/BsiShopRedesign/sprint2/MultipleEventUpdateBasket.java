@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
+import com.tcs.BsiShopRedesign.pages.BasketPage;
 import com.tcs.BsiShopRedesign.pages.EventPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
@@ -95,7 +96,8 @@ public class MultipleEventUpdateBasket extends BaseTest {
 
 			System.out.println("Remove Multiple Event from Basket");
 			Log.info("Remove Multiple Event from Basket");
-			event.removeMultipleEvent();
+			BasketPage basket = new BasketPage(driver);
+			basket.removeMultipleProduct();
 			
 			System.out.println("Click Logout");
 			Log.info("Click Logout");

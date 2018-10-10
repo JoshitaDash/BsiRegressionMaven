@@ -82,7 +82,7 @@ public class StandardProductAndEventRemoveBasket extends BaseTest {
 			WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
 			CommonHelper.elementToBeClickable("searchBox_id");
 			search.clear();
-			search.sendKeys("ASD-STAN prEN 9110:2016");
+			search.sendKeys("BIP 2155");
 
 			Log.info("Click on Search");
 			System.out.println("Click on Search");

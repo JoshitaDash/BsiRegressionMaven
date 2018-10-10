@@ -417,7 +417,7 @@ public class DeliveryAddressPage extends Page {
 		try {
 
 			for (int i = 1; i <= 9; i++) {
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 				Log.info("Add New Delivery Address");
 				System.out.println("Add New Delivery Address");
 				test.log(LogStatus.INFO, "Add New Delivery Address");
@@ -452,7 +452,7 @@ public class DeliveryAddressPage extends Page {
 		// WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			boolean deleteAddress = CommonHelper.checkVisibility(By.cssSelector(".action.delete>span"));
 
 			if (deleteAddress) {

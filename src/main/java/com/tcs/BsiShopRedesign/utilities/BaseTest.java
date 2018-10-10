@@ -27,12 +27,13 @@ public class BaseTest extends Page {
 
 	public static String browser;
 	String url = BsiConstants.getEnvDetails().get("url");
+	String adminURL = BsiConstants.getEnvDetails().get("adminURL");
 
 	@SuppressWarnings("deprecation")
-	@Parameters("browser")
+	@Parameters({ "browser", "isAdmin" })
 	@BeforeClass
 	// *** Passing Browser parameter from TestNG xml
-	public String launchBrowser(String browser) throws InterruptedException, IOException {
+	public String launchBrowser(String browser, String isAdmin) throws InterruptedException, IOException {
 
 		try {
 			DOMConfigurator.configure("log4j.xml");
@@ -59,7 +60,8 @@ public class BaseTest extends Page {
 			else if (browser.equalsIgnoreCase("IE")) {
 				String projectPath = System.getProperty("user.dir");
 				DesiredCapabilities cap = null;
-				// System.setProperty("webdriver.ie.driver", projectPath +"\\\\lib\\\\IEDriverServer_Win32_3.9.0\\\\IEDriverServer.exe");
+				// System.setProperty("webdriver.ie.driver", projectPath
+				// +"\\\\lib\\\\IEDriverServer_Win32_3.9.0\\\\IEDriverServer.exe");
 				System.setProperty("webdriver.ie.driver",
 						projectPath + "\\lib\\IEDriverServer_Win32_3.14.0\\IEDriverServer.exe");
 				cap = DesiredCapabilities.internetExplorer();
@@ -101,16 +103,25 @@ public class BaseTest extends Page {
 				test.log(LogStatus.SKIP, "The tescase is skipped");
 			}
 
-			// ****** Doesn't the browser type, launch the Website
-			System.out.println("Fetching the URL");
-			driver.get(url);
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			Thread.sleep(2000);
-			driver.findElement(By.id("cookiePolicyBtn")).click();
-			Thread.sleep(2000);
-		}
+			// ****** Launch the Website
 
-		catch (WebDriverException e) {
+			if (isAdmin.equalsIgnoreCase("No")) {
+				System.out.println("Fetching the URL");
+				driver.get(url);
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				Thread.sleep(2000);
+				driver.findElement(By.id("cookiePolicyBtn")).click();
+				Thread.sleep(2000);
+			} else {
+				System.out.println("Fetching the Admin URL");
+				driver.get(adminURL);
+				//test = extent.startTest("URL: " + adminURL);
+				System.out.println("URL: " + adminURL);
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				Thread.sleep(2000);
+
+			}
+		} catch (WebDriverException e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
 		}

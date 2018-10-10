@@ -1,6 +1,7 @@
 package com.tcs.BsiShopRedesign.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.openqa.selenium.WebElement;
@@ -148,7 +149,10 @@ public class MyProfileMemberPage extends Page {
 			test.log(LogStatus.INFO, "Click Renew Membership");
 			System.out.println("Click Renew Membership");
 			Log.info("Click Renew Membership");
+			// CommonHelper.scrolltoview("renewMembership_css");
 			WebElement renewMembership = driver.findElements(By.cssSelector("a[title*='Renew Membership']")).get(0);
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("arguments[0].scrollIntoView(true);", renewMembership);
 			String renewMemText = renewMembership.getText();
 			test.log(LogStatus.INFO, "The Membership number is: " + renewMemText);
 			System.out.println("The Membership number is: " + renewMemText);

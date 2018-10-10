@@ -415,15 +415,17 @@ public class ProductPage extends Page {
 				pdfZoomOut();
 
 				pdfSave();
-
+				
 				pdfPrint();
 
 				pdfCloseWindow();
 
 			} else /* if (noPreview.isDisplayed()) */ {
-				test.log(LogStatus.INFO, ("No PDF Preview available for this product"));
+				test.log(LogStatus.PASS, ("No PDF Preview available for this product"));
 				Log.info("No PDF Preview available for this product");
 				System.out.println("No PDF Preview available for this product");
+				Thread.sleep(1000);
+				CommonHelper.takeScreenShot();
 			}
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("PDF Previweing was unsuccessful");
@@ -463,6 +465,8 @@ public class ProductPage extends Page {
 			System.out.println("Verify PDF Preview Zoom In");
 			CommonHelper.elementToBeClickable("pdfZoomIn_css");
 			click("pdfZoomIn_css");
+			Thread.sleep(2000);
+			CommonHelper.takeScreenShot();
 			test.log(LogStatus.PASS, "Verify PDF Preview Zoom In was successful");
 
 		} catch (Exception e) {
@@ -479,6 +483,8 @@ public class ProductPage extends Page {
 			System.out.println("Verify PDF Preview Zoom Out");
 			CommonHelper.elementToBeClickable("pdfZoomOut_css");
 			click("pdfZoomOut_css");
+			Thread.sleep(2000);
+			CommonHelper.takeScreenShot();
 			test.log(LogStatus.PASS, "Verify PDF Preview Zoom Out was successful");
 
 		} catch (Exception e) {
@@ -495,13 +501,13 @@ public class ProductPage extends Page {
 			System.out.println("Verify PDF Preview Save");
 			CommonHelper.elementToBeClickable("pdfSave_css");
 			click("pdfSave_css");
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			CommonHelper.handleAlert();
 			test.log(LogStatus.PASS, "Verify PDF Preview Save was successful");
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			String productName = driver.findElement(By.cssSelector("span[itemprop='name']")).getText();
 			productName = productName.replace(":", "_");
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 			if (verifyExpectedFileName(productName) != null) {
 				test.log(LogStatus.PASS, "Verification of PDF Preview file name is Successful");
 				System.out.println("Verification of PDF Preview file name is Successful");
@@ -540,8 +546,8 @@ public class ProductPage extends Page {
 			test.log(LogStatus.INFO, ("Verify PDF Preview Close Window"));
 			Log.info("Verify PDF Preview Close Window");
 			System.out.println("Verify PDF Preview Close Window");
-			CommonHelper.elementToBeClickable("pdfClose_id");
-			click("pdfClose_id");
+			CommonHelper.elementToBeClickable("pdfClose_css");
+			click("pdfClose_css");
 			test.log(LogStatus.PASS, "Verify PDF Preview Close Window was successful");
 
 		} catch (Exception e) {

@@ -16,7 +16,7 @@ public class BsiConstants {
 	public static final String STORE_QA_URL = "https://standards-storeqa.bsigroup.com/";
 	public static final String STORE_QA_USERNAME = "sharmilee.mohapatra@tcs.com";
 	public static final String STORE_QA_PASSWORD = "Test@1234";
-	public static final String STORE_QA_MEM_USERNAME ="dash.joshita@tcs.com";
+	public static final String STORE_QA_MEM_USERNAME = "dash.joshita@tcs.com";
 	public static final String STORE_QA_MEM_PASSWORD = "Test@1234";
 	public static final String STORE_QA_REG_USERNAME = "autoTest@tcs.com";
 	public static final String STORE_QA_MEM_SEC_USERNAME = "sharmileemohapatra@gmail.com";
@@ -34,13 +34,15 @@ public class BsiConstants {
 	public static final String UAT_URL = "https://staging-standards.bsigroup.com/";
 	public static final String UAT_USERNAME = "sharmilee.mohapatra@tcs.com";
 	public static final String UAT_PASSWORD = "Test@1234";
-	public static final String UAT_MEM_USERNAME ="dash.joshita@tcs.com";
+	public static final String UAT_MEM_USERNAME = "dash.joshita@tcs.com";
 	public static final String UAT_MEM_PASSWORD = "Test@1234";
 	public static final String UAT_REG_USERNAME = "autoTest@tcs.com";
 	public static final String UAT_MEM_SEC_USERNAME = "sharmileemohapatra@gmail.com";
 	public static final String UAT_MEM_SEC_PASSWORD = "June@2018";
 	public static final String UAT_TEN_USERNAME = "tenAddress@tcs.com";
-	
+	public static final String UAT_ADMIN_URL = "https://staging-standards.bsigroup.com/admin";
+	public static final String UAT_ADMIN_USERNAME = "phani";
+	public static final String UAT_ADMIN_PASSWORD = "Phani@123";
 
 	public static Hashtable<String, String> table;
 
@@ -63,6 +65,9 @@ public class BsiConstants {
 				table.put("mem_sec_username", UAT_MEM_SEC_USERNAME);
 				table.put("mem_sec_password", UAT_MEM_SEC_PASSWORD);
 				table.put("ten_address_username", UAT_TEN_USERNAME);
+				table.put("adminURL", UAT_ADMIN_URL);
+				table.put("admin_username", UAT_ADMIN_USERNAME);
+				table.put("admin_password", UAT_ADMIN_PASSWORD);
 
 			} else if (ENV.equalsIgnoreCase("QA5")) {
 				table.put("url", QA5_URL);

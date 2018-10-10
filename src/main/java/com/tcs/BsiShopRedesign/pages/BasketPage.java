@@ -55,10 +55,10 @@ public class BasketPage extends Page {
 						.visibilityOfElementLocated(By.cssSelector("input[class='input-text qty'][title='Qty']")));
 				WebElement update = wait.until(ExpectedConditions.elementToBeClickable(By.id("qty_upd")));
 				quantityCount.clear();
-				quantityCount.sendKeys("5");
+				quantityCount.sendKeys("50");
 				update.click();
-				System.out.println("The Quantity of the product updated to 5");
-				test.log(LogStatus.INFO, "The Quantity of the product updated to 5");
+				System.out.println("The Quantity of the product updated to 50");
+				test.log(LogStatus.INFO, "The Quantity of the product updated to 50");
 
 			} else if (quantityLaminated) {
 				Log.info("Update Quantity in Basket");
@@ -70,10 +70,10 @@ public class BasketPage extends Page {
 
 				WebElement update = driver.findElement(By.id("qty_upd"));
 				quantityLaminatedCount.clear();
-				quantityLaminatedCount.sendKeys("5");
+				quantityLaminatedCount.sendKeys("50");
 				update.click();
-				System.out.println("The Quantity of the product updated to 5 ");
-				test.log(LogStatus.INFO, "The Quantity of the product updated to 5 ");
+				System.out.println("The Quantity of the product updated to 50 ");
+				test.log(LogStatus.INFO, "The Quantity of the product updated to 50");
 
 			} else {
 				test.log(LogStatus.INFO, "This is a PDF product hence quantity textbox is disabled.");
@@ -195,7 +195,7 @@ public class BasketPage extends Page {
 			test.log(LogStatus.INFO, "Click on Remove Item");
 			Thread.sleep(5000);
 			wait.until(ExpectedConditions.visibilityOf(remove));
-			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
+			// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
 
 			// CommonHelper.clickByJS("remoeItem_id");
@@ -442,15 +442,16 @@ public class BasketPage extends Page {
 			test.log(LogStatus.INFO, "Click Checkout");
 			System.out.println("Click Checkout");
 			Log.info("Click Checkout");
-			Thread.sleep(1000);
-			CommonHelper.scrolltoview("checkoutNow_css");
+			Thread.sleep(2000);
+			// CommonHelper.scrolltoview("checkoutNow_css");
 			WebElement checkout = driver.findElement(By.cssSelector("button[title='Checkout Now']"));
 			if (checkout.isDisplayed() || checkout.isEnabled()) {
-				Thread.sleep(1000);
-				//CommonHelper.clickJS(checkout);
-				// checkout.click();
-				click("checkoutNow_css");
-				Thread.sleep(2000);
+				Thread.sleep(5000);
+				// CommonHelper.clickJS(checkout);
+				checkout.click();
+				// click("checkoutNow_css");
+
+				Thread.sleep(3000);
 			} else {
 				test.log(LogStatus.FAIL, "Click Checkout was unsuccessful");
 			}
@@ -522,15 +523,21 @@ public class BasketPage extends Page {
 
 			if (finalFinalPrice == memberPrice && finalMemPrice == memberPrice && finalTotalPrice == memberPrice) {
 				System.out.println("The unit price of the product in the Basket Page is: " + finalUnitPrice
-						+ " & The member price of the product in the Basket Page is: " + memberPrice);
-				test.log(LogStatus.PASS, "The unit price of the product in the Basket Page is: " + finalUnitPrice
-						+ " & The member price of the product in the Basket Page is: " + memberPrice);
+						+ " & The member price of the product in the Basket Page is: " + finalMemPrice
+						+ " & The total price of the product in the Basket Page is: " + finalTotalPrice);
+				test.log(LogStatus.PASS,
+						"The unit price of the product in the Basket Page is: " + finalUnitPrice
+								+ " & The member price of the product in the Basket Page is: " + finalMemPrice
+								+ " & The total price of the product in the Basket Page is: " + finalTotalPrice);
 				// return true;
 			} else {
 				System.out.println("The unit price of the product in the Basket Page is: " + finalUnitPrice
-						+ " & The member price of the product in the Basket Page is: " + memberPrice);
-				test.log(LogStatus.FAIL, "The unit price of the product in the Basket Page is: " + finalUnitPrice
-						+ " & The member price of the product in the Basket Page is: " + memberPrice);
+						+ " & The member price of the product in the Basket Page is: " + finalMemPrice
+						+ " & The total price of the product in the Basket Page is: " + finalTotalPrice);
+				test.log(LogStatus.FAIL,
+						"The unit price of the product in the Basket Page is: " + finalUnitPrice
+								+ " & The member price of the product in the Basket Page is: " + finalMemPrice
+								+ " & The total price of the product in the Basket Page is: " + finalTotalPrice);
 				CommonHelper.reportFailure("The member price in the Basket Page is incorrect");
 			}
 			// return false;
@@ -540,6 +547,40 @@ public class BasketPage extends Page {
 			e.printStackTrace();
 		}
 		return memDiscount;
+
+	}
+
+	public void removeMultipleProduct() {
+
+		WebDriverWait wait = new WebDriverWait(driver, 120);
+		test.log(LogStatus.INFO, "Remove Multiple Products from Basket");
+		List<WebElement> removeItem = driver.findElements(By.xpath("//img[@alt='delete']"));
+		System.out.println("Remove");
+		try {
+
+			for (int i = 1; i <= removeItem.size(); i++) {
+				//WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
+				Thread.sleep(5000);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
+				//remove.click();
+				click("removeEvent_xpath");
+			}
+
+			Thread.sleep(3000);
+			test.log(LogStatus.INFO, "Verify Remove Basket");
+			// CommonHelper.elementToBeVisible("verifyBasket_css");
+			CommonHelper.elementToBeClickable("verifyBasket_css");
+			String verifyBasket = CommonHelper.element("verifyBasket_css").getText();
+			System.out.println("The Verfication message is: " + verifyBasket);
+			Log.info("The Verfication message is: " + verifyBasket);
+			test.log(LogStatus.PASS, "Multiple Products has been removed from Basket successfully");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Remove Product from Basket was unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
 
 	}
 

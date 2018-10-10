@@ -1,4 +1,5 @@
 package com.tcs.BsiShopRedesign.pages;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.impl.client.EntityEnclosingRequestWrapper;
 import org.openqa.selenium.By;
@@ -21,15 +22,21 @@ public class CheckoutPage extends Page {
 
 	public void clickMiniCartCheckout() {
 
-		System.out.println("Hover on Basket");
-		test.log(LogStatus.INFO, "Hover on Basket");
-		Log.info("Hover on Basket");
-		mouseHover("mouseHoverBasket_xpath");
+		try {
+			System.out.println("Hover on Basket");
+			test.log(LogStatus.INFO, "Hover on Basket");
+			Log.info("Hover on Basket");
+			mouseHover("mouseHoverBasket_xpath");
 
-		System.out.println("Click Checkout");
-		test.log(LogStatus.INFO, "Click Checkout");
-		Log.info("Click Checkout");
-		click("miniCartCheckout_xpath");
+			System.out.println("Click Checkout");
+			test.log(LogStatus.INFO, "Click Checkout");
+			Log.info("Click Checkout");
+			click("miniCartCheckout_xpath");
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Click Checkout from mini cart was unsuccessful");
+			e.printStackTrace();
+		}
 	}
 
 	public void signIn() {
@@ -168,6 +175,7 @@ public class CheckoutPage extends Page {
 			Log.info("Click Place Order");
 			// CommonHelper.scrolltoview("completeOrder_id");
 			click("completeOrder_id");
+			CommonHelper.scrolltoview("");
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("Confirm Order Details was unsuccessful");
 			e.printStackTrace();
@@ -211,27 +219,27 @@ public class CheckoutPage extends Page {
 	}
 
 	public void enterNonUKOrderDetails() {
-
 		try {
-			// driver.switchTo().defaultContent();
-			System.out.println("Select Country");
-			test.log(LogStatus.INFO, "Select Country");
-			Log.info("Select Country");
-			selectDpdwnText("country_xpath", "Singapore");
+			Thread.sleep(5000);
+			System.out.println("Click Enter Payment Details");
+			test.log(LogStatus.INFO, "Click Enter Payment Details");
+			Log.info("Click Enter Payment Details");
+			CommonHelper.scrolltoview("paymentDetails_id");
+			click("paymentDetails_id");
+			Thread.sleep(1000);
 
-			System.out.println("Click Review Order");
-			test.log(LogStatus.INFO, "Click Review Order");
-			Log.info("Click Review Order");
-			click("reviewOrder_xpath");
-			Thread.sleep(2000);
-
+			/*
+			 * System.out.println("Click Pay by Credit Card"); test.log(LogStatus.INFO,
+			 * "Click Pay by Credit Card"); Log.info("Click Pay by Credit Card");
+			 * click("payCard_id");
+			 */
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Non-UK Order Details was unsuccesful");
 			e.printStackTrace();
 		}
 	}
 
-	public void enterUKOrderDetails() {
+	public void enterUKOrderDetailsHarcopy() {
 
 		try {
 			// driver.switchTo().defaultContent();
@@ -254,7 +262,7 @@ public class CheckoutPage extends Page {
 	public void validateEvidenceErrorMessage() {
 
 		String addressErrorMsg = driver.findElement(By.cssSelector("span[class='error-message']")).getText();
-		if (addressErrorMsg.contains("Evidence does not match.")) {
+		if (addressErrorMsg.contains("Evidence does not match")) {
 			test.log(LogStatus.PASS, addressErrorMsg);
 			System.out.println(addressErrorMsg);
 		} else {
@@ -319,9 +327,11 @@ public class CheckoutPage extends Page {
 	public void createBillingAddress() {
 
 		try {
+			Thread.sleep(2000);
 			System.out.println("Add New Billing Address");
 			test.log(LogStatus.INFO, "Add New Billing Address");
 			Log.info("Add New Billing Address");
+			click("selectBillingAddress_id");
 			selectDpdwnText("selectBillingAddress_id", "New Address");
 
 			Thread.sleep(1000);
@@ -496,12 +506,13 @@ public class CheckoutPage extends Page {
 
 		try {
 
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			System.out.println("Click Edit Order on Checkout Page");
 			test.log(LogStatus.INFO, "Click Edit Order on Checkout Page");
+			CommonHelper.scrolltoview("editOrder_id");
 			driver.findElement(By.id("edit-button")).click();
-			// CommonHelper.scrolltoview("editOrder_id");
 			// click("editOrder_id");
+
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("Click Edit Order on Checkout Page was unsuccessful");
@@ -552,7 +563,7 @@ public class CheckoutPage extends Page {
 			test.log(LogStatus.INFO, "Enter Promo Code on Checkout Page");
 			// CommonHelper.scrolltoview("promoCode_id");
 			clearText("promoCode_id");
-			enterText("promoCode_id", "PROMOCODESEPT");
+			enterText("promoCode_id", "testpromoaut");
 
 			System.out.println("Click Apply Coupon on Checkout Page");
 			test.log(LogStatus.INFO, "Click Apply Coupon on Checkout Page");
@@ -641,16 +652,31 @@ public class CheckoutPage extends Page {
 
 	public void enterInvoicePaymentDetails() {
 
+		boolean removePrice = false;
+
 		try {
 			Thread.sleep(5000);
 			System.out.println("Click Enter Payment Details");
 			test.log(LogStatus.INFO, "Click Enter Payment Details");
 			Log.info("Click Enter Payment Details");
-			CommonHelper.scrolltoview("paymentDetails_id");
+			// CommonHelper.scrolltoview("paymentDetails_id");
 			click("paymentDetails_id");
 			Thread.sleep(1000);
-			click("paymentDetails_id");
+			// click("paymentDetails_id");
 			// driver.findElement(By.id("opc-shipping-btn")).click();
+
+			try {
+				Thread.sleep(1000);
+				removePrice = driver.findElement(By.xpath("//*[@id='iwd_opc_store_credit']/div[2]/button/span"))
+						.isDisplayed();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			Thread.sleep(2000);
+			if (removePrice) {
+				click("removeInovicePrice_xpath");
+			}
 
 			System.out.println("Click Pay by Invoice");
 			test.log(LogStatus.INFO, "Click Pay by Invoice");
@@ -669,7 +695,7 @@ public class CheckoutPage extends Page {
 			test.log(LogStatus.INFO, "Enter Phone Number");
 			Log.info("Enter Phone Number");
 			enterText("storeCreditPhone_id", "+443450869001");
-		    Thread.sleep(1000);
+			Thread.sleep(1000);
 			driver.findElement(By.id("form-storecredit")).click();
 
 			Thread.sleep(1000);
@@ -677,7 +703,7 @@ public class CheckoutPage extends Page {
 			test.log(LogStatus.INFO, "Click Apply");
 			Log.info("Click Apply");
 			click("appyInvoice_xpath");
-			
+
 			Thread.sleep(2000);
 			String additionalPaymentInfo = driver.findElement(By.cssSelector("div[class*='additional_payment_info']"))
 					.getText();
@@ -718,6 +744,56 @@ public class CheckoutPage extends Page {
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Order Details was unsuccesful");
+			e.printStackTrace();
+		}
+	}
+
+	public void insufficientBalInvoice() {
+
+		boolean removePrice = false;
+
+		try {
+			Thread.sleep(5000);
+			System.out.println("Click Enter Payment Details");
+			test.log(LogStatus.INFO, "Click Enter Payment Details");
+			Log.info("Click Enter Payment Details");
+			CommonHelper.scrolltoview("paymentDetails_id");
+			click("paymentDetails_id");
+			Thread.sleep(1000);
+			click("paymentDetails_id");
+			// driver.findElement(By.id("opc-shipping-btn")).click();
+
+			try {
+				Thread.sleep(1000);
+				removePrice = driver.findElement(By.xpath("//*[@id='iwd_opc_store_credit']/div[2]/button/span"))
+						.isDisplayed();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			Thread.sleep(2000);
+			if (removePrice) {
+				click("removeInovicePrice_xpath");
+			}
+
+			System.out.println("Click Pay by Invoice");
+			test.log(LogStatus.INFO, "Click Pay by Invoice");
+			Log.info("Click Pay by Invoice");
+			click("payInvoice_id");
+			// driver.switchTo().frame(0);
+
+			String errorMessage = driver
+					.findElement(By.xpath("//*[@id='checkout-payment-method-load']/div[3]/div[2]/div")).getText();
+			if (errorMessage.contains("Insufficient funds")) {
+				System.out.println("The error message is: " + errorMessage);
+				test.log(LogStatus.PASS, "The error message is: " + errorMessage);
+			} else {
+				System.out.println("The error message is: " + errorMessage);
+				test.log(LogStatus.FAIL, "The error message is: " + errorMessage);
+			}
+		} catch (Exception e) {
+			CommonHelper
+					.reportFailure("Pay By Invoice Insufficient balance error message verificiaiton was unsuccesful");
 			e.printStackTrace();
 		}
 	}

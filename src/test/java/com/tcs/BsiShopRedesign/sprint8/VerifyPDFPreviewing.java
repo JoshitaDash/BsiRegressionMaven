@@ -1,5 +1,7 @@
 package com.tcs.BsiShopRedesign.sprint8;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.LogStatus;
@@ -20,6 +22,7 @@ public class VerifyPDFPreviewing extends BaseTest {
 
 		try {
 			test = extent.startTest("Sprint 8 - Ecom-55 AC#66, 68__ PDF Previewing");
+
 			System.out.println("Perform Blank Search");
 			Log.info("Perform Blank Search");
 			HomePage home = new HomePage(driver);
@@ -34,10 +37,19 @@ public class VerifyPDFPreviewing extends BaseTest {
 			Log.info("Click on Product");
 			search.clickProductOnSearchList();
 
-			/*System.out.println("Click on Product");
-			Log.info("Click on Product");
-			ProductPage prod = new ProductPage(driver);
-			prod.clickLookInside();*/
+			/*
+			 * Log.info("Enter product name in Search textbox");
+			 * System.out.println("Enter product name in Search textbox");
+			 * driver.findElement(By.id("search")).clear();
+			 * driver.findElement(By.id("search")).sendKeys("BS EN 3682-007:2013");
+			 * 
+			 * Log.info("Click on Search"); System.out.println("Click on Search");
+			 * click("searchButton_css");
+			 * 
+			 * Log.info("Select the Product"); System.out.println("Select the Product");
+			 * WebElement product = driver.findElement(By.linkText("BS EN 3682-007:2013"));
+			 * product.click();
+			 */
 
 			System.out.println("Verify PDF Previewing");
 			Log.info("Verify PDF Previewing");
@@ -51,31 +63,4 @@ public class VerifyPDFPreviewing extends BaseTest {
 			Assert.fail(e.getMessage());
 		}
 	}
-
-	/*
-	 * @Test(priority = 2, enabled = true) public void verifyPDFPreviewFeatures() {
-	 * 
-	 * try { System.out.println("Verify PDF Previewing Zoom In");
-	 * Log.info("Verify PDF Previewing Zoom In"); ProductPage prod = new
-	 * ProductPage(driver); prod.verifyPDFZoomIn();
-	 * 
-	 * System.out.println("Verify PDF Previewing Zoom Out");
-	 * Log.info("Verify PDF Previewing Zoom Out"); prod.verifyPDFZoomOut();
-	 * 
-	 * System.out.println("Verify PDF Previewing Save");
-	 * Log.info("Verify PDF Previewing Save"); prod.verifyPDFSave();
-	 * 
-	 * System.out.println("Verify PDF Previewing Print");
-	 * Log.info("Verify PDF Previewing Print"); prod.verifyPDFPrint();
-	 * 
-	 * System.out.println("Verify PDF Previewing Close Window");
-	 * Log.info("Verify PDF Previewing Close Window"); prod.verifyPDFCloseWindow();
-	 * 
-	 * } catch (Exception e) { test.log(LogStatus.FATAL,
-	 * "Verify PDF Previewing was unsuccessful");
-	 * CommonHelper.reportFailure("Verify PDF Previewing was unsuccessful");
-	 * e.printStackTrace(); }
-	 * 
-	 * }
-	 */
 }
