@@ -39,7 +39,7 @@ public class CreateCheckoutBillingAddress extends BaseTest{
 	}
 
 	@Test(priority = 2, enabled = true)
-	public void editBillingAddress() {
+	public void createBillingAddress() {
 		
 		test = extent.startTest("Sprint 7 - Ecom 10 AC#48; Ecom-15 AC#44; Ecom-52 AC#28,30,38; Ecom-25 AC#56,58__ Create New Checkout Billing Address in Checkout Page");
 

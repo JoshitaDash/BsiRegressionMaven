@@ -243,6 +243,17 @@ public class OrderConfirmationPage extends Page {
 				test.log(LogStatus.FAIL, "Placing of order was unsuccesful");
 				System.out.println("Placing of order was unsuccesful");
 			}
+
+			Thread.sleep(1000);
+			System.out.println("Click Automatic notification of new version of a standard on Order Confirmation Page");
+			test.log(LogStatus.INFO,
+					"Click Automatic notification of new version of a standard on Order Confirmation Page");
+			Log.info("Click Automatic notification of new version of a standard on Order Confirmation Page");
+			click("prodNotification_id");
+			Thread.sleep(1000);
+			test.log(LogStatus.PASS, "Checked Automatic notification of new version of a standard.");
+			System.out.println("Checked Automatic notification of new version of a standard.");
+
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Placing of order was unsuccesful");
 			e.printStackTrace();

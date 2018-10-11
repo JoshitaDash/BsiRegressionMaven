@@ -122,4 +122,15 @@ public class Page {
 			e.printStackTrace();
 		}
 	}
+	
+	public void selectDpdwnIndex(String locator, int index) {
+		try {
+			CommonHelper.elementToBeVisible(locator);
+			Select dpdwn = new Select(CommonHelper.element(locator));
+			dpdwn.selectByIndex(index);
+		} catch (Exception e) {
+			test.log(LogStatus.FAIL, " Cannot select the value from dropdown");
+			e.printStackTrace();
+		}
+	}
 }

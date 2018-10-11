@@ -368,7 +368,7 @@ public class CheckoutPage extends Page {
 			Thread.sleep(1000);
 			System.out.println("Enter Telephone Number");
 			test.log(LogStatus.INFO, "Enter Telephone Number");
-			driver.findElement(By.cssSelector("input[name='telephone']")).sendKeys("123456790");
+			driver.findElement(By.cssSelector("input[name='telephone']")).sendKeys("+443450869001");
 
 			Thread.sleep(3000);
 			System.out.println("Click Save");
@@ -441,7 +441,7 @@ public class CheckoutPage extends Page {
 			System.out.println("Enter Telephone Number");
 			test.log(LogStatus.INFO, "Enter Telephone Number");
 			driver.findElement(By.cssSelector("input[name='telephone']")).clear();
-			driver.findElement(By.cssSelector("input[name='telephone']")).sendKeys("123456790");
+			driver.findElement(By.cssSelector("input[name='telephone']")).sendKeys("+443450869001");
 
 			Thread.sleep(3000);
 			System.out.println("Click Save");

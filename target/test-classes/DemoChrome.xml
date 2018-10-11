@@ -3,6 +3,7 @@
 <suite name="Suite">
 	<test name="Chrome Browser">
 		<parameter name="browser" value="chrome" />
+		<parameter name="isAdmin" value="No" />
 		<classes>
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
 			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
@@ -29,7 +30,7 @@
 			<class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout" />
 			<class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" />
 			<class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress" />	 -->
-			<class name="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress" />
+		<!-- 	<class name="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" /> 
 			<class name="com.tcs.BsiShopRedesign.sprint8.RenewMembership" />
@@ -40,6 +41,16 @@
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing" />	 -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder" /> -->
 			<!-- <class name="com.tcs.BsiShopRedesign.sprint9.PayByInvoice" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint9.PreBookProducts" /> -->
+			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs" />
 		</classes>
+	</test>
+	
+	  <test name="BSI Admin">
+		<parameter name="browser" value="chrome" />
+		<parameter name="isAdmin" value="Yes" />
+		<classes>
+			<!-- <class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails" /> -->
+	    </classes>
 	</test>
 </suite>

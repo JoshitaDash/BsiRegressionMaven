@@ -55,34 +55,41 @@ public class SubscriptionsPage extends Page {
 	}
 
 	public void enterBSOLPardotDetails() {
+		boolean clickHere = false;
 
 		try {
 			test.log(LogStatus.INFO, "Enter BSOL Pardot form details");
 			System.out.println("Enter BSOL Pardot form details");
 			Log.info("Enter BSOL Pardot form details");
 
-			/*
-			 * System.out.println("Switch iFrame"); driver.switchTo().frame(0);
-			 * Thread.sleep(3000); System.out.println("iframe switched");
-			 * 
-			 * boolean clickHere =
-			 * driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
-			 * 
-			 * if (clickHere) if (CommonHelper.element("clickHere_xpath") != null ||
-			 * CommonHelper.element("clickHere_xpath").isDisplayed()) {
-			 * test.log(LogStatus.INFO, "Click on the Click Here link");
-			 * System.out.println("Click on the Click Here link");
-			 * Log.info("Click on the Click Here link");
-			 * driver.findElement(By.xpath("//*[@id='pardot-form']/p[1]/span/a")).click();
-			 * CommonHelper.isElementVisible("title_css");
-			 * CommonHelper.elementToBeClickable("title_css"); enterBSOLPardotFormDetails();
-			 * } else
-			 */ {
-				Thread.sleep(3000);
-				System.out.println("Switch iFrame");
-				driver.switchTo().frame(0);
-				Thread.sleep(5000);
-				System.out.println("iframe switched");
+			System.out.println("Switch iFrame");
+			driver.switchTo().frame(0);
+			Thread.sleep(3000);
+			System.out.println("iframe switched");
+
+			try {
+				clickHere = driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			if (clickHere) {
+				if (CommonHelper.element("clickHere_xpath") != null
+						|| CommonHelper.element("clickHere_xpath").isDisplayed()) {
+					test.log(LogStatus.INFO, "Click on the Click Here link");
+					System.out.println("Click on the Click Here link");
+					Log.info("Click on the Click Here link");
+					driver.findElement(By.xpath("//*[@id='pardot-form']/p[1]/span/a")).click();
+					CommonHelper.isElementVisible("title_css");
+					CommonHelper.elementToBeClickable("title_css");
+					enterBSOLPardotFormDetails();
+				}
+			} else {
+				/*
+				 * Thread.sleep(3000); System.out.println("Switch iFrame");
+				 * driver.switchTo().frame(0); Thread.sleep(5000);
+				 * System.out.println("iframe switched");
+				 */
 
 				CommonHelper.isElementVisible("title_css");
 				CommonHelper.elementToBeClickable("title_css");
@@ -119,6 +126,12 @@ public class SubscriptionsPage extends Page {
 			Log.info("Enter Email");
 			clearText("email_xpath");
 			enterText("email_xpath", "bsol@tcs.com");
+
+			test.log(LogStatus.INFO, "Enter Phone");
+			System.out.println("Enter Phone");
+			Log.info("Enter Phone");
+			clearText("phoneBsol_xpath");
+			enterText("phoneBsol_xpath", "7896523156");
 
 			test.log(LogStatus.INFO, "Enter Job Title");
 			System.out.println("Enter Job Title");
@@ -249,9 +262,10 @@ public class SubscriptionsPage extends Page {
 
 		try {
 
+			Thread.sleep(2000);
 			test.log(LogStatus.INFO, "Click on Subscriptions Compliance Navigator");
 			System.out.println("Mousehover Subscriptions");
-			CommonHelper.elementToBeVisible("subscriptions_xpath");
+			// CommonHelper.elementToBeVisible("subscriptions_xpath");
 			mouseHover("subscriptions_xpath");
 			Log.info("Click on Subscriptions Compliance Navigator");
 			System.out.println("Click on Compliance Navigator");
@@ -267,16 +281,23 @@ public class SubscriptionsPage extends Page {
 	}
 
 	public void enterCNPardotDetails() {
+		boolean clickHere = false;
+
 		try {
 			System.out.println("Switch iFrame");
 			driver.switchTo().frame(0);
 			Thread.sleep(3000);
 			System.out.println("iframe switched");
 
-			boolean clickHere = driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
+			try {
+				clickHere = driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 			Thread.sleep(2000);
 
-			if (clickHere)
+			if (clickHere) {
 				if (CommonHelper.element("clickHere_xpath") != null
 						|| CommonHelper.element("clickHere_xpath").isDisplayed()) {
 					test.log(LogStatus.INFO, "Click on the Click Here link");
@@ -292,15 +313,16 @@ public class SubscriptionsPage extends Page {
 					Log.info("Enter Compliance Navigator Pardot Form Details");
 					enterCNPardotFormDetails();
 
-				} else {
-
-					test.log(LogStatus.INFO, "Enter Compliance Navigator Pardot Form Details");
-					System.out.println("Enter Compliance Navigator Pardot Form Details");
-					Log.info("Enter Compliance Navigator Pardot Form Details");
-					// CommonHelper.isVisisble("title_css");
-					// CommonHelper.elementToBeClickable("title_css");
-					enterCNPardotFormDetails();
 				}
+			} else {
+
+				test.log(LogStatus.INFO, "Enter Compliance Navigator Pardot Form Details");
+				System.out.println("Enter Compliance Navigator Pardot Form Details");
+				Log.info("Enter Compliance Navigator Pardot Form Details");
+				// CommonHelper.isVisisble("title_css");
+				// CommonHelper.elementToBeClickable("title_css");
+				enterCNPardotFormDetails();
+			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Pardot Form details was unsuccessful");
 			Assert.fail(e.getMessage());
@@ -401,6 +423,8 @@ public class SubscriptionsPage extends Page {
 
 	public void enterEurocodePardotDetails() {
 
+		boolean clickHere = false;
+
 		try {
 
 			System.out.println("Switch iFrame");
@@ -408,9 +432,13 @@ public class SubscriptionsPage extends Page {
 			Thread.sleep(3000);
 			System.out.println("iframe switched");
 
-			boolean clickHere = driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
+			try {
+				clickHere = driver.findElement(By.xpath("/html/body/form/p[1]/span/a")).isDisplayed();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 
-			if (clickHere)
+			if (clickHere) {
 				if (CommonHelper.element("clickHere_xpath") != null
 						|| CommonHelper.element("clickHere_xpath").isDisplayed()) {
 					test.log(LogStatus.INFO, "Click on the Click Here link");
@@ -425,15 +453,16 @@ public class SubscriptionsPage extends Page {
 					Log.info("Enter Eurocode Pardot Form Details");
 					enterEurocodePardotFormDetails();
 
-				} else {
-
-					test.log(LogStatus.INFO, "Enter Eurocode Pardot Form Details");
-					System.out.println("Enter Eurocode Pardot Form Details");
-					Log.info("Enter Eurocode Pardot Form Details");
-					CommonHelper.isElementVisible("firstNameEC_xpath");
-					CommonHelper.elementToBeClickable("firstNameEC_xpath");
-					enterEurocodePardotFormDetails();
 				}
+			} else {
+
+				test.log(LogStatus.INFO, "Enter Eurocode Pardot Form Details");
+				System.out.println("Enter Eurocode Pardot Form Details");
+				Log.info("Enter Eurocode Pardot Form Details");
+				CommonHelper.isElementVisible("firstNameEC_xpath");
+				CommonHelper.elementToBeClickable("firstNameEC_xpath");
+				enterEurocodePardotFormDetails();
+			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Eurocode Pardot Form details was unsuccessful");
 			Assert.fail(e.getMessage());

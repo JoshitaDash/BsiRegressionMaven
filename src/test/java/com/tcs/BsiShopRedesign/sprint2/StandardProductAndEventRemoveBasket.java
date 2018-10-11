@@ -93,8 +93,8 @@ public class StandardProductAndEventRemoveBasket extends BaseTest {
 			Log.info("Select the Product");
 			System.out.println("Select the Product");
 			test.log(LogStatus.INFO, "Select the Product");
-			WebElement product = driver.findElement(By.linkText("ASD-STAN prEN 9110:2016"));
-			Thread.sleep(1000);
+			WebElement product = driver.findElement(By.linkText("BIP 2155"));
+			Thread.sleep(2000);
 			product.click();
 
 			Thread.sleep(5000);

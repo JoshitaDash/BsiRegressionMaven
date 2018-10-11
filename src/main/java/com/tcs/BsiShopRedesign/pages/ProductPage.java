@@ -415,7 +415,7 @@ public class ProductPage extends Page {
 				pdfZoomOut();
 
 				pdfSave();
-				
+
 				pdfPrint();
 
 				pdfCloseWindow();
@@ -590,5 +590,65 @@ public class ProductPage extends Page {
 			}
 		}
 		return lastModifiedFile;
+	}
+
+	public void verifyAdvanceAccessProduct() {
+
+		try {
+
+			test.log(LogStatus.INFO, ("Verify Advance Access Product"));
+			Log.info("Verify Advance Access Product");
+			System.out.println("Verify Advance Access Product");
+
+			String advanceAcessText = driver.findElement(By.cssSelector("span[data-th='Availability Check']"))
+					.getText();
+			if (advanceAcessText.contains("advance access")) {
+				System.out.println(
+						"The text of the product is: " + advanceAcessText + "Advance Access Product was successful");
+				test.log(LogStatus.INFO, "The text of the product is: " + advanceAcessText);
+				test.log(LogStatus.PASS, "Advance Access Product was successful");
+			}
+
+			else {
+				System.out.println(
+						"The text of the product is: " + advanceAcessText + "Advance Access Product was unsuccessful");
+				test.log(LogStatus.INFO, "The text of the product is: " + advanceAcessText);
+				test.log(LogStatus.FAIL, "Advance Access Product was unsuccessful");
+			}
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Advance Access Product was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPreOrderProduct() {
+
+		try {
+
+			test.log(LogStatus.INFO, ("Verify Pre Order Product"));
+			Log.info("Verify Pre Order Product");
+			System.out.println("Verify Pre Order Product");
+
+			String advanceAcessText = driver.findElement(By.cssSelector("span[data-th='Availability Check']"))
+					.getText();
+			if (advanceAcessText.contains("pre-order")) {
+				System.out.println(
+						"The text of the product is: " + advanceAcessText + "Pre Order Product was successful");
+				test.log(LogStatus.INFO, "The text of the product is: " + advanceAcessText);
+				test.log(LogStatus.PASS, "Pre Order Product was successful");
+			}
+
+			else {
+				System.out.println(
+						"The text of the product is: " + advanceAcessText + "Pre Order Product was unsuccessful");
+				test.log(LogStatus.INFO, "The text of the product is: " + advanceAcessText);
+				test.log(LogStatus.FAIL, "Pre Order Product was unsuccessful");
+			}
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Pre Order Product was unsuccessful");
+			e.printStackTrace();
+		}
 	}
 }

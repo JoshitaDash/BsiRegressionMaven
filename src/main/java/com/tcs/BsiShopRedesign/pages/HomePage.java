@@ -1,8 +1,10 @@
 package com.tcs.BsiShopRedesign.pages;
 
 import java.io.FileInputStream;
+import java.util.ArrayList;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.jsoup.Connection.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -264,7 +266,7 @@ public class HomePage extends BaseTest {
 		test.log(LogStatus.INFO, "Click on Register");
 		CommonHelper.elementToBeClickable("register_xpath");
 		CommonHelper.clickByJS("register_xpath");
-		//click("register_xpath");
+		// click("register_xpath");
 
 	}
 
@@ -756,4 +758,116 @@ public class HomePage extends BaseTest {
 		}
 	}
 
+	public void clickContactUs() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click Contact Us on Home Page");
+			Log.info("Click Contact Us on Home Page");
+			System.out.println("Click Contact Us on Home Page");
+			CommonHelper.scrolltoview("contactUs_linkText");
+			CommonHelper.elementToBeVisible("contactUs_linkText");
+			CommonHelper.elementToBeClickable("contactUs_linkText");
+			click("contactUs_linkText");
+			Thread.sleep(2000);
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Click on Home Page was unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	public void enterContactUsDetails() {
+
+		try {
+
+			Thread.sleep(2000);
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			driver.manage().window().maximize();
+			System.out.println("switched to 2nd window");
+
+			test.log(LogStatus.INFO, "Select What is your enquiry about");
+			Log.info("Select What is your enquiry about");
+			System.out.println("Select What is your enquiry about");
+			selectDpdwnIndex("enquiryAbout_id", 3);
+
+			test.log(LogStatus.INFO, "Select What can we help you with");
+			Log.info("Select What can we help you with");
+			System.out.println("Select What can we help you with");
+			selectDpdwnIndex("helpWith_id", 5);
+
+			test.log(LogStatus.INFO, "Enter First Name");
+			Log.info("Enter First Name");
+			System.out.println("Enter First Name");
+			enterText("contactUsFirstName_id", "Harry");
+
+			test.log(LogStatus.INFO, "Enter Last Name");
+			Log.info("Enter Last Name");
+			System.out.println("Enter Last Name");
+			enterText("contactUsLastName_id", "Potter");
+
+			test.log(LogStatus.INFO, "Enter Email Address");
+			Log.info("Enter Email Address");
+			System.out.println("Enter Email Address");
+			enterText("contactUsEmail_id", "harry.potter@gmail.com");
+
+			test.log(LogStatus.INFO, "Enter Company Name");
+			Log.info("Enter Company Name");
+			System.out.println("Enter Company Name");
+			enterText("contactUsOrganisation_id", "Harry Potter and The World of Wizardry");
+
+			test.log(LogStatus.INFO, "Enter Company Postcode");
+			Log.info("Enter Company Postcode");
+			System.out.println("Enter Company Postcode");
+			enterText("contactUsPostCode_id", "65486456");
+
+			test.log(LogStatus.INFO, "Click Submit");
+			Log.info("Click Submit");
+			System.out.println("Click Submit");
+			click("conatctUsSubmit_css");
+
+			Thread.sleep(2000);
+			driver.switchTo().window(tabs2.get(0));
+			Thread.sleep(2000);
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Enter Contact Us Details was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyContactUsMessage() {
+
+		try {
+			test.log(LogStatus.INFO, "Verify Contact Us Message");
+			Log.info("Verify Contact Us Message");
+			System.out.println("Verify Contact Us Message");
+			String contactSubmitTitle = driver.getTitle();
+			/*String submissionMsg = driver.findElement(By.xpath("//*[@id='maincontent']/div[4]/div/div[2]/div/div/p[1]"))
+					.getText();*/
+			if (contactSubmitTitle.contains("Contact us")
+					/*&& submissionMsg.contains("Thank you for contacting us")*/) {
+				//test.log(LogStatus.INFO, "The Success Message is: " + submissionMsg);
+				//.out.println("The Success Message is: " + submissionMsg);
+				CommonHelper.takeScreenShot();
+				test.log(LogStatus.PASS, "Verification of Contact Us Message was successful");
+				
+
+			} else {
+				//test.log(LogStatus.INFO, "The Success Message is: " + submissionMsg);
+				//System.out.println("The Success Message is: " + submissionMsg);
+				CommonHelper.takeScreenShot();
+				test.log(LogStatus.FAIL, "Verification of Contact Us Message was unsuccessful");
+			}
+			//ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			//driver.close();
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Contact Us Message was unsuccessful");
+			e.printStackTrace();
+		}
+	}
 }

@@ -99,12 +99,10 @@ public class VerifyHardCopyDetails extends BaseTest {
 			OrderConfirmationPage verifyMsg = new OrderConfirmationPage(driver);
 			verifyMsg.verifyOrderSuccessMessage();
 
-			
-			 System.out.println("Verify Hard Copy Details in Order Confirmation Page");
-			 Log.info("Verify Hard Copy Details in Order Confirmation Page");
-			 OrderConfirmationPage hardCopy = new OrderConfirmationPage(driver);
-			 hardCopy.verifyHardCopyDetails();
-			 
+			System.out.println("Verify Hard Copy Details in Order Confirmation Page");
+			Log.info("Verify Hard Copy Details in Order Confirmation Page");
+			OrderConfirmationPage hardCopy = new OrderConfirmationPage(driver);
+			hardCopy.verifyHardCopyDetails();
 
 			/*
 			 * System.out.println("Fetching the URL"); driver.get(url);

@@ -45,7 +45,7 @@ public class SCRProductsUpdateBasket extends BaseTest {
 	@Test(dataProvider = "getData")
 	public void productUpdateBasket(Hashtable<String, String> data) throws BiffException, IOException {
 
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 
 		try {
 			String prodName = data.get("Product_name");
