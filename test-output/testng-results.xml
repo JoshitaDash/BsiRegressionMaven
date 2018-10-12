@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="20344" started-at="2018-10-12T09:37:38Z" finished-at="2018-10-12T09:37:58Z">
+  <suite name="Suite" duration-ms="62756" started-at="2018-10-12T14:02:18Z" finished-at="2018-10-12T14:03:20Z">
     <groups>
     </groups>
-    <test name="Chrome Browser" duration-ms="20344" started-at="2018-10-12T09:37:38Z" finished-at="2018-10-12T09:37:58Z">
-      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@569cfc36]" name="launchBrowser" is-config="true" duration-ms="9966" started-at="2018-10-12T09:37:38Z" finished-at="2018-10-12T09:37:48Z">
+    <test name="Internet Explorer Browser" duration-ms="62756" started-at="2018-10-12T14:02:18Z" finished-at="2018-10-12T14:03:20Z">
+      <class name="com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing@569cfc36]" name="launchBrowser" is-config="true" duration-ms="9015" started-at="2018-10-12T14:02:18Z" finished-at="2018-10-12T14:02:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[IE]]>
               </value>
             </param>
             <param index="1">
@@ -23,23 +23,62 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="contactUs()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@569cfc36]" name="contactUs" duration-ms="9456" started-at="2018-10-12T09:37:48Z" finished-at="2018-10-12T09:37:57Z">
+        <test-method status="FAIL" signature="verifyMemberLink()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing@569cfc36]" name="verifyMemberLink" duration-ms="52882" started-at="2018-10-12T14:02:27Z" finished-at="2018-10-12T14:03:19Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[File Not Found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: File Not Found
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:76)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.verifyExpectedFileName(ProductPage.java:561)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.pdfSave(ProductPage.java:503)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.verifyPDFPreview(ProductPage.java:409)
+	at com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing.verifyMemberLink(VerifyPDFPreviewing.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- contactUs -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@569cfc36]" name="tearDown" is-config="true" duration-ms="906" started-at="2018-10-12T09:37:57Z" finished-at="2018-10-12T09:37:58Z">
+        </test-method> <!-- verifyMemberLink -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing@569cfc36]" name="tearDown" is-config="true" duration-ms="859" started-at="2018-10-12T14:03:19Z" finished-at="2018-10-12T14:03:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyContactUs -->
-    </test> <!-- Chrome Browser -->
-    <test name="BSI Admin" duration-ms="0" started-at="2018-10-12T09:37:58Z" finished-at="2018-10-12T09:37:58Z">
-      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-10-12T09:37:38Z" finished-at="2018-10-12T09:37:38Z">
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing -->
+    </test> <!-- Internet Explorer Browser -->
+    <test name="BSI Admin" duration-ms="0" started-at="2018-10-12T14:03:20Z" finished-at="2018-10-12T14:03:20Z">
+      <class name="com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="16" started-at="2018-10-12T14:02:17Z" finished-at="2018-10-12T14:02:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyContactUs -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing -->
     </test> <!-- BSI Admin -->
   </suite> <!-- Suite -->
 </testng-results>

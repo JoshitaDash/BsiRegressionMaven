@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\shopqa\git\BsiRegressionMaven\src\test\resources\DemoChrome.xml</span>
+                    <span>C:\Users\shopqa\git\BsiRegressionMaven\src\test\resources\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs" hash-for-method="contactUs">contactUs</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing" hash-for-method="verifyMemberLink">verifyMemberLink</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,40 +116,48 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.tcs.BsiShopRedesign.sprint9.VerifyContactUs</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="contactUs">
-                  </a> <!-- contactUs -->
-                  <span class="method-name">contactUs</span>
+                  <a name="verifyMemberLink">
+                  </a> <!-- verifyMemberLink -->
+                  <span class="method-name">verifyMemberLink</span>
+                  <div class="stack-trace">java.lang.AssertionError: File Not Found
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:76)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.verifyExpectedFileName(ProductPage.java:561)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.pdfSave(ProductPage.java:503)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.verifyPDFPreview(ProductPage.java:409)
+	at com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing.verifyMemberLink(VerifyPDFPreviewing.java:57)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shopqa\git\BsiRegressionMaven\src\test\resources\DemoChrome.xml</span>
+            <span class="header-content">C:\Users\shopqa\git\BsiRegressionMaven\src\test\resources\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;test name=&quot;Chrome Browser&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;test name=&quot;Internet Explorer Browser&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;IE&quot;/&gt;
     &lt;parameter name=&quot;isAdmin&quot; value=&quot;No&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint9.VerifyContactUs&quot;/&gt;
+      &lt;class name=&quot;com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Chrome Browser --&gt;
+  &lt;/test&gt; &lt;!-- Internet Explorer Browser --&gt;
   &lt;test name=&quot;BSI Admin&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;IE&quot;/&gt;
     &lt;parameter name=&quot;isAdmin&quot; value=&quot;Yes&quot;/&gt;
   &lt;/test&gt; &lt;!-- BSI Admin --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -163,7 +171,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Chrome Browser (1 class)</span>
+                <span class="test-name">Internet Explorer Browser (1 class)</span>
               </li>
               <li>
                 <span class="test-name">BSI Admin (0 classes)</span>
@@ -194,14 +202,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'contactUs')
-data.setCell(0, 2, 'com.tcs.BsiShopRedesign.sprint9.VerifyContactUs')
-data.setCell(0, 3, 9456);
+data.setCell(0, 1, 'verifyMemberLink')
+data.setCell(0, 2, 'com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing')
+data.setCell(0, 3, 52882);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 52 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -227,22 +235,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint9.VerifyContactUs</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">getDriverInstance</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">launchBrowser(chrome, No)</span>
+                <span class="method-name">launchBrowser(IE, No)</span>
                 <span class="method-start">16 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">contactUs</span>
-                <span class="method-start">9982 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyMemberLink</span>
+                <span class="method-start">9031 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">19438 ms</span>
+                <span class="method-start">61913 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

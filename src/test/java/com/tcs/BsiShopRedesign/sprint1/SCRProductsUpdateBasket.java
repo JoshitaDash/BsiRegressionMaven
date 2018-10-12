@@ -28,15 +28,15 @@ public class SCRProductsUpdateBasket extends BaseTest {
 	public SCRProductsUpdateBasket() throws Exception {
 		super();
 	}
-	
+
 	String userdir = System.getProperty("user.dir");
 	public Xls_Reader xls = new Xls_Reader(userdir + "\\TestData\\List_of_products_users-TCS.xls");
-	
+
 	String testCaseName = "Standard_Product_Update";
-	
+
 	// String url = "https://staging-standards.bsigroup.com/";
 	String url = BsiConstants.getEnvDetails().get("url");
-	
+
 	@DataProvider
 	public Object[][] getData() {
 		return DataUtil.getData(xls, testCaseName);
@@ -49,7 +49,9 @@ public class SCRProductsUpdateBasket extends BaseTest {
 
 		try {
 			String prodName = data.get("Product_name");
-			test = extent.startTest("Sprint 1 - Ecom-01,03 AC#01,06,10 ___ Search and Update Basket of SCR imported Product: " + prodName);
+			test = extent.startTest(
+					"Sprint 1 - Ecom-01,03 AC#01,05,06,10 ___ Search and Update Basket of SCR imported Product: "
+							+ prodName);
 			System.out.println("Test");
 			driver.get(url);
 			Log.info("Enter product name in Search textbox");
@@ -80,7 +82,7 @@ public class SCRProductsUpdateBasket extends BaseTest {
 			ProductPage prod = new ProductPage(driver);
 			String stat = prod.selectFormatAndAddToBasket();
 
-			if (!stat.contains("Withdrawn") || stat.contains("essentialsFormat")) {
+			if (!stat.contains("Withdrawn") || stat.contains("essentialsFormat") || stat.isEmpty()) {
 				Log.info("Edit the Basket with Update Quantity");
 				System.out.println("Edit the Basket with Update Quantity");
 				test.log(LogStatus.INFO, "Edit the Basket with Update Quantity");
@@ -95,7 +97,8 @@ public class SCRProductsUpdateBasket extends BaseTest {
 				Log.info("Remove the Product");
 				System.out.println("Remove the Product");
 				test.log(LogStatus.INFO, "Remove the Product");
-				basket.removeProduct();
+				basket.removeMultipleProduct();
+				
 			}
 
 			else {

@@ -5,9 +5,9 @@
 		<parameter name="browser" value="IE" />
 		<parameter name="isAdmin" value="No" />
 		<classes>
-			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
-			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
-			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/>  -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfileAddTenAddresses" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket" />
@@ -35,14 +35,14 @@
 			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" /> 
 			<class name="com.tcs.BsiShopRedesign.sprint8.RenewMembership" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads" />
-			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" />	
+			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails" />	 -->
 			<class name="com.tcs.BsiShopRedesign.sprint8.ValidateCheckoutDetails" />
-			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing" />
-			<class name="com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.PayByInvoice" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.PreBookProducts" /> -->
-			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs" />
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs" /> -->
 			
 		</classes>
 	  </test>

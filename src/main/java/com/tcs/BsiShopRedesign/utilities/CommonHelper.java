@@ -42,7 +42,17 @@ public class CommonHelper extends Page {
 			return false;
 		}
 	}
-
+	public static boolean isElementPresent(By by) {
+		try {
+			if(driver.findElement((by)).isDisplayed() & driver.findElement((by)).isDisplayed())
+				return true;
+			else
+				return false;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 	public static void takeScreenShot() {
 
 		String userDir = System.getProperty("user.dir");
