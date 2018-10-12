@@ -765,7 +765,7 @@ public class HomePage extends BaseTest {
 			test.log(LogStatus.INFO, "Click Contact Us on Home Page");
 			Log.info("Click Contact Us on Home Page");
 			System.out.println("Click Contact Us on Home Page");
-			CommonHelper.scrolltoview("contactUs_linkText");
+			// CommonHelper.scrolltoview("contactUs_linkText");
 			CommonHelper.elementToBeVisible("contactUs_linkText");
 			CommonHelper.elementToBeClickable("contactUs_linkText");
 			click("contactUs_linkText");
@@ -828,9 +828,6 @@ public class HomePage extends BaseTest {
 			Log.info("Click Submit");
 			System.out.println("Click Submit");
 			click("conatctUsSubmit_css");
-
-			Thread.sleep(2000);
-			driver.switchTo().window(tabs2.get(0));
 			Thread.sleep(2000);
 
 		} catch (InterruptedException e) {
@@ -847,24 +844,22 @@ public class HomePage extends BaseTest {
 			Log.info("Verify Contact Us Message");
 			System.out.println("Verify Contact Us Message");
 			String contactSubmitTitle = driver.getTitle();
-			/*String submissionMsg = driver.findElement(By.xpath("//*[@id='maincontent']/div[4]/div/div[2]/div/div/p[1]"))
-					.getText();*/
-			if (contactSubmitTitle.contains("Contact us")
-					/*&& submissionMsg.contains("Thank you for contacting us")*/) {
-				//test.log(LogStatus.INFO, "The Success Message is: " + submissionMsg);
-				//.out.println("The Success Message is: " + submissionMsg);
+			String submissionMsg = driver.findElement(By.xpath("//*[@id='maincontent']/div[4]/div/div[2]/div/div/p[1]"))
+					.getText();
+			if (contactSubmitTitle.contains("Contact us") && submissionMsg.contains("Thank you for contacting us")) {
+				test.log(LogStatus.INFO, "The Contact Us Message is: " + submissionMsg);
+				System.out.println("The Contact Us Message is: " + submissionMsg);
 				CommonHelper.takeScreenShot();
 				test.log(LogStatus.PASS, "Verification of Contact Us Message was successful");
-				
 
 			} else {
-				//test.log(LogStatus.INFO, "The Success Message is: " + submissionMsg);
-				//System.out.println("The Success Message is: " + submissionMsg);
+				test.log(LogStatus.INFO, "The Contact Us Message is: " + submissionMsg);
+				System.out.println("The Contact Us Message is: " + submissionMsg);
 				CommonHelper.takeScreenShot();
 				test.log(LogStatus.FAIL, "Verification of Contact Us Message was unsuccessful");
 			}
-			//ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-			//driver.close();
+			// ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			// driver.close();
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Contact Us Message was unsuccessful");
 			e.printStackTrace();

@@ -30,10 +30,10 @@ public class VerifyContactUs extends BaseTest {
 			Log.info("Enter Contact Us Details");
 			home.enterContactUsDetails();
 
-			/*System.out.println("Verify Contact Us Message");
+			System.out.println("Verify Contact Us Message");
 			Log.info("Verify Contact Us Message");
 			home.verifyContactUsMessage();
-*/
+
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verification of Contact Us Message was unsuccessful");
 			CommonHelper.reportFailure("Verification of Contact Us Message was unsuccessful");

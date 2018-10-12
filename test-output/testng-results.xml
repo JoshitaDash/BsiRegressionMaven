@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="187625" started-at="2018-10-11T14:50:30Z" finished-at="2018-10-11T14:53:38Z">
+  <suite name="Suite" duration-ms="20344" started-at="2018-10-12T09:37:38Z" finished-at="2018-10-12T09:37:58Z">
     <groups>
     </groups>
-    <test name="Internet Explorer Browser" duration-ms="187614" started-at="2018-10-11T14:50:30Z" finished-at="2018-10-11T14:53:38Z">
-      <class name="com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket@7403c468]" name="launchBrowser" is-config="true" duration-ms="9050" started-at="2018-10-11T14:52:53Z" finished-at="2018-10-11T14:53:02Z">
+    <test name="Chrome Browser" duration-ms="20344" started-at="2018-10-12T09:37:38Z" finished-at="2018-10-12T09:37:58Z">
+      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@569cfc36]" name="launchBrowser" is-config="true" duration-ms="9966" started-at="2018-10-12T09:37:38Z" finished-at="2018-10-12T09:37:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[IE]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
@@ -23,49 +23,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="checkWarningMsgPDF()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket@7403c468]" name="checkWarningMsgPDF" duration-ms="35143" started-at="2018-10-11T14:53:02Z" finished-at="2018-10-11T14:53:37Z">
+        <test-method status="PASS" signature="contactUs()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@569cfc36]" name="contactUs" duration-ms="9456" started-at="2018-10-12T09:37:48Z" finished-at="2018-10-12T09:37:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkWarningMsgPDF -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket@7403c468]" name="tearDown" is-config="true" duration-ms="608" started-at="2018-10-11T14:53:37Z" finished-at="2018-10-11T14:53:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket -->
-      <class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode@43bd930a]" name="launchBrowser" is-config="true" duration-ms="8766" started-at="2018-10-11T14:50:30Z" finished-at="2018-10-11T14:50:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[IE]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[No]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="registerMUNL()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode@43bd930a]" name="registerMUNL" duration-ms="133155" started-at="2018-10-11T14:50:39Z" finished-at="2018-10-11T14:52:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerMUNL -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode@43bd930a]" name="tearDown" is-config="true" duration-ms="890" started-at="2018-10-11T14:52:52Z" finished-at="2018-10-11T14:52:53Z">
+        </test-method> <!-- contactUs -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@569cfc36]" name="tearDown" is-config="true" duration-ms="906" started-at="2018-10-12T09:37:57Z" finished-at="2018-10-12T09:37:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode -->
-    </test> <!-- Internet Explorer Browser -->
-    <test name="BSI Admin" duration-ms="1" started-at="2018-10-11T14:53:38Z" finished-at="2018-10-11T14:53:38Z">
-      <class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode@43bd930a]" name="getDriverInstance" is-config="true" duration-ms="15" started-at="2018-10-11T14:50:30Z" finished-at="2018-10-11T14:50:30Z">
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyContactUs -->
+    </test> <!-- Chrome Browser -->
+    <test name="BSI Admin" duration-ms="0" started-at="2018-10-12T09:37:58Z" finished-at="2018-10-12T09:37:58Z">
+      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-10-12T09:37:38Z" finished-at="2018-10-12T09:37:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyContactUs -->
     </test> <!-- BSI Admin -->
   </suite> <!-- Suite -->
 </testng-results>

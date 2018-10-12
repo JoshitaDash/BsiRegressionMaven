@@ -38,11 +38,11 @@ public class PreBookProducts extends BaseTest {
 		}
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void verifyAdavanceAccessProduct() {
 
 		test = extent.startTest(
-				"Sprint 9 - ECom-04 & ECom-19 AC#9,10,11,12,13 ___ Verification and Placing order for Advance Access Product");
+				"Sprint 9 - ECom-04 & ECom-19 AC#9,10,11,12,13 ___ Verification and Placing order of Advance Access Product");
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		try {
@@ -101,7 +101,7 @@ public class PreBookProducts extends BaseTest {
 			verifyMsg.verifyOrderSuccessMessage();
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Verification and Placing order for Advance Access Product was unsuccessful");
+			test.log(LogStatus.FATAL, "Verification and Placing order of Advance Access Product was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 
@@ -112,7 +112,7 @@ public class PreBookProducts extends BaseTest {
 	public void verifyPreOrderProduct() {
 
 		test = extent.startTest(
-				"Sprint 9 - ECom-04 & ECom-19 AC#9,10,11,12,13 ___ Verification and Placing order for Advance Access Product");
+				"Sprint 9 - ECom-04 & ECom-19 AC#9,10,11,12,13 ___ Verification and Placing order of Pre Order Product");
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		try {
@@ -171,7 +171,7 @@ public class PreBookProducts extends BaseTest {
 			verifyMsg.verifyOrderSuccessMessage();
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Verification and Placing order for Pre Order Product was unsuccessful");
+			test.log(LogStatus.FATAL, "Verification and Placing order of Pre Order Product was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 
