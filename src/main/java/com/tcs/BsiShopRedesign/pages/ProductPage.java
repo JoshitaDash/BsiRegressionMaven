@@ -1,6 +1,7 @@
 package com.tcs.BsiShopRedesign.pages;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -98,7 +99,7 @@ public class ProductPage extends Page {
 				click("addToBasket_xpath");
 				// driver.findElement(By.xpath("//*[@id='product-addtocart-button']/span")).click();
 
-				//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).click();
+				// wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).click();
 				status = "essentialsFormat";
 				System.out.println("The status of the product is: " + status);
 				test.log(LogStatus.INFO, "The status of the product is: " + status);
@@ -642,5 +643,94 @@ public class ProductPage extends Page {
 			CommonHelper.reportFailure("Verification of Pre Order Product was unsuccessful");
 			e.printStackTrace();
 		}
+	}
+
+	public void clickStatus() {
+
+		try {
+			click("dcStatus_css");
+			Thread.sleep(1000);
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			driver.manage().window().maximize();
+			System.out.println("switched to 2nd window");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Click on DC Status was unsuccesful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyURL() {
+
+		try {
+			Log.info("Verify URL");
+			System.out.println("Verify URL");
+			String statusUrl = driver.getCurrentUrl();
+			if (statusUrl.contains("-")) {
+				System.out.println(statusUrl);
+				test.log(LogStatus.INFO, statusUrl);
+				test.log(LogStatus.PASS, "URL Verification of DC Product was successful");
+			} else {
+				System.out.println(statusUrl);
+				test.log(LogStatus.FAIL, "URL Verification of DC Product was unsuccessful");
+			}
+
+			driver.close();
+			Thread.sleep(1000);
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(0));
+			System.out.println("Switched back to parent window");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of DC URL was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyNewsFeed() {
+
+		String newsFeedText = null;
+
+		try {
+			Log.info("Verify News Feed");
+			System.out.println("Verify News Feed");
+			CommonHelper.elementToBeVisible("productCarousel_id");
+			CommonHelper.scrolltoview("productCarousel_id");
+
+			boolean newsFeed = driver.findElement(By.id("myCarousel")).isDisplayed();
+
+			if (newsFeed) {
+				newsFeedText = driver.findElement(By.id("myCarousel")).getText();
+				System.out.println("The News Feed is: " + newsFeedText);
+				test.log(LogStatus.INFO, "The News Feed is: " + newsFeedText);
+				test.log(LogStatus.PASS, "Verification of News Feed was successful");
+
+				Log.info("Verify News Feed on clicking Left Carousel");
+				System.out.println("Verify News Feed on clicking Left Carousel");
+				test.log(LogStatus.INFO, "Verify News Feed on clicking Left Carousel");
+				click("leftCarousel_css");
+				System.out.println("The Left Carousel News Feed is: " + newsFeedText);
+				test.log(LogStatus.INFO, "The Left Carousel News Feed is: " + newsFeedText);
+				test.log(LogStatus.PASS, "Verification of Left Carousel News Feed was successful");
+
+				Log.info("Verify News Feed on clicking Right Carousel");
+				System.out.println("Verify News Feed on clicking Right Carousel");
+				test.log(LogStatus.INFO, "Verify News Feed on clicking Right Carousel");
+				click("rightCarousel_css");
+				System.out.println("The Right Carousel News Feed is: " + newsFeedText);
+				test.log(LogStatus.INFO, "The Right Carousel News Feed is: " + newsFeedText);
+				test.log(LogStatus.PASS, "Verification of Right Carousel News Feed was successful");
+
+			} else {
+				test.log(LogStatus.INFO, "The News Feed is: " + newsFeedText);
+				test.log(LogStatus.FAIL, "Verification of News Feed was unsuccessful");
+			}
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of News Feed was unsuccessful");
+			e.printStackTrace();
+		}
+
 	}
 }
