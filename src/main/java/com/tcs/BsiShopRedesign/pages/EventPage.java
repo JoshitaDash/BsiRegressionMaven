@@ -49,6 +49,35 @@ public class EventPage extends Page {
 		}
 
 	}
+	
+	public void searchPaidEventOne() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Enter Event name in Search Box");
+			Log.info("Enter event name in Search Box");
+			System.out.println("Enter event name in Search Box");
+			CommonHelper.elementToBeClickable("searchBox_id");
+			enterText("searchBox_id", "BSI’s BIM Conference");
+
+			test.log(LogStatus.INFO, "Click on Search");
+			Log.info("Click on Search");
+			System.out.println("Click on Search");
+			click("searchButton_css");
+
+			test.log(LogStatus.INFO, "Select the Event");
+			Log.info("Select the Event");
+			System.out.println("Select the Event");
+			click("paidEvent_linkText");
+
+		} catch (Exception e) {
+
+			CommonHelper.reportFailure("Search Event was unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
 
 	public void searchSecondPaidEvent() {
 

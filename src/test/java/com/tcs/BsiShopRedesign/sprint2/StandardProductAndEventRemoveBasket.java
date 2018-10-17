@@ -43,7 +43,7 @@ public class StandardProductAndEventRemoveBasket extends BaseTest {
 
 	@Test(priority = 2, enabled = true)
 	public void BookPaidEventAndStandardProduct() {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 
 		try {
 			test = extent.startTest("Sprint 2 - Ecom-06 AC#26 __ Add Paid Event and Standard Product to Basket");

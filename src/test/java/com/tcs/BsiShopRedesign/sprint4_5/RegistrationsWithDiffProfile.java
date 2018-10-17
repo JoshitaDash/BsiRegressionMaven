@@ -12,7 +12,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 		super();
 	}
 
-	@Test(priority = 1, enabled = true)
+	@Test(priority = 1, enabled = false)
 	public void createRegUserUKProfile() {
 
 		test = extent.startTest("Sprint 4&5 - Ecom-35 AC#1,2,6,7 ___ Create registered user with UK profile using Postcode");
@@ -71,7 +71,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 		}
 	}
 
-	@Test(priority = 3, enabled = true)
+	@Test(priority = 3, enabled = false)
 	public void verifyTooltip() {
 
 		test = extent.startTest("Sprint 4&5 - Ecom-35 AC#9 __ Verify Tooltip on Registration Page");
@@ -101,7 +101,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 
 	}
 
-	@Test(priority = 4, enabled = true)
+	@Test(priority = 4, enabled = false)
 	public void verifyContactInformation() {
 
 		test = extent.startTest("Sprint 4&5 - Ecom-35 AC#3 __ Verify Contact Information on Registration Page");
@@ -126,7 +126,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 
 	}
 
-	@Test(priority = 5, enabled = true)
+	@Test(priority = 5, enabled = false)
 	public void loginThroughAlreadyRegistered() {
 
 		test = extent.startTest("Sprint 4&5 - Ecom-35 AC#3 __Login through Already Registered User on Registration Page");
@@ -155,7 +155,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 		}
 	}
 
-	@Test(priority = 6, enabled = true)
+	@Test(priority = 6, enabled = false)
 	public void verifyLoginForRegisteredUser() {
 
 		test = extent.startTest("Sprint 4&5 - Ecom-35 AC#11 ___ Verify Login Error Message for Registered User on Registration Page");

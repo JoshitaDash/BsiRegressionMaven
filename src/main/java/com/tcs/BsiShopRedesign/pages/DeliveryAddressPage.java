@@ -28,8 +28,11 @@ public class DeliveryAddressPage extends Page {
 			Log.info("Click on Add new Delivery Address");
 			System.out.println("Click on Add new Delivery Address");
 			test.log(LogStatus.INFO, "Click on Add new Delivery Address");
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("> Add New Delivery Address")));
-			driver.findElement(By.linkText("> Add New Delivery Address")).click();
+			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("> Add New Delivery Address")));
+			//driver.findElement(By.linkText("> Add New Delivery Address")).click();
+			System.out.println("");
+			CommonHelper.isElementPresent(By.linkText("> Add New Delivery Address"));
+			click("addDeliveryAddress_css");
 
 			Thread.sleep(2000);
 			Log.info("Adding Delivery Address Details");
@@ -432,6 +435,7 @@ public class DeliveryAddressPage extends Page {
 			if (tenDeliveryMsg
 					.contains("You have reached the maximum of 10 delivery addresses attached to your profile.")) {
 				test.log(LogStatus.PASS, tenDeliveryMsg);
+				System.out.println(tenDeliveryMsg);
 			}
 
 			else {

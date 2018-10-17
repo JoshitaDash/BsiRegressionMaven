@@ -409,17 +409,19 @@ public class HomePage extends BaseTest {
 			Log.info("Click Find Address");
 			System.out.println("Click Find Address");
 			test.log(LogStatus.INFO, "Click Find Address");
-			CommonHelper.clickByJS("findAddressReg_css");
+			click("findAddressReg_css");
 
 			Thread.sleep(2000);
 			String manualAddressText = CommonHelper.element("manualAddressMsg_xpath").getText();
 			System.out.println("The message is: " + manualAddressText);
 			test.log(LogStatus.PASS, "The message is: " + manualAddressText);
-
+			
 			Log.info("Click Find Address");
 			System.out.println("Click Find Address");
 			test.log(LogStatus.INFO, "Click Find Address");
-			click("findAddressReg_css");
+			CommonHelper.clickByJS("findAddressReg_css");
+			//click("findAddressReg_css");
+			//click("findAddressReg_css");
 
 			Log.info("Enter Address Name");
 			System.out.println("Enter Address Name");
@@ -442,7 +444,7 @@ public class HomePage extends BaseTest {
 			System.out.println("Select Country");
 			test.log(LogStatus.INFO, "Select Country");
 			CommonHelper.scrolltoview("country_id");
-			selectDpdwnText("country_id", "South Africa");
+			selectDpdwnText("country_id", "United States");
 
 			Log.info("Enter Telephone Number");
 			System.out.println("Enter Telephone Number");

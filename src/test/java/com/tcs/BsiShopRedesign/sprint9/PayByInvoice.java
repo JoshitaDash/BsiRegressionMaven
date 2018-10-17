@@ -117,7 +117,7 @@ public class PayByInvoice extends BaseTest {
 		}
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void verifyPayByInvoiceErrorMsg() {
 
 		try {

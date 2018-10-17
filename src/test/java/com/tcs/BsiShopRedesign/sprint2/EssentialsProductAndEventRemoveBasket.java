@@ -76,7 +76,7 @@ public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 			test.log(LogStatus.INFO, "Enter product name in Search textbox");
 			WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
 			search.clear();
-			search.sendKeys("BSI Essentials: ISO 9001");
+			search.sendKeys("Pas 2030 Online");
 
 			Log.info("Click on Search");
 			System.out.println("Click on Search");
@@ -86,7 +86,7 @@ public class EssentialsProductAndEventRemoveBasket extends BaseTest {
 			Log.info("Select the Product");
 			System.out.println("Select the Product");
 			test.log(LogStatus.INFO, "Select the Product");
-			WebElement product = driver.findElement(By.linkText("BSI Essentials: ISO 9001"));
+			WebElement product = driver.findElement(By.linkText("Pas 2030 Online"));
 			Thread.sleep(500);
 			product.click();
 

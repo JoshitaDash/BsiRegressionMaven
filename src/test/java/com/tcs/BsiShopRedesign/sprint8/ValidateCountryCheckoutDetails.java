@@ -77,8 +77,8 @@ public class ValidateCountryCheckoutDetails extends BaseTest {
 
 			System.out.println("Click Checkout Now");
 			Log.info("Click Checkout Now");
-			BasketPage checkout = new BasketPage(driver);
-			checkout.clickCheckout();
+			BasketPage basket = new BasketPage(driver);
+			basket.clickCheckout();
 
 			System.out.println("Create South African Billing Address");
 			Log.info("Create Checkout Billing South African Billing Address");
@@ -95,7 +95,7 @@ public class ValidateCountryCheckoutDetails extends BaseTest {
 			System.out.println("Enter Order Details");
 			Log.info("Enter Order Details");
 			test.log(LogStatus.INFO, "Enter Order Details");
-			checkoutOrder.enterUKOrderDetailsHarcopy();
+			checkoutOrder.enterNonUKOrderDetailsHardcopy();
 
 			System.out.println("Validate Error Message for Hardcopy Product");
 			Log.info("Validate Error Message for Hardcopy Product");
@@ -107,15 +107,10 @@ public class ValidateCountryCheckoutDetails extends BaseTest {
 			CheckoutPage editOrder = new CheckoutPage(driver);
 			editOrder.clickEditOrder();
 
-			/*
-			 * System.out.println("Click Continue Shopping");
-			 * Log.info("Click Continue Shopping"); checkoutOrder.clickContinueShopping();
-			 */
-
 			Log.info("Remove the Product");
 			System.out.println("Remove the Product");
 			test.log(LogStatus.INFO, "Remove the Product");
-			checkout.removeProduct();
+			basket.removeMultipleProduct();
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL,
@@ -128,7 +123,7 @@ public class ValidateCountryCheckoutDetails extends BaseTest {
 	}
 
 	@Test(priority = 3, enabled = true)
-	public void validateCheckoutUKDetailsSoftCopy() {
+	public void validateCheckoutNonUKDetailsSoftCopy() {
 
 		try {
 			test = extent.startTest(

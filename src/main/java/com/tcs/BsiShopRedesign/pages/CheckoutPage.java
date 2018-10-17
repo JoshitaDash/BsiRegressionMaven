@@ -70,9 +70,9 @@ public class CheckoutPage extends Page {
 
 		try {
 			Thread.sleep(5000);
-			System.out.println("Click Enter Payment Details");
-			test.log(LogStatus.INFO, "Click Enter Payment Details");
-			Log.info("Click Enter Payment Details");
+			System.out.println("Enter Payment Details");
+			test.log(LogStatus.INFO, "Enter Payment Details");
+			Log.info("Enter Payment Details");
 			CommonHelper.scrolltoview("paymentDetails_id");
 			click("paymentDetails_id");
 			Thread.sleep(1000);
@@ -239,14 +239,14 @@ public class CheckoutPage extends Page {
 		}
 	}
 
-	public void enterUKOrderDetailsHarcopy() {
+	public void enterNonUKOrderDetailsHardcopy() {
 
 		try {
 			// driver.switchTo().defaultContent();
 			System.out.println("Select Country");
 			test.log(LogStatus.INFO, "Select Country");
 			Log.info("Select Country");
-			selectDpdwnText("country_xpath", "United Kingdom");
+			selectDpdwnText("country_xpath", "Singapore");
 
 			System.out.println("Click Review Order");
 			test.log(LogStatus.INFO, "Click Review Order");
@@ -798,4 +798,102 @@ public class CheckoutPage extends Page {
 		}
 	}
 
+	public void enterSecureCardPaymentDetails() throws InterruptedException {
+
+		try {
+			Thread.sleep(5000);
+			System.out.println("Enter Payment Details");
+			test.log(LogStatus.INFO, "Enter Payment Details");
+			Log.info("Enter Payment Details");
+			CommonHelper.scrolltoview("paymentDetails_id");
+			click("paymentDetails_id");
+			Thread.sleep(1000);
+			// driver.findElement(By.id("opc-shipping-btn")).click();
+
+			System.out.println("Click Pay by Credit Card");
+			test.log(LogStatus.INFO, "Click Pay by Credit Card");
+			Log.info("Click Pay by Credit Card");
+			click("payCard_id");
+			// driver.switchTo().frame(0);
+
+			Thread.sleep(2000);
+			System.out.println("Select VISA Credit Card");
+			test.log(LogStatus.INFO, "Select VISA Credit Card");
+			Log.info("Select VISA Credit Card");
+
+			boolean selectCard = driver.findElement(By
+					.xpath("//*[@id='checkout-payment-method-load']/div[2]/div[2]/fieldset/div[2]/div/label/span/span"))
+					.isDisplayed();
+			if (selectCard) {
+				click("selectCard_xpath");
+			}
+			selectDpdwnText("creditCard_id", "VISA");
+
+			driver.switchTo().frame(0);
+			System.out.println("Enter Secure Card Number");
+			test.log(LogStatus.INFO, "Enter Secure Card Number");
+			Log.info("Enter Card Number");
+			enterText("cardNum_id", "4000000000000002");
+
+			System.out.println("Enter Cardholder's Name");
+			test.log(LogStatus.INFO, "Enter Cardholder's Name");
+			Log.info("Enter Cardholder's Name");
+			enterText("cardholderName_id", "Hermoine Granger");
+
+			System.out.println("Enter Card Expiry Month");
+			test.log(LogStatus.INFO, "Enter Card Expiry Month");
+			Log.info("Enter Card Expiry Month");
+			selectDpdwnValue("payExpMonth_id", "12");
+
+			System.out.println("Enter Card Expiry Year");
+			test.log(LogStatus.INFO, "Enter Card Expiry Year");
+			Log.info("Enter Card Expiry Year");
+			selectDpdwnValue("payExpYear_id", "2058");
+
+			System.out.println("Enter CVC Number");
+			test.log(LogStatus.INFO, "Enter CVC Number");
+			Log.info("Enter CVC Number");
+			enterText("payCvc_id", "000");
+
+			Thread.sleep(5000);
+			System.out.println("Click Submit");
+			test.log(LogStatus.INFO, "Click Submit");
+			Log.info("Click Submit");
+			CommonHelper.clickByJS("paySubmit_id");
+			// CommonHelper.scrolltoview("paySubmit_id");
+			// click("paySubmit_id");
+			driver.switchTo().defaultContent();
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Enter Card Details was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void enterIngenicoAuthenticationDetails() {
+
+		try {
+			Thread.sleep(5000);
+			System.out.println("Enter Authentication Password");
+			test.log(LogStatus.INFO, "Enter  Authentication Password");
+			Log.info("Enter  Authentication Password");
+			enterText("ingenicoAuthPwd_css", "11111");
+			Thread.sleep(1000);
+			System.out.println("Click GO");
+			test.log(LogStatus.INFO, "Click GO");
+			Log.info("Click GO");
+			click("ingenicoAuthGo_id");
+			Thread.sleep(1000);
+			System.out.println("Click Back to Payment");
+			test.log(LogStatus.INFO, "Click Back to Payment");
+			Log.info("Click Back to Payment");
+			click("ingenicoAuthBackToPay_id");
+			Thread.sleep(1000);
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Enter Card Details was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
 }
