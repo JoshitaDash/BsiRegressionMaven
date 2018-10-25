@@ -32,7 +32,7 @@ public class BsiConstants {
 
 	// URLs-UAT
 	public static final String UAT_URL = "https://staging-standards.bsigroup.com/";
-	public static final String UAT_USERNAME = "sharmilee.mohapatra@tcs.com";
+	public static final String UAT_USERNAME = "subhrateja.satapathy@tcs.com";
 	public static final String UAT_PASSWORD = "Test@1234";
 	public static final String UAT_MEM_USERNAME = "dash.joshita@tcs.com";
 	public static final String UAT_MEM_PASSWORD = "Test@1234";

@@ -21,7 +21,7 @@ public class PayByInvoice extends BaseTest {
 	}
 
 	String url = BsiConstants.getEnvDetails().get("url");
-	
+
 	@Test(priority = 1, enabled = true)
 	public void signInMember() {
 
@@ -33,6 +33,7 @@ public class PayByInvoice extends BaseTest {
 			signIn.memberNewLogin();
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Member Signing in was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -104,10 +105,11 @@ public class PayByInvoice extends BaseTest {
 			test.log(LogStatus.INFO, "Verify Success Message on Order Confirmation Page");
 			OrderConfirmationPage verifyMsg = new OrderConfirmationPage(driver);
 			verifyMsg.verifyOrderSuccessMessage();
-			
-			/*System.out.println("Click Logout");
-			Log.info("Click Logout");
-			home.clickLogout();*/
+
+			/*
+			 * System.out.println("Click Logout"); Log.info("Click Logout");
+			 * home.clickLogout();
+			 */
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Place order with Pay By Invoice payment method was unsuccessful");
@@ -123,10 +125,10 @@ public class PayByInvoice extends BaseTest {
 		try {
 			test = extent.startTest(
 					"Sprint 9 - Ecom-27 AC#66 __ Verify Pay By Invoice payment error message for Insufficient Balance");
-			
+
 			System.out.println("Fetching the URL");
 			driver.get(url);
-			
+
 			System.out.println("Perform Blank Search");
 			Log.info("Perform Blank Search");
 			HomePage home = new HomePage(driver);
@@ -180,7 +182,7 @@ public class PayByInvoice extends BaseTest {
 			System.out.println("Remove Membership from Basket");
 			Log.info("Remove Membership from Basket");
 			checkout.removeMultipleProduct();
-			
+
 			System.out.println("Click Logout");
 			Log.info("Click Logout");
 			home.clickLogout();

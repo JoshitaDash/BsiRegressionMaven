@@ -2,12 +2,18 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="45582" started-at="2018-10-17T11:01:46Z" finished-at="2018-10-17T11:02:31Z">
+  <suite name="Suite" duration-ms="48740" started-at="2018-10-25T12:42:25Z" finished-at="2018-10-25T12:43:14Z">
     <groups>
     </groups>
-    <test name="Internet Explorer Browser" duration-ms="45582" started-at="2018-10-17T11:01:46Z" finished-at="2018-10-17T11:02:31Z">
-      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="launchBrowser" is-config="true" duration-ms="8828" started-at="2018-10-17T11:01:46Z" finished-at="2018-10-17T11:01:55Z">
+    <test name="Internet Explorer Browser" duration-ms="15" started-at="2018-10-25T12:42:25Z" finished-at="2018-10-25T12:42:25Z">
+    </test> <!-- Internet Explorer Browser -->
+    <test name="BSI Admin" duration-ms="48725" started-at="2018-10-25T12:42:25Z" finished-at="2018-10-25T12:43:14Z">
+      <class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@12c8a2c0]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-10-25T12:42:25Z" finished-at="2018-10-25T12:42:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriverInstance -->
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@12c8a2c0]" name="launchBrowser" is-config="true" duration-ms="6991" started-at="2018-10-25T12:42:25Z" finished-at="2018-10-25T12:42:32Z">
           <params>
             <param index="0">
               <value>
@@ -16,34 +22,26 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[No]]>
+                <![CDATA[Yes]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyDCProduct()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="verifyDCProduct" duration-ms="16877" started-at="2018-10-17T11:01:55Z" finished-at="2018-10-17T11:02:11Z">
+        <test-method status="PASS" signature="signInCms()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@12c8a2c0]" name="signInCms" duration-ms="8571" started-at="2018-10-25T12:42:32Z" finished-at="2018-10-25T12:42:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDCProduct -->
-        <test-method status="PASS" signature="verifyNewsFeed()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="verifyNewsFeed" duration-ms="19004" started-at="2018-10-17T11:02:11Z" finished-at="2018-10-17T11:02:30Z">
+        </test-method> <!-- signInCms -->
+        <test-method status="PASS" signature="verifyCmsDetails()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@12c8a2c0]" name="verifyCmsDetails" duration-ms="32316" started-at="2018-10-25T12:42:41Z" finished-at="2018-10-25T12:43:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNewsFeed -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="tearDown" is-config="true" duration-ms="866" started-at="2018-10-17T11:02:30Z" finished-at="2018-10-17T11:02:31Z">
+        </test-method> <!-- verifyCmsDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@12c8a2c0]" name="tearDown" is-config="true" duration-ms="844" started-at="2018-10-25T12:43:13Z" finished-at="2018-10-25T12:43:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType -->
-    </test> <!-- Internet Explorer Browser -->
-    <test name="BSI Admin" duration-ms="0" started-at="2018-10-17T11:02:31Z" finished-at="2018-10-17T11:02:31Z">
-      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="15" started-at="2018-10-17T11:01:46Z" finished-at="2018-10-17T11:01:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getDriverInstance -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType -->
+      </class> <!-- com.tcs.BsiShopRedesign.cms.VerifyCmsDetails -->
     </test> <!-- BSI Admin -->
   </suite> <!-- Suite -->
 </testng-results>

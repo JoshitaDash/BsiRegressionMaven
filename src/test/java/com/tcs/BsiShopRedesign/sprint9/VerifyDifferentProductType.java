@@ -62,6 +62,7 @@ public class VerifyDifferentProductType extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verification Status of DC Product was unsuccessful");
+			CommonHelper.reportFailure("Verification Status of DC Product was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 
@@ -98,7 +99,7 @@ public class VerifyDifferentProductType extends BaseTest {
 			wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Building and Construction")));
 			product.click();
 			Thread.sleep(2000);
-			
+
 			Log.info("Verify News Feed");
 			System.out.println("Verify News Feed");
 			test.log(LogStatus.INFO, "Verify News Feed");
@@ -107,6 +108,54 @@ public class VerifyDifferentProductType extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verification of News Feed was unsuccessful");
+			CommonHelper.takeScreenShot();
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+
+		}
+
+	}
+
+	@Test(priority = 3, enabled = true)
+	public void verifyPAS2030ProductDetails() {
+
+		test = extent.startTest("Sprint 9 - ECom-51 , ECom-60 AC#63 ___ Verification PAS 2030 Online Product Details");
+
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		try {
+			
+			Log.info("Enter product name in Search textbox");
+			System.out.println("Enter product name in Search textbox");
+			test.log(LogStatus.INFO, "Enter product name in Search textbox");
+			WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
+			search.clear();
+			search.sendKeys("Pas 2030 Online");
+
+			Log.info("Click on Search");
+			System.out.println("Click on Search");
+			test.log(LogStatus.INFO, "Click on Search");
+			CommonHelper.elementToBeClickable("searchButton_css");
+			// driver.findElement(By.cssSelector("button[title='Search']")).click();
+			click("searchButton_css");
+
+			Log.info("Select the Product");
+			System.out.println("Select the Product");
+			test.log(LogStatus.INFO, "Select the Product");
+			WebElement product = driver.findElement(By.linkText("Pas 2030 Online"));
+			Thread.sleep(1000);
+			wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Pas 2030 Online")));
+			product.click();
+			Thread.sleep(2000);
+			
+			Log.info("View Product Details");
+			System.out.println("View Product Details");
+			test.log(LogStatus.INFO, "View Product Details");
+			ProductPage prodDetails = new ProductPage(driver);
+			prodDetails.verifyProductDetails();
+			
+		} catch (Exception e) {
+			test.log(LogStatus.FATAL, "Verification PAS 2030 Product Details was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 

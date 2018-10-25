@@ -28,14 +28,17 @@ public class MembershipPage extends Page {
 			Log.info("Select Organisation");
 			CommonHelper.elementToBeVisible("selectOrganisation_id");
 			CommonHelper.elementToBeClickable("selectOrganisation_id");
+			click("selectOrganisation_id");
 			selectDpdwnText("selectOrganisation_id",
 					"D - Educational, Housing Associations and Healthcare establishments");
 
+			Thread.sleep(2000);
 			System.out.println("Click Get Quote");
 			test.log(LogStatus.INFO, "Click Get Quoten");
 			Log.info("Click Get Quote");
 			CommonHelper.elementToBeClickable("getQuote_id");
 			click("getQuote_id");
+			Thread.sleep(2000);
 
 			System.out.println("Click Cost Membership Continue ");
 			test.log(LogStatus.INFO, "Click Cost Membership Continue");
@@ -126,10 +129,12 @@ public class MembershipPage extends Page {
 	public void addToBasket() {
 
 		try {
+			Thread.sleep(2000);
 			System.out.println("Click Add to Basket");
 			test.log(LogStatus.INFO, "Click Add to Basket");
 			Log.info("Click Add to Basket");
 			click("memberAddToBasket_id");
+			//click("memberAddToBasket_id");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -141,7 +146,7 @@ public class MembershipPage extends Page {
 
 	public void enterMembershipDetailsAboveBandNine() {
 
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		//WebDriverWait wait = new WebDriverWait(driver, 30);
 		try {
 			CommonHelper.waitForLoad(driver);
 			System.out.println("Select Organisation");
@@ -150,6 +155,8 @@ public class MembershipPage extends Page {
 			CommonHelper.elementToBeVisible("selectOrganisation_id");
 			CommonHelper.elementToBeClickable("selectOrganisation_id");
 			selectDpdwnText("selectOrganisation_id", "A - Partnerships and Consultancy services");
+			click("selectOrganisation_id");
+			Thread.sleep(2000);
 
 			System.out.println("Select Number of Employees");
 			test.log(LogStatus.INFO, "Select Number of Employees");
@@ -157,6 +164,8 @@ public class MembershipPage extends Page {
 			CommonHelper.elementToBeVisible("numOfEmployees_id");
 			CommonHelper.elementToBeClickable("numOfEmployees_id");
 			selectDpdwnText("numOfEmployees_id", "1401+");
+			click("numOfEmployees_id");
+			Thread.sleep(2000);
 
 			System.out.println("Click Get Quote");
 			test.log(LogStatus.INFO, "Click Get Quote");

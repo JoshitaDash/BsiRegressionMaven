@@ -425,7 +425,7 @@ public class SearchPage extends Page {
 
 	public void checkFreeEventName() {
 		boolean freeEvent = false;
-		String prodName = "Sustainability Performance and Reporting Event – 2016";
+		String prodName = "Sustainability Performance and Reporting Event";
 
 		try {
 			System.out.println("Check Free Event Name");

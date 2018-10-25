@@ -733,4 +733,53 @@ public class ProductPage extends Page {
 		}
 
 	}
+
+	public void verifyProductDetails() {
+
+		try {
+			Log.info("Verify Product Details of PAS 2030 Online");
+			System.out.println("Verify Product Details of PAS 2030 Online");
+			test.log(LogStatus.INFO, "Verify Product Details of PAS 2030 Online");
+			String prod = driver.findElement(By.cssSelector("div[class='panel-body']")).getText();
+			String price = driver.findElement(By.cssSelector("div[class='price-box price-final_price']")).getText();
+			String format = driver.findElement(By.cssSelector("div[class='product-add-form']")).getText();
+
+			if (prod != null) {
+				System.out.println("The Product Details of PAS 2030 Online is: " + prod);
+				test.log(LogStatus.INFO, "The Product Details of PAS 2030 Online is: " + prod);
+				test.log(LogStatus.PASS, "Verification of Product Details was successful");
+				//CommonHelper.takeScreenShot();
+			} else {
+				System.out.println("The Product Details of PAS 2030 Online does not exist");
+				test.log(LogStatus.INFO, "The Product Details of PAS 2030 Online does not exist");
+				test.log(LogStatus.FAIL, "Verification of Product Details was unsuccessful");
+			}
+
+			if (price != null) {
+				System.out.println("The Price of PAS 2030 Online is: " + price);
+				test.log(LogStatus.INFO, "The Price of PAS 2030 Online is: " + price);
+				test.log(LogStatus.PASS, "Verification of Price was successful");
+				//CommonHelper.takeScreenShot();
+			} else {
+				System.out.println("The Price of PAS 2030 Online does not exist");
+				test.log(LogStatus.INFO, "The Price of PAS 2030 Online does not exist");
+				test.log(LogStatus.FAIL, "Verification of Price was unsuccessful");
+			}
+
+			if (format != null) {
+				System.out.println("The Format of PAS 2030 Online is: " + format);
+				test.log(LogStatus.INFO, "The Format of PAS 2030 Online is: " + format);
+				test.log(LogStatus.PASS, "Verification of Format was successful");
+				CommonHelper.takeScreenShot();
+			} else {
+				System.out.println("The Format of PAS 2030 Online does not exist");
+				test.log(LogStatus.INFO, "The Format of PAS 2030 Online does not exist");
+				test.log(LogStatus.FAIL, "Verification of Format was unsuccessful");
+				
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of PAS 2030 Details was successful");
+			e.printStackTrace();
+		}
+	}
 }

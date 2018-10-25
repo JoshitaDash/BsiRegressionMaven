@@ -329,7 +329,7 @@ public class SignInPage extends Page {
 			Thread.sleep(3000);
 
 			CommonHelper.isElementVisible("closeAlert_css");
-			click("closeAlert_css");
+			click("closeAlert_xpath");
 			Thread.sleep(1000);
 
 			String pageTitle = driver.getTitle();

@@ -623,7 +623,7 @@ public class HomePage extends BaseTest {
 	public void loginThroughAlreadyRegistered() {
 
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 			Log.info("Click Login Here");
 			System.out.println("Click Login Here");
 			test.log(LogStatus.INFO, "Click Login Here");
@@ -637,13 +637,13 @@ public class HomePage extends BaseTest {
 			Thread.sleep(5000);
 			driver.findElement(By.id("bsi_email")).sendKeys(BsiConstants.getEnvDetails().get("username"));
 
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			System.out.println("Enter Password");
 			Log.info("Enter Password");
 			test.log(LogStatus.INFO, "Enter Password");
 			driver.findElement(By.id("bsi_pass")).sendKeys(BsiConstants.getEnvDetails().get("password"));
 
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			System.out.println("Click on SignIn button");
 			Log.info("Click on SignIn button");
 			test.log(LogStatus.INFO, "Click on SignIn button");

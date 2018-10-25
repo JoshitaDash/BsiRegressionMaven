@@ -7,14 +7,14 @@
     <parameter name="browser" value="IE"/>
     <parameter name="isAdmin" value="No"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType">
+      <class name="com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress">
         <methods>
           <include name="launchBrowser"/>
-          <include name="verifyNewsFeed"/>
+          <include name="verifyHardCopyDeliveryDetails"/>
           <include name="getDriverInstance"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress -->
     </classes>
   </test> <!-- Internet Explorer Browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -142,7 +142,7 @@ public class ApplyMemberAccount extends BaseTest {
 		}
 	}
 
-	@Test(priority = 4, enabled = true)
+	/*@Test(priority = 4, enabled = false)
 	public void validateErrorMsgMemberNumber() {
 
 		try {
@@ -169,5 +169,5 @@ public class ApplyMemberAccount extends BaseTest {
 			e.printStackTrace();
 		}
 
-	}
+	}*/
 }

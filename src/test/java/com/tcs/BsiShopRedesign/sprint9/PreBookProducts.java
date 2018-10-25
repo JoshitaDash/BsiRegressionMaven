@@ -102,6 +102,7 @@ public class PreBookProducts extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verification and Placing order of Advance Access Product was unsuccessful");
+			CommonHelper.reportFailure("Verification and Placing order of Advance Access Product was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 
@@ -172,6 +173,7 @@ public class PreBookProducts extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verification and Placing order of Pre Order Product was unsuccessful");
+			CommonHelper.reportFailure("Verification and Placing order of Pre Order Product was unsuccessful");
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 

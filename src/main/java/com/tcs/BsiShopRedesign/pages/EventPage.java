@@ -49,7 +49,7 @@ public class EventPage extends Page {
 		}
 
 	}
-	
+
 	public void searchPaidEventOne() {
 
 		try {
@@ -68,7 +68,7 @@ public class EventPage extends Page {
 			test.log(LogStatus.INFO, "Select the Event");
 			Log.info("Select the Event");
 			System.out.println("Select the Event");
-			click("paidEvent_linkText");
+			click("paidEventOne_linkText");
 
 		} catch (Exception e) {
 
@@ -366,7 +366,7 @@ public class EventPage extends Page {
 			// click("removeEvent_xpath");
 			// CommonHelper.clickByJS("removeEvent_xpath");
 			click("removeEvent_xpath");
-			//remove.click();
+			// remove.click();
 			Thread.sleep(3000);
 			test.log(LogStatus.INFO, "Verify Remove Basket");
 			CommonHelper.elementToBeClickable("verifyBasket_css");

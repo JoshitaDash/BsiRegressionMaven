@@ -43,8 +43,9 @@
 			<class name="com.tcs.BsiShopRedesign.sprint9.PayByInvoice" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.PreBookProducts" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs" />
-			<class name="com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment" /> -->
-			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType" />
+			<class name="com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment" />
+			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType" /> -->
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress" /> -->
 		</classes>
 	  </test>
       <test name="BSI Admin">

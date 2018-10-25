@@ -896,4 +896,29 @@ public class CheckoutPage extends Page {
 		}
 
 	}
+
+	public void selectDeliveryAddress() {
+
+		try {
+			test.log(LogStatus.INFO, "Uncheck Billing Address as Delivery Address");
+			System.out.println("Uncheck Billing Address as Delivery Address");
+			Log.info("Uncheck Billing Address as Delivery Address");
+			click("uncheckAddress_id");
+			test.log(LogStatus.PASS, "Selected New Delivery Address successfully");
+			System.out.println("Selected New Delivery Address successfully");
+
+			String billingAddress = driver.findElement(By.cssSelector("span[data-bind='html: addressText']")).getText();
+			String deliveryAdress = driver.findElement(By.cssSelector("span[data-bind='html: shippingAddressText']"))
+					.getText();
+			System.out.println("The Billing Address is: " + billingAddress);
+			test.log(LogStatus.INFO, "The Billing Address is: " + billingAddress);
+			System.out.println("The Delivery Address is: " + deliveryAdress);
+			test.log(LogStatus.INFO, "The Delivery Address is: " + deliveryAdress);
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Uncheck of Billing Address as Delivery Address was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
 }

@@ -465,6 +465,8 @@ public class BasketPage extends Page {
 
 	}
 
+	
+
 	public void clickOtherFormatOKAlert() {
 
 		try {
@@ -559,11 +561,11 @@ public class BasketPage extends Page {
 		try {
 
 			for (int i = 1; i <= removeItem.size(); i++) {
-				//WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
+				// WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
 				Thread.sleep(5000);
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
-				//remove.click();
+				// remove.click();
 				click("removeEvent_xpath");
 			}
 
