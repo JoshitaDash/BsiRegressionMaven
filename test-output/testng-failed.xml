@@ -3,18 +3,24 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="browser" value="IE"/>
   <parameter name="isAdmin" value="Yes"/>
-  <test name="Internet Explorer Browser(failed)">
+  <test name="BSI Admin(failed)">
     <parameter name="browser" value="IE"/>
-    <parameter name="isAdmin" value="No"/>
+    <parameter name="isAdmin" value="Yes"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress">
+      <class name="com.tcs.BsiShopRedesign.cms.ResetPassword">
         <methods>
           <include name="launchBrowser"/>
-          <include name="verifyHardCopyDeliveryDetails"/>
+          <include name="verifyCmsDetails"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tcs.BsiShopRedesign.cms.ResetPassword -->
+      <class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails">
+        <methods>
+          <include name="launchBrowser"/>
           <include name="getDriverInstance"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress -->
+      </class> <!-- com.tcs.BsiShopRedesign.cms.VerifyCmsDetails -->
     </classes>
-  </test> <!-- Internet Explorer Browser(failed) -->
+  </test> <!-- BSI Admin(failed) -->
 </suite> <!-- Failed suite [Suite] -->

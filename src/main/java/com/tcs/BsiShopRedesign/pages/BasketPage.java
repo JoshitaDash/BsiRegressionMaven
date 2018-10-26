@@ -554,7 +554,7 @@ public class BasketPage extends Page {
 
 	public void removeMultipleProduct() {
 
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver,30);
 		test.log(LogStatus.INFO, "Remove Multiple Products from Basket");
 		List<WebElement> removeItem = driver.findElements(By.xpath("//img[@alt='delete']"));
 		System.out.println("Remove");

@@ -15,6 +15,7 @@ public class CmsPage extends Page {
 	}
 
 	public void searchCustomerDetails() {
+		boolean remove = false;
 
 		try {
 			System.out.println("Click Customer Menu");
@@ -26,11 +27,18 @@ public class CmsPage extends Page {
 			Log.info("Click All Customer Submenu");
 			test.log(LogStatus.INFO, "Click All Customer Submenu");
 			click("magentoAllCustomer_xpath");
-			
-			System.out.println("Click Remove Keyword");
-			Log.info("Click Remove Keyword");
-			test.log(LogStatus.INFO, "Click Remove Keyword");
-			click("removeKeyword_css");
+
+			try {
+				remove = CommonHelper.isElementVisible("removeKeyword_css");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			if (remove) {
+				System.out.println("Click Remove Keyword");
+				Log.info("Click Remove Keyword");
+				test.log(LogStatus.INFO, "Click Remove Keyword");
+				click("removeKeyword_css");
+			}
 
 			Thread.sleep(2000);
 			System.out.println("Enter keyword for search");
@@ -110,11 +118,13 @@ public class CmsPage extends Page {
 			System.out.println("The Group is: " + group);
 			test.log(LogStatus.INFO, "The Group is: " + group);
 
-			String firstName = driver.findElement(By.cssSelector("input[name='customer[firstname]']")).getAttribute("value");
+			String firstName = driver.findElement(By.cssSelector("input[name='customer[firstname]']"))
+					.getAttribute("value");
 			System.out.println("The First Name is: " + firstName);
 			test.log(LogStatus.INFO, "The First Name is: " + firstName);
 
-			String lastName = driver.findElement(By.cssSelector("input[name='customer[lastname]']")).getAttribute("value");
+			String lastName = driver.findElement(By.cssSelector("input[name='customer[lastname]']"))
+					.getAttribute("value");
 			System.out.println("The Last Name is: " + lastName);
 			test.log(LogStatus.INFO, "The Last Name is: " + lastName);
 
@@ -122,7 +132,8 @@ public class CmsPage extends Page {
 			System.out.println("The Email id is: " + email);
 			test.log(LogStatus.INFO, "The Email id is: " + email);
 
-			String memberID = driver.findElement(By.cssSelector("input[name='customer[membership_number]']")).getAttribute("value");
+			String memberID = driver.findElement(By.cssSelector("input[name='customer[membership_number]']"))
+					.getAttribute("value");
 			System.out.println("The Membership Number is: " + memberID);
 			test.log(LogStatus.INFO, "The Membership Number is: " + memberID);
 
@@ -209,6 +220,80 @@ public class CmsPage extends Page {
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Order Details was unsuccessful");
 			e.printStackTrace();
+		}
+	}
+
+	public void verifyResetPwd() {
+
+		try {
+			System.out.println("Click Reset Password");
+			test.log(LogStatus.INFO, "Click Reset Password");
+			click("cmsResetPassword_id");
+
+			System.out.println("Verify Success Message");
+			test.log(LogStatus.INFO, "Verify Success Message");
+			String successMsg = driver.findElement(By.cssSelector("div[class='message message-success success']"))
+					.getText();
+			if (successMsg.contains("The customer will receive an email with a link to reset password.")) {
+				System.out.println("Verification of Success Message was successful");
+				test.log(LogStatus.INFO, "Verification of Success Message was successful");
+				test.log(LogStatus.PASS, "The message is: " + successMsg);
+				CommonHelper.takeScreenShot();
+			} else {
+				System.out.println("Verification of Success Message was unsuccessful");
+				test.log(LogStatus.INFO, "Verification of Success Message was unsuccessful");
+				test.log(LogStatus.FAIL, "The message is: " + successMsg);
+				CommonHelper.takeScreenShot();
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Success Message was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void blankSearchCustomerDetails() {
+		boolean remove = false;
+
+		try {
+			System.out.println("Click Customer Menu");
+			Log.info("Click Customer Menu");
+			test.log(LogStatus.INFO, "Click Customer Menu");
+			click("magentoCustomer_xpath");
+
+			System.out.println("Click All Customer Submenu");
+			Log.info("Click All Customer Submenu");
+			test.log(LogStatus.INFO, "Click All Customer Submenu");
+			click("magentoAllCustomer_xpath");
+
+			try {
+				remove = CommonHelper.isElementVisible("removeKeyword_css");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			if (remove) {
+				System.out.println("Click Remove Keyword");
+				Log.info("Click Remove Keyword");
+				test.log(LogStatus.INFO, "Click Remove Keyword");
+				click("removeKeyword_css");
+			}
+			/*
+			 * Thread.sleep(2000); System.out.println("Enter keyword for search");
+			 * Log.info("Enter keyword for search"); test.log(LogStatus.INFO,
+			 * "Enter keyword for search"); clearText("searchKeywordText_id");
+			 * Thread.sleep(2000); enterText("searchKeywordText_id", "joshita");
+			 */
+
+			System.out.println("Click on Search");
+			Log.info("Click on Search");
+			test.log(LogStatus.INFO, "Click on Search");
+			click("searchDetails_xpath");
+			Thread.sleep(5000);
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Search Customer Details was Unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 	}
 }
