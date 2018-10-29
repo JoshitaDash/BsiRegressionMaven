@@ -41,8 +41,8 @@ public class BsiConstants {
 	public static final String UAT_MEM_SEC_PASSWORD = "June@2018";
 	public static final String UAT_TEN_USERNAME = "tenAddress@tcs.com";
 	public static final String UAT_ADMIN_URL = "https://staging-standards.bsigroup.com/admin";
-	public static final String UAT_ADMIN_USERNAME = "phani";
-	public static final String UAT_ADMIN_PASSWORD = "Phani@123";
+	public static final String UAT_ADMIN_USERNAME = "tcs_cs_user";
+	public static final String UAT_ADMIN_PASSWORD = "tcs1234";
 
 	public static Hashtable<String, String> table;
 

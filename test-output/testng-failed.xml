@@ -7,20 +7,14 @@
     <parameter name="browser" value="IE"/>
     <parameter name="isAdmin" value="Yes"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.cms.ResetPassword">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="verifyCmsDetails"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.cms.ResetPassword -->
-      <class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails">
+      <class name="com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList">
         <methods>
           <include name="launchBrowser"/>
           <include name="getDriverInstance"/>
+          <include name="signInCms"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.cms.VerifyCmsDetails -->
+      </class> <!-- com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList -->
     </classes>
   </test> <!-- BSI Admin(failed) -->
 </suite> <!-- Failed suite [Suite] -->

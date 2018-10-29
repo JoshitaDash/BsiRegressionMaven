@@ -1,5 +1,7 @@
 package com.tcs.BsiShopRedesign.pages;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -296,4 +298,191 @@ public class CmsPage extends Page {
 			Assert.fail(e.getMessage());
 		}
 	}
+
+	public void clickMarketing() {
+
+		try {
+			System.out.println("Click Marketing Menu");
+			Log.info("Click on Marketing Menu");
+			test.log(LogStatus.INFO, "Click on Marketing Menu");
+			click("marketingMenu_xpath");
+
+			System.out.println("Click Cart Price Rules submenu");
+			Log.info("Click Cart Price Rules Submenu");
+			test.log(LogStatus.INFO, "Click Cart Price Rules submenu");
+			click("cartPriceRule_linkText");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Click Add New Rule was unsucessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void clickAddNewRule() throws InterruptedException {
+
+		System.out.println("Click Add New Rule");
+		Log.info("Click  Add New Rule");
+		test.log(LogStatus.INFO, "Click  Add New Rule");
+		click("addNewRule_css");
+		Thread.sleep(2000);
+	}
+
+	public void enterPromoCodeDetails() {
+
+		try {
+
+			System.out.println("Enter Rule Name");
+			Log.info("Enter Rule Name");
+			test.log(LogStatus.INFO, "Enter Rule Name");
+			CommonHelper.elementToBeVisible("ruleName_css");
+			String ruleName = RandomStringUtils.randomAlphanumeric(5) + RandomStringUtils.random(5, "@!#$%")
+					+ RandomStringUtils.randomAlphabetic(3);
+			System.out.println("The rule Name is: " + ruleName);
+			test.log(LogStatus.INFO, "The rule Name is: " + ruleName);
+			clearText("ruleName_css");
+			enterText("ruleName_css", ruleName);
+			Thread.sleep(2000);
+
+			System.out.println("Select Website");
+			Log.info("Select Website");
+			test.log(LogStatus.INFO, "Select Website");
+			click("mainWebsite_css");
+			String website = CommonHelper.element("mainWebsite_css").getAttribute("data-title");
+			System.out.println("The Website is: " + website);
+			test.log(LogStatus.INFO, "The Website is: " + website);
+
+			System.out.println("Select Customer Group");
+			Log.info("Select Customer Group");
+			test.log(LogStatus.INFO, "Select Customer Group");
+			click("groupGeneral_css");
+			String group = CommonHelper.element("groupGeneral_css").getText();
+			System.out.println("The Customer Group is: " + group);
+			test.log(LogStatus.INFO, "The Customer Group is: " + group);
+
+			System.out.println("Select Coupon Type");
+			Log.info("Select Coupon Type");
+			test.log(LogStatus.INFO, "Select Coupon Type");
+			selectDpdwnText("couponType_css", "Specific Coupon");
+			String couponType = CommonHelper.element("couponType_css").getCssValue("value");
+			System.out.println("The Coupon Type is: " + "Specific Coupon");
+			test.log(LogStatus.INFO, "The Coupon Type is: " + "Specific Coupon");
+
+			System.out.println("Enter Coupon Code");
+			Log.info("Enter Coupon Code");
+			test.log(LogStatus.INFO, "Enter Coupon Code");
+			clearText("couponCode_css");
+			enterText("couponCode_css", ruleName);
+			String couponCode = CommonHelper.element("couponCode_css").getAttribute("data-title");
+			System.out.println("The Coupon Code is: " + ruleName);
+			test.log(LogStatus.INFO, "The Coupon Code is: " + ruleName);
+
+			System.out.println("Enter Uses Per Coupon");
+			Log.info("Enter Uses Per Coupon");
+			test.log(LogStatus.INFO, "Enter Uses Per Coupon");
+			clearText("usesPerCoupon_css");
+			enterText("usesPerCoupon_css", "100");
+			String usesPerCoupon = CommonHelper.element("usesPerCoupon_css").getAttribute("data-title");
+			System.out.println("The Uses Per Coupon is: " + "100");
+			test.log(LogStatus.INFO, "The Uses Per Coupon is: " + "100");
+
+			System.out.println("Enter Uses Per Customer");
+			Log.info("Enter Uses Per Customer");
+			test.log(LogStatus.INFO, "Enter Uses Per Customer");
+			clearText("usesPerCustomer_css");
+			enterText("usesPerCustomer_css", "100");
+			String usesPerCustomer = CommonHelper.element("usesPerCustomer_css").getAttribute("data-title");
+			System.out.println("The Uses Per Customer is: " + "100");
+			test.log(LogStatus.INFO, "The Uses Per Customer is: " + "100");
+
+			System.out.println("Click on Action");
+			Log.info("Click on Action");
+			test.log(LogStatus.INFO, "Click on Action");
+			click("actions_xpath");
+			Thread.sleep(1000);
+
+			System.out.println("Enter Discount Percentage");
+			Log.info("Enter Discount Percentage");
+			test.log(LogStatus.INFO, "Enter Discount Percentage");
+			clearText("discountAmount_css");
+			enterText("discountAmount_css", "10");
+			String discountAmount = CommonHelper.element("discountAmount_css").getAttribute("data-title");
+			System.out.println("The Discount Percentage is: " + "10");
+			test.log(LogStatus.INFO, "The Discount Percentage is: " + "10");
+
+			System.out.println("Click on Save");
+			Log.info("Click on Save");
+			test.log(LogStatus.INFO, "Click on Save");
+			click("saveCouponCodeDetails_id");
+			Thread.sleep(1000);
+			test.log(LogStatus.PASS, "Enter Promo Code Details was successful");
+			System.out.println("Enter Promo Code Details was successful");
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Enter Promo Code Details was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void clickReports() {
+
+		try {
+			System.out.println("Click Reports Menu");
+			Log.info("Click on Reports Menu");
+			test.log(LogStatus.INFO, "Click Reports Menu");
+			click("reportsMenu_xpath");
+
+			System.out.println("Click Coupons submenu");
+			Log.info("Click Coupons Submenu");
+			test.log(LogStatus.INFO, "Click Coupons submenu");
+			click("coupons_xpath");
+			//click("coupons_css");
+			//driver.findElement(By.cssSelector("coupons_xpath")).click();
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Click Add New Rule was unsucessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void selectCalendarDate() {
+
+		System.out.println("Click From Date Calendar");
+		Log.info("Click From Date Calendar");
+		test.log(LogStatus.INFO, "Click From Date Calendar");
+		click("calendarFromDatePicker_xpath");
+
+		System.out.println("Select From Month");
+		Log.info("Select From Month");
+		test.log(LogStatus.INFO, "Select From Month");
+		selectDpdwnText("calendarMonthPicker_css", "Apr");
+
+		System.out.println("Select From Date");
+		Log.info("Select From Date");
+		test.log(LogStatus.INFO, "Select From Date");
+		click("calendarFromDate_xpath");
+
+		System.out.println("Click To Date Calendar");
+		Log.info("Click To Date Calendar");
+		test.log(LogStatus.INFO, "Click To Date Calendar");
+		click("calendarToDatePicker_xpath");
+
+		System.out.println("Select Today's Date");
+		Log.info("Select Today's Date");
+		test.log(LogStatus.INFO, "Select Today's Date");
+		click("calendarTodayDate_css");
+
+		System.out.println("Click Close Calendar");
+		Log.info("Click Close Calendar");
+		test.log(LogStatus.INFO, "Click Close Calendar");
+		click("calendarClose_xpath");
+		
+		System.out.println("Click Show Report");
+		Log.info("Click Show Report");
+		test.log(LogStatus.INFO, "Click Show Report");
+		click("showReport_id");
+		test.log(LogStatus.PASS, "Reports shown successfully");
+
+	}
+
 }

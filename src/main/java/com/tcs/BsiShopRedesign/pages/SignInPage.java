@@ -304,7 +304,7 @@ public class SignInPage extends Page {
 
 	public void adminLogin() {
 
-		//boolean closeAlert = false;
+		boolean closeAlert = false;
 
 		try {
 
@@ -327,10 +327,14 @@ public class SignInPage extends Page {
 			CommonHelper.elementToBeClickable("adminSignin_xpath");
 			click("adminSignin_xpath");
 			Thread.sleep(3000);
-
-			CommonHelper.isElementVisible("closeAlert_css");
-			click("closeAlert_xpath");
-			Thread.sleep(1000);
+			
+			closeAlert = driver.findElement(By.cssSelector("button[data-role='closeBtn']")).isDisplayed();
+			if (closeAlert) {
+				test.log(LogStatus.INFO, "Close Alert");
+				System.out.println("Close Alert");
+				click("closeAlert_css");
+				Thread.sleep(1000);
+			}
 
 			String pageTitle = driver.getTitle();
 			System.out.println(pageTitle);
@@ -339,13 +343,7 @@ public class SignInPage extends Page {
 				test.log(LogStatus.PASS, "Admin User Sign In Successful");
 			}
 
-			/*
-			 * closeAlert =
-			 * driver.findElement(By.cssSelector("button[data-role='closeBtn']")).
-			 * isDisplayed(); if (closeAlert) { test.log(LogStatus.INFO, "Close Alert");
-			 * System.out.println("Close Alert"); click("closeAlert_css");
-			 * Thread.sleep(1000); }
-			 */
+			
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Admin Login Unsuccessful");

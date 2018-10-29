@@ -42,9 +42,10 @@ public class CommonHelper extends Page {
 			return false;
 		}
 	}
+
 	public static boolean isElementPresent(By by) {
 		try {
-			if(driver.findElement((by)).isDisplayed() & driver.findElement((by)).isDisplayed())
+			if (driver.findElement((by)).isDisplayed() & driver.findElement((by)).isEnabled())
 				return true;
 			else
 				return false;
@@ -53,6 +54,7 @@ public class CommonHelper extends Page {
 			return false;
 		}
 	}
+
 	public static void takeScreenShot() {
 
 		String userDir = System.getProperty("user.dir");
@@ -113,15 +115,20 @@ public class CommonHelper extends Page {
 
 	public static WebElement element(String locator) {
 		WebElement e = null;
-		if (locator.endsWith("_xpath"))
-			e = driver.findElement(By.xpath(prop.getProperty(locator)));
-		else if (locator.endsWith("_id"))
-			e = driver.findElement(By.id(prop.getProperty(locator)));
-		else if (locator.endsWith("_css"))
-			e = driver.findElement(By.cssSelector(prop.getProperty(locator)));
-		else if (locator.endsWith("_linkText"))
-			e = driver.findElement(By.linkText(prop.getProperty(locator)));
+		try {
+			if (locator.endsWith("_xpath"))
+				e = driver.findElement(By.xpath(prop.getProperty(locator)));
+			else if (locator.endsWith("_id"))
+				e = driver.findElement(By.id(prop.getProperty(locator)));
+			else if (locator.endsWith("_css"))
+				e = driver.findElement(By.cssSelector(prop.getProperty(locator)));
+			else if (locator.endsWith("_linkText"))
+				e = driver.findElement(By.linkText(prop.getProperty(locator)));
 
+		} catch (Exception e1) {
+			test.log(LogStatus.FAIL, locator + " WebElement is not Visible");
+			e1.printStackTrace();
+		}
 		return e;
 
 	}
@@ -236,8 +243,13 @@ public class CommonHelper extends Page {
 	}
 
 	public static void visibilityOfElement(WebElement element) throws Exception {
-		element.isDisplayed();
-		element.isEnabled();
+		try {
+			element.isDisplayed();
+			element.isEnabled();
+		} catch (Exception e) {
+			test.log(LogStatus.FAIL, element + " Element is not Displayed and Enabled");
+			e.printStackTrace();
+		}
 	}
 
 	public static boolean isElementVisible(String locator) {
@@ -245,7 +257,7 @@ public class CommonHelper extends Page {
 			visibilityOfElement(element(locator));
 			return true;
 		} catch (Exception e) {
-			// test.log(LogStatus.FAIL, locator + " Element is not Visible");
+			test.log(LogStatus.FAIL, locator + " Element is not Visible");
 			e.printStackTrace();
 			return false;
 		}

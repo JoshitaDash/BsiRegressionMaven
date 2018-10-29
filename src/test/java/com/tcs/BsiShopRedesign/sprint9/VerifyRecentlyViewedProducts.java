@@ -26,13 +26,13 @@ public class VerifyRecentlyViewedProducts extends BaseTest {
 			HomePage home = new HomePage(driver);
 			home.blankSearch();
 
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			System.out.println("Verfiy search result");
 			Log.info("Verfiy search result");
 			SearchPage search = new SearchPage(driver);
 			search.verifySearchResultforBlankSearch();
 
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			System.out.println("View First Product");
 			Log.info("View First Product");
 			String firstProd = search.viewFirstProduct();
@@ -41,12 +41,12 @@ public class VerifyRecentlyViewedProducts extends BaseTest {
 			Log.info("Perform Blank Search");
 			home.blankSearch();
 
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			System.out.println("Verfiy search result");
 			Log.info("Verfiy search result");
 			search.verifySearchResultforBlankSearch();
 
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			System.out.println("View Second Product");
 			Log.info("View Second Product");
 			String secondProd = search.viewSecondProduct();
@@ -55,12 +55,12 @@ public class VerifyRecentlyViewedProducts extends BaseTest {
 			Log.info("Perform Blank Search");
 			home.blankSearch();
 
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			System.out.println("Verfiy search result");
 			Log.info("Verfiy search result");
 			search.verifySearchResultforBlankSearch();
 
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			System.out.println("View Third Product");
 			Log.info("View Third Product");
 			String thirdProd = search.viewThirdProduct();
@@ -69,12 +69,17 @@ public class VerifyRecentlyViewedProducts extends BaseTest {
 			Log.info("Perform Blank Search");
 			home.blankSearch();
 
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			System.out.println("Verfiy search result");
 			Log.info("Verfiy search result");
 			search.verifySearchResultforBlankSearch();
+			
+			Thread.sleep(3000);
+			System.out.println("View Third Product");
+			Log.info("View Third Product");
+			search.viewFourthProduct();
 
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			System.out.println("Verify Recently viewed Products");
 			Log.info("Verify Recently viewed Products");
 			search.verifyRecentlyViewedProducts(firstProd, secondProd, thirdProd);

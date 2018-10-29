@@ -1046,7 +1046,7 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, ("Click product on the Search List"));
 			Log.info("Click product on the Search List");
 			System.out.println("Click product on the Search List");
-			driver.findElement(By.cssSelector("a[class='product-item-link']")).click();
+			driver.findElements(By.cssSelector("a[class='product-item-link']")).get(3).click();
 
 			prodName = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
 			System.out.println("The Second Product is: " + prodName);
@@ -1065,7 +1065,7 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, ("Click product on the Search List"));
 			Log.info("Click product on the Search List");
 			System.out.println("Click product on the Search List");
-			driver.findElement(By.cssSelector("a[class='product-item-link']")).click();
+			driver.findElements(By.cssSelector("a[class='product-item-link']")).get(3).click();
 
 			prodName = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
 			System.out.println("The Third Product is: " + prodName);
@@ -1078,42 +1078,75 @@ public class SearchPage extends Page {
 		return prodName;
 	}
 
+	public void viewFourthProduct() {
+
+		try {
+			test.log(LogStatus.INFO, ("Click product on the Search List"));
+			Log.info("Click product on the Search List");
+			System.out.println("Click product on the Search List");
+			driver.findElements(By.cssSelector("a[class='product-item-link']")).get(5).click();
+
+			String prodName = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			System.out.println("The Fourth Product is: " + prodName);
+			test.log(LogStatus.INFO, "The Fourth Product is: " + prodName);
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("The Fourth product view was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
 	public void verifyRecentlyViewedProducts(String firstProd, String secProd, String ThirdProd) {
 
 		try {
+			Thread.sleep(2000);
+			CommonHelper.scrolltoview("recentlyViewWidget_id");
 
 			List<WebElement> recentlyViewedProducts = driver
 					.findElements(By.xpath("//a[@class='product-item-link active']"));
 
-			//List<String> texts = recentlyViewedProducts.stream().map(WebElement::getText).collect(Collectors.toList());
+			// List<String> texts =
+			// recentlyViewedProducts.stream().map(WebElement::getText).collect(Collectors.toList());
 			/*
 			 * List<String> strings = new ArrayList<String>(); for (WebElement e :
 			 * recentlyViewedProducts) { strings.add(e.getText()); }
 			 */
-			/*System.out.println(texts);*/
+			/* System.out.println(texts); */
 
- 			String firstRVProd = recentlyViewedProducts.get(0).getText();
- 			String secRVProd = recentlyViewedProducts.get(1).getText();
+			String firstRVProd = recentlyViewedProducts.get(0).getText();
+			String secRVProd = recentlyViewedProducts.get(1).getText();
 			String thirdRVProd = recentlyViewedProducts.get(2).getText();
 
-			if (firstRVProd.equals(firstProd)) {
+			if (firstRVProd.equals(ThirdProd)) {
 				System.out.println("Verification of Recently viewed for First product is successful");
 				test.log(LogStatus.INFO, "The First Recently viewed product is: " + firstRVProd);
 				test.log(LogStatus.PASS, "Verification of Recently viewed for First product is successful");
+			} else {
+				System.out.println("Verification of Recently viewed for First product is unsuccessful");
+				test.log(LogStatus.INFO, "The First Recently viewed product is: " + firstRVProd);
+				test.log(LogStatus.PASS, "Verification of Recently viewed for First product is unsuccessful");
 			}
 
 			if (secRVProd.equals(secProd)) {
 				System.out.println("Verification of Recently viewed for Second product is successful");
 				test.log(LogStatus.INFO, "The Second Recently viewed product is: " + secRVProd);
 				test.log(LogStatus.PASS, "Verification of Recently viewed for Second product is successful");
+			} else {
+				System.out.println("Verification of Recently viewed for Second product is unsuccessful");
+				test.log(LogStatus.INFO, "The Second Recently viewed product is: " + secRVProd);
+				test.log(LogStatus.PASS, "Verification of Recently viewed for Second product is unsuccessful");
 			}
 
-			if (thirdRVProd.equals(ThirdProd)) {
+			if (thirdRVProd.equals(firstProd)) {
 				System.out.println("Verification of Recently viewed for Third product is successful");
 				test.log(LogStatus.INFO, "The Third Recently viewed product is: " + thirdRVProd);
 				test.log(LogStatus.PASS, "Verification of Recently viewed for Third product is successful");
-
 				CommonHelper.takeScreenShot();
+			} else {
+				System.out.println("Verification of Recently viewed for Third product is unsuccessful");
+				test.log(LogStatus.INFO, "The Third Recently viewed product is: " + thirdRVProd);
+				test.log(LogStatus.PASS, "Verification of Recently viewed for Third product is unsuccessful");
 			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Recently Viewed Products was unsuccessful");
