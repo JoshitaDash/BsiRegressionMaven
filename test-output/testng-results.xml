@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="22282" started-at="2018-10-29T15:12:46Z" finished-at="2018-10-29T15:13:08Z">
+  <suite name="Suite" duration-ms="60173" started-at="2018-10-30T11:14:14Z" finished-at="2018-10-30T11:15:14Z">
     <groups>
     </groups>
-    <test name="Internet Explorer Browser" duration-ms="6" started-at="2018-10-29T15:12:46Z" finished-at="2018-10-29T15:12:46Z">
-    </test> <!-- Internet Explorer Browser -->
-    <test name="BSI Admin" duration-ms="22265" started-at="2018-10-29T15:12:46Z" finished-at="2018-10-29T15:13:08Z">
-      <class name="com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList@12c8a2c0]" name="getDriverInstance" is-config="true" duration-ms="8" started-at="2018-10-29T15:12:46Z" finished-at="2018-10-29T15:12:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getDriverInstance -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList@12c8a2c0]" name="launchBrowser" is-config="true" duration-ms="6924" started-at="2018-10-29T15:12:46Z" finished-at="2018-10-29T15:12:53Z">
+    <test name="Internet Explorer Browser" duration-ms="60173" started-at="2018-10-30T11:14:14Z" finished-at="2018-10-30T11:15:14Z">
+      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="launchBrowser" is-config="true" duration-ms="9607" started-at="2018-10-30T11:14:14Z" finished-at="2018-10-30T11:14:23Z">
           <params>
             <param index="0">
               <value>
@@ -22,26 +16,38 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Yes]]>
+                <![CDATA[No]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signInCms()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList@12c8a2c0]" name="signInCms" duration-ms="6816" started-at="2018-10-29T15:12:53Z" finished-at="2018-10-29T15:13:00Z">
+        <test-method status="PASS" signature="verifyDCProduct()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="verifyDCProduct" duration-ms="17941" started-at="2018-10-30T11:14:23Z" finished-at="2018-10-30T11:14:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInCms -->
-        <test-method status="PASS" signature="verifyCmsDetails()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList@12c8a2c0]" name="verifyCmsDetails" duration-ms="7678" started-at="2018-10-29T15:13:00Z" finished-at="2018-10-29T15:13:07Z">
+        </test-method> <!-- verifyDCProduct -->
+        <test-method status="PASS" signature="verifyNewsFeed()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="verifyNewsFeed" duration-ms="19377" started-at="2018-10-30T11:14:41Z" finished-at="2018-10-30T11:15:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCmsDetails -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList@12c8a2c0]" name="tearDown" is-config="true" duration-ms="840" started-at="2018-10-29T15:13:07Z" finished-at="2018-10-29T15:13:08Z">
+        </test-method> <!-- verifyNewsFeed -->
+        <test-method status="PASS" signature="verifyPAS2030ProductDetails()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="verifyPAS2030ProductDetails" duration-ms="12414" started-at="2018-10-30T11:15:01Z" finished-at="2018-10-30T11:15:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPAS2030ProductDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="tearDown" is-config="true" duration-ms="813" started-at="2018-10-30T11:15:13Z" finished-at="2018-10-30T11:15:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType -->
+    </test> <!-- Internet Explorer Browser -->
+    <test name="BSI Admin" duration-ms="0" started-at="2018-10-30T11:15:14Z" finished-at="2018-10-30T11:15:14Z">
+      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-10-30T11:14:14Z" finished-at="2018-10-30T11:14:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriverInstance -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType -->
     </test> <!-- BSI Admin -->
   </suite> <!-- Suite -->
 </testng-results>

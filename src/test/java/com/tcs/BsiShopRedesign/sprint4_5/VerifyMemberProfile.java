@@ -8,6 +8,7 @@ import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class VerifyMemberProfile extends BaseTest{
 
@@ -28,6 +29,7 @@ public class VerifyMemberProfile extends BaseTest{
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Member Signing in was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -70,6 +72,7 @@ public class VerifyMemberProfile extends BaseTest{
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verify Member tab was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

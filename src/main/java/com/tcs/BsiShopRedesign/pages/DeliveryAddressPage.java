@@ -462,6 +462,7 @@ public class DeliveryAddressPage extends Page {
 			if (deleteAddress) {
 
 				for (int i = 1; i <= 9; i++) {
+					Thread.sleep(3000);
 					Log.info("Click on Delete Delivery Address");
 					System.out.println("Click on Delete Delivery Address");
 					test.log(LogStatus.INFO, "Click on Delete Delivery Address");
@@ -469,12 +470,12 @@ public class DeliveryAddressPage extends Page {
 					CommonHelper.elementToBeClickable("deleteDeliveryAddress_css");
 					click("deleteDeliveryAddress_css");
 
-					Thread.sleep(2000);
+					Thread.sleep(3000);
 					Log.info("Click on Confirm Delete Delivery Address");
 					System.out.println("Click on Confirm Delete Delivery Address");
 					test.log(LogStatus.INFO, "Click on Confirm Delete Delivery Address");
 					driver.findElement(By.cssSelector(".action-primary.action-accept")).click();
-					Thread.sleep(2000);
+					Thread.sleep(3000);
 				}
 
 				test.log(LogStatus.PASS, "Ten Delivery Addresses has been deleted successfully");

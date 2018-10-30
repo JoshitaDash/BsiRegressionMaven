@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class RegistrationsWithDiffProfile extends BaseTest {
 
@@ -35,6 +36,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Create registered user with UK profile using Postcode was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 
@@ -65,6 +67,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL,
 					"Create registered user with Non-UK profile without using Postcode was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 
@@ -94,6 +97,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verify Tooltip on Registration Page was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 
@@ -119,6 +123,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verify Tooltip on Registration Page was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 
@@ -149,6 +154,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Login through Already Registered User on Registration Page was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 
@@ -179,6 +185,7 @@ public class RegistrationsWithDiffProfile extends BaseTest {
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL,
 					"Verify Login Error Message for Registered User on Registration Page was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 

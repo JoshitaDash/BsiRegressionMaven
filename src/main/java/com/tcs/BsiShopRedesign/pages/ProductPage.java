@@ -652,7 +652,9 @@ public class ProductPage extends Page {
 			Thread.sleep(1000);
 			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
 			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
 			driver.manage().window().maximize();
+			Thread.sleep(1000);
 			System.out.println("switched to 2nd window");
 
 		} catch (Exception e) {

@@ -3,18 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="browser" value="IE"/>
   <parameter name="isAdmin" value="Yes"/>
-  <test name="BSI Admin(failed)">
+  <test name="Internet Explorer Browser(failed)">
     <parameter name="browser" value="IE"/>
-    <parameter name="isAdmin" value="Yes"/>
+    <parameter name="isAdmin" value="No"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList">
+      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType">
         <methods>
+          <include name="verifyPAS2030ProductDetails"/>
           <include name="launchBrowser"/>
+          <include name="verifyNewsFeed"/>
+          <include name="verifyDCProduct"/>
           <include name="getDriverInstance"/>
-          <include name="signInCms"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType -->
     </classes>
-  </test> <!-- BSI Admin(failed) -->
+  </test> <!-- Internet Explorer Browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

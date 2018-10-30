@@ -9,6 +9,7 @@ import com.tcs.BsiShopRedesign.pages.HomePage;
 import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class AddInvoiceToBasketFromMemTab extends BaseTest {
 
@@ -29,6 +30,7 @@ public class AddInvoiceToBasketFromMemTab extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Member Signing in was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -62,6 +64,7 @@ public class AddInvoiceToBasketFromMemTab extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Add invoice to Basket from Member Tab was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

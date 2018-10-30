@@ -8,6 +8,7 @@ import com.tcs.BsiShopRedesign.pages.CmsPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.BsiConstants;
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class VerifyCmsDetails extends BaseTest {
 
@@ -29,6 +30,7 @@ public class VerifyCmsDetails extends BaseTest {
 			signIn.adminLogin();
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Admin Signing in was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -67,6 +69,7 @@ public class VerifyCmsDetails extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verify Customer Details was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}

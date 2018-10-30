@@ -465,8 +465,6 @@ public class BasketPage extends Page {
 
 	}
 
-	
-
 	public void clickOtherFormatOKAlert() {
 
 		try {
@@ -554,7 +552,7 @@ public class BasketPage extends Page {
 
 	public void removeMultipleProduct() {
 
-		WebDriverWait wait = new WebDriverWait(driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		test.log(LogStatus.INFO, "Remove Multiple Products from Basket");
 		List<WebElement> removeItem = driver.findElements(By.xpath("//img[@alt='delete']"));
 		System.out.println("Remove");
@@ -576,7 +574,8 @@ public class BasketPage extends Page {
 			String verifyBasket = CommonHelper.element("verifyBasket_css").getText();
 			System.out.println("The Verfication message is: " + verifyBasket);
 			Log.info("The Verfication message is: " + verifyBasket);
-			test.log(LogStatus.PASS, "Multiple Products has been removed from Basket successfully");
+			test.log(LogStatus.PASS, verifyBasket);
+			//test.log(LogStatus.PASS, "Multiple Products has been removed from Basket successfully");
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Remove Product from Basket was unsuccessful");

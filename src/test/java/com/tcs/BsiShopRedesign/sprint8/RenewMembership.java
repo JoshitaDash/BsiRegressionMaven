@@ -11,6 +11,7 @@ import com.tcs.BsiShopRedesign.pages.MyProfileMemberPage;
 import com.tcs.BsiShopRedesign.pages.OrderConfirmationPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
+import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
 public class RenewMembership extends BaseTest {
 
@@ -31,6 +32,7 @@ public class RenewMembership extends BaseTest {
 
 		catch (Exception e) {
 			test.log(LogStatus.FATAL, "Member Signing in was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
@@ -91,6 +93,7 @@ public class RenewMembership extends BaseTest {
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Renew Membership was unsuccessful");
+			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
 		}
