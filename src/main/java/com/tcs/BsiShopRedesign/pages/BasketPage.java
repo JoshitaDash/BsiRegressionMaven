@@ -22,21 +22,15 @@ public class BasketPage extends Page {
 	public BasketPage(WebDriver driver) throws Exception {
 		super(driver);
 		// Page.driver = driver;
-		// TODO Auto-generated constructor stub
 	}
 
 	public void editBasketUpdateQuantity() {
 
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 
 		try {
 
 			Thread.sleep(2000);
-			/*
-			 * Log.info("Update Quantity in Basket"); System.out.println(
-			 * "Update Quantity in Basket");
-			 */
-
 			boolean quantity = CommonHelper
 					.checkVisibility(By.cssSelector("input[class='input-text qty'][title='Qty']"));
 			boolean quantityLaminated = CommonHelper.checkVisibility(By.xpath("//*[@data-role='cart-item-qty']"));
@@ -46,11 +40,19 @@ public class BasketPage extends Page {
 				Log.info("Update Quantity in Basket");
 				System.out.println("Update Quantity in Basket");
 				test.log(LogStatus.INFO, "Update Quantity in Basket");
-				// Thread.sleep(3000);
-				// WebElement quantityCount =
-				// driver.findElement(By.cssSelector("input[class='input-text
-				// qty'][title='Qty']"));
-				// WebElement update = driver.findElement(By.id("qty_upd"));
+
+				String beforeUpdateUnitPrice = driver
+						.findElement(By.xpath("//*[@id='shopping-cart-table']/tbody/tr/td[4]/div[1]")).getText();
+				beforeUpdateUnitPrice = beforeUpdateUnitPrice.substring(1);
+				System.out.println("The unit price is: " + beforeUpdateUnitPrice);
+				test.log(LogStatus.INFO, "The unit price is: " + beforeUpdateUnitPrice);
+				String beforeUpdateFinalPrice = driver
+						.findElement(By.xpath("//*[@id='shopping-cart-table']/tbody/tr/td[6]/span/span/span"))
+						.getText();
+				beforeUpdateFinalPrice = beforeUpdateFinalPrice.substring(1);
+				System.out.println("The Final price is: " + beforeUpdateFinalPrice);
+				test.log(LogStatus.INFO, "The Final price is: " + beforeUpdateFinalPrice);
+
 				WebElement quantityCount = wait.until(ExpectedConditions
 						.visibilityOfElementLocated(By.cssSelector("input[class='input-text qty'][title='Qty']")));
 				WebElement update = wait.until(ExpectedConditions.elementToBeClickable(By.id("qty_upd")));
@@ -58,7 +60,58 @@ public class BasketPage extends Page {
 				quantityCount.sendKeys("50");
 				update.click();
 				System.out.println("The Quantity of the product updated to 50");
-				test.log(LogStatus.INFO, "The Quantity of the product updated to 50");
+				test.log(LogStatus.PASS, "The Quantity of the product updated to 50");
+
+				String afterUpdateUnitPrice = driver
+						.findElement(By.xpath("//*[@id='shopping-cart-table']/tbody/tr/td[4]/div[1]")).getText();
+				afterUpdateUnitPrice = afterUpdateUnitPrice.substring(1);
+				System.out.println("The updated unit price is: " + afterUpdateUnitPrice);
+				test.log(LogStatus.INFO, "The updated unit price is: " + afterUpdateUnitPrice);
+				String afterUpdateFinalPrice = driver
+						.findElement(By.xpath("//*[@id='shopping-cart-table']/tbody/tr/td[6]/span/span/span"))
+						.getText();
+				afterUpdateFinalPrice = afterUpdateFinalPrice.substring(1);
+				afterUpdateFinalPrice = afterUpdateFinalPrice.replace(",", "");
+				System.out.println("The updated final price is: " + afterUpdateFinalPrice);
+				test.log(LogStatus.INFO, "The updated final price is: " + afterUpdateFinalPrice);
+
+				double afterUpdateUnitPriceOnly = Double.parseDouble(afterUpdateUnitPrice);
+				System.out.println(afterUpdateUnitPriceOnly);
+				// double afterUpdateFinalPriceOnly = new Double(afterUpdateFinalPrice);
+				double afterUpdateFinalPriceOnly = Double.parseDouble(afterUpdateFinalPrice);
+				System.out.println(afterUpdateFinalPriceOnly);
+				double expectedFinalPrice = afterUpdateUnitPriceOnly * 50;
+				System.out.println(expectedFinalPrice);
+
+				if (afterUpdateFinalPriceOnly == expectedFinalPrice) {
+					System.out.println("The updated final price only is: " + afterUpdateFinalPriceOnly
+							+ " & The expected final price only is: " + expectedFinalPrice);
+					test.log(LogStatus.PASS, "The updated final price only is: " + afterUpdateFinalPriceOnly
+							+ " & The expected final price only is: " + expectedFinalPrice);
+				} else {
+					System.out.println("The Price of the product is incorrect " + afterUpdateFinalPriceOnly);
+					test.log(LogStatus.FAIL, "The Price of the product is incorrect " + afterUpdateFinalPriceOnly);
+				}
+
+				String afterUpdateTotalPrice = driver
+						.findElement(By.xpath("//*[@id='cart-summ']/div[1]/strong/span[2]")).getText();
+				afterUpdateTotalPrice = afterUpdateTotalPrice.substring(1);
+				afterUpdateTotalPrice = afterUpdateTotalPrice.replace(",", "");
+				System.out.println("The updated total price is: " + afterUpdateTotalPrice);
+				test.log(LogStatus.INFO, "The updated total price is: " + afterUpdateTotalPrice);
+
+				double afterUpdateTotalPriceOnly = Double.parseDouble(afterUpdateTotalPrice);
+				System.out.println(afterUpdateTotalPrice);
+
+				if (afterUpdateTotalPriceOnly == expectedFinalPrice) {
+					System.out.println("The after update total price only is: " + afterUpdateTotalPriceOnly
+							+ " & The expected final price only is: " + expectedFinalPrice);
+					test.log(LogStatus.PASS, "The after update total price only is: " + afterUpdateTotalPriceOnly
+							+ " & The expected final price only is: " + expectedFinalPrice);
+				} else {
+					System.out.println("The Price of the product is incorrect " + afterUpdateTotalPriceOnly);
+					test.log(LogStatus.FAIL, "The Price of the product is incorrect " + afterUpdateTotalPriceOnly);
+				}
 
 			} else if (quantityLaminated) {
 				Log.info("Update Quantity in Basket");
@@ -127,6 +180,8 @@ public class BasketPage extends Page {
 						Select dpdwn = new Select(ele);
 						dpdwn.selectByIndex(0);
 						Thread.sleep(3000);
+						System.out.println("Format was changed successfully");
+						test.log(LogStatus.PASS, "Format was changed successfully");
 
 					} else {
 						System.out.println("Dropwn not visible: " + ele);
@@ -154,6 +209,8 @@ public class BasketPage extends Page {
 						Select dpdwn = new Select(ele);
 						dpdwn.selectByIndex(1);
 						Thread.sleep(3000);
+						System.out.println("Format was changed successfully");
+						test.log(LogStatus.PASS, "Format was changed successfully");
 
 					} else {
 						System.out.println("Dropwn not visible: " + ele);
@@ -575,7 +632,7 @@ public class BasketPage extends Page {
 			System.out.println("The Verfication message is: " + verifyBasket);
 			Log.info("The Verfication message is: " + verifyBasket);
 			test.log(LogStatus.PASS, verifyBasket);
-			//test.log(LogStatus.PASS, "Multiple Products has been removed from Basket successfully");
+			test.log(LogStatus.PASS, "Multiple Products has been removed from Basket successfully");
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Remove Product from Basket was unsuccessful");

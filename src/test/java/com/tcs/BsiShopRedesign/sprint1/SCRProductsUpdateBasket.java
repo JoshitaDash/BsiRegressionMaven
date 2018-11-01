@@ -67,6 +67,8 @@ public class SCRProductsUpdateBasket extends BaseTest {
 			CommonHelper.elementToBeClickable("searchButton_css");
 			// driver.findElement(By.cssSelector("button[title='Search']")).click();
 			click("searchButton_css");
+			System.out.println("Search was successful");
+			test.log(LogStatus.PASS, "Search was successful");
 
 			Log.info("Select the Product");
 			System.out.println("Select the Product");

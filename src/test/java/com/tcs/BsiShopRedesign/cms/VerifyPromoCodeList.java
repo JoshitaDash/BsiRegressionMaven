@@ -46,11 +46,19 @@ public class VerifyPromoCodeList extends BaseTest {
 			Log.info("Click on Reports Menu");
 			CmsPage customer = new CmsPage(driver);
 			customer.clickReports();
-			
-			System.out.println("");
+
 			System.out.println("Select Date from Calendar");
 			Log.info("Select Date from Calendar");
 			customer.selectCalendarDate();
+
+			System.out.println("Click Show Reports");
+			Log.info("Click Show Reports");
+			customer.clickShowReports();
+			
+			System.out.println("Verify List of Promo Codes");
+			Log.info("Verify List of Promo Codes");
+			customer.verifyPromoCodeList();
+			
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verification of List of Promo Codes was unsuccessful");

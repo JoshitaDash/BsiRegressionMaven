@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="browser" value="IE"/>
+  <parameter name="browser" value="chrome"/>
   <parameter name="isAdmin" value="Yes"/>
-  <test name="Internet Explorer Browser(failed)">
-    <parameter name="browser" value="IE"/>
+  <test name="Chrome Browser(failed)">
+    <parameter name="browser" value="chrome"/>
     <parameter name="isAdmin" value="No"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType">
+      <class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket">
         <methods>
-          <include name="verifyPAS2030ProductDetails"/>
           <include name="launchBrowser"/>
-          <include name="verifyNewsFeed"/>
-          <include name="verifyDCProduct"/>
+          <include name="productUpdateBasket" invocation-numbers="0"/>
           <include name="getDriverInstance"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket -->
     </classes>
-  </test> <!-- Internet Explorer Browser(failed) -->
+  </test> <!-- Chrome Browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -436,8 +436,8 @@ public class CmsPage extends Page {
 			Log.info("Click Coupons Submenu");
 			test.log(LogStatus.INFO, "Click Coupons submenu");
 			click("coupons_xpath");
-			//click("coupons_css");
-			//driver.findElement(By.cssSelector("coupons_xpath")).click();
+			// click("coupons_css");
+			// driver.findElement(By.cssSelector("coupons_xpath")).click();
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Click Add New Rule was unsucessful");
@@ -476,12 +476,47 @@ public class CmsPage extends Page {
 		Log.info("Click Close Calendar");
 		test.log(LogStatus.INFO, "Click Close Calendar");
 		click("calendarClose_xpath");
-		
-		System.out.println("Click Show Report");
-		Log.info("Click Show Report");
-		test.log(LogStatus.INFO, "Click Show Report");
-		click("showReport_id");
-		test.log(LogStatus.PASS, "Reports shown successfully");
+
+	}
+
+	public void clickShowReports() {
+
+		try {
+			System.out.println("Click Show Report");
+			Log.info("Click Show Report");
+			test.log(LogStatus.INFO, "Click Show Report");
+			click("showReport_id");
+			test.log(LogStatus.PASS, "Reports shown successfully");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Reports shown was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPromoCodeList() {
+
+		try {
+			Thread.sleep(2000);
+			System.out.println("View Number of Records");
+			Log.info("View Number of Records");
+			test.log(LogStatus.INFO, "View Number of Records");
+			String numRecords = CommonHelper.element("numOfRecords_css").getText();
+			System.out.println("The number of Records is:" + numRecords);
+			test.log(LogStatus.INFO, "The number of Records is:" + numRecords);
+
+			Thread.sleep(3000);
+			CommonHelper.scrolltoview("tableOfRecords_css");
+			String table = driver.findElement(By.cssSelector("table[class='data-grid']")).getText();
+			System.out.println("The table data is:" + table);
+			test.log(LogStatus.INFO, "The table data is:" + table);
+			CommonHelper.takeScreenShot();
+			
+			
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Promo Code records was unsuccessful");
+			e.printStackTrace();
+		}
 
 	}
 
