@@ -5,7 +5,7 @@
 		<parameter name="browser" value="IE" />
 		<parameter name="isAdmin" value="No" />
 		<classes>
-		<!-- 	<class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
+			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
 			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" />
@@ -26,9 +26,9 @@
 			<class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate" /> 
 			<class name="com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile" />
 			<class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile" />
-			<class name="com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab" /> -->
+			<class name="com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab" />
 			<class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout" />
-			<!-- <class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" />
+			<class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" />
 			<class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress" />	
 			<class name="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount" />
@@ -46,17 +46,18 @@
 			<class name="com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress" />
-			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts" /> -->
+			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts" />
+			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyPaymentDetails" />
 		</classes>
 	  </test>
       <test name="BSI Admin">
 		<parameter name="browser" value="IE" />
 		<parameter name="isAdmin" value="Yes" />
 		<classes>
-			<!-- <class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails" />
+			<class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails" />
 			<class name="com.tcs.BsiShopRedesign.cms.ResetPassword" />
 			<class name="com.tcs.BsiShopRedesign.cms.CreatePromoCode" /> 
-			<class name="com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList" /> -->		
+			<class name="com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList" />		
 	    </classes>
 	</test>
 </suite> 

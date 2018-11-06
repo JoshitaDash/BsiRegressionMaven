@@ -1,8 +1,11 @@
 package com.tcs.BsiShopRedesign.pages;
 
+import java.util.List;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.impl.client.EntityEnclosingRequestWrapper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.DoubleClickAction;
@@ -102,6 +105,7 @@ public class CheckoutPage extends Page {
 			System.out.println("Enter Card Number");
 			test.log(LogStatus.INFO, "Enter Card Number");
 			Log.info("Enter Card Number");
+			clearText("cardNum_id");
 			enterText("cardNum_id", "4111111111111111");
 
 			System.out.println("Enter Cardholder's Name");
@@ -122,6 +126,7 @@ public class CheckoutPage extends Page {
 			System.out.println("Enter CVC Number");
 			test.log(LogStatus.INFO, "Enter CVC Number");
 			Log.info("Enter CVC Number");
+			clearText("payCvc_id");
 			enterText("payCvc_id", "000");
 
 			Thread.sleep(5000);
@@ -140,6 +145,178 @@ public class CheckoutPage extends Page {
 
 	}
 
+	public void verifyIncorrectCardPaymentDetails() {
+		
+		try {
+			
+			Thread.sleep(5000);
+			System.out.println("Enter Payment Details");
+			test.log(LogStatus.INFO, "Enter Payment Details");
+			Log.info("Enter Payment Details");
+			CommonHelper.scrolltoview("paymentDetails_id");
+			click("paymentDetails_id");
+			Thread.sleep(1000);
+
+			System.out.println("Click Pay by Credit Card");
+			test.log(LogStatus.INFO, "Click Pay by Credit Card");
+			Log.info("Click Pay by Credit Card");
+			click("payCard_id");
+
+			Thread.sleep(2000);
+			System.out.println("Select VISA Credit Card");
+			test.log(LogStatus.INFO, "Select VISA Credit Card");
+			Log.info("Select VISA Credit Card");
+
+			boolean selectCard = driver.findElement(By
+					.xpath("//*[@id='checkout-payment-method-load']/div[2]/div[2]/fieldset/div[2]/div/label/span/span"))
+					.isDisplayed();
+			if (selectCard) {
+				click("selectCard_xpath");
+			}
+			selectDpdwnText("creditCard_id", "VISA");
+
+			driver.switchTo().frame(0);
+			System.out.println("Enter Incorrect Card Number");
+			test.log(LogStatus.INFO, "Enter Incorrect Card Number");
+			Log.info("Enter Incorrect Card Number");
+			enterText("cardNum_id", "4561538");
+
+			Thread.sleep(2000);
+			System.out.println("Click Outside Fields");
+			test.log(LogStatus.INFO, "Click Outside Fields");
+			Log.info("Click Outside Fields");
+			driver.findElement(By.id("payment-cardholdername-container")).click();
+
+			String cardNumValidation = driver.findElement(By.cssSelector("span[data-valmsg-for='Card.CardNumber']"))
+					.getText();
+			if (cardNumValidation.contains("enter a valid card number.")) {
+				System.out.println("The validation message for Card Number is: " + cardNumValidation);
+				test.log(LogStatus.INFO, "The validation message for Card Number is: " + cardNumValidation);
+				System.out.println("Verification of invalid card number was successful");
+				test.log(LogStatus.PASS, "Verification of invalid card number was successful");
+			} else {
+				test.log(LogStatus.FAIL, "The validation message for Card Number is: " + cardNumValidation);
+				System.out.println("Verification of invalid card number was unsuccessful");
+			}
+			Thread.sleep(2000);
+			System.out.println("Enter Card Expiry Month");
+			test.log(LogStatus.INFO, "Enter Card Expiry Month");
+			Log.info("Enter Card Expiry Month");
+			selectDpdwnText("payExpMonth_id", "3");
+
+			System.out.println("Enter Card Expiry Year");
+			test.log(LogStatus.INFO, "Enter Card Expiry Year");
+			Log.info("Enter Card Expiry Year");
+			selectDpdwnText("payExpYear_id", "2018");
+
+			Thread.sleep(2000);
+			String cardExpiryDateValidation = driver
+					.findElement(By.xpath("//*[@id='payment-expirymonth-error-container']/span/span/p")).getText();
+			if (cardExpiryDateValidation.contains("Please provide a valid expiry date")) {
+				System.out.println("The validation message for Card Expiry Date is: " + cardExpiryDateValidation);
+				test.log(LogStatus.INFO, "The validation message for Card Expiry Date is: " + cardExpiryDateValidation);
+				System.out.println("Verification of invalid Card Expiry Date was successful");
+				test.log(LogStatus.PASS, "Verification of invalid Card Expiry Date was successful");
+			} else {
+				test.log(LogStatus.FAIL, "The validation message for Card Expiry Date is: " + cardExpiryDateValidation);
+				System.out.println("Verification of invalid Card Expiry Date was unsuccessful");
+			}
+
+			Thread.sleep(2000);
+			System.out.println("Enter Incorrect CVC Number");
+			test.log(LogStatus.INFO, "Enter Incorrect CVC Number");
+			Log.info("Enter Incorrect CVC Number");
+			enterText("payCvc_id", "1245");
+
+			Thread.sleep(2000);
+			System.out.println("Click Submit");
+			test.log(LogStatus.INFO, "Click Submit");
+			Log.info("Click Submit");
+			CommonHelper.clickByJS("paySubmit_id");
+
+			Thread.sleep(2000);
+			String cardCvvNumValidation = driver
+					.findElement(By.xpath("//*[@id='payment-cvc-error-container']/span/span/p")).getText();
+			if (cardCvvNumValidation.contains("The CVC you have entered is not correct")) {
+				System.out.println("The validation message for Card CVC Number is: " + cardCvvNumValidation);
+				test.log(LogStatus.INFO, "The validation message for Card CVC Number is: " + cardCvvNumValidation);
+				System.out.println("Verification of invalid Card CVC Number was successful");
+				test.log(LogStatus.PASS, "Verification of invalid Card CVC Number was successful");
+			} else {
+				test.log(LogStatus.FAIL, "The validation message for Card CVC Number is: " + cardCvvNumValidation);
+				System.out.println("Verification of invalid Card CVC Number was unsuccessful");
+			}
+
+			Thread.sleep(2000);
+			String cardHolderNameValidation = driver
+					.findElement(By.xpath("//*[@id='payment-cardholdername-error-container']/span/span/p")).getText();
+			if (cardHolderNameValidation.contains("Cardholder's name is required.")) {
+				System.out.println("The validation message for Card Holder's name is: " + cardHolderNameValidation);
+				test.log(LogStatus.INFO,
+						"The validation message for Card Holder's name is: " + cardHolderNameValidation);
+				System.out.println("Verification of invalid Card Holder's name was successful");
+				test.log(LogStatus.PASS, "Verification of invalid Card Holder's name was successful");
+			} else {
+				test.log(LogStatus.FAIL,
+						"The validation message for Card Holder's name is: " + cardHolderNameValidation);
+				System.out.println("Verification of invalid Card Holder's name was unsuccessful");
+			}
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Enter Incorrect Card Details was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void enterValidCardPaymentDetails() {
+
+		try {
+
+			System.out.println("Enter Valid Card Number");
+			test.log(LogStatus.INFO, "Enter Valid Card Number");
+			Log.info("Enter Valid Card Number");
+			CommonHelper.scrolltoview("cardNum_id");
+			clearText("cardNum_id");
+			enterText("cardNum_id", "4111111111111111");
+
+			System.out.println("Enter Cardholder's Name");
+			test.log(LogStatus.INFO, "Enter Cardholder's Name");
+			Log.info("Enter Cardholder's Name");
+			enterText("cardholderName_id", "Tom Cruise");
+
+			System.out.println("Enter Card Expiry Month");
+			test.log(LogStatus.INFO, "Enter Card Expiry Month");
+			Log.info("Enter Card Expiry Month");
+			selectDpdwnText("payExpMonth_id", "5");
+
+			System.out.println("Enter Card Expiry Year");
+			test.log(LogStatus.INFO, "Enter Card Expiry Year");
+			Log.info("Enter Card Expiry Year");
+			selectDpdwnText("payExpYear_id", "2058");
+
+			System.out.println("Enter CVC Number");
+			test.log(LogStatus.INFO, "Enter CVC Number");
+			Log.info("Enter CVC Number");
+			clearText("payCvc_id");
+			enterText("payCvc_id", "000");
+
+			Thread.sleep(5000);
+			System.out.println("Click Submit");
+			test.log(LogStatus.INFO, "Click Submit");
+			Log.info("Click Submit");
+			CommonHelper.clickByJS("paySubmit_id");
+			// CommonHelper.scrolltoview("paySubmit_id");
+			// click("paySubmit_id");
+			driver.switchTo().defaultContent();
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Enter valid card details was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
 	public void clickReviewOrder() {
 
 		try {
@@ -153,7 +330,7 @@ public class CheckoutPage extends Page {
 			test.log(LogStatus.INFO, "Click Review Order");
 			Log.info("Click Review Order");
 			click("reviewOrder_xpath");
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Click Review Order was unsuccesful");
 			e.printStackTrace();
@@ -175,7 +352,7 @@ public class CheckoutPage extends Page {
 			Log.info("Click Place Order");
 			// CommonHelper.scrolltoview("completeOrder_id");
 			click("completeOrder_id");
-			CommonHelper.scrolltoview("");
+			// CommonHelper.scrolltoview("completeOrder_id");
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("Confirm Order Details was unsuccessful");
 			e.printStackTrace();
@@ -184,7 +361,6 @@ public class CheckoutPage extends Page {
 	}
 
 	public void enterOrderDetails() {
-
 		try {
 			// driver.switchTo().defaultContent();
 			System.out.println("Select Card Billing Country");
@@ -214,6 +390,84 @@ public class CheckoutPage extends Page {
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Enter Order Details was unsuccesful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyReviewOrderMemberPrice(String searchMemPrice) {
+
+		boolean priceMismatch = false;
+		List<WebElement> price = driver.findElements(By.cssSelector("span[class='price']"));
+
+		try {
+			Thread.sleep(1000);
+			try {
+				priceMismatch = driver.findElement(By.cssSelector("div[class='price-mismatch']")).isDisplayed();
+				Thread.sleep(3000);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			if (priceMismatch) {
+				Thread.sleep(1000);
+				String priceMismatchText = driver.findElement(By.cssSelector("div[class='price-mismatch']")).getText();
+				System.out.println("The Price Mismatch message is: " + priceMismatchText);
+				test.log(LogStatus.INFO, "The Price Mismatch message is: " + priceMismatchText);
+
+				String orderSummaryPrice = price.get(0).getText();
+				String orderSummarySubTotal = price.get(1).getText();
+				String reviewOrderPrice = price.get(4).getText();
+				String reviewOrderSubTotal = price.get(5).getText();
+
+				System.out.println("The search Member Price is: " + searchMemPrice);
+				test.log(LogStatus.INFO, "The search Member Price is: " + searchMemPrice);
+
+				if (orderSummaryPrice.equals(orderSummarySubTotal) && reviewOrderPrice.equals(reviewOrderSubTotal)
+						&& orderSummarySubTotal.equals(reviewOrderSubTotal)
+						&& reviewOrderSubTotal.equals(searchMemPrice)) {
+					System.out.println("The review order subtotal is: " + reviewOrderSubTotal);
+					test.log(LogStatus.INFO, "The review order subtotal is: " + reviewOrderSubTotal);
+					test.log(LogStatus.INFO, "The order summary subtotal is: " + orderSummarySubTotal);
+					System.out.println("Member Price Verification on Review Order Page was successful");
+					test.log(LogStatus.PASS, "Member Price Verification on Review Order Page was successful");
+
+				} else {
+					System.out.println("The review order subtotal is: " + reviewOrderSubTotal);
+					test.log(LogStatus.INFO, "The review order subtotal is: " + reviewOrderSubTotal);
+					test.log(LogStatus.INFO, "The order summary subtotal is: " + orderSummarySubTotal);
+					System.out.println("Member Price Verification on Review Order Page was unsuccessful");
+					test.log(LogStatus.FAIL, "Member Price Verification on Review Order Page was unsuccessful");
+					CommonHelper.takeScreenShot();
+				}
+
+			} else {
+
+				String orderSummaryPrice = price.get(0).getText();
+				String orderSummarySubTotal = price.get(1).getText();
+				String reviewOrderPrice = price.get(4).getText();
+				String reviewOrderSubTotal = price.get(5).getText();
+
+				System.out.println("The search Member Price is: " + searchMemPrice);
+				test.log(LogStatus.INFO, "The search Member Price is: " + searchMemPrice);
+
+				if (orderSummaryPrice.equals(orderSummarySubTotal) && reviewOrderPrice.equals(reviewOrderSubTotal)
+						&& orderSummarySubTotal.equals(reviewOrderSubTotal)
+						&& reviewOrderSubTotal.equals(searchMemPrice)) {
+					System.out.println("The member price is: " + reviewOrderSubTotal);
+					test.log(LogStatus.INFO, "The member price is: " + reviewOrderSubTotal);
+					System.out.println("Member Price Verification was successful");
+					test.log(LogStatus.PASS, "Member Price Verification was successful");
+				} else {
+					System.out.println("The member price is: " + reviewOrderSubTotal);
+					test.log(LogStatus.INFO, "The member price is: " + reviewOrderSubTotal);
+					System.out.println("Member Price Verification was unsuccessful");
+					test.log(LogStatus.FAIL, "Member Price Verification was unsuccessful");
+					CommonHelper.takeScreenShot();
+				}
+
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Member Price in the Review Order Page was unsuccesful");
 			e.printStackTrace();
 		}
 	}
@@ -523,19 +777,24 @@ public class CheckoutPage extends Page {
 	public boolean verifyMemPriceCheckout(String memDisc) {
 
 		try {
+			List<WebElement> orderSummaryPrice = driver.findElements(By.cssSelector("span[class='price']"));
 			WebElement cartPrice = driver.findElement(By.cssSelector("span[class='cart-price']"));
 			String price = cartPrice.getText();
-			price = price.substring(1);
-			double finalUnitPrice = Double.parseDouble(price);
-			String finalPrice = Double.toString(finalUnitPrice);
+			/*
+			 * price = price.substring(1); double finalUnitPrice =
+			 * Double.parseDouble(price); String finalPrice =
+			 * Double.toString(finalUnitPrice);
+			 */
+			String Subtotal = orderSummaryPrice.get(1).getText();
+			String Total = orderSummaryPrice.get(2).getText();
 
-			if (finalPrice.equals(memDisc)) {
-				System.out.println("The member price of the product in the Checkout Page is: " + memDisc);
-				test.log(LogStatus.PASS, "The member price of the product in the Checkout Page is: " + memDisc);
+			if (price.equals(memDisc) && memDisc == Subtotal && Total == memDisc) {
+				System.out.println("The SubTotal of the product in the Checkout Page is: " + Subtotal);
+				test.log(LogStatus.INFO, "The SubTotal of the product in the Checkout Page is: " + Subtotal);
 				return true;
 			} else {
-				System.out.println("The member price of the product in the Checkout Page is: " + memDisc);
-				test.log(LogStatus.FAIL, "The member price of the product in the Checkout Page is: " + memDisc);
+				System.out.println("The SubTotal of the product in the Checkout Page is: " + Subtotal);
+				test.log(LogStatus.INFO, "The SubTotal of the product in the Checkout Page is: " + Subtotal);
 			}
 			return false;
 

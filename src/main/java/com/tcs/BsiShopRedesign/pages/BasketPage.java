@@ -549,8 +549,8 @@ public class BasketPage extends Page {
 		}
 	}
 
-	public String verifyMemPriceBasket() {
-
+	public void verifyMemPriceBasket(String searchMemPrice) {
+		String finalPriceText = null;
 		String memDiscount = null;
 		try {
 			WebElement unitPrice = driver.findElements(By.cssSelector("td[data-th='Price']>div")).get(0);
@@ -558,52 +558,79 @@ public class BasketPage extends Page {
 			WebElement memPrice = driver.findElements(By.cssSelector("span[class='textcolour']")).get(1);
 			WebElement totalPrice = driver.findElement(By.cssSelector("span[class='floatr']"));
 
+			// String memPriceText = memPrice.getText();
 			String priceText = unitPrice.getText();
-			String finalPriceText = finalPrice.getText();
+			finalPriceText = finalPrice.getText();
 			String totalPriceText = totalPrice.getText();
 
-			String memPrice1 = memPrice.getText();
-			String[] splitMemPrice = memPrice1.split(" ", 3);
-			String memPriceText = splitMemPrice[2];
+			System.out.println("The search Member Price is: " + searchMemPrice);
+			test.log(LogStatus.INFO, "The search Member Price is: " + searchMemPrice);
+			
+			if (finalPriceText == totalPriceText && finalPriceText == searchMemPrice && totalPriceText == finalPriceText
+					&& finalPriceText == searchMemPrice) {
+				System.out.println("The unit price of the product in the Basket Page is: " + priceText
+						+ " & The member price of the product in the Basket Page is: " + finalPriceText
+						+ " & The total price of the product in the Basket Page is: " + totalPriceText);
+				test.log(LogStatus.INFO,
+						"The unit price of the product in the Basket Page is: " + finalPriceText
+								+ " & The member price of the product in the Basket Page is: " + finalPriceText
+								+ " & The total price of the product in the Basket Page is: " + totalPriceText); // return
+																													// true;
 
-			priceText = priceText.substring(1);
-			finalPriceText = finalPriceText.substring(1);
-			memPriceText = memPriceText.substring(1);
-			totalPriceText = totalPriceText.substring(1);
-
-			double finalUnitPrice = Double.parseDouble(priceText);
-			double finalFinalPrice = Double.parseDouble(finalPriceText);
-			double finalMemPrice = Double.parseDouble(memPriceText);
-			double finalTotalPrice = Double.parseDouble(totalPriceText);
-			double memberPrice = finalUnitPrice / 2;
-			memDiscount = Double.toString(memberPrice);
-
-			if (finalFinalPrice == memberPrice && finalMemPrice == memberPrice && finalTotalPrice == memberPrice) {
-				System.out.println("The unit price of the product in the Basket Page is: " + finalUnitPrice
-						+ " & The member price of the product in the Basket Page is: " + finalMemPrice
-						+ " & The total price of the product in the Basket Page is: " + finalTotalPrice);
-				test.log(LogStatus.PASS,
-						"The unit price of the product in the Basket Page is: " + finalUnitPrice
-								+ " & The member price of the product in the Basket Page is: " + finalMemPrice
-								+ " & The total price of the product in the Basket Page is: " + finalTotalPrice);
-				// return true;
 			} else {
-				System.out.println("The unit price of the product in the Basket Page is: " + finalUnitPrice
-						+ " & The member price of the product in the Basket Page is: " + finalMemPrice
-						+ " & The total price of the product in the Basket Page is: " + finalTotalPrice);
-				test.log(LogStatus.FAIL,
-						"The unit price of the product in the Basket Page is: " + finalUnitPrice
-								+ " & The member price of the product in the Basket Page is: " + finalMemPrice
-								+ " & The total price of the product in the Basket Page is: " + finalTotalPrice);
-				CommonHelper.reportFailure("The member price in the Basket Page is incorrect");
+
+				System.out.println("The unit price of the product in the Basket Page is: " + priceText
+						+ " & The member price of the product in the Basket Page is: " + finalPriceText
+						+ " & The total price of the product in the Basket Page is: " + totalPriceText);
+				test.log(LogStatus.INFO,
+						"The unit price of the product in the Basket Page is: " + finalPriceText
+								+ " & The member price of the product in the Basket Page is: " + finalPriceText
+								+ " & The total price of the product in the Basket Page is: " + totalPriceText);
 			}
+
+			/*
+			 * String memPrice1 = memPrice.getText(); String[] splitMemPrice =
+			 * memPrice1.split(" ", 3); String memPriceText = splitMemPrice[2];
+			 * 
+			 * priceText = priceText.substring(1); finalPriceText =
+			 * finalPriceText.substring(1); memPriceText = memPriceText.substring(1);
+			 * totalPriceText = totalPriceText.substring(1);
+			 * 
+			 * double finalUnitPrice = Double.parseDouble(priceText); double finalFinalPrice
+			 * = Double.parseDouble(finalPriceText); double finalMemPrice =
+			 * Double.parseDouble(memPriceText); double finalTotalPrice =
+			 * Double.parseDouble(totalPriceText); double memberPrice = finalUnitPrice / 2;
+			 * memDiscount = Double.toString(memberPrice);
+			 * 
+			 * if (finalFinalPrice == memberPrice && finalMemPrice == memberPrice &&
+			 * finalTotalPrice == memberPrice) {
+			 * System.out.println("The unit price of the product in the Basket Page is: " +
+			 * finalUnitPrice + " & The member price of the product in the Basket Page is: "
+			 * + finalMemPrice + " & The total price of the product in the Basket Page is: "
+			 * + finalTotalPrice); test.log(LogStatus.PASS,
+			 * "The unit price of the product in the Basket Page is: " + finalUnitPrice +
+			 * " & The member price of the product in the Basket Page is: " + finalMemPrice
+			 * + " & The total price of the product in the Basket Page is: " +
+			 * finalTotalPrice); // return true; } else {
+			 * System.out.println("The unit price of the product in the Basket Page is: " +
+			 * finalUnitPrice + " & The member price of the product in the Basket Page is: "
+			 * + finalMemPrice + " & The total price of the product in the Basket Page is: "
+			 * + finalTotalPrice); test.log(LogStatus.FAIL,
+			 * "The unit price of the product in the Basket Page is: " + finalUnitPrice +
+			 * " & The member price of the product in the Basket Page is: " + finalMemPrice
+			 * + " & The total price of the product in the Basket Page is: " +
+			 * finalTotalPrice);
+			 * CommonHelper.reportFailure("The member price in the Basket Page is incorrect"
+			 * ); }
+			 */
 			// return false;
 
 		} catch (NumberFormatException e) {
 			CommonHelper.reportFailure("The member price in the Basket Page is incorrect");
 			e.printStackTrace();
 		}
-		return memDiscount;
+
+		//return finalPriceText;
 
 	}
 

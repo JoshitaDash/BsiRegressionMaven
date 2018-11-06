@@ -28,6 +28,7 @@ public class CreatePromoCode extends BaseTest {
 			Log.info("Admin Signing In");
 			SignInPage signIn = new SignInPage(driver);
 			signIn.adminLogin();
+			
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Admin Signing in was unsuccessful");
 			CommonHelper.reportFailure("Admin Signing in was unsuccessful");
@@ -54,7 +55,12 @@ public class CreatePromoCode extends BaseTest {
 			System.out.println("Enter Promo Code Details");
 			Log.info("Enter Promo Code Details");
 			test.log(LogStatus.INFO, "Enter Promo Code Details");
-			customer.enterPromoCodeDetails();
+			String promoCode = customer.createPromoCodeDetails();
+			
+			System.out.println("Verify Promo Code");
+			Log.info("Verify Promo Code");
+			test.log(LogStatus.INFO, "Verify Promo Code");
+			customer.verifyPromoCode(promoCode);
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Create Promocode with Special Character was unsuccessful");

@@ -45,18 +45,18 @@ public class Page {
 		try {
 
 			if (BaseTest.browser.equals("IE")/* || BaseTest.browser.equals("firefox")*/) {
-				System.out.println("");
 				if (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
 					CommonHelper.elementToBeVisible(locator);
 				CommonHelper.elementToBeClickable(locator);
 				CommonHelper.clickByJS(locator);
+				Thread.sleep(2000);
 			} else {// (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
 				CommonHelper.elementToBeVisible(locator);
 				CommonHelper.elementToBeClickable(locator);
 				CommonHelper.element(locator).click();
 			}
 		} catch (Exception e) {
-			test.log(LogStatus.FAIL, locator + " Click Element Not Found");
+			//test.log(LogStatus.FAIL, locator + " Click Element Not Found");
 			e.printStackTrace();
 		}
 	}

@@ -4,6 +4,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -327,7 +328,8 @@ public class CmsPage extends Page {
 		Thread.sleep(2000);
 	}
 
-	public void enterPromoCodeDetails() {
+	public String createPromoCodeDetails() {
+		String ruleName = null;
 
 		try {
 
@@ -335,7 +337,7 @@ public class CmsPage extends Page {
 			Log.info("Enter Rule Name");
 			test.log(LogStatus.INFO, "Enter Rule Name");
 			CommonHelper.elementToBeVisible("ruleName_css");
-			String ruleName = RandomStringUtils.randomAlphanumeric(5) + RandomStringUtils.random(5, "@!#$%")
+			ruleName = RandomStringUtils.randomAlphanumeric(5) + RandomStringUtils.random(5, "@!#$%")
 					+ RandomStringUtils.randomAlphabetic(3);
 			System.out.println("The rule Name is: " + ruleName);
 			test.log(LogStatus.INFO, "The rule Name is: " + ruleName);
@@ -343,22 +345,29 @@ public class CmsPage extends Page {
 			enterText("ruleName_css", ruleName);
 			Thread.sleep(2000);
 
+			//Thread.sleep(2000);
 			System.out.println("Select Website");
 			Log.info("Select Website");
 			test.log(LogStatus.INFO, "Select Website");
+			//Thread.sleep(2000);
 			click("mainWebsite_css");
 			String website = CommonHelper.element("mainWebsite_css").getAttribute("data-title");
 			System.out.println("The Website is: " + website);
 			test.log(LogStatus.INFO, "The Website is: " + website);
+			// Thread.sleep(2000);
 
+			// Thread.sleep(2000);
 			System.out.println("Select Customer Group");
 			Log.info("Select Customer Group");
 			test.log(LogStatus.INFO, "Select Customer Group");
+			// selectDpdwnText("mainWebsite_css", "General");
 			click("groupGeneral_css");
 			String group = CommonHelper.element("groupGeneral_css").getText();
 			System.out.println("The Customer Group is: " + group);
 			test.log(LogStatus.INFO, "The Customer Group is: " + group);
+			// Thread.sleep(2000);
 
+			// Thread.sleep(2000);
 			System.out.println("Select Coupon Type");
 			Log.info("Select Coupon Type");
 			test.log(LogStatus.INFO, "Select Coupon Type");
@@ -366,16 +375,21 @@ public class CmsPage extends Page {
 			String couponType = CommonHelper.element("couponType_css").getCssValue("value");
 			System.out.println("The Coupon Type is: " + "Specific Coupon");
 			test.log(LogStatus.INFO, "The Coupon Type is: " + "Specific Coupon");
+			// Thread.sleep(2000);
 
+			// Thread.sleep(2000);
 			System.out.println("Enter Coupon Code");
 			Log.info("Enter Coupon Code");
 			test.log(LogStatus.INFO, "Enter Coupon Code");
+			CommonHelper.scrolltoview("couponCode_css");
 			clearText("couponCode_css");
 			enterText("couponCode_css", ruleName);
 			String couponCode = CommonHelper.element("couponCode_css").getAttribute("data-title");
 			System.out.println("The Coupon Code is: " + ruleName);
 			test.log(LogStatus.INFO, "The Coupon Code is: " + ruleName);
+			// Thread.sleep(2000);
 
+			// Thread.sleep(2000);
 			System.out.println("Enter Uses Per Coupon");
 			Log.info("Enter Uses Per Coupon");
 			test.log(LogStatus.INFO, "Enter Uses Per Coupon");
@@ -384,7 +398,9 @@ public class CmsPage extends Page {
 			String usesPerCoupon = CommonHelper.element("usesPerCoupon_css").getAttribute("data-title");
 			System.out.println("The Uses Per Coupon is: " + "100");
 			test.log(LogStatus.INFO, "The Uses Per Coupon is: " + "100");
+			// Thread.sleep(2000);
 
+			// Thread.sleep(2000);
 			System.out.println("Enter Uses Per Customer");
 			Log.info("Enter Uses Per Customer");
 			test.log(LogStatus.INFO, "Enter Uses Per Customer");
@@ -393,7 +409,9 @@ public class CmsPage extends Page {
 			String usesPerCustomer = CommonHelper.element("usesPerCustomer_css").getAttribute("data-title");
 			System.out.println("The Uses Per Customer is: " + "100");
 			test.log(LogStatus.INFO, "The Uses Per Customer is: " + "100");
+			// Thread.sleep(2000);
 
+			// Thread.sleep(2000);
 			System.out.println("Click on Action");
 			Log.info("Click on Action");
 			test.log(LogStatus.INFO, "Click on Action");
@@ -403,6 +421,7 @@ public class CmsPage extends Page {
 			System.out.println("Enter Discount Percentage");
 			Log.info("Enter Discount Percentage");
 			test.log(LogStatus.INFO, "Enter Discount Percentage");
+			CommonHelper.scrolltoview("discountAmount_css");
 			clearText("discountAmount_css");
 			enterText("discountAmount_css", "10");
 			String discountAmount = CommonHelper.element("discountAmount_css").getAttribute("data-title");
@@ -414,13 +433,24 @@ public class CmsPage extends Page {
 			test.log(LogStatus.INFO, "Click on Save");
 			click("saveCouponCodeDetails_id");
 			Thread.sleep(1000);
-			test.log(LogStatus.PASS, "Enter Promo Code Details was successful");
-			System.out.println("Enter Promo Code Details was successful");
 
-		} catch (InterruptedException e) {
-			CommonHelper.reportFailure("Enter Promo Code Details was unsuccessful");
+			String successMsg = driver.findElement(By.xpath("//*[@id='messages']/div/div/div")).getText();
+			if (successMsg.contains("You saved the rule.")) {
+				test.log(LogStatus.PASS, "The success message is: " + successMsg);
+				System.out.println("The success message is: " + successMsg);
+				test.log(LogStatus.PASS, "Create Promocode with Special Character was successful");
+				System.out.println("Create Promocode with Special Character was successful");
+			} else {
+				test.log(LogStatus.FAIL, "Create Promocode with Special Character was unsuccessful");
+				System.out.println("Create Promocode with Special Character was unsuccessful");
+			}
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Create Promocode with Special Character was unsuccessful");
 			e.printStackTrace();
 		}
+
+		return ruleName;
 
 	}
 
@@ -511,10 +541,55 @@ public class CmsPage extends Page {
 			System.out.println("The table data is:" + table);
 			test.log(LogStatus.INFO, "The table data is:" + table);
 			CommonHelper.takeScreenShot();
-			
-			
+
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Promo Code records was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyPromoCode(String promocode) {
+
+		try {
+
+			System.out.println("Reset Filter");
+			Log.info("Reset Filter");
+			test.log(LogStatus.INFO, "Reset Filter");
+			click("resetFilter_css");
+
+			Thread.sleep(2000);
+			System.out.println("Enter Promocode");
+			Log.info("Enter Promocode");
+			test.log(LogStatus.INFO, "Enter Promocode");
+			enterText("couponCode_id", promocode);
+
+			System.out.println("Click Search Promocode");
+			Log.info("Click Search Promocode");
+			test.log(LogStatus.INFO, "Click Search Promocode");
+			click("searchCouponCode_css");
+
+			String couponCode = CommonHelper.element("couponCodeSearchColumnData_css").getText();
+			if (couponCode.equals(promocode)) {
+				System.out.println("The created Coupon Code is: " + couponCode);
+				test.log(LogStatus.PASS, "The created Coupon Code is: " + couponCode);
+			} else {
+				System.out.println("The created Coupon Code is: " + couponCode);
+				test.log(LogStatus.FAIL, "The created Coupon Code is: " + couponCode);
+			}
+
+			String couponCodeStatus = CommonHelper.element("statusPromoCode_css").getText();
+			if (couponCodeStatus.equalsIgnoreCase("Active")) {
+				System.out.println("The status of Coupon Code is: " + couponCode);
+				test.log(LogStatus.PASS, "The status of Coupon Code is: " + couponCode);
+				test.log(LogStatus.PASS, "Verification of Promo Code was successful");
+
+			} else {
+				System.out.println("Verification of Promo Code was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Promo Code was unsuccessful");
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Promo Code was unsuccessful");
 			e.printStackTrace();
 		}
 

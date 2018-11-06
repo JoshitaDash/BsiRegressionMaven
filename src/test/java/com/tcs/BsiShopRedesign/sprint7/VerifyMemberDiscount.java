@@ -7,6 +7,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.pages.BasketPage;
 import com.tcs.BsiShopRedesign.pages.CheckoutPage;
 import com.tcs.BsiShopRedesign.pages.HomePage;
+import com.tcs.BsiShopRedesign.pages.OrderConfirmationPage;
 import com.tcs.BsiShopRedesign.pages.SearchPage;
 import com.tcs.BsiShopRedesign.pages.SignInPage;
 import com.tcs.BsiShopRedesign.utilities.BaseTest;
@@ -60,7 +61,7 @@ public class VerifyMemberDiscount extends BaseTest {
 			System.out.println("Verify Member Price in Search List");
 			Log.info("Verify Member Price in Search List");
 			SearchPage memPrice = new SearchPage(driver);
-			memPrice.verifyMemPriceSearchList();
+			String searchMemDisc = memPrice.verifyMemPriceSearchList();
 
 			Thread.sleep(1000);
 			System.out.println("Click on Add to Basket from Search List");
@@ -81,7 +82,7 @@ public class VerifyMemberDiscount extends BaseTest {
 			System.out.println("Verify Member Price in Basket Page");
 			Log.info("Verify Member Price in Basket Page");
 			BasketPage basketMemPrice = new BasketPage(driver);
-			String memberDiscount = basketMemPrice.verifyMemPriceBasket();
+			basketMemPrice.verifyMemPriceBasket(searchMemDisc);
 
 			System.out.println("Click Checkout Now");
 			Log.info("Click Checkout Now");
@@ -92,13 +93,37 @@ public class VerifyMemberDiscount extends BaseTest {
 			System.out.println("Verify Member Price in Checkout Page");
 			Log.info("Verify Member Price in Checkout Page");
 			CheckoutPage checkoutMemPrice = new CheckoutPage(driver);
-			checkoutMemPrice.verifyMemPriceCheckout(memberDiscount);
+			checkoutMemPrice.verifyMemPriceCheckout(searchMemDisc);
 			
-			/*System.out.println("Click Continue Shopping");
-			Log.info("Click Continue Shopping");
-			checkoutMemPrice.clickContinueShopping();*/
+			System.out.println("Enter Payment Details");
+			Log.info("Enter Payment Details");
+			test.log(LogStatus.INFO, "Enter Payment Details");
+			CheckoutPage order = new CheckoutPage(driver);
+			order.enterCardPaymentDetails();
 			
-			System.out.println("Click Edit on Checkout Page");
+			System.out.println("Click Review Order");
+			Log.info("Click Review Order");
+			test.log(LogStatus.INFO, "Click Review Order");
+			order.clickReviewOrder();
+			
+			Thread.sleep(5000);
+			System.out.println("Verify Member Price in Review Order Page");
+			Log.info("Verify Member Price in Review Order Page");
+			test.log(LogStatus.INFO, "Verify Member Price in Review Order Page");
+			order.verifyReviewOrderMemberPrice(searchMemDisc);
+			
+			System.out.println("Confirm Order Details");
+			Log.info("Confirm Order Details");
+			test.log(LogStatus.INFO, "Confirm Order Details");
+			order.confirmOrderDetailsOnly();
+
+			System.out.println("Verify Success Message on Order Confirmation Page");
+			Log.info("Verify Success Message on Order Confirmation Page");
+			test.log(LogStatus.INFO, "Verify Success Message on Order Confirmation Page");
+			OrderConfirmationPage softcopy = new OrderConfirmationPage(driver);
+			softcopy.verifyOrderSuccessMessage();
+			
+			/*System.out.println("Click Edit on Checkout Page");
 			Log.info("Click Edit on Checkout Page");
 			CheckoutPage editOrder = new CheckoutPage(driver);
 			editOrder.clickEditOrder();
@@ -106,7 +131,7 @@ public class VerifyMemberDiscount extends BaseTest {
 			Log.info("Remove the Product");
 			System.out.println("Remove the Product");
 			test.log(LogStatus.INFO, "Remove the Product");
-			basketMemPrice.removeMultipleProduct();
+			basketMemPrice.removeMultipleProduct();*/
 
 			System.out.println("Click Logout");
 			Log.info("Click Logout");

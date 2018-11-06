@@ -809,11 +809,10 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, "Click on Add to Basket");
 			Log.info("Click on Add to Basket");
 			System.out.println("Click on Add to Basket");
-			// WebElement addToBasket =
-			// driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
 			CommonHelper.elementToBeClickable("addToBasket_css");
-			click("addToBasket_css");
-			// addToBasket.click();
+			WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
+			// click("addToBasket_css");
+			addToBasket.click();
 			Thread.sleep(2000);
 
 		} catch (Exception e) {
@@ -951,45 +950,58 @@ public class SearchPage extends Page {
 		}
 	}
 
-	public boolean verifyMemPriceSearchList() throws InterruptedException {
+	public String verifyMemPriceSearchList() throws InterruptedException {
+
+		// double finalMemPrice = 0;
+		// double finalPrice = 0;
+
+		String memPrice = null;
 
 		try {
 			Thread.sleep(2000);
-			WebElement priceList = driver.findElements(By.cssSelector("span[id*='product-price']")).get(0);
+			WebElement priceList = driver.findElements(By.cssSelector("span[id*='product-price']")).get(1);
 			// WebElement memPriceList =
 			// driver.findElements(By.cssSelector("span[class='price']")).get(1);
 			WebElement memPriceList = driver.findElement(
-					By.xpath("//*[@id='search_results_display']/li[1]/div[1]/div/div[2]/div[1]/span[2]/span/span[1]"));
+					By.xpath("//*[@id='search_results_display']/li[2]/div[1]/div/div[2]/div[1]/span[2]/span/span[1]"));
 			String price = priceList.getText();
-			String memPrice = memPriceList.getText();
+			memPrice = memPriceList.getText();
 
-			price = price.substring(1);
-			memPrice = memPrice.substring(1);
+			//price = price.substring(1);
+			//memPrice = memPrice.substring(1);
+			System.out.println("The price of the second product in the search list is: " + price
+					+ " & The member price of the second product in the search list is: " + memPrice);
+			test.log(LogStatus.PASS, "The price of the second product in the search list is: " + price
+					+ " & The member price of the second product in the search list is: " + memPrice);
 
-			double finalPrice = Double.parseDouble(price);
-			double finalMemPrice = Double.parseDouble(memPrice);
-			double memberPrice = finalPrice / 2;
+			/*
+			 * finalPrice = Double.parseDouble(price); finalMemPrice
+			 * =Double.parseDouble(memPrice); double memberPrice = finalPrice / 2;
+			 */
 
-			Thread.sleep(2000);
-			if (finalMemPrice == memberPrice) {
-				System.out.println("The price of the first product in the search list is: " + finalPrice
-						+ " & The member price of the first product in the search list is: " + finalMemPrice);
-				test.log(LogStatus.PASS, "The price of the first product in the search list is: " + finalPrice
-						+ " & The member price of the first product in the search list is: " + finalMemPrice);
-				return true;
-			} else {
-				System.out.println("The member price in the search list is incorrect");
-				test.log(LogStatus.FAIL, "The price of the first product in the search list is: " + finalPrice
-						+ " & The member price of the first product in the search list is: " + finalMemPrice);
-			}
-			return false;
+			/*
+			 * Thread.sleep(2000); if (finalMemPrice == memberPrice ) {
+			 * System.out.println("The price of the first product in the search list is: " +
+			 * finalPrice +
+			 * " & The member price of the first product in the search list is: " +
+			 * finalMemPrice); test.log(LogStatus.PASS,
+			 * "The price of the first product in the search list is: " + finalPrice +
+			 * " & The member price of the first product in the search list is: " +
+			 * finalMemPrice); return true; } else {
+			 * System.out.println("The member price in the search list is incorrect");
+			 * test.log(LogStatus.FAIL,
+			 * "The price of the first product in the search list is: " + finalPrice +
+			 * " & The member price of the first product in the search list is: " +
+			 * finalMemPrice); } return false;
+			 */
 
 		} catch (NumberFormatException e) {
 			CommonHelper.reportFailure("The member price in the search list is incorrect");
 			e.printStackTrace();
 		}
-		return false;
 
+		return memPrice;
+		// return finalPrice;
 	}
 
 	public void clickProductOnSearchList() {
