@@ -39,7 +39,7 @@ public class PreBookProducts extends BaseTest {
 		}
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = false)
 	public void verifyAdavanceAccessProduct() {
 
 		test = extent.startTest(
@@ -124,7 +124,7 @@ public class PreBookProducts extends BaseTest {
 			test.log(LogStatus.INFO, "Enter product name in Search textbox");
 			WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
 			search.clear();
-			search.sendKeys("BIP 2223:2018");
+			search.sendKeys("PAS 43:2018");
 
 			Log.info("Click on Search");
 			System.out.println("Click on Search");
@@ -136,9 +136,9 @@ public class PreBookProducts extends BaseTest {
 			Log.info("Select the Product");
 			System.out.println("Select the Product");
 			test.log(LogStatus.INFO, "Select the Product");
-			WebElement product = driver.findElement(By.linkText("BIP 2223:2018"));
+			WebElement product = driver.findElement(By.linkText("PAS 43:2018"));
 			Thread.sleep(1000);
-			wait.until(ExpectedConditions.elementToBeClickable(By.linkText("BIP 2223:2018")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.linkText("PAS 43:2018")));
 			product.click();
 
 			Log.info("Verify Pre Order Product");
@@ -148,7 +148,7 @@ public class PreBookProducts extends BaseTest {
 
 			Log.info("Add Pre Order Product to Basket");
 			System.out.println("Add Pre Order Product to Basket");
-			preOrder.selectDefaultFormatAndAddToBasket();
+			preOrder.selectExistingFormatAndAddToBasket();
 
 			System.out.println("Click Checkout Now");
 			Log.info("Click Checkout Now");

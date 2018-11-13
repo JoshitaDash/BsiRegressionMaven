@@ -750,7 +750,7 @@ public class ProductPage extends Page {
 				System.out.println("The Product Details of PAS 2030 Online is: " + prod);
 				test.log(LogStatus.INFO, "The Product Details of PAS 2030 Online is: " + prod);
 				test.log(LogStatus.PASS, "Verification of Product Details was successful");
-				//CommonHelper.takeScreenShot();
+				// CommonHelper.takeScreenShot();
 			} else {
 				System.out.println("The Product Details of PAS 2030 Online does not exist");
 				test.log(LogStatus.INFO, "The Product Details of PAS 2030 Online does not exist");
@@ -761,7 +761,7 @@ public class ProductPage extends Page {
 				System.out.println("The Price of PAS 2030 Online is: " + price);
 				test.log(LogStatus.INFO, "The Price of PAS 2030 Online is: " + price);
 				test.log(LogStatus.PASS, "Verification of Price was successful");
-				//CommonHelper.takeScreenShot();
+				// CommonHelper.takeScreenShot();
 			} else {
 				System.out.println("The Price of PAS 2030 Online does not exist");
 				test.log(LogStatus.INFO, "The Price of PAS 2030 Online does not exist");
@@ -777,10 +777,42 @@ public class ProductPage extends Page {
 				System.out.println("The Format of PAS 2030 Online does not exist");
 				test.log(LogStatus.INFO, "The Format of PAS 2030 Online does not exist");
 				test.log(LogStatus.FAIL, "Verification of Format was unsuccessful");
-				
+
 			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of PAS 2030 Details was successful");
+			e.printStackTrace();
+		}
+	}
+
+	public void selectExistingFormatAndAddToBasket() {
+
+		Log.info("Check Visibility for Existing Format product");
+		System.out.println("Check Visibility for Existing Format product");
+		boolean existingFormat = CommonHelper.isElementPresent(By.cssSelector("h3[class*='formatConfig']"));
+
+		try {
+			if (existingFormat) {
+				 Thread.sleep(2000);
+				System.out.println("Select Hardcopy format");
+				test.log(LogStatus.INFO, "Select Hardcopy format");
+				Log.info("Select Hardcopy format");
+				click("selectHardcopy_xpath");
+
+				Log.info("Click on Add to Basket");
+				System.out.println("Click on Add to Basket");
+				test.log(LogStatus.INFO, "Click on Add to Basket");
+				CommonHelper.elementToBeClickable("addToBasket_xpath");
+				click("addToBasket_xpath");
+
+				viewBasket();
+
+			} else {
+				System.out.println("The format of the product was not selected");
+				test.log(LogStatus.FAIL, "The format of the product was not selected");
+			}
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Select Format and Add to Basket was unsuccessful");
 			e.printStackTrace();
 		}
 	}

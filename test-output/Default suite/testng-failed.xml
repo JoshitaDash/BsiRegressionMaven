@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads">
+      <class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount">
         <methods>
-          <include name="downloadSoftCopyfromOrderHistoryPage"/>
-          <include name="signIn"/>
+          <include name="verifyMemberPrice"/>
+          <include name="signInMember"/>
           <include name="getDriverInstance"/>
-          <include name="downloadSoftCopyfromOrderCofirmationPage"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

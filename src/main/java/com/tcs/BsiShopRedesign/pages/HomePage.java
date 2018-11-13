@@ -503,11 +503,12 @@ public class HomePage extends BaseTest {
 
 	public void clickMyProfile() {
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			Log.info("Click on My Profile");
 			System.out.println("Click on My Profile");
 			test.log(LogStatus.INFO, "Click on My Profile");
 			click("myProfile_id");
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("Click on My Profile was unsuccessful");
 			Assert.fail(e.getMessage());

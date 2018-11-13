@@ -64,10 +64,22 @@ public class SignInPage extends Page {
 			if (isEMyprofileVisible)
 				test.log(LogStatus.PASS, "Login Successful");
 			else
-				CommonHelper.reportFailure("Login UnSuccessful");
+				CommonHelper.reportFailure("Login Unsuccessful");
+
+			//Thread.sleep(1000);
+			/*SearchPage basketPage = new SearchPage(driver);
+			basketPage.viewBasket();
+			
+			//Thread.sleep(1000);
+			BasketPage remove = new BasketPage(driver);
+			remove.removeProductsOnSignIn();
+			
+			Thread.sleep(1000);
+			HomePage myProfile = new HomePage(driver);
+			myProfile.clickMyProfile();*/
 
 		} catch (Exception e) {
-			CommonHelper.reportFailure("Login UnSuccessful");
+			CommonHelper.reportFailure("Login Unsuccessful");
 			e.printStackTrace();
 		}
 
@@ -327,7 +339,7 @@ public class SignInPage extends Page {
 			CommonHelper.elementToBeClickable("adminSignin_xpath");
 			click("adminSignin_xpath");
 			Thread.sleep(3000);
-			
+
 			closeAlert = driver.findElement(By.cssSelector("button[data-role='closeBtn']")).isDisplayed();
 			if (closeAlert) {
 				test.log(LogStatus.INFO, "Close Alert");
@@ -342,8 +354,6 @@ public class SignInPage extends Page {
 				System.out.println("Admin User Sign In Successful");
 				test.log(LogStatus.PASS, "Admin User Sign In Successful");
 			}
-
-			
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Admin Login Unsuccessful");

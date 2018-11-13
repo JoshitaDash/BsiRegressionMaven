@@ -565,7 +565,7 @@ public class BasketPage extends Page {
 
 			System.out.println("The search Member Price is: " + searchMemPrice);
 			test.log(LogStatus.INFO, "The search Member Price is: " + searchMemPrice);
-			
+
 			if (finalPriceText == totalPriceText && finalPriceText == searchMemPrice && totalPriceText == finalPriceText
 					&& finalPriceText == searchMemPrice) {
 				System.out.println("The unit price of the product in the Basket Page is: " + priceText
@@ -630,7 +630,7 @@ public class BasketPage extends Page {
 			e.printStackTrace();
 		}
 
-		//return finalPriceText;
+		// return finalPriceText;
 
 	}
 
@@ -669,4 +669,49 @@ public class BasketPage extends Page {
 
 	}
 
+	public void removeProductsOnSignIn() {
+
+		try {
+			boolean removeProd = driver.findElement(By.xpath("//img[@alt='delete']")).isDisplayed();
+			if (removeProd) {
+
+				WebDriverWait wait = new WebDriverWait(driver, 30);
+				test.log(LogStatus.INFO, "Remove Multiple Products from Basket");
+				List<WebElement> removeItem = driver.findElements(By.xpath("//img[@alt='delete']"));
+				System.out.println("Remove");
+
+				for (int i = 1; i <= removeItem.size(); i++) {
+					// WebElement remove = driver.findElement(By.xpath("//img[@alt='delete']"));
+					Thread.sleep(5000);
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='delete']")));
+					wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='delete']")));
+					// remove.click();
+					click("removeEvent_xpath");
+				}
+
+				Thread.sleep(3000);
+				test.log(LogStatus.INFO, "Verify Remove Basket");
+				// CommonHelper.elementToBeVisible("verifyBasket_css");
+				CommonHelper.elementToBeClickable("verifyBasket_css");
+				String verifyBasket = CommonHelper.element("verifyBasket_css").getText();
+				System.out.println("The Verfication message is: " + verifyBasket);
+				Log.info("The Verfication message is: " + verifyBasket);
+				test.log(LogStatus.PASS, verifyBasket);
+				test.log(LogStatus.PASS, "Multiple Products has been removed from Basket successfully");
+
+			} else {
+				
+				test.log(LogStatus.INFO, "The Basket Page does not contain any products to be removed ");
+				test.log(LogStatus.PASS, "Basket Page verification was succesful");
+				System.out.println("The Basket Page does not contain any products to be removed ");
+				Log.info("The Basket Page does not contain any products to be removed ");
+			}
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Remove Product from Basket was unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
 }

@@ -19,11 +19,11 @@ public class SearchSortOrderByPublishedDate extends BaseTest {
 		test = extent.startTest("Sprint 3 - Ecom-49 AC#47 ____ Verify Sorting order for Products by Published Date in Search List");
 		try {
 
-			System.out.println("Search PAS Product");
-			Log.info("Search PAS Product");
-			test.log(LogStatus.INFO, "Search PAS Product");
+			System.out.println("Search ASTM Product");
+			Log.info("Search ASTM Product");
+			test.log(LogStatus.INFO, "Search ASTM Product");
 			HomePage home = new HomePage(driver);
-			home.searchPASProduct();
+			home.searchASTMProduct();
 
 			System.out.println("Select maximum items");
 			Log.info("Select maximum items");
