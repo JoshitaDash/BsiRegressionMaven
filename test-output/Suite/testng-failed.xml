@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="browser" value="chrome"/>
+  <parameter name="browser" value="IE"/>
   <parameter name="isAdmin" value="Yes"/>
-  <test name="Chrome Browser(failed)">
-    <parameter name="browser" value="chrome"/>
+  <test name="Internet Explorer Browser(failed)">
+    <parameter name="browser" value="IE"/>
     <parameter name="isAdmin" value="No"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress">
+      <class name="com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice">
         <methods>
+          <include name="applyPromoCode"/>
           <include name="launchBrowser"/>
-          <include name="editBillingAddress"/>
           <include name="getDriverInstance"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice -->
     </classes>
-  </test> <!-- Chrome Browser(failed) -->
+  </test> <!-- Internet Explorer Browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

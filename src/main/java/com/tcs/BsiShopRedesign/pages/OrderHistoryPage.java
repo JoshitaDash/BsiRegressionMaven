@@ -1,6 +1,7 @@
 package com.tcs.BsiShopRedesign.pages;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -144,11 +145,28 @@ public class OrderHistoryPage extends Page {
 		return lastModifiedFile;
 	}
 
-	public void verifyOrderStatus() {
+	public void verifyHardCopyOrderStatus() {
 
 		try {
 			String status = driver.findElements(By.cssSelector("td[data-th='Status']")).get(0).getText();
 			if (status.equals("In Progress")) {
+				test.log(LogStatus.PASS, "The Status is: " + status);
+				System.out.println("The Status is: " + status);
+			} else {
+				test.log(LogStatus.FAIL, "The Status is: " + status);
+				System.out.println("The Status is: " + status);
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Status in Order History Page was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPDFOrderStatus() {
+
+		try {
+			String status = driver.findElements(By.cssSelector("td[data-th='Status']")).get(0).getText();
+			if (status.equals("Complete")) {
 				test.log(LogStatus.PASS, "The Status is: " + status);
 				System.out.println("The Status is: " + status);
 			} else {
@@ -215,6 +233,44 @@ public class OrderHistoryPage extends Page {
 			Assert.fail(e.getMessage());
 			e.printStackTrace();
 		}
+	}
+
+	public void viewPDFInvoice() {
+
+		try {
+			Log.info("Click View Invoice in Order History Page");
+			System.out.println("Click View Invoice in Order History Page");
+			test.log(LogStatus.INFO, "Click View Invoice in Order History Page");
+			CommonHelper.scrolltoview("viewPdfInvoice_xpath");
+			click("viewPdfInvoice_xpath");
+
+			Thread.sleep(2000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			driver.manage().window().maximize();
+			Thread.sleep(2000);
+			System.out.println("Switched to 2nd tab");
+
+			String invoiceUrl = driver.getCurrentUrl();
+			if (invoiceUrl.contains("_Invoice")) {
+				System.out.println("View Invoice was successful");
+				test.log(LogStatus.PASS, "View Invoice was successful");
+				CommonHelper.takeScreenShot();
+			} else {
+				System.out.println("View Invoice was unsuccessful");
+				test.log(LogStatus.FAIL, "View Invoice was unsuccessful");
+				CommonHelper.takeScreenShot();
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Click View Invoice in Order History Page was unsuccessful");
+			e.printStackTrace();
+		}
+
 	}
 
 }

@@ -118,9 +118,9 @@ public class VerifyHardCopyDetails extends BaseTest {
 			OrderHistoryPage order = new OrderHistoryPage(driver);
 			order.clickOrderHistoryTab();
 
-			System.out.println("Verify Order Status");
-			Log.info("Verify Order Status");
-			order.verifyOrderStatus();
+			System.out.println("Verify Hard Copy Order Status");
+			Log.info("Verify Hard Copy Order Status");
+			order.verifyHardCopyOrderStatus();
 
 			System.out.println("Click on View Order");
 			Log.info("Click on View Order");
@@ -129,7 +129,7 @@ public class VerifyHardCopyDetails extends BaseTest {
 			System.out.println("Verify Hard Copy Details in Order History Page");
 			Log.info("Verify Hard Copy Details in Order History Page");
 			order.verifyHardCopyDetails();
-			
+
 			System.out.println("Click Logout");
 			Log.info("Click Logout");
 			home.clickLogout();
