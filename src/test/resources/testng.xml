@@ -47,7 +47,7 @@
 			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts" />
-			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyPaymentDetails" />
+			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice" /> 
 		</classes>
 	  </test>
