@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="147017" started-at="2018-11-14T13:47:46Z" finished-at="2018-11-14T13:50:13Z">
+  <suite name="Suite" duration-ms="45922" started-at="2018-11-15T13:47:31Z" finished-at="2018-11-15T13:48:17Z">
     <groups>
     </groups>
-    <test name="Chrome Browser" duration-ms="147017" started-at="2018-11-14T13:47:46Z" finished-at="2018-11-14T13:50:13Z">
-      <class name="com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@569cfc36]" name="launchBrowser" is-config="true" duration-ms="10021" started-at="2018-11-14T13:47:46Z" finished-at="2018-11-14T13:47:56Z">
+    <test name="Chrome Browser" duration-ms="45922" started-at="2018-11-15T13:47:31Z" finished-at="2018-11-15T13:48:17Z">
+      <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="launchBrowser" is-config="true" duration-ms="10352" started-at="2018-11-15T13:47:31Z" finished-at="2018-11-15T13:47:42Z">
           <params>
             <param index="0">
               <value>
@@ -23,27 +23,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@569cfc36]" name="signIn" duration-ms="17526" started-at="2018-11-14T13:47:56Z" finished-at="2018-11-14T13:48:14Z">
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="signIn" duration-ms="17362" started-at="2018-11-15T13:47:42Z" finished-at="2018-11-15T13:47:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="applyPromoCode()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@569cfc36]" name="applyPromoCode" duration-ms="118577" started-at="2018-11-14T13:48:14Z" finished-at="2018-11-14T13:50:13Z">
+        <test-method status="PASS" signature="downloadPASMM()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="downloadPASMM" duration-ms="17240" started-at="2018-11-15T13:47:59Z" finished-at="2018-11-15T13:48:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- applyPromoCode -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@569cfc36]" name="tearDown" is-config="true" duration-ms="893" started-at="2018-11-14T13:50:13Z" finished-at="2018-11-14T13:50:13Z">
+        </test-method> <!-- downloadPASMM -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="tearDown" is-config="true" duration-ms="952" started-at="2018-11-15T13:48:16Z" finished-at="2018-11-15T13:48:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial -->
     </test> <!-- Chrome Browser -->
-    <test name="BSI Admin" duration-ms="0" started-at="2018-11-14T13:50:13Z" finished-at="2018-11-14T13:50:13Z">
-      <class name="com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="15" started-at="2018-11-14T13:47:46Z" finished-at="2018-11-14T13:47:46Z">
+    <test name="BSI Admin" duration-ms="0" started-at="2018-11-15T13:48:17Z" finished-at="2018-11-15T13:48:17Z">
+      <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-11-15T13:47:31Z" finished-at="2018-11-15T13:47:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial -->
     </test> <!-- BSI Admin -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -63,7 +63,7 @@ public class DownloadMarketingMaterial extends BaseTest {
 			Log.info("Click Download Now");
 			System.out.println("Click Download Now");
 			DownloadMMPage down = new DownloadMMPage(driver);
-			down.clickDownloadNow();
+			down.clickDownloadNow();	
 			
 			/*Log.info("Select the Product");
 			System.out.println("Select the Product");
@@ -78,18 +78,22 @@ public class DownloadMarketingMaterial extends BaseTest {
 			DownloadMMPage down = new DownloadMMPage(driver);
 			down.clickDownloadNow();*/
 			
-			Log.info("Enter Pardot Details");
+			Log.info("Verify Youtube link");
+			System.out.println("Verify Youtube link");
+			down.verifyYoutubeLink();
+			
+			/*Log.info("Enter Pardot Details");
 			System.out.println("Enter Pardot Details");
 			down.enterGRPardotDetails();
 			
 			Log.info("Verify Governance Resilience pdf download");
 			System.out.println("Verify Governance Resilience pdf download");
-			down.verifyPdf();
+			down.verifyPdf();*/
 
-			/*System.out.println("Click Logout");
+			System.out.println("Click Logout");
 			Log.info("Click Logout");
 			HomePage event = new HomePage(driver);
-			event.clickLogout();*/
+			event.clickLogout();
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Download Materials for Governance Resilience product was unsuccessful");

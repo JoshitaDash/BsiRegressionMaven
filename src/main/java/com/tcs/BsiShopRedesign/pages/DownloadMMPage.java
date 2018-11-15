@@ -43,12 +43,11 @@ public class DownloadMMPage extends Page {
 			Thread.sleep(2000);
 			System.out.println("Switched to 2nd tab");
 
-			System.out.println("Switch iFrame");
-			Thread.sleep(3000);
-			driver.switchTo().frame(0);
-			Thread.sleep(2000);
-			System.out.println("iframe switched");
-			Thread.sleep(2000);
+			/*
+			 * System.out.println("Switch iFrame"); Thread.sleep(3000);
+			 * driver.switchTo().frame(0); Thread.sleep(2000);
+			 * System.out.println("iframe switched"); Thread.sleep(2000);
+			 */
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Click on Download Now was unsuccessful");
@@ -266,4 +265,37 @@ public class DownloadMMPage extends Page {
 	 * 
 	 * return flag; }
 	 */
+
+	public void verifyYoutubeLink() {
+
+		try {
+			test.log(LogStatus.INFO, "Verify Governance Resilience Youtube Link");
+			System.out.println("Verify Governance Resilience Youtube Link");
+			Log.info("Verify Governance Resilience Youtube Link");
+			String getURL = driver.getCurrentUrl();
+
+			if (getURL.contains("https://www.youtube.com/")) {
+				System.out.println("The URL is: " + getURL);
+				test.log(LogStatus.INFO, "The URL is: " + getURL);
+				System.out.println("The Verification of Governance Resilence was successful ");
+				test.log(LogStatus.PASS, "The Verification of Governance Resilence was successful ");
+				Thread.sleep(3000);
+				CommonHelper.takeScreenShot();
+			} else {
+
+				System.out.println("The Verification of Governance Resilence was successful " + getURL);
+				test.log(LogStatus.FAIL, "The Verification of Governance Resilence was successful " + getURL);
+				CommonHelper.takeScreenShot();
+			}
+
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verification of Youtube Link was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
 }
