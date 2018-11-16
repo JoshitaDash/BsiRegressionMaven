@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="24" total="112" passed="88">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="45922" started-at="2018-11-15T13:47:31Z" finished-at="2018-11-15T13:48:17Z">
+  <suite name="Suite" duration-ms="8218748" started-at="2018-11-15T13:56:59Z" finished-at="2018-11-15T16:13:58Z">
     <groups>
     </groups>
-    <test name="Chrome Browser" duration-ms="45922" started-at="2018-11-15T13:47:31Z" finished-at="2018-11-15T13:48:17Z">
-      <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="launchBrowser" is-config="true" duration-ms="10352" started-at="2018-11-15T13:47:31Z" finished-at="2018-11-15T13:47:42Z">
+    <test name="Internet Explorer Browser" duration-ms="7814739" started-at="2018-11-15T13:56:59Z" finished-at="2018-11-15T16:07:14Z">
+      <class name="com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket@402bba4f]" name="launchBrowser" is-config="true" duration-ms="9128" started-at="2018-11-15T14:47:50Z" finished-at="2018-11-15T14:47:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[IE]]>
               </value>
             </param>
             <param index="1">
@@ -23,27 +23,2413 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="signIn" duration-ms="17362" started-at="2018-11-15T13:47:42Z" finished-at="2018-11-15T13:47:59Z">
+        <test-method status="PASS" signature="checkWarningMsgPDF()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket@402bba4f]" name="checkWarningMsgPDF" duration-ms="36636" started-at="2018-11-15T14:47:59Z" finished-at="2018-11-15T14:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkWarningMsgPDF -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket@402bba4f]" name="tearDown" is-config="true" duration-ms="564" started-at="2018-11-15T14:48:36Z" finished-at="2018-11-15T14:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket -->
+      <class name="com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket@333291e3]" name="launchBrowser" is-config="true" duration-ms="9916" started-at="2018-11-15T14:33:16Z" finished-at="2018-11-15T14:33:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket@333291e3]" name="signIn" duration-ms="20533" started-at="2018-11-15T14:33:26Z" finished-at="2018-11-15T14:33:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="downloadPASMM()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="downloadPASMM" duration-ms="17240" started-at="2018-11-15T13:47:59Z" finished-at="2018-11-15T13:48:16Z">
+        <test-method status="PASS" signature="BookPaidEventAndStandardProduct()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket@333291e3]" name="BookPaidEventAndStandardProduct" duration-ms="115439" started-at="2018-11-15T14:33:46Z" finished-at="2018-11-15T14:35:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookPaidEventAndStandardProduct -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket@333291e3]" name="tearDown" is-config="true" duration-ms="582" started-at="2018-11-15T14:35:42Z" finished-at="2018-11-15T14:35:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket -->
+      <class name="com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode@6e171cd7]" name="launchBrowser" is-config="true" duration-ms="9185" started-at="2018-11-15T14:45:21Z" finished-at="2018-11-15T14:45:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="FAIL" signature="registerMUNL()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode@6e171cd7]" name="registerMUNL" duration-ms="139471" started-at="2018-11-15T14:45:30Z" finished-at="2018-11-15T14:47:49Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[VerifyRequest MUNL Details was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: VerifyRequest MUNL Details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.verifyMUNL(BasketPage.java:489)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode.registerMUNL(RegisterMUNLCode.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMUNL -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode@6e171cd7]" name="tearDown" is-config="true" duration-ms="576" started-at="2018-11-15T14:47:49Z" finished-at="2018-11-15T14:47:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@3bb9a3ff]" name="launchBrowser" is-config="true" duration-ms="9001" started-at="2018-11-15T16:05:58Z" finished-at="2018-11-15T16:06:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@3bb9a3ff]" name="signIn" duration-ms="20450" started-at="2018-11-15T16:06:07Z" finished-at="2018-11-15T16:06:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="FAIL" signature="applyPromoCode()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@3bb9a3ff]" name="applyPromoCode" duration-ms="45752" started-at="2018-11-15T16:06:28Z" finished-at="2018-11-15T16:07:14Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Click Checkout was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Click Checkout was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.clickCheckout(BasketPage.java:518)
+	at com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice.applyPromoCode(ViewPDFInvoice.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyPromoCode -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@3bb9a3ff]" name="tearDown" is-config="true" duration-ms="578" started-at="2018-11-15T16:07:14Z" finished-at="2018-11-15T16:07:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice -->
+      <class name="com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket@479d31f3]" name="launchBrowser" is-config="true" duration-ms="9200" started-at="2018-11-15T14:35:42Z" finished-at="2018-11-15T14:35:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket@479d31f3]" name="signIn" duration-ms="20437" started-at="2018-11-15T14:35:52Z" finished-at="2018-11-15T14:36:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="BookPaidEventAndStandardProduct()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket@479d31f3]" name="BookPaidEventAndStandardProduct" duration-ms="134751" started-at="2018-11-15T14:36:12Z" finished-at="2018-11-15T14:38:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookPaidEventAndStandardProduct -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket@479d31f3]" name="tearDown" is-config="true" duration-ms="581" started-at="2018-11-15T14:38:27Z" finished-at="2018-11-15T14:38:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts@47af7f3d]" name="launchBrowser" is-config="true" duration-ms="9103" started-at="2018-11-15T16:01:05Z" finished-at="2018-11-15T16:01:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="blankSearch()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts@47af7f3d]" name="blankSearch" duration-ms="81995" started-at="2018-11-15T16:01:15Z" finished-at="2018-11-15T16:02:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts@47af7f3d]" name="tearDown" is-config="true" duration-ms="594" started-at="2018-11-15T16:02:37Z" finished-at="2018-11-15T16:02:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts -->
+      <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@498d318c]" name="launchBrowser" is-config="true" duration-ms="9427" started-at="2018-11-15T14:43:55Z" finished-at="2018-11-15T14:44:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@498d318c]" name="signIn" duration-ms="20450" started-at="2018-11-15T14:44:05Z" finished-at="2018-11-15T14:44:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="FAIL" signature="downloadPASMM()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@498d318c]" name="downloadPASMM" duration-ms="54639" started-at="2018-11-15T14:44:25Z" finished-at="2018-11-15T14:45:20Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Click on Download Now was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Click on Download Now was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.DownloadMMPage.clickDownloadNow(DownloadMMPage.java:53)
+	at com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial.downloadPASMM(DownloadMarketingMaterial.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- downloadPASMM -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="tearDown" is-config="true" duration-ms="952" started-at="2018-11-15T13:48:16Z" finished-at="2018-11-15T13:48:17Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@498d318c]" name="tearDown" is-config="true" duration-ms="583" started-at="2018-11-15T14:45:20Z" finished-at="2018-11-15T14:45:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial -->
-    </test> <!-- Chrome Browser -->
-    <test name="BSI Admin" duration-ms="0" started-at="2018-11-15T13:48:17Z" finished-at="2018-11-15T13:48:17Z">
-      <class name="com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-11-15T13:47:31Z" finished-at="2018-11-15T13:47:31Z">
+      <class name="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails@1a451d4d]" name="launchBrowser" is-config="true" duration-ms="9146" started-at="2018-11-15T15:26:17Z" finished-at="2018-11-15T15:26:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails@1a451d4d]" name="signInMember" duration-ms="12887" started-at="2018-11-15T15:26:27Z" finished-at="2018-11-15T15:26:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInMember -->
+        <test-method status="PASS" signature="verifyMemberLink()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails@1a451d4d]" name="verifyMemberLink" duration-ms="44487" started-at="2018-11-15T15:26:39Z" finished-at="2018-11-15T15:27:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMemberLink -->
+        <test-method status="PASS" signature="enterEmailID()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails@1a451d4d]" name="enterEmailID" duration-ms="19889" started-at="2018-11-15T15:27:24Z" finished-at="2018-11-15T15:27:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterEmailID -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails@1a451d4d]" name="tearDown" is-config="true" duration-ms="565" started-at="2018-11-15T15:27:44Z" finished-at="2018-11-15T15:27:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails -->
+      <class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount@14dd9eb7]" name="launchBrowser" is-config="true" duration-ms="9861" started-at="2018-11-15T15:09:57Z" finished-at="2018-11-15T15:10:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount@14dd9eb7]" name="signInMember" duration-ms="13312" started-at="2018-11-15T15:10:07Z" finished-at="2018-11-15T15:10:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInMember -->
+        <test-method status="PASS" signature="verifyMemberPrice()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount@14dd9eb7]" name="verifyMemberPrice" duration-ms="163300" started-at="2018-11-15T15:10:21Z" finished-at="2018-11-15T15:13:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMemberPrice -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount@14dd9eb7]" name="tearDown" is-config="true" duration-ms="579" started-at="2018-11-15T15:13:04Z" finished-at="2018-11-15T15:13:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@158da8e]" name="launchBrowser" is-config="true" duration-ms="9028" started-at="2018-11-15T15:58:00Z" finished-at="2018-11-15T15:58:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="FAIL" signature="verifyDCProduct()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@158da8e]" name="verifyDCProduct" duration-ms="61472" started-at="2018-11-15T15:58:10Z" finished-at="2018-11-15T15:59:11Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Click on DC Status was unsuccesful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Click on DC Status was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.clickStatus(ProductPage.java:661)
+	at com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType.verifyDCProduct(VerifyDifferentProductType.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDCProduct -->
+        <test-method status="PASS" signature="verifyNewsFeed()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@158da8e]" name="verifyNewsFeed" duration-ms="23984" started-at="2018-11-15T15:59:11Z" finished-at="2018-11-15T15:59:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewsFeed -->
+        <test-method status="PASS" signature="verifyPAS2030ProductDetails()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@158da8e]" name="verifyPAS2030ProductDetails" duration-ms="12954" started-at="2018-11-15T15:59:35Z" finished-at="2018-11-15T15:59:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPAS2030ProductDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@158da8e]" name="tearDown" is-config="true" duration-ms="588" started-at="2018-11-15T15:59:48Z" finished-at="2018-11-15T15:59:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType -->
+      <class name="com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@7334aada]" name="launchBrowser" is-config="true" duration-ms="9078" started-at="2018-11-15T15:01:37Z" finished-at="2018-11-15T15:01:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="createRegUserUKProfile()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@7334aada]" name="createRegUserUKProfile" duration-ms="22892" started-at="2018-11-15T15:01:46Z" finished-at="2018-11-15T15:02:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createRegUserUKProfile -->
+        <test-method status="FAIL" signature="createRegUserNonUKProfile()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@7334aada]" name="createRegUserNonUKProfile" duration-ms="184655" started-at="2018-11-15T15:02:09Z" finished-at="2018-11-15T15:05:13Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verification of registration details was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verification of registration details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.HomePage.verifyReg(HomePage.java:497)
+	at com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile.createRegUserNonUKProfile(RegistrationsWithDiffProfile.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createRegUserNonUKProfile -->
+        <test-method status="PASS" signature="verifyTooltip()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@7334aada]" name="verifyTooltip" duration-ms="18820" started-at="2018-11-15T15:05:13Z" finished-at="2018-11-15T15:05:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTooltip -->
+        <test-method status="PASS" signature="verifyContactInformation()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@7334aada]" name="verifyContactInformation" duration-ms="8727" started-at="2018-11-15T15:05:32Z" finished-at="2018-11-15T15:05:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContactInformation -->
+        <test-method status="PASS" signature="loginThroughAlreadyRegistered()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@7334aada]" name="loginThroughAlreadyRegistered" duration-ms="28843" started-at="2018-11-15T15:05:41Z" finished-at="2018-11-15T15:06:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginThroughAlreadyRegistered -->
+        <test-method status="PASS" signature="verifyLoginForRegisteredUser()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@7334aada]" name="verifyLoginForRegisteredUser" duration-ms="22716" started-at="2018-11-15T15:06:10Z" finished-at="2018-11-15T15:06:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginForRegisteredUser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@7334aada]" name="tearDown" is-config="true" duration-ms="563" started-at="2018-11-15T15:06:33Z" finished-at="2018-11-15T15:06:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile -->
+      <class name="com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket@43195e57]" name="launchBrowser" is-config="true" duration-ms="10171" started-at="2018-11-15T14:29:47Z" finished-at="2018-11-15T14:29:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket@43195e57]" name="signIn" duration-ms="13204" started-at="2018-11-15T14:29:57Z" finished-at="2018-11-15T14:30:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="addAndUpdateMultipleEvents()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket@43195e57]" name="addAndUpdateMultipleEvents" duration-ms="185128" started-at="2018-11-15T14:30:10Z" finished-at="2018-11-15T14:33:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAndUpdateMultipleEvents -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket@43195e57]" name="tearDown" is-config="true" duration-ms="610" started-at="2018-11-15T14:33:15Z" finished-at="2018-11-15T14:33:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket -->
+      <class name="com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab@4d9e68d0]" name="launchBrowser" is-config="true" duration-ms="12188" started-at="2018-11-15T15:07:06Z" finished-at="2018-11-15T15:07:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab@4d9e68d0]" name="signInMember" duration-ms="11676" started-at="2018-11-15T15:07:19Z" finished-at="2018-11-15T15:07:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInMember -->
+        <test-method status="PASS" signature="AddInvoiceToBasket()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab@4d9e68d0]" name="AddInvoiceToBasket" duration-ms="28494" started-at="2018-11-15T15:07:30Z" finished-at="2018-11-15T15:07:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddInvoiceToBasket -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab@4d9e68d0]" name="tearDown" is-config="true" duration-ms="582" started-at="2018-11-15T15:07:59Z" finished-at="2018-11-15T15:07:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab -->
+      <class name="com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@6973b51b]" name="launchBrowser" is-config="true" duration-ms="9197" started-at="2018-11-15T14:06:02Z" finished-at="2018-11-15T14:06:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@6973b51b]" name="signIn" duration-ms="12442" started-at="2018-11-15T14:06:12Z" finished-at="2018-11-15T14:06:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="addTenBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@6973b51b]" name="addTenBillingAddress" duration-ms="283123" started-at="2018-11-15T14:06:24Z" finished-at="2018-11-15T14:11:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTenBillingAddress -->
+        <test-method status="PASS" signature="deleteTenBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@6973b51b]" name="deleteTenBillingAddress" duration-ms="113816" started-at="2018-11-15T14:11:07Z" finished-at="2018-11-15T14:13:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTenBillingAddress -->
+        <test-method status="FAIL" signature="addTenDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@6973b51b]" name="addTenDeliveryAddress" duration-ms="389610" started-at="2018-11-15T14:13:01Z" finished-at="2018-11-15T14:19:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Add New Delivery address was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Add New Delivery address was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.DeliveryAddressPage.addNewDeliveryAddress(DeliveryAddressPage.java:121)
+	at com.tcs.BsiShopRedesign.pages.DeliveryAddressPage.addTenNewDeliveryAddress(DeliveryAddressPage.java:427)
+	at com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses.addTenDeliveryAddress(MyProfileTenAddresses.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTenDeliveryAddress -->
+        <test-method status="PASS" signature="deleteTenDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@6973b51b]" name="deleteTenDeliveryAddress" duration-ms="201394" started-at="2018-11-15T14:19:31Z" finished-at="2018-11-15T14:22:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTenDeliveryAddress -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@6973b51b]" name="tearDown" is-config="true" duration-ms="643" started-at="2018-11-15T14:22:52Z" finished-at="2018-11-15T14:22:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses -->
+      <class name="com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus@f5ac9e4]" name="launchBrowser" is-config="true" duration-ms="9046" started-at="2018-11-15T14:51:50Z" finished-at="2018-11-15T14:51:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="checkProductStatus()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus@f5ac9e4]" name="checkProductStatus" duration-ms="46332" started-at="2018-11-15T14:51:59Z" finished-at="2018-11-15T14:52:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkProductStatus -->
+        <test-method status="PASS" signature="checkEventStatus()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus@f5ac9e4]" name="checkEventStatus" duration-ms="46265" started-at="2018-11-15T14:52:46Z" finished-at="2018-11-15T14:53:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEventStatus -->
+        <test-method status="PASS" signature="checkBookStatus()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus@f5ac9e4]" name="checkBookStatus" duration-ms="49237" started-at="2018-11-15T14:53:32Z" finished-at="2018-11-15T14:54:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkBookStatus -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus@f5ac9e4]" name="tearDown" is-config="true" duration-ms="569" started-at="2018-11-15T14:54:21Z" finished-at="2018-11-15T14:54:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment@6aba2b86]" name="launchBrowser" is-config="true" duration-ms="9036" started-at="2018-11-15T15:56:44Z" finished-at="2018-11-15T15:56:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment@6aba2b86]" name="signIn" duration-ms="20445" started-at="2018-11-15T15:56:54Z" finished-at="2018-11-15T15:57:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="FAIL" signature="verifyHardCopyDeliveryDetails()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment@6aba2b86]" name="verifyHardCopyDeliveryDetails" duration-ms="45917" started-at="2018-11-15T15:57:14Z" finished-at="2018-11-15T15:58:00Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Click Checkout was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Click Checkout was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.clickCheckout(BasketPage.java:518)
+	at com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment.verifyHardCopyDeliveryDetails(SecureAuthenticationPayment.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHardCopyDeliveryDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment@6aba2b86]" name="tearDown" is-config="true" duration-ms="574" started-at="2018-11-15T15:58:00Z" finished-at="2018-11-15T15:58:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment -->
+      <class name="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress@6c80d78a]" name="launchBrowser" is-config="true" duration-ms="9033" started-at="2018-11-15T15:15:28Z" finished-at="2018-11-15T15:15:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress@6c80d78a]" name="signIn" duration-ms="20521" started-at="2018-11-15T15:15:37Z" finished-at="2018-11-15T15:15:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="FAIL" signature="createBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress@6c80d78a]" name="createBillingAddress" duration-ms="419062" started-at="2018-11-15T15:15:58Z" finished-at="2018-11-15T15:22:57Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Placing of order was unsuccesful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Placing of order was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress.createBillingAddress(CreateCheckoutBillingAddress.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBillingAddress -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress@6c80d78a]" name="tearDown" is-config="true" duration-ms="578" started-at="2018-11-15T15:22:57Z" finished-at="2018-11-15T15:22:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress -->
+      <class name="com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures@dbf57b3]" name="launchBrowser" is-config="true" duration-ms="9781" started-at="2018-11-15T14:57:25Z" finished-at="2018-11-15T14:57:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="FAIL" signature="checkFreeEvent()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures@dbf57b3]" name="checkFreeEvent" duration-ms="39162" started-at="2018-11-15T14:57:34Z" finished-at="2018-11-15T14:58:14Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Free Event Price match is unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Free Event Price match is unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SearchPage.checkFreeEventPrice(SearchPage.java:479)
+	at com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures.checkFreeEvent(CheckProductFeatures.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFreeEvent -->
+        <test-method status="PASS" signature="checkPASProduct()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures@dbf57b3]" name="checkPASProduct" duration-ms="14654" started-at="2018-11-15T14:58:14Z" finished-at="2018-11-15T14:58:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPASProduct -->
+        <test-method status="PASS" signature="checkPaidEvent()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures@dbf57b3]" name="checkPaidEvent" duration-ms="22674" started-at="2018-11-15T14:58:28Z" finished-at="2018-11-15T14:58:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPaidEvent -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures@dbf57b3]" name="tearDown" is-config="true" duration-ms="564" started-at="2018-11-15T14:58:51Z" finished-at="2018-11-15T14:58:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails@7c729a55]" name="launchBrowser" is-config="true" duration-ms="9136" started-at="2018-11-15T16:02:37Z" finished-at="2018-11-15T16:02:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails@7c729a55]" name="signInMember" duration-ms="13563" started-at="2018-11-15T16:02:46Z" finished-at="2018-11-15T16:03:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInMember -->
+        <test-method status="PASS" signature="verifyIncorrectCardPayment()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails@7c729a55]" name="verifyIncorrectCardPayment" duration-ms="177994" started-at="2018-11-15T16:03:00Z" finished-at="2018-11-15T16:05:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIncorrectCardPayment -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails@7c729a55]" name="tearDown" is-config="true" duration-ms="568" started-at="2018-11-15T16:05:58Z" finished-at="2018-11-15T16:05:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails -->
+      <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="launchBrowser" is-config="true" duration-ms="9959" started-at="2018-11-15T13:56:59Z" finished-at="2018-11-15T13:57:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="signIn" duration-ms="20552" started-at="2018-11-15T13:57:09Z" finished-at="2018-11-15T13:57:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="addNewBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="addNewBillingAddress" duration-ms="26496" started-at="2018-11-15T13:57:30Z" finished-at="2018-11-15T13:57:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewBillingAddress -->
+        <test-method status="PASS" signature="makeDefaultBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="makeDefaultBillingAddress" duration-ms="5035" started-at="2018-11-15T13:57:56Z" finished-at="2018-11-15T13:58:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makeDefaultBillingAddress -->
+        <test-method status="PASS" signature="editBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="editBillingAddress" duration-ms="25033" started-at="2018-11-15T13:58:02Z" finished-at="2018-11-15T13:58:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editBillingAddress -->
+        <test-method status="PASS" signature="deleteBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="deleteBillingAddress" duration-ms="10827" started-at="2018-11-15T13:58:27Z" finished-at="2018-11-15T13:58:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBillingAddress -->
+        <test-method status="PASS" signature="addDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="addDeliveryAddress" duration-ms="22049" started-at="2018-11-15T13:58:37Z" finished-at="2018-11-15T13:58:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDeliveryAddress -->
+        <test-method status="PASS" signature="makeDefaultDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="makeDefaultDeliveryAddress" duration-ms="5220" started-at="2018-11-15T13:58:59Z" finished-at="2018-11-15T13:59:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makeDefaultDeliveryAddress -->
+        <test-method status="PASS" signature="editDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="editDeliveryAddress" duration-ms="22900" started-at="2018-11-15T13:59:05Z" finished-at="2018-11-15T13:59:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editDeliveryAddress -->
+        <test-method status="PASS" signature="deleteDeliveryAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="deleteDeliveryAddress" duration-ms="9674" started-at="2018-11-15T13:59:28Z" finished-at="2018-11-15T13:59:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteDeliveryAddress -->
+        <test-method status="PASS" signature="resetPassword()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="resetPassword" duration-ms="29063" started-at="2018-11-15T13:59:37Z" finished-at="2018-11-15T14:00:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.MyProfile@188715b5]" name="tearDown" is-config="true" duration-ms="801" started-at="2018-11-15T14:00:06Z" finished-at="2018-11-15T14:00:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint1.MyProfile -->
+      <class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile@1d9b7cce]" name="launchBrowser" is-config="true" duration-ms="11926" started-at="2018-11-15T15:06:33Z" finished-at="2018-11-15T15:06:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile@1d9b7cce]" name="signInMember" duration-ms="11654" started-at="2018-11-15T15:06:45Z" finished-at="2018-11-15T15:06:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInMember -->
+        <test-method status="PASS" signature="verifyMemberTab()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile@1d9b7cce]" name="verifyMemberTab" duration-ms="9104" started-at="2018-11-15T15:06:57Z" finished-at="2018-11-15T15:07:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMemberTab -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile@1d9b7cce]" name="tearDown" is-config="true" duration-ms="564" started-at="2018-11-15T15:07:06Z" finished-at="2018-11-15T15:07:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile -->
+      <class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate@441772e]" name="launchBrowser" is-config="true" duration-ms="9059" started-at="2018-11-15T15:00:23Z" finished-at="2018-11-15T15:00:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="FAIL" signature="checkSortingOrderQuality()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate@441772e]" name="checkSortingOrderQuality" duration-ms="63563" started-at="2018-11-15T15:00:32Z" finished-at="2018-11-15T15:01:36Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Sorting list of products with Published Date was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Sorting list of products with Published Date was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SearchPage.publishedDateSorting(SearchPage.java:251)
+	at com.tcs.BsiShopRedesign.pages.SearchPage.checkSortingByPublishedDate(SearchPage.java:364)
+	at com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate.checkSortingOrderQuality(SearchSortOrderByPublishedDate.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSortingOrderQuality -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate@441772e]" name="tearDown" is-config="true" duration-ms="1139" started-at="2018-11-15T15:01:36Z" finished-at="2018-11-15T15:01:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate -->
+      <class name="com.tcs.BsiShopRedesign.sprint3.CheckSearchCount">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckSearchCount@59fd97a8]" name="launchBrowser" is-config="true" duration-ms="12506" started-at="2018-11-15T14:49:08Z" finished-at="2018-11-15T14:49:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="searchPASCount()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckSearchCount@59fd97a8]" name="searchPASCount" duration-ms="149222" started-at="2018-11-15T14:49:21Z" finished-at="2018-11-15T14:51:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchPASCount -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckSearchCount@59fd97a8]" name="tearDown" is-config="true" duration-ms="579" started-at="2018-11-15T14:51:50Z" finished-at="2018-11-15T14:51:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint3.CheckSearchCount -->
+      <class name="com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab@795cd85e]" name="launchBrowser" is-config="true" duration-ms="9004" started-at="2018-11-15T14:48:36Z" finished-at="2018-11-15T14:48:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab@795cd85e]" name="signInMember" duration-ms="13586" started-at="2018-11-15T14:48:45Z" finished-at="2018-11-15T14:48:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInMember -->
+        <test-method status="PASS" signature="verifyStatus()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab@795cd85e]" name="verifyStatus" duration-ms="8756" started-at="2018-11-15T14:48:59Z" finished-at="2018-11-15T14:49:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStatus -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab@795cd85e]" name="tearDown" is-config="true" duration-ms="581" started-at="2018-11-15T14:49:07Z" finished-at="2018-11-15T14:49:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab -->
+      <class name="com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout@32eff876]" name="launchBrowser" is-config="true" duration-ms="9088" started-at="2018-11-15T15:42:39Z" finished-at="2018-11-15T15:42:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout@32eff876]" name="signIn" duration-ms="20537" started-at="2018-11-15T15:42:48Z" finished-at="2018-11-15T15:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="FAIL" signature="verifyHardCopyDeliveryDetails()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout@32eff876]" name="verifyHardCopyDeliveryDetails" duration-ms="101139" started-at="2018-11-15T15:43:08Z" finished-at="2018-11-15T15:44:49Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Other Format Flag does not exists]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Other Format Flag does not exists
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.clickOtherFormatOKAlert(BasketPage.java:547)
+	at com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout.verifyHardCopyDeliveryDetails(EditOrderDetailsFromCheckout.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHardCopyDeliveryDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout@32eff876]" name="tearDown" is-config="true" duration-ms="571" started-at="2018-11-15T15:44:49Z" finished-at="2018-11-15T15:44:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress@74e52303]" name="launchBrowser" is-config="true" duration-ms="9279" started-at="2018-11-15T15:59:48Z" finished-at="2018-11-15T15:59:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress@74e52303]" name="signIn" duration-ms="20692" started-at="2018-11-15T15:59:58Z" finished-at="2018-11-15T16:00:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="FAIL" signature="verifyHardCopyDeliveryDetails()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress@74e52303]" name="verifyHardCopyDeliveryDetails" duration-ms="46428" started-at="2018-11-15T16:00:18Z" finished-at="2018-11-15T16:01:05Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Click Checkout was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Click Checkout was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.clickCheckout(BasketPage.java:518)
+	at com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress.verifyHardCopyDeliveryDetails(CheckoutDeliveryAddress.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHardCopyDeliveryDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress@74e52303]" name="tearDown" is-config="true" duration-ms="576" started-at="2018-11-15T16:01:05Z" finished-at="2018-11-15T16:01:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.PreBookProducts">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PreBookProducts@71809907]" name="launchBrowser" is-config="true" duration-ms="9079" started-at="2018-11-15T15:52:48Z" finished-at="2018-11-15T15:52:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PreBookProducts@71809907]" name="signInMember" duration-ms="11637" started-at="2018-11-15T15:52:57Z" finished-at="2018-11-15T15:53:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInMember -->
+        <test-method status="PASS" signature="verifyAdavanceAccessProduct()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PreBookProducts@71809907]" name="verifyAdavanceAccessProduct" duration-ms="107611" started-at="2018-11-15T15:53:09Z" finished-at="2018-11-15T15:54:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAdavanceAccessProduct -->
+        <test-method status="FAIL" signature="verifyPreOrderProduct()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PreBookProducts@71809907]" name="verifyPreOrderProduct" duration-ms="46000" started-at="2018-11-15T15:54:56Z" finished-at="2018-11-15T15:55:42Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Click Checkout was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Click Checkout was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.clickCheckout(BasketPage.java:518)
+	at com.tcs.BsiShopRedesign.sprint9.PreBookProducts.verifyPreOrderProduct(PreBookProducts.java:156)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPreOrderProduct -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PreBookProducts@71809907]" name="tearDown" is-config="true" duration-ms="575" started-at="2018-11-15T15:55:42Z" finished-at="2018-11-15T15:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.PreBookProducts -->
+      <class name="com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList@61862a7f]" name="launchBrowser" is-config="true" duration-ms="8984" started-at="2018-11-15T14:59:14Z" finished-at="2018-11-15T14:59:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="addToBasketSearchList()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList@61862a7f]" name="addToBasketSearchList" duration-ms="59516" started-at="2018-11-15T14:59:23Z" finished-at="2018-11-15T15:00:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToBasketSearchList -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList@61862a7f]" name="tearDown" is-config="true" duration-ms="579" started-at="2018-11-15T15:00:23Z" finished-at="2018-11-15T15:00:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList -->
+      <class name="com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions@40ef3420]" name="launchBrowser" is-config="true" duration-ms="9311" started-at="2018-11-15T14:38:27Z" finished-at="2018-11-15T14:38:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="FAIL" signature="regBSOLQuote()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions@40ef3420]" name="regBSOLQuote" duration-ms="107076" started-at="2018-11-15T14:38:37Z" finished-at="2018-11-15T14:40:24Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verification of Pardot Form was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verification of Pardot Form was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SubscriptionsPage.verifyPardotForm(SubscriptionsPage.java:255)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regBSOLQuote(RegisterSubscriptions.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regBSOLQuote -->
+        <test-method status="FAIL" signature="regCNQuote()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions@40ef3420]" name="regCNQuote" duration-ms="108211" started-at="2018-11-15T14:40:24Z" finished-at="2018-11-15T14:42:12Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verification of Pardot Form was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verification of Pardot Form was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SubscriptionsPage.verifyPardotForm(SubscriptionsPage.java:255)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regCNQuote(RegisterSubscriptions.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regCNQuote -->
+        <test-method status="FAIL" signature="regEurocodes()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions@40ef3420]" name="regEurocodes" duration-ms="102981" started-at="2018-11-15T14:42:12Z" finished-at="2018-11-15T14:43:55Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verification of Pardot Form was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verification of Pardot Form was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SubscriptionsPage.verifyPardotForm(SubscriptionsPage.java:255)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regEurocodes(RegisterSubscriptions.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regEurocodes -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions@40ef3420]" name="tearDown" is-config="true" duration-ms="604" started-at="2018-11-15T14:43:55Z" finished-at="2018-11-15T14:43:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions -->
+      <class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket@1afd44cb]" name="launchBrowser" is-config="true" duration-ms="9202" started-at="2018-11-15T14:00:07Z" finished-at="2018-11-15T14:00:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="productUpdateBasket(java.util.Hashtable)[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket@1afd44cb]" name="productUpdateBasket" duration-ms="109495" started-at="2018-11-15T14:00:16Z" data-provider="getData" finished-at="2018-11-15T14:02:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Runmode=Y, Product_name=BS 6070-1:1981, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productUpdateBasket -->
+        <test-method status="PASS" signature="productUpdateBasket(java.util.Hashtable)[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket@1afd44cb]" name="productUpdateBasket" duration-ms="96332" started-at="2018-11-15T14:02:06Z" data-provider="getData" finished-at="2018-11-15T14:03:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Runmode=Y, Product_name=Pas 2030 Online, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productUpdateBasket -->
+        <test-method status="PASS" signature="productUpdateBasket(java.util.Hashtable)[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket@1afd44cb]" name="productUpdateBasket" duration-ms="139573" started-at="2018-11-15T14:03:42Z" data-provider="getData" finished-at="2018-11-15T14:06:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Runmode=Y, Product_name=BIP 2197, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productUpdateBasket -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket@1afd44cb]" name="tearDown" is-config="true" duration-ms="657" started-at="2018-11-15T14:06:02Z" finished-at="2018-11-15T14:06:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket -->
+      <class name="com.tcs.BsiShopRedesign.sprint8.RenewMembership">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.RenewMembership@7fa98a66]" name="launchBrowser" is-config="true" duration-ms="9106" started-at="2018-11-15T15:27:44Z" finished-at="2018-11-15T15:27:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.RenewMembership@7fa98a66]" name="signInMember" duration-ms="13457" started-at="2018-11-15T15:27:54Z" finished-at="2018-11-15T15:28:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInMember -->
+        <test-method status="PASS" signature="addRenewMembershipToBasket()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.RenewMembership@7fa98a66]" name="addRenewMembershipToBasket" duration-ms="93446" started-at="2018-11-15T15:28:07Z" finished-at="2018-11-15T15:29:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addRenewMembershipToBasket -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.RenewMembership@7fa98a66]" name="tearDown" is-config="true" duration-ms="564" started-at="2018-11-15T15:29:40Z" finished-at="2018-11-15T15:29:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.RenewMembership -->
+      <class name="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount@62150f9e]" name="launchBrowser" is-config="true" duration-ms="10963" started-at="2018-11-15T15:22:57Z" finished-at="2018-11-15T15:23:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount@62150f9e]" name="signIn" duration-ms="20469" started-at="2018-11-15T15:23:08Z" finished-at="2018-11-15T15:23:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="applyMemberAccountBelowBandNine()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount@62150f9e]" name="applyMemberAccountBelowBandNine" duration-ms="134313" started-at="2018-11-15T15:23:29Z" finished-at="2018-11-15T15:25:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyMemberAccountBelowBandNine -->
+        <test-method status="PASS" signature="applyMemberAccountBandNineAbove()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount@62150f9e]" name="applyMemberAccountBandNineAbove" duration-ms="33770" started-at="2018-11-15T15:25:43Z" finished-at="2018-11-15T15:26:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyMemberAccountBandNineAbove -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount@62150f9e]" name="tearDown" is-config="true" duration-ms="571" started-at="2018-11-15T15:26:17Z" finished-at="2018-11-15T15:26:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.VerifyContactUs">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@3ce1e309]" name="launchBrowser" is-config="true" duration-ms="9002" started-at="2018-11-15T15:55:43Z" finished-at="2018-11-15T15:55:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="FAIL" signature="contactUs()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@3ce1e309]" name="contactUs" duration-ms="52126" started-at="2018-11-15T15:55:52Z" finished-at="2018-11-15T15:56:44Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verification of Contact Us Message was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verification of Contact Us Message was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.sprint9.VerifyContactUs.contactUs(VerifyContactUs.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactUs -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@3ce1e309]" name="tearDown" is-config="true" duration-ms="623" started-at="2018-11-15T15:56:44Z" finished-at="2018-11-15T15:56:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.VerifyContactUs -->
+      <class name="com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails@5fdcaa40]" name="launchBrowser" is-config="true" duration-ms="9251" started-at="2018-11-15T15:33:38Z" finished-at="2018-11-15T15:33:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails@5fdcaa40]" name="signIn" duration-ms="20451" started-at="2018-11-15T15:33:48Z" finished-at="2018-11-15T15:34:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="verifyHardCopyDeliveryDetails()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails@5fdcaa40]" name="verifyHardCopyDeliveryDetails" duration-ms="140736" started-at="2018-11-15T15:34:08Z" finished-at="2018-11-15T15:36:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHardCopyDeliveryDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails@5fdcaa40]" name="tearDown" is-config="true" duration-ms="565" started-at="2018-11-15T15:36:29Z" finished-at="2018-11-15T15:36:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder@8dbdac1]" name="launchBrowser" is-config="true" duration-ms="9054" started-at="2018-11-15T15:44:50Z" finished-at="2018-11-15T15:44:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder@8dbdac1]" name="signIn" duration-ms="20488" started-at="2018-11-15T15:44:59Z" finished-at="2018-11-15T15:45:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="FAIL" signature="applyPromoCode()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder@8dbdac1]" name="applyPromoCode" duration-ms="55997" started-at="2018-11-15T15:45:20Z" finished-at="2018-11-15T15:46:16Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Click Checkout was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Click Checkout was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.BasketPage.clickCheckout(BasketPage.java:518)
+	at com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder.applyPromoCode(PromoCodeOrder.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyPromoCode -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder@8dbdac1]" name="tearDown" is-config="true" duration-ms="594" started-at="2018-11-15T15:46:16Z" finished-at="2018-11-15T15:46:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder -->
+      <class name="com.tcs.BsiShopRedesign.sprint9.PayByInvoice">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@6e20b53a]" name="launchBrowser" is-config="true" duration-ms="9187" started-at="2018-11-15T15:46:16Z" finished-at="2018-11-15T15:46:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@6e20b53a]" name="signInMember" duration-ms="13515" started-at="2018-11-15T15:46:25Z" finished-at="2018-11-15T15:46:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInMember -->
+        <test-method status="FAIL" signature="payByInvoiceOrder()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@6e20b53a]" name="payByInvoiceOrder" duration-ms="164960" started-at="2018-11-15T15:46:39Z" finished-at="2018-11-15T15:49:24Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Placing of order was unsuccesful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Placing of order was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.PayByInvoice.payByInvoiceOrder(PayByInvoice.java:107)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payByInvoiceOrder -->
+        <test-method status="PASS" signature="verifyPayByInvoiceErrorMsg()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@6e20b53a]" name="verifyPayByInvoiceErrorMsg" duration-ms="203432" started-at="2018-11-15T15:49:24Z" finished-at="2018-11-15T15:52:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPayByInvoiceErrorMsg -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@6e20b53a]" name="tearDown" is-config="true" duration-ms="596" started-at="2018-11-15T15:52:47Z" finished-at="2018-11-15T15:52:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.PayByInvoice -->
+      <class name="com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing@5e0826e7]" name="launchBrowser" is-config="true" duration-ms="9122" started-at="2018-11-15T15:41:41Z" finished-at="2018-11-15T15:41:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="FAIL" signature="verifyMemberLink()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing@5e0826e7]" name="verifyMemberLink" duration-ms="48377" started-at="2018-11-15T15:41:50Z" finished-at="2018-11-15T15:42:38Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[File Not Found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: File Not Found
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.verifyExpectedFileName(ProductPage.java:562)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.pdfSave(ProductPage.java:504)
+	at com.tcs.BsiShopRedesign.pages.ProductPage.verifyPDFPreview(ProductPage.java:410)
+	at com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing.verifyMemberLink(VerifyPDFPreviewing.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMemberLink -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing@5e0826e7]" name="tearDown" is-config="true" duration-ms="594" started-at="2018-11-15T15:42:38Z" finished-at="2018-11-15T15:42:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing -->
+      <class name="com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails@6dc17b83]" name="launchBrowser" is-config="true" duration-ms="11920" started-at="2018-11-15T15:36:29Z" finished-at="2018-11-15T15:36:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails@6dc17b83]" name="signIn" duration-ms="20472" started-at="2018-11-15T15:36:41Z" finished-at="2018-11-15T15:37:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="validateCheckoutNonUKDetailsHardCopy()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails@6dc17b83]" name="validateCheckoutNonUKDetailsHardCopy" duration-ms="155861" started-at="2018-11-15T15:37:02Z" finished-at="2018-11-15T15:39:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCheckoutNonUKDetailsHardCopy -->
+        <test-method status="PASS" signature="validateCheckoutNonUKDetailsSoftCopy()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails@6dc17b83]" name="validateCheckoutNonUKDetailsSoftCopy" duration-ms="122500" started-at="2018-11-15T15:39:38Z" finished-at="2018-11-15T15:41:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCheckoutNonUKDetailsSoftCopy -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails@6dc17b83]" name="tearDown" is-config="true" duration-ms="578" started-at="2018-11-15T15:41:40Z" finished-at="2018-11-15T15:41:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails -->
+      <class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress@52e6fdee]" name="launchBrowser" is-config="true" duration-ms="9950" started-at="2018-11-15T15:13:04Z" finished-at="2018-11-15T15:13:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress@52e6fdee]" name="signIn" duration-ms="20422" started-at="2018-11-15T15:13:14Z" finished-at="2018-11-15T15:13:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="editBillingAddress()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress@52e6fdee]" name="editBillingAddress" duration-ms="112812" started-at="2018-11-15T15:13:35Z" finished-at="2018-11-15T15:15:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editBillingAddress -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress@52e6fdee]" name="tearDown" is-config="true" duration-ms="565" started-at="2018-11-15T15:15:28Z" finished-at="2018-11-15T15:15:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress -->
+      <class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout@42e99e4a]" name="launchBrowser" is-config="true" duration-ms="9046" started-at="2018-11-15T15:07:59Z" finished-at="2018-11-15T15:08:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="CheckLoginAlertOnChekout()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout@42e99e4a]" name="CheckLoginAlertOnChekout" duration-ms="108389" started-at="2018-11-15T15:08:08Z" finished-at="2018-11-15T15:09:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckLoginAlertOnChekout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout@42e99e4a]" name="tearDown" is-config="true" duration-ms="580" started-at="2018-11-15T15:09:57Z" finished-at="2018-11-15T15:09:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout -->
+      <class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@15ff3e9e]" name="launchBrowser" is-config="true" duration-ms="9097" started-at="2018-11-15T15:29:41Z" finished-at="2018-11-15T15:29:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@15ff3e9e]" name="signIn" duration-ms="20656" started-at="2018-11-15T15:29:50Z" finished-at="2018-11-15T15:30:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="FAIL" signature="downloadSoftCopyfromOrderCofirmationPage()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@15ff3e9e]" name="downloadSoftCopyfromOrderCofirmationPage" duration-ms="135254" started-at="2018-11-15T15:30:11Z" finished-at="2018-11-15T15:32:26Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[File Not Found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: File Not Found
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyExpectedFileName(OrderConfirmationPage.java:189)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.downloadVerifySoftCopyDocuments(OrderConfirmationPage.java:54)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderCofirmationPage(SoftCopyDownloads.java:119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadSoftCopyfromOrderCofirmationPage -->
+        <test-method status="FAIL" signature="downloadSoftCopyfromOrderHistoryPage()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@15ff3e9e]" name="downloadSoftCopyfromOrderHistoryPage" duration-ms="71699" started-at="2018-11-15T15:32:26Z" finished-at="2018-11-15T15:33:38Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[File Not Found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: File Not Found
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderHistoryPage.verifyExpectedFileName(OrderHistoryPage.java:123)
+	at com.tcs.BsiShopRedesign.pages.OrderHistoryPage.downloadAndVerifySoftCopy(OrderHistoryPage.java:78)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderHistoryPage(SoftCopyDownloads.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadSoftCopyfromOrderHistoryPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@15ff3e9e]" name="tearDown" is-config="true" duration-ms="578" started-at="2018-11-15T15:33:38Z" finished-at="2018-11-15T15:33:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads -->
+      <class name="com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult@384ad17b]" name="launchBrowser" is-config="true" duration-ms="9011" started-at="2018-11-15T14:58:51Z" finished-at="2018-11-15T14:59:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="blankSearch()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult@384ad17b]" name="blankSearch" duration-ms="12954" started-at="2018-11-15T14:59:00Z" finished-at="2018-11-15T14:59:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult@384ad17b]" name="tearDown" is-config="true" duration-ms="578" started-at="2018-11-15T14:59:13Z" finished-at="2018-11-15T14:59:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult -->
+      <class name="com.tcs.BsiShopRedesign.sprint2.BookEvent">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.BookEvent@1ab3a8c8]" name="launchBrowser" is-config="true" duration-ms="11297" started-at="2018-11-15T14:22:53Z" finished-at="2018-11-15T14:23:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.BookEvent@1ab3a8c8]" name="signIn" duration-ms="20932" started-at="2018-11-15T14:23:04Z" finished-at="2018-11-15T14:23:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="BookPaidEvent()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.BookEvent@1ab3a8c8]" name="BookPaidEvent" duration-ms="61611" started-at="2018-11-15T14:23:25Z" finished-at="2018-11-15T14:24:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookPaidEvent -->
+        <test-method status="FAIL" signature="BookFreeEvent()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.BookEvent@1ab3a8c8]" name="BookFreeEvent" duration-ms="319629" started-at="2018-11-15T14:24:26Z" finished-at="2018-11-15T14:29:46Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Click Book Now was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Click Book Now was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.bookFreeEvent(EventPage.java:471)
+	at com.tcs.BsiShopRedesign.sprint2.BookEvent.BookFreeEvent(BookEvent.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookFreeEvent -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint2.BookEvent@1ab3a8c8]" name="tearDown" is-config="true" duration-ms="655" started-at="2018-11-15T14:29:46Z" finished-at="2018-11-15T14:29:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint2.BookEvent -->
+      <class name="com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType@123ef382]" name="launchBrowser" is-config="true" duration-ms="9020" started-at="2018-11-15T14:54:22Z" finished-at="2018-11-15T14:54:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="checkSortingOrderQuality()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType@123ef382]" name="checkSortingOrderQuality" duration-ms="173189" started-at="2018-11-15T14:54:31Z" finished-at="2018-11-15T14:57:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSortingOrderQuality -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType@123ef382]" name="tearDown" is-config="true" duration-ms="590" started-at="2018-11-15T14:57:24Z" finished-at="2018-11-15T14:57:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType -->
+    </test> <!-- Internet Explorer Browser -->
+    <test name="BSI Admin" duration-ms="403978" started-at="2018-11-15T16:07:14Z" finished-at="2018-11-15T16:13:58Z">
+      <class name="com.tcs.BsiShopRedesign.cms.CreatePromoCode">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.cms.CreatePromoCode@6b81ce95]" name="launchBrowser" is-config="true" duration-ms="6531" started-at="2018-11-15T16:11:35Z" finished-at="2018-11-15T16:11:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInCms()[pri:0, instance:com.tcs.BsiShopRedesign.cms.CreatePromoCode@6b81ce95]" name="signInCms" duration-ms="12900" started-at="2018-11-15T16:11:42Z" finished-at="2018-11-15T16:11:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInCms -->
+        <test-method status="FAIL" signature="verifyCmsDetails()[pri:0, instance:com.tcs.BsiShopRedesign.cms.CreatePromoCode@6b81ce95]" name="verifyCmsDetails" duration-ms="71616" started-at="2018-11-15T16:11:55Z" finished-at="2018-11-15T16:13:06Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Create Promocode with Special Character was unsuccessful]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Create Promocode with Special Character was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.CmsPage.createPromoCodeDetails(CmsPage.java:449)
+	at com.tcs.BsiShopRedesign.cms.CreatePromoCode.verifyCmsDetails(CreatePromoCode.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCmsDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.cms.CreatePromoCode@6b81ce95]" name="tearDown" is-config="true" duration-ms="590" started-at="2018-11-15T16:13:06Z" finished-at="2018-11-15T16:13:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.cms.CreatePromoCode -->
+      <class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@5b239d7d]" name="getDriverInstance" is-config="true" duration-ms="15" started-at="2018-11-15T13:56:59Z" finished-at="2018-11-15T13:56:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial -->
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@5b239d7d]" name="launchBrowser" is-config="true" duration-ms="7048" started-at="2018-11-15T16:07:14Z" finished-at="2018-11-15T16:07:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInCms()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@5b239d7d]" name="signInCms" duration-ms="10749" started-at="2018-11-15T16:07:21Z" finished-at="2018-11-15T16:07:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInCms -->
+        <test-method status="PASS" signature="verifyCmsDetails()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@5b239d7d]" name="verifyCmsDetails" duration-ms="192938" started-at="2018-11-15T16:07:32Z" finished-at="2018-11-15T16:10:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCmsDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyCmsDetails@5b239d7d]" name="tearDown" is-config="true" duration-ms="578" started-at="2018-11-15T16:10:45Z" finished-at="2018-11-15T16:10:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.cms.VerifyCmsDetails -->
+      <class name="com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList@2a798d51]" name="launchBrowser" is-config="true" duration-ms="7223" started-at="2018-11-15T16:13:07Z" finished-at="2018-11-15T16:13:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInCms()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList@2a798d51]" name="signInCms" duration-ms="9513" started-at="2018-11-15T16:13:14Z" finished-at="2018-11-15T16:13:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInCms -->
+        <test-method status="PASS" signature="verifyCmsDetails()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList@2a798d51]" name="verifyCmsDetails" duration-ms="34196" started-at="2018-11-15T16:13:23Z" finished-at="2018-11-15T16:13:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCmsDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList@2a798d51]" name="tearDown" is-config="true" duration-ms="578" started-at="2018-11-15T16:13:58Z" finished-at="2018-11-15T16:13:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList -->
+      <class name="com.tcs.BsiShopRedesign.cms.ResetPassword">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.cms.ResetPassword@6572421]" name="launchBrowser" is-config="true" duration-ms="6601" started-at="2018-11-15T16:10:46Z" finished-at="2018-11-15T16:10:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="signInCms()[pri:0, instance:com.tcs.BsiShopRedesign.cms.ResetPassword@6572421]" name="signInCms" duration-ms="9853" started-at="2018-11-15T16:10:52Z" finished-at="2018-11-15T16:11:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInCms -->
+        <test-method status="PASS" signature="verifyCmsDetails()[pri:0, instance:com.tcs.BsiShopRedesign.cms.ResetPassword@6572421]" name="verifyCmsDetails" duration-ms="32465" started-at="2018-11-15T16:11:02Z" finished-at="2018-11-15T16:11:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCmsDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.cms.ResetPassword@6572421]" name="tearDown" is-config="true" duration-ms="594" started-at="2018-11-15T16:11:34Z" finished-at="2018-11-15T16:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tcs.BsiShopRedesign.cms.ResetPassword -->
     </test> <!-- BSI Admin -->
   </suite> <!-- Suite -->
 </testng-results>
