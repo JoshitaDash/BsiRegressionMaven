@@ -28,6 +28,7 @@ public class VerifyCmsDetails extends BaseTest {
 			Log.info("Admin Signing In");
 			SignInPage signIn = new SignInPage(driver);
 			signIn.adminLogin();
+			
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Admin Signing in was unsuccessful");
 			CommonHelper.takeScreenShot();
@@ -66,6 +67,10 @@ public class VerifyCmsDetails extends BaseTest {
 			System.out.println("Verify Customer Orders");
 			Log.info("Verify Customer Orders");
 			customer.verifyOrders();
+			
+			System.out.println("Click Admin Logout");
+			Log.info("Click Admin Logout");
+			customer.clickAdminLogout();
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verify Customer Details was unsuccessful");

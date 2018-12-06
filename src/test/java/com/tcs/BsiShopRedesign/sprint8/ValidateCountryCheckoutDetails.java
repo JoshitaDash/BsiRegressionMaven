@@ -127,7 +127,7 @@ public class ValidateCountryCheckoutDetails extends BaseTest {
 
 		try {
 			test = extent.startTest(
-					"Sprint 8 - Ecom-29 AC#52 __ Validate Checkout Details with Billing as Non - UK Country for PDF product on Checkout Page");
+					"Sprint 8 - Ecom-29,09 AC#52,46 __ Validate Checkout Details with Billing as Non - UK Country for PDF product on Checkout Page");
 			
 			System.out.println("Fetching the URL");
 			driver.get(url);		

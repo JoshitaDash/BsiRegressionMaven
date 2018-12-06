@@ -415,13 +415,13 @@ public class HomePage extends BaseTest {
 			String manualAddressText = CommonHelper.element("manualAddressMsg_xpath").getText();
 			System.out.println("The message is: " + manualAddressText);
 			test.log(LogStatus.PASS, "The message is: " + manualAddressText);
-			
+
 			Log.info("Click Find Address");
 			System.out.println("Click Find Address");
 			test.log(LogStatus.INFO, "Click Find Address");
 			CommonHelper.clickByJS("findAddressReg_css");
-			//click("findAddressReg_css");
-			//click("findAddressReg_css");
+			// click("findAddressReg_css");
+			// click("findAddressReg_css");
 
 			Log.info("Enter Address Name");
 			System.out.println("Enter Address Name");
@@ -868,4 +868,645 @@ public class HomePage extends BaseTest {
 			e.printStackTrace();
 		}
 	}
+
+	public void verifyAffiliateProgramme() {
+
+		try {
+			test.log(LogStatus.INFO, "Click Affiliate Programme");
+			Log.info("Click Affiliate Programme");
+			System.out.println("Click Affiliate Programme");
+			CommonHelper.scrolltoview("affiliateProgramme_linkText");
+			click("affiliateProgramme_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Affiliate program")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Affiliate Programme was successful");
+				test.log(LogStatus.PASS, "Verification of Affiliate Programme was successful");
+			} else {
+				System.out.println("Verification of Affiliate Programme was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Affiliate Programme was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Affiliate Programme was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyDistributorProgramme() {
+
+		try {
+			test.log(LogStatus.INFO, "Click Distributor Programme");
+			Log.info("Click Distributor Programme");
+			System.out.println("Click Distributor Programme");
+			CommonHelper.scrolltoview("distributorProgramme_linkText");
+			click("distributorProgramme_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Distributor Network")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Distributor Programme was successful");
+				test.log(LogStatus.PASS, "Verification of Distributor Programme was successful");
+			} else {
+				System.out.println("Verification of Distributor Programme was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Distributor Programme was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Distributor Programme was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyLicensing() {
+
+		try {
+			test.log(LogStatus.INFO, "Click Licensing");
+			Log.info("Click Licensing");
+			System.out.println("Click Licensing");
+			CommonHelper.scrolltoview("licensing_linkText");
+			click("licensing_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Licensing")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Licensing was successful");
+				test.log(LogStatus.PASS, "Verification of Licensing was successful");
+			} else {
+				System.out.println("Verification of Licensing was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Licensing was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Licensing was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyNewsletter() {
+
+		try {
+			test.log(LogStatus.INFO, "Click Newsletter");
+			Log.info("Click Newsletter");
+			System.out.println("Click Newsletter");
+			CommonHelper.scrolltoview("newsletter_linkText");
+			click("newsletter_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Newsletter")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Newsletter was successful");
+				test.log(LogStatus.PASS, "Verification of Newsletter was successful");
+			} else {
+				System.out.println("Verification of Newsletter was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Newsletter was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Newsletter was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPAS() {
+
+		try {
+			test.log(LogStatus.INFO, "Click PAS");
+			Log.info("Click PAS");
+			System.out.println("Click PAS");
+			CommonHelper.scrolltoview("PAS_linkText");
+			click("PAS_linkText");
+
+			/*
+			 * Thread.sleep(1000); System.out.println("Switch to 2nd tab");
+			 * ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			 * Thread.sleep(1000); driver.switchTo().window(tabs2.get(1));
+			 * Thread.sleep(1000); driver.manage().window().maximize(); Thread.sleep(1000);
+			 * System.out.println("Switched to 2nd tab");
+			 */
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("PAS")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of PAS was successful");
+				test.log(LogStatus.PASS, "Verification of PAS was successful");
+			} else {
+				System.out.println("Verification of PAS was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of PAS was unsuccessful");
+			}
+
+			/*
+			 * driver.close(); driver.switchTo().window(tabs2.get(0));
+			 */
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verify PAS was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyWorldwideStandards() {
+
+		try {
+			test.log(LogStatus.INFO, "Click Worldwide Standards");
+			Log.info("Click Worldwide Standards");
+			System.out.println("Click Worldwide Standards");
+			CommonHelper.scrolltoview("worldwideStandards_linkText");
+			click("worldwideStandards_linkText");
+
+			/*
+			 * Thread.sleep(1000); System.out.println("Switch to 2nd tab");
+			 * ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			 * Thread.sleep(1000); driver.switchTo().window(tabs2.get(1));
+			 * Thread.sleep(1000); driver.manage().window().maximize(); Thread.sleep(1000);
+			 * System.out.println("Switched to 2nd tab");
+			 */
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Worldwide Standards")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Worldwide Standards was successful");
+				test.log(LogStatus.PASS, "Verification of Worldwide Standards was successful");
+			} else {
+				System.out.println("Verification of Worldwide Standards was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Worldwide Standards was unsuccessful");
+			}
+
+			/*
+			 * driver.close(); driver.switchTo().window(tabs2.get(0));
+			 */
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verify Worldwide Standards was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyBimLevel2() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click BIM Level 2");
+			Log.info("Click BIM Level 2");
+			System.out.println("Click BIM Level 2");
+			CommonHelper.scrolltoview("bimLevel2_linkText");
+			click("bimLevel2_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("BIM Level 2")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of BIM Level 2 was successful");
+				test.log(LogStatus.PASS, "Verification of BIM Level 2 was successful");
+			} else {
+				System.out.println("Verification of BIM Level 2 was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of BIM Level 2 was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify BIM Level 2 was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyBSIGroupWebsite() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click BSI Group website");
+			Log.info("Click BSI Group website");
+			System.out.println("Click BSI Group website");
+			CommonHelper.scrolltoview("bsiGroupWebsite_linkText");
+			click("bsiGroupWebsite_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("BSI Group website")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of BSI Group website was successful");
+				test.log(LogStatus.PASS, "Verification of BSI Group website was successful");
+			} else {
+				System.out.println("Verification of BSI Group website was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of BSI Group website was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify BSI Group website was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyBritishStandardsOnline() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click BSOL: British Standards Online");
+			Log.info("Click BSOL: British Standards Online");
+			System.out.println("Click BSOL: British Standards Online");
+			CommonHelper.scrolltoview("britishStandardsOnline_linkText");
+			click("britishStandardsOnline_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("BSOL: British Standards Online")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of BSOL: British Standards Online was successful");
+				test.log(LogStatus.PASS, "Verification of BSOL: British Standards Online was successful");
+			} else {
+				System.out.println("Verification of BSOL: British Standards Online was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of BSOL: British Standards Online was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify BSOL: British Standards Online was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyComplianceNavigatorMedicalDevices() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click Compliance Navigator for Medical Devices");
+			Log.info("Click Compliance Navigator for Medical Devices");
+			System.out.println("Click Compliance Navigator for Medical Devices");
+			CommonHelper.scrolltoview("complianceNavigatorForMedicalDevices_linkText");
+			click("complianceNavigatorForMedicalDevices_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab successfully");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Compliance Navigator for Medical Devices")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Compliance Navigator for Medical Devices was successful");
+				test.log(LogStatus.PASS, "Verification of Compliance Navigator for Medical Devices was successful");
+			} else {
+				System.out.println("Verification of Compliance Navigator for Medical Devices was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Compliance Navigator for Medical Devices was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Compliance Navigator for Medical Devices was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyECommittees() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click E-committees");
+			Log.info("Click E-committees");
+			System.out.println("Click E-committees");
+			CommonHelper.scrolltoview("eCommittees_linkText");
+			click("eCommittees_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab successfully");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("E-committees")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of E-committees was successful");
+				test.log(LogStatus.PASS, "Verification of E-committees was successful");
+			} else {
+				System.out.println("Verification of E-committees was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of E-committees was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify E-committees was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyEurocodesPlus() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click Eurocodes Plus");
+			Log.info("Click Eurocodes Plus");
+			System.out.println("Click Eurocodes Plus");
+			CommonHelper.scrolltoview("eurocodesPlus_linkText");
+			click("eurocodesPlus_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab successfully");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Eurocodes Plus")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Eurocodes Plus was successful");
+				test.log(LogStatus.PASS, "Verification of Eurocodes Plus was successful");
+			} else {
+				System.out.println("Verification of Eurocodes Plus was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Eurocodes Plus was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Eurocodes Plus was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyMemberPortal() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click Member Portal");
+			Log.info("Click Member Portal");
+			System.out.println("Click Member Portal");
+			CommonHelper.scrolltoview("memberPortal_linkText");
+			click("memberPortal_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab successfully");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Member Portal")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Member Portalwas successful");
+				test.log(LogStatus.PASS, "Verification of Member Portal was successful");
+			} else {
+				System.out.println("Verification of Member Portal was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Member Portal was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Member Portal was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyPerinorm() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click Perinorm");
+			Log.info("Click Perinorm");
+			System.out.println("Click Perinorm");
+			CommonHelper.scrolltoview("perinorm_linkText");
+			click("perinorm_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab successfully");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Perinorm")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Perinorm was successful");
+				test.log(LogStatus.PASS, "Verification of Perinorm was successful");
+			} else {
+				System.out.println("Verification of Perinorm was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Perinorm was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Perinorm was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyStandardsDevelopment() {
+
+		try {
+
+			test.log(LogStatus.INFO, "Click Standards Development");
+			Log.info("Click Standards Development");
+			System.out.println("Click Standards Development");
+			CommonHelper.scrolltoview("standardsDevelopment_linkText");
+			click("standardsDevelopment_linkText");
+
+			Thread.sleep(1000);
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			Thread.sleep(1000);
+			driver.switchTo().window(tabs2.get(1));
+			Thread.sleep(1000);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+			System.out.println("Switched to 2nd tab successfully");
+
+			String text = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
+			if (text.contains("Standards Development")) {
+				System.out.println("The text contains: " + text);
+				test.log(LogStatus.PASS, "The text contains: " + text);
+				System.out.println("Verification of Standards Development was successful");
+				test.log(LogStatus.PASS, "Verification of Standards Development was successful");
+			} else {
+				System.out.println("Verification of Standards Development was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Standards Development was unsuccessful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Verify Standards Development was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyForgotPassword() {
+
+		try {
+			
+			Thread.sleep(3000);
+			System.out.println("Click on login link");
+			Log.info("Click on login link");
+			test.log(LogStatus.INFO, "Click on login link");
+			CommonHelper.elementToBeVisible("loginLink_xpath");
+			CommonHelper.elementToBeClickable("loginLink_xpath");
+			click("loginLink_xpath");
+			Thread.sleep(2000);
+			
+			test.log(LogStatus.INFO, "Click Forgot Password");
+			Log.info("Click Forgot Password");
+			System.out.println("Click Forgot Password");
+			click("forgotPwd_linkText");
+
+			test.log(LogStatus.INFO, "Enter Email ID");
+			Log.info("Enter Email ID");
+			System.out.println("Enter Email ID");
+			enterText("forgotPwdEmail_id", "subhrateja.satapathy@tcs.com");
+
+			test.log(LogStatus.INFO, "Click Reset Password");
+			Log.info("Click Reset Password");
+			System.out.println("Click Reset Password");
+			click("resetPwd_xpath");
+
+			String successMsg = driver.findElement(By.cssSelector("div[data-ui-id='message-success']")).getText();
+			if (successMsg.contains("you will receive an email with a link to reset your password")) {
+				System.out.println("The success message is: " + successMsg);
+				test.log(LogStatus.INFO, "The success message is: " + successMsg);
+				System.out.println("Verification of Forgot Password was successful");
+				test.log(LogStatus.PASS, "Verification of Forgot Password was successful");
+			} else {
+				System.out.println("Verification of Forgot Password was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Forgot Password was unsuccessful");
+				CommonHelper.takeScreenShot();
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Forgot Password was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
 }

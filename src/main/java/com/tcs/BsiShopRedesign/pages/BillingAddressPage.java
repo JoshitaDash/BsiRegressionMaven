@@ -115,7 +115,7 @@ public class BillingAddressPage extends Page {
 			test.log(LogStatus.PASS, "Adding Billing Address was successful");
 
 		} catch (Exception e) {
-
+			CommonHelper.reportFailure("Adding Billing Address was unsuccessful");
 			e.printStackTrace();
 			test.log(LogStatus.FAIL, "Adding Billing Address was unsuccessful");
 			Assert.fail(e.getMessage());
@@ -370,6 +370,7 @@ public class BillingAddressPage extends Page {
 			}
 
 		} catch (Exception e) {
+			CommonHelper.reportFailure("Delete Billing Address was unsuccessful");
 			e.printStackTrace();
 			test.log(LogStatus.FAIL, "Delete Billing Address was unsuccessful");
 			Assert.fail(e.getMessage());

@@ -22,6 +22,8 @@ public class EventPage extends Page {
 	}
 
 	public void searchPaidEvent() {
+		
+		String paidEvent = "Crisis Management Conference";
 
 		try {
 
@@ -29,7 +31,9 @@ public class EventPage extends Page {
 			Log.info("Enter event name in Search Box");
 			System.out.println("Enter event name in Search Box");
 			CommonHelper.elementToBeClickable("searchBox_id");
-			enterText("searchBox_id", "Crisis Management Conference");
+			enterText("searchBox_id", paidEvent);
+			System.out.println("The Paid Event is: " + paidEvent);
+			test.log(LogStatus.INFO, "The Paid Event is: " + paidEvent);
 
 			test.log(LogStatus.INFO, "Click on Search");
 			Log.info("Click on Search");
@@ -51,6 +55,8 @@ public class EventPage extends Page {
 	}
 
 	public void searchPaidEventOne() {
+		
+		String firstEvent = "Crisis Management Conference";
 
 		try {
 
@@ -58,7 +64,10 @@ public class EventPage extends Page {
 			Log.info("Enter event name in Search Box");
 			System.out.println("Enter event name in Search Box");
 			CommonHelper.elementToBeClickable("searchBox_id");
-			enterText("searchBox_id", "BSI’s BIM Conference");
+			enterText("searchBox_id", firstEvent);
+			System.out.println("The first Paid Event is: " + firstEvent);
+			test.log(LogStatus.INFO, "The first Paid Event is: " + firstEvent);
+			
 
 			test.log(LogStatus.INFO, "Click on Search");
 			Log.info("Click on Search");
@@ -80,6 +89,8 @@ public class EventPage extends Page {
 	}
 
 	public void searchSecondPaidEvent() {
+		
+		String secondEvent = "BSI’s BIM Conference";
 
 		try {
 
@@ -87,7 +98,9 @@ public class EventPage extends Page {
 			Log.info("Enter second  event name in Search Box");
 			System.out.println("Enter second  event name in Search Box");
 			CommonHelper.elementToBeClickable("searchBox_id");
-			enterText("searchBox_id", "Fire Safety Conference");
+			enterText("searchBox_id", secondEvent);
+			System.out.println("The second Paid Event is: " + secondEvent);
+			test.log(LogStatus.INFO, "The second Paid Event is: " + secondEvent);
 
 			test.log(LogStatus.INFO, "Click on Search");
 			Log.info("Click on Search");
@@ -423,7 +436,7 @@ public class EventPage extends Page {
 			Log.info("Enter event name in Search Box");
 			System.out.println("Enter event name in Search Box");
 			CommonHelper.elementToBeClickable("searchBox_id");
-			enterText("searchBox_id", "Sustainability Performance and Reporting Event – 2016");
+			enterText("searchBox_id", "ISO 50001:2018 Energy management systems");
 			Thread.sleep(2000);
 			// driver.findElement(By.id("search")).sendKeys("BSI�s BIM
 			// Conference");

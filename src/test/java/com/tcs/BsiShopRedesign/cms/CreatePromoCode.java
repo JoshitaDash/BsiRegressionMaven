@@ -61,6 +61,11 @@ public class CreatePromoCode extends BaseTest {
 			Log.info("Verify Promo Code");
 			test.log(LogStatus.INFO, "Verify Promo Code");
 			customer.verifyPromoCode(promoCode);
+			
+			System.out.println("Click Admin Logout");
+			Log.info("Click Admin Logout");
+			customer.clickAdminLogout();
+
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Create Promocode with Special Character was unsuccessful");

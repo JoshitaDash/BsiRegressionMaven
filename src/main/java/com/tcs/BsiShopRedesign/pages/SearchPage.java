@@ -95,7 +95,7 @@ public class SearchPage extends Page {
 				return true;
 			} else {
 				System.out.println("The search count was unsuccessful");
-				test.log(LogStatus.FAIL, "The search count was unsuccessful");
+				CommonHelper.reportFailure("The search count was unsuccessful");
 
 			}
 			return false;
@@ -967,8 +967,8 @@ public class SearchPage extends Page {
 			String price = priceList.getText();
 			memPrice = memPriceList.getText();
 
-			//price = price.substring(1);
-			//memPrice = memPrice.substring(1);
+			// price = price.substring(1);
+			// memPrice = memPrice.substring(1);
 			System.out.println("The price of the second product in the search list is: " + price
 					+ " & The member price of the second product in the search list is: " + memPrice);
 			test.log(LogStatus.PASS, "The price of the second product in the search list is: " + price
@@ -1162,6 +1162,370 @@ public class SearchPage extends Page {
 			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Recently Viewed Products was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void withdrwanFilterSearch() {
+
+		try {
+			Thread.sleep(2000);
+			CommonHelper.scrolltoview("resetFilter_linkText");
+			test.log(LogStatus.INFO, ("Click Reset Filters"));
+			Log.info("Click Reset Filters");
+			System.out.println("Click Reset Filters");
+			click("resetFilter_linkText");
+
+			Thread.sleep(3000);
+			CommonHelper.scrolltoview("filterStatus_css");
+			test.log(LogStatus.INFO, ("Select Status"));
+			Log.info("Select Status");
+			System.out.println("Select Status");
+			click("filterStatus_css");
+			Thread.sleep(1000);
+			test.log(LogStatus.INFO, ("Select Withdrawn"));
+			Log.info("Select Withdrawn");
+			System.out.println("Select Withdrawn");
+			click("searchStatusWithdrawn_id");
+
+			Thread.sleep(1000);
+			// CommonHelper.scrolltoview("applySearchFilter_id");
+			test.log(LogStatus.INFO, ("Click Apply Filter"));
+			Log.info("Click Apply Filter");
+			System.out.println("Click Apply Filter");
+			click("applySearchFilter_id");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Select Filter with Withdrawn Status was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyWithdrawnColorCode() {
+
+		boolean isNextButtonDisplayed = false;
+		int counter = 0;
+
+		try { // isNextButtonDisplayed = CommonHelper.isVisisble("next_xpath");
+			driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
+			isNextButtonDisplayed = true;
+		} catch (Exception e) {
+			isNextButtonDisplayed = false;
+			e.printStackTrace();
+		}
+
+		try {
+
+			do {
+				Thread.sleep(2000);
+				test.log(LogStatus.INFO, ("Verify Withdrawn Status Color Code"));
+				Log.info("Verify Withdrawn Status Color Code");
+				System.out.println("Verify Withdrawn Status Color Code");
+				// CommonHelper.scrolltoview("productStatus_css");
+				List<WebElement> withdrawn = driver.findElements(By.cssSelector("span[class*='font14']"));
+
+				for (int i = 0; i < withdrawn.size(); i++) {
+					// CommonHelper.scrolltoview("productStatus_css");
+					String withdrawnText = withdrawn.get(i).getText();
+					System.out.println("The Status of the product is: " + withdrawnText);
+					test.log(LogStatus.INFO, "The Status of the product is: " + withdrawnText);
+					String withdrawnValue = withdrawn.get(i).getAttribute("class");
+					System.out.println("The Withdrawn Value is: " + withdrawnValue);
+
+					if (withdrawnText.equals("Withdrawn") && withdrawnValue.startsWith("status-green-colour")) {
+						System.out.println("Verification of Color code for Withdrawn status was unsucessful");
+						test.log(LogStatus.FAIL, "Verification of Color code for Withdrawn status was unsucessful");
+						System.out.println("The Color Code is not Red ");
+						test.log(LogStatus.INFO, "The Color Code is not Red ");
+						CommonHelper.takeScreenShot();
+					} else {
+						System.out.println("The Color Code is Red ");
+						test.log(LogStatus.INFO, "The Color Code is Red ");
+						System.out.println("Verification of Color code for Withdrawn status was sucessful");
+						test.log(LogStatus.PASS, "Verification of Color code for Withdrawn status was sucessful");
+						CommonHelper.takeScreenShot();
+					}
+				}
+
+				if (isNextButtonDisplayed) {
+					counter = 1;
+					CommonHelper.elementToBeVisible("next_xpath");
+					CommonHelper.scrolltoview("next_xpath");
+					test.log(LogStatus.INFO, "Click on Next");
+					System.out.println("Click on Next");
+					Log.info("Click on Next");
+					driver.findElement(By.xpath("(//span[text()='Next'])[2]")).click();
+					try { //
+						isNextButtonDisplayed = // CommonHelper.isVisisble("next_xpath");
+								driver.findElement(By.xpath("(//span[text()='Next'])[2]")).isDisplayed();
+						isNextButtonDisplayed = true;
+					} catch (Exception e) {
+						isNextButtonDisplayed = false;
+						e.printStackTrace();
+					}
+
+				}
+			} while (isNextButtonDisplayed);
+
+			Thread.sleep(1000);
+			if (counter != 0) {
+				Thread.sleep(2000);
+				test.log(LogStatus.INFO, ("Verify Withdrawn Status Color Code"));
+				Log.info("Verify Withdrawn Status Color Code");
+				System.out.println("Verify Withdrawn Status Color Code");
+				// CommonHelper.scrolltoview("productStatus_css");
+				List<WebElement> withdrawn = driver.findElements(By.cssSelector("span[class*='font14']"));
+
+				for (int i = 0; i < withdrawn.size(); i++) {
+					CommonHelper.scrolltoview("productStatus_css");
+					String withdrawnText = withdrawn.get(i).getText();
+					System.out.println("The Status of the product is: " + withdrawnText);
+					test.log(LogStatus.INFO, "The Status of the product is: " + withdrawnText);
+					String withdrawnValue = withdrawn.get(i).getAttribute("class");
+					System.out.println("The Withdrawn Value is: " + withdrawnValue);
+
+					if (withdrawnText.equals("Withdrawn") && withdrawnValue.startsWith("status-green-colour")) {
+						System.out.println("The Color Code for Withdrawn Status is not Red ");
+						test.log(LogStatus.INFO, "The Color Code for Withdrawn Status is not Red ");
+						System.out.println("Verification of Color code for Withdrawn status was unsucessful");
+						test.log(LogStatus.FAIL, "Verification of Color code for Withdrawn status was unsucessful");
+						CommonHelper.takeScreenShot();
+					} else {
+						System.out.println("The Color Code for Withdrawn Status is Red ");
+						test.log(LogStatus.INFO, "The Color Code for Withdrawn Status is Red ");
+						System.out.println("Verification of Color code for Withdrawn status was sucessful");
+						test.log(LogStatus.PASS, "Verification of Color code for Withdrawn status was sucessful");
+						CommonHelper.takeScreenShot();
+					}
+				}
+
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Color Code for Withdrawn status was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void currentFilterSearch() {
+
+		try {
+			Thread.sleep(2000);
+			CommonHelper.scrolltoview("resetFilter_linkText");
+			test.log(LogStatus.INFO, ("Click Reset Filters"));
+			Log.info("Click Reset Filters");
+			System.out.println("Click Reset Filters");
+			click("resetFilter_linkText");
+
+			Thread.sleep(3000);
+			CommonHelper.scrolltoview("filterStatus_css");
+			test.log(LogStatus.INFO, ("Select Status"));
+			Log.info("Select Status");
+			System.out.println("Select Status");
+			click("filterStatus_css");
+			Thread.sleep(1000);
+			test.log(LogStatus.INFO, ("Select Current"));
+			Log.info("Select Current");
+			System.out.println("Select Current");
+			click("filterCurrentStatus_id");
+
+			Thread.sleep(1000);
+			// CommonHelper.scrolltoview("applySearchFilter_id");
+			test.log(LogStatus.INFO, ("Click Apply Filter"));
+			Log.info("Click Apply Filter");
+			System.out.println("Click Apply Filter");
+			click("applySearchFilter_id");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Select Filter with Current Status was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyCurrentColorCode() {
+
+		try {
+			Thread.sleep(2000);
+			test.log(LogStatus.INFO, ("Verify Current Status Color Code"));
+			Log.info("Verify Current Status Color Code");
+			System.out.println("Verify Current Status Color Code");
+			// CommonHelper.scrolltoview("productStatus_css");
+			List<WebElement> status = driver.findElements(By.cssSelector("span[class*='font14']"));
+
+			for (int i = 0; i < status.size(); i++) {
+				// CommonHelper.scrolltoview("productStatus_css");
+				String statusText = status.get(i).getText();
+				System.out.println("The Status of the product is: " + statusText);
+				test.log(LogStatus.INFO, "The Status of the product is: " + statusText);
+				String statusValue = status.get(i).getAttribute("class");
+				System.out.println("The Status Value is: " + statusValue);
+
+				if (statusText.equals("Current") && statusValue.startsWith("status-green-colour")) {
+					System.out.println("The Color Code for Current Status is Green ");
+					test.log(LogStatus.INFO, "The Color Code for Current Status is Green ");
+					System.out.println("Verification of Color code for Current status was sucessful");
+					test.log(LogStatus.PASS, "Verification of Color code for Current status was sucessful");
+					CommonHelper.takeScreenShot();
+				} else {
+					System.out.println("The Color Code for Current Status is not Green ");
+					test.log(LogStatus.INFO, "The Color Code for Current Status is not Green ");
+					System.out.println("Verification of Color code for Current status was unsucessful");
+					test.log(LogStatus.FAIL, "Verification of Color code for Current status was unsucessful");
+					CommonHelper.takeScreenShot();
+				}
+			}
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Color Code for Current status was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void currentDraftFilterSearch() {
+
+		try {
+			Thread.sleep(2000);
+			CommonHelper.scrolltoview("resetFilter_linkText");
+			test.log(LogStatus.INFO, ("Click Reset Filters"));
+			Log.info("Click Reset Filters");
+			System.out.println("Click Reset Filters");
+			click("resetFilter_linkText");
+
+			Thread.sleep(3000);
+			CommonHelper.scrolltoview("filterStatus_css");
+			test.log(LogStatus.INFO, ("Select Status"));
+			Log.info("Select Status");
+			System.out.println("Select Status");
+			click("filterStatus_css");
+			Thread.sleep(1000);
+			test.log(LogStatus.INFO, ("Select Current Draft for Public Comment Status"));
+			Log.info("Select Current Draft for Public Comment Status");
+			System.out.println("Select Current Draft for Public Comment Status");
+			click("filterDraftStatus_id");
+
+			Thread.sleep(1000);
+			// CommonHelper.scrolltoview("applySearchFilter_id");
+			test.log(LogStatus.INFO, ("Click Apply Filter"));
+			Log.info("Click Apply Filter");
+			System.out.println("Click Apply Filter");
+			click("applySearchFilter_id");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure(
+					"Select Multiple Filter with Current Draft for Public Comment Status was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void currentRevisionUnderwayFilterSearch() {
+
+		try {
+			Thread.sleep(2000);
+			CommonHelper.scrolltoview("resetFilter_linkText");
+			test.log(LogStatus.INFO, ("Click Reset Filters"));
+			Log.info("Click Reset Filters");
+			System.out.println("Click Reset Filters");
+			click("resetFilter_linkText");
+
+			Thread.sleep(3000);
+			CommonHelper.scrolltoview("filterStatus_css");
+			test.log(LogStatus.INFO, ("Select Status"));
+			Log.info("Select Status");
+			System.out.println("Select Status");
+			click("filterStatus_css");
+
+			Thread.sleep(1000);
+			test.log(LogStatus.INFO, ("Select Current Revision Underway Status"));
+			Log.info("Select Current Revision Underway Status");
+			System.out.println("Select Current Revision Underway Status");
+			click("filterRevisionUnderwayStatus_id");
+
+			Thread.sleep(1000);
+			// CommonHelper.scrolltoview("applySearchFilter_id");
+			test.log(LogStatus.INFO, ("Click Apply Filter"));
+			Log.info("Click Apply Filter");
+			System.out.println("Click Apply Filter");
+			click("applySearchFilter_id");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Select Filter with Current Revision Underway Status was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void currentReviewFilterSearch() {
+
+		try {
+			Thread.sleep(2000);
+			CommonHelper.scrolltoview("resetFilter_linkText");
+			test.log(LogStatus.INFO, ("Click Reset Filters"));
+			Log.info("Click Reset Filters");
+			System.out.println("Click Reset Filters");
+			click("resetFilter_linkText");
+
+			Thread.sleep(3000);
+			CommonHelper.scrolltoview("filterStatus_css");
+			test.log(LogStatus.INFO, ("Select Status"));
+			Log.info("Select Status");
+			System.out.println("Select Status");
+			click("filterStatus_css");
+
+			Thread.sleep(1000);
+			test.log(LogStatus.INFO, ("Select Current Under Review Status"));
+			Log.info("Select Current Under Review Status");
+			System.out.println("Select Current Under Review Status");
+			click("filterUnderReviewStatus_id");
+
+			Thread.sleep(1000);
+			// CommonHelper.scrolltoview("applySearchFilter_id");
+			test.log(LogStatus.INFO, ("Click Apply Filter"));
+			Log.info("Click Apply Filter");
+			System.out.println("Click Apply Filter");
+			click("applySearchFilter_id");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Select Multiple Filter with Current Under Review Status was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void verifyAmberColorCode() {
+
+		try {
+			Thread.sleep(2000);
+			test.log(LogStatus.INFO, ("Verify Current Draft Status Color Code"));
+			Log.info("Verify Current Draft Status Color Code");
+			System.out.println("Verify Current Draft Status Color Code");
+			// CommonHelper.scrolltoview("productStatus_css");
+			List<WebElement> status = driver.findElements(By.cssSelector("span[class*='font14']"));
+			Thread.sleep(2000);
+			for (int i = 0; i < status.size(); i++) {
+				Thread.sleep(1000);
+				// CommonHelper.scrolltoview("productStatus_css");
+				String statusText = status.get(i).getText();
+				System.out.println("The Status of the product is: " + statusText);
+				test.log(LogStatus.INFO, "The Status of the product is: " + statusText);
+				String statusValue = status.get(i).getAttribute("class");
+				System.out.println("The Status Value is: " + statusValue);
+				Thread.sleep(2000);
+
+				if (statusText.contains("Current") && statusValue.startsWith("status-draft-color")) {
+					System.out.println("The Color Code for Current Status is Amber ");
+					test.log(LogStatus.INFO, "The Color Code for Current Status is Amber ");
+					System.out.println("Verification of Color code for Current status was sucessful");
+					test.log(LogStatus.PASS, "Verification of Color code for Current status was sucessful");
+					CommonHelper.takeScreenShot();
+				} else {
+					System.out.println("The Color Code for Current Status is not Amber ");
+					test.log(LogStatus.INFO, "The Color Code for Current Status is not Amber ");
+					System.out.println("Verification of Color code for Current status was unsucessful");
+					test.log(LogStatus.FAIL, "Verification of Color code for Current status was unsucessful");
+					CommonHelper.takeScreenShot();
+				}
+			}
+
+		} catch (Exception e) {
+			CommonHelper
+					.reportFailure("Verification of Color Code for Current Draft statuses was unsuccessful");
 			e.printStackTrace();
 		}
 	}

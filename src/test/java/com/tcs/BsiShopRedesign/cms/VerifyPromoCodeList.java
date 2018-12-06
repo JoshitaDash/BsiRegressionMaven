@@ -28,6 +28,7 @@ public class VerifyPromoCodeList extends BaseTest {
 			Log.info("Admin Signing In");
 			SignInPage signIn = new SignInPage(driver);
 			signIn.adminLogin();
+			
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Admin Signing in was unsuccessful");
 			CommonHelper.reportFailure("Admin Signing in was unsuccessful");
@@ -59,6 +60,9 @@ public class VerifyPromoCodeList extends BaseTest {
 			Log.info("Verify List of Promo Codes");
 			customer.verifyPromoCodeList();
 			
+			System.out.println("Click Admin Logout");
+			Log.info("Click Admin Logout");
+			customer.clickAdminLogout();
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verification of List of Promo Codes was unsuccessful");

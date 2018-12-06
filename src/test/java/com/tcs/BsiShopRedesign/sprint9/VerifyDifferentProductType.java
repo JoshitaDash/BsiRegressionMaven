@@ -72,7 +72,7 @@ public class VerifyDifferentProductType extends BaseTest {
 	@Test(priority = 2, enabled = true)
 	public void verifyNewsFeed() {
 
-		test = extent.startTest("Sprint 9 - #CM06 ___ Verification of News Feed");
+		test = extent.startTest("Sprint 9 - CM-06, CM-04,09 AC#22 ___ Verification of News Feed");
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		try {

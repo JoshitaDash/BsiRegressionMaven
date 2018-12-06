@@ -914,7 +914,7 @@ public class CheckoutPage extends Page {
 		boolean removePrice = false;
 
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			System.out.println("Click Enter Payment Details");
 			test.log(LogStatus.INFO, "Click Enter Payment Details");
 			Log.info("Click Enter Payment Details");
@@ -932,7 +932,7 @@ public class CheckoutPage extends Page {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 			if (removePrice) {
 				click("removeInovicePrice_xpath");
 			}
@@ -943,7 +943,7 @@ public class CheckoutPage extends Page {
 			click("payInvoice_id");
 			// driver.switchTo().frame(0);
 
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			System.out.println("Enter PO Number");
 			test.log(LogStatus.INFO, "Enter PO Number");
 			Log.info("Enter PO Number");
@@ -1012,7 +1012,7 @@ public class CheckoutPage extends Page {
 		boolean removePrice = false;
 
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			System.out.println("Click Enter Payment Details");
 			test.log(LogStatus.INFO, "Click Enter Payment Details");
 			Log.info("Click Enter Payment Details");

@@ -273,4 +273,26 @@ public class OrderHistoryPage extends Page {
 
 	}
 
+	public String viewOrderNum() {
+		
+		String orderNumText = null;
+		try {
+			Log.info("View First Order Number Number in Order History Page");
+			System.out.println("View First Order Number Number in Order History Page");
+			test.log(LogStatus.INFO, "View First Order Number Number in Order History Page");
+
+			List<WebElement> orderNum = driver.findElements(By.cssSelector("td[data-th='Order #']"));
+			orderNumText = orderNum.get(0).getText();
+			System.out.println("The First Order Number in Order History Page is: " + orderNumText);
+			test.log(LogStatus.INFO, "The First Order Number in Order History Page is: " + orderNumText);
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("View First Order Number Number in Order History Page was unsuccessful");
+			e.printStackTrace();
+		}
+
+		return orderNumText;
+
+	}
+
 }

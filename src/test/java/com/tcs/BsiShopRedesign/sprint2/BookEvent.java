@@ -46,7 +46,7 @@ public class BookEvent extends BaseTest {
 			System.out.println("Search Paid Event");
 			Log.info("Search Paid Event");
 			EventPage event = new EventPage(driver);
-			event.searchPaidEventOne();
+			event.searchPaidEvent();
 
 			System.out.println("Click Book Now for Paid Event");
 			Log.info("Click Book Now for Paid Event");
@@ -84,7 +84,7 @@ public class BookEvent extends BaseTest {
 		}
 	}
 
-	@Test(priority = 3, enabled = true)
+	@Test(priority = 3, enabled = false)
 	public void BookFreeEvent() {
 
 		test = extent.startTest("Sprint 2 - Ecom-06 AC#27 ___Book Free Event");

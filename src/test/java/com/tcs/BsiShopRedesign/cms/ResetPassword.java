@@ -28,6 +28,7 @@ public class ResetPassword extends BaseTest {
 			Log.info("Admin Signing In");
 			SignInPage signIn = new SignInPage(driver);
 			signIn.adminLogin();
+			
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Admin Signing in was unsuccessful");
 			CommonHelper.reportFailure("Admin Signing in was unsuccessful");
@@ -54,6 +55,11 @@ public class ResetPassword extends BaseTest {
 			System.out.println("Verify Reset Password");
 			Log.info("Verify Reset Password");
 			customer.verifyResetPwd();
+			
+			System.out.println("Click Admin Logout");
+			Log.info("Click Admin Logout");
+			customer.clickAdminLogout();
+
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verify Customer Details was unsuccessful");

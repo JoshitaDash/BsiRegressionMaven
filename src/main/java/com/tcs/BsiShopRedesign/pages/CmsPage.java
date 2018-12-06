@@ -1,9 +1,12 @@
 package com.tcs.BsiShopRedesign.pages;
 
+import java.util.List;
+
 import org.apache.commons.lang3.RandomStringUtils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
@@ -345,11 +348,11 @@ public class CmsPage extends Page {
 			enterText("ruleName_css", ruleName);
 			Thread.sleep(2000);
 
-			//Thread.sleep(2000);
+			// Thread.sleep(2000);
 			System.out.println("Select Website");
 			Log.info("Select Website");
 			test.log(LogStatus.INFO, "Select Website");
-			//Thread.sleep(2000);
+			// Thread.sleep(2000);
 			click("mainWebsite_css");
 			String website = CommonHelper.element("mainWebsite_css").getAttribute("data-title");
 			System.out.println("The Website is: " + website);
@@ -595,4 +598,238 @@ public class CmsPage extends Page {
 
 	}
 
+	public void clickSalesMenu() throws Exception {
+
+		System.out.println("Click Sales Menu");
+		Log.info("Click Sales Menu");
+		test.log(LogStatus.INFO, "Click Sales Menu");
+		click("magentoSales_xpath");
+
+	}
+
+	public void clickOrdersSubmenu() throws Exception {
+
+		System.out.println("Click Orders Submenu");
+		Log.info("Click Orders Submenu");
+		test.log(LogStatus.INFO, "Click Orders Submenu");
+		click("orderSubmenu_xpath");
+	}
+
+	public void searchOrderNum(String orderNumber) {
+		try {
+			boolean remove = false;
+
+			try {
+				remove = CommonHelper.isElementVisible("removeKeyword_css");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			if (remove) {
+				System.out.println("Click Remove Keyword");
+				Log.info("Click Remove Keyword");
+				test.log(LogStatus.INFO, "Click Remove Keyword");
+				click("removeKeyword_css");
+			}
+
+			Thread.sleep(2000);
+			System.out.println("Enter keyword for search");
+			Log.info("Enter keyword for search");
+			test.log(LogStatus.INFO, "Enter keyword for search");
+			clearText("searchKeywordText_id");
+			Thread.sleep(2000);
+			enterText("searchKeywordText_id", orderNumber);
+
+			System.out.println("Click on Search");
+			Log.info("Click on Search");
+			test.log(LogStatus.INFO, "Click on Search");
+			click("searchDetails_xpath");
+			Thread.sleep(5000);
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Search Order Number was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void clickViewOrder() throws Exception {
+
+		boolean closeAlert = false;
+
+		try {
+			Thread.sleep(2000);
+			System.out.println("Click View Order");
+			Log.info("Click View Order");
+			test.log(LogStatus.INFO, "Click View Order");
+			click("viewCMSOrder_xpath");
+			Thread.sleep(5000);
+
+			driver.switchTo().defaultContent();
+			closeAlert = driver.findElement(By.cssSelector("button[data-role='closeBtn']")).isDisplayed();
+			if (closeAlert) {
+				test.log(LogStatus.INFO, "Close Alert");
+				System.out.println("Close Alert");
+				List<WebElement> alert = driver.findElements(By.cssSelector("button[data-role='closeBtn']"));
+				for (int i = 0; i <= alert.size(); i++) {
+					click("closeAlert_css");
+				}
+				Thread.sleep(1000);
+			}
+
+			/*
+			 * try { alert = driver.findElement(By.xpath(
+			 * "//*[@id='html-body']/div[8]/aside[3]/div[2]/header/button")) .isDisplayed();
+			 * } catch (Exception e) { e.printStackTrace(); } if (alert) {
+			 * System.out.println("Click Alert"); test.log(LogStatus.INFO, "Click Alert");
+			 * List<WebElement> alerts = driver .findElements(By.xpath(
+			 * "//*[@id='html-body']/div[8]/aside[4]/div[2]/footer/button/span")); for (int
+			 * i = 0; i <= alerts.size(); i++) { driver.findElement(By.xpath(
+			 * "//*[@id='html-body']/div[8]/aside[4]/div[2]/footer/button/span")) .click();
+			 * }
+			 * 
+			 * }
+			 */
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Click View Order was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void verifyEvidenceInfo() {
+
+		try {
+			CommonHelper.scrolltoview("evidenceInfo_xpath");
+			List<WebElement> evidenceCountry = driver.findElements(By.cssSelector("div[class='box-content']"));
+			String ipCountry = evidenceCountry.get(0).getText();
+			System.out.println("The IP Country is: " + ipCountry);
+			test.log(LogStatus.INFO, "The IP Country is: " + ipCountry);
+			String billingCountry = evidenceCountry.get(1).getText();
+			System.out.println("The Billing Country is: " + billingCountry);
+			test.log(LogStatus.INFO, "The Billing Country is: " + billingCountry);
+			String cardIssueCountry = evidenceCountry.get(2).getText();
+			System.out.println("The Card Issue Country is: " + cardIssueCountry);
+			test.log(LogStatus.INFO, "The Card Issue Country is: " + cardIssueCountry);
+
+			if (ipCountry.equals(billingCountry) && billingCountry.equals(cardIssueCountry)
+					&& cardIssueCountry.equals(ipCountry)) {
+				System.out.println("Verification of Evidence Information was successful");
+				test.log(LogStatus.PASS, "Verification of Evidence Information was successful");
+			} else {
+				System.out.println("Verification of Evidence Information was unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Evidence Information was unsuccessful");
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verification of Evidence Information Order Details was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public void clickAdminLogout() {
+
+		try {
+
+			Thread.sleep(2000);
+			System.out.println("Click Admin Logout");
+			Log.info("Click Admin Logout");
+			test.log(LogStatus.INFO, "Click Admin Logout");
+			CommonHelper.scrolltoview("adminLogoutDpdwn_xpath");
+			click("adminLogoutDpdwn_xpath");
+			click("adminSignOut_css");
+			test.log(LogStatus.PASS, "Admin Logout was successful");
+			System.out.println("Admin Logout was successful");
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Admin Logout was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void clickContent() {
+
+		try {
+			System.out.println("Click Content Menu");
+			Log.info("Click on Content Menu");
+			test.log(LogStatus.INFO, "Click on Content Menu");
+			click("contentMenu_xpath");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Click Content Menu was unsucessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void clickPages() {
+
+		try {
+
+			System.out.println("Click Pages submenu");
+			Log.info("Click Pages Submenu");
+			test.log(LogStatus.INFO, "Click Pages submenu");
+			click("pagesSubmenu_xpath");
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Click Pages submenu was unsucessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void searchPage() {
+
+		boolean remove = false;
+
+		try {
+			Thread.sleep(2000);
+			try {
+				remove = CommonHelper.isElementVisible("removeKeyword_css");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			if (remove) {
+				System.out.println("Click Remove Keyword");
+				Log.info("Click Remove Keyword");
+				test.log(LogStatus.INFO, "Click Remove Keyword");
+				click("removeKeyword_css");
+			}
+
+			Thread.sleep(1000);
+			System.out.println("Enter keyword for search");
+			Log.info("Enter keyword for search");
+			test.log(LogStatus.INFO, "Enter keyword for search");
+			clearText("searchKeywordText_id");
+			Thread.sleep(1000);
+			enterText("searchKeywordText_id", "503");
+
+			System.out.println("Click on Search");
+			Log.info("Click on Search");
+			test.log(LogStatus.INFO, "Click on Search");
+			click("searchDetails_xpath");
+			Thread.sleep(2000);
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Search Page was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void viewCMSContentPage() {
+
+		try {
+
+			System.out.println("Verify CMS Page");
+			Log.info("Verify CMS Page");
+			test.log(LogStatus.INFO, "Verify CMS Page");
+			String title = driver.findElement(By.xpath("//*[@id='container']/div/div[5]/table/tbody/tr[2]/td[3]/div"))
+					.getText();
+			if (title.contains("503")) {
+				System.out.println("Verification of CMS Content Page was susccessful");
+				test.log(LogStatus.PASS, "Verification of CMS Content Page was susccessful");
+				CommonHelper.takeScreenShot();
+			}
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Verify CMS Content Page was unsuccessful");
+			e.printStackTrace();
+		}
+	}
 }

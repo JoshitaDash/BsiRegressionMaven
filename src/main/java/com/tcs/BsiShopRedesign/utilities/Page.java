@@ -49,7 +49,7 @@ public class Page {
 					CommonHelper.elementToBeVisible(locator);
 				CommonHelper.elementToBeClickable(locator);
 				CommonHelper.clickByJS(locator);
-				Thread.sleep(2000);
+				//Thread.sleep(1000);
 			} else {// (!locator.isEmpty() && CommonHelper.isElementVisible(locator))
 				CommonHelper.elementToBeVisible(locator);
 				CommonHelper.elementToBeClickable(locator);

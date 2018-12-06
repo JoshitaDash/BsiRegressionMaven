@@ -45,7 +45,7 @@ public class MultipleEventUpdateBasket extends BaseTest {
 			System.out.println("Search Paid Event");
 			Log.info("Search Paid Event");
 			EventPage event = new EventPage(driver);
-			event.searchPaidEvent();
+			event.searchPaidEventOne();
 	
 			System.out.println("Click Book Now for Paid Event");
 			Log.info("Click Book Now for Paid Event");

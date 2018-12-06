@@ -623,19 +623,19 @@ public class ProductPage extends Page {
 			Log.info("Verify Pre Order Product");
 			System.out.println("Verify Pre Order Product");
 
-			String advanceAcessText = driver.findElement(By.cssSelector("span[data-th='Availability Check']"))
+			String preOrderText = driver.findElement(By.cssSelector("span[data-th='Availability Check']"))
 					.getText();
-			if (advanceAcessText.contains("pre-order")) {
+			if (preOrderText.contains("pre-order")) {
 				System.out.println(
-						"The text of the product is: " + advanceAcessText + "Pre Order Product was successful");
-				test.log(LogStatus.INFO, "The text of the product is: " + advanceAcessText);
+						"The text of the product is: " + preOrderText + "Pre Order Product was successful");
+				test.log(LogStatus.INFO, "The text of the product is: " + preOrderText);
 				test.log(LogStatus.PASS, "Pre Order Product was successful");
 			}
 
 			else {
 				System.out.println(
-						"The text of the product is: " + advanceAcessText + "Pre Order Product was unsuccessful");
-				test.log(LogStatus.INFO, "The text of the product is: " + advanceAcessText);
+						"The text of the product is: " + preOrderText + "Pre Order Product was unsuccessful");
+				test.log(LogStatus.INFO, "The text of the product is: " + preOrderText);
 				test.log(LogStatus.FAIL, "Pre Order Product was unsuccessful");
 			}
 
