@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1760608" started-at="2018-12-06T14:56:13Z" finished-at="2018-12-06T15:25:33Z">
+  <suite name="Suite" duration-ms="223392" started-at="2018-12-10T13:22:07Z" finished-at="2018-12-10T13:25:51Z">
     <groups>
     </groups>
-    <test name="Chrome Browser" duration-ms="1760608" started-at="2018-12-06T14:56:13Z" finished-at="2018-12-06T15:25:33Z">
-      <class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@569cfc36]" name="launchBrowser" is-config="true" duration-ms="12858" started-at="2018-12-06T14:56:13Z" finished-at="2018-12-06T14:56:26Z">
+    <test name="Chrome Browser" duration-ms="223392" started-at="2018-12-10T13:22:07Z" finished-at="2018-12-10T13:25:51Z">
+      <class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="launchBrowser" is-config="true" duration-ms="10879" started-at="2018-12-10T13:22:07Z" finished-at="2018-12-10T13:22:18Z">
           <params>
             <param index="0">
               <value>
@@ -23,39 +23,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="withdrawnStatusColorCode()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@569cfc36]" name="withdrawnStatusColorCode" duration-ms="122798" started-at="2018-12-06T14:56:26Z" finished-at="2018-12-06T14:58:29Z">
+        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="signIn" duration-ms="18545" started-at="2018-12-10T13:22:18Z" finished-at="2018-12-10T13:22:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- withdrawnStatusColorCode -->
-        <test-method status="PASS" signature="currentStatusColorCode()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@569cfc36]" name="currentStatusColorCode" duration-ms="97478" started-at="2018-12-06T14:58:29Z" finished-at="2018-12-06T15:00:06Z">
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="downloadSoftCopyfromOrderCofirmationPage()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="downloadSoftCopyfromOrderCofirmationPage" duration-ms="150668" started-at="2018-12-10T13:22:37Z" finished-at="2018-12-10T13:25:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- currentStatusColorCode -->
-        <test-method status="PASS" signature="currentDraftStatusColorCode()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@569cfc36]" name="currentDraftStatusColorCode" duration-ms="511805" started-at="2018-12-06T15:00:06Z" finished-at="2018-12-06T15:08:38Z">
+        </test-method> <!-- downloadSoftCopyfromOrderCofirmationPage -->
+        <test-method status="PASS" signature="downloadSoftCopyfromOrderHistoryPage()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="downloadSoftCopyfromOrderHistoryPage" duration-ms="42377" started-at="2018-12-10T13:25:08Z" finished-at="2018-12-10T13:25:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- currentDraftStatusColorCode -->
-        <test-method status="PASS" signature="currentRevisionUnderwayStatusColorCode()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@569cfc36]" name="currentRevisionUnderwayStatusColorCode" duration-ms="505555" started-at="2018-12-06T15:08:38Z" finished-at="2018-12-06T15:17:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- currentRevisionUnderwayStatusColorCode -->
-        <test-method status="PASS" signature="currentUnderReviewStatusColorCode()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@569cfc36]" name="currentUnderReviewStatusColorCode" duration-ms="509053" started-at="2018-12-06T15:17:03Z" finished-at="2018-12-06T15:25:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- currentUnderReviewStatusColorCode -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@569cfc36]" name="tearDown" is-config="true" duration-ms="1040" started-at="2018-12-06T15:25:32Z" finished-at="2018-12-06T15:25:33Z">
+        </test-method> <!-- downloadSoftCopyfromOrderHistoryPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="tearDown" is-config="true" duration-ms="919" started-at="2018-12-10T13:25:50Z" finished-at="2018-12-10T13:25:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads -->
     </test> <!-- Chrome Browser -->
-    <test name="BSI Admin" duration-ms="0" started-at="2018-12-06T15:25:33Z" finished-at="2018-12-06T15:25:33Z">
-      <class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-12-06T14:56:13Z" finished-at="2018-12-06T14:56:13Z">
+    <test name="BSI Admin" duration-ms="0" started-at="2018-12-10T13:25:51Z" finished-at="2018-12-10T13:25:51Z">
+      <class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="15" started-at="2018-12-10T13:22:07Z" finished-at="2018-12-10T13:22:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads -->
     </test> <!-- BSI Admin -->
   </suite> <!-- Suite -->
 </testng-results>

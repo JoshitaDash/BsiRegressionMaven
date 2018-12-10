@@ -769,6 +769,7 @@ public class SearchPage extends Page {
 			Log.info("Verify blank search result");
 			System.out.println("Verify blank search result");
 			Thread.sleep(1000);
+			// CommonHelper.elementToBeClickable("blankSearchResult_xpath");
 			boolean res = CommonHelper.isElementVisible("blankSearchResult_xpath");
 
 			if (res) {
@@ -811,7 +812,6 @@ public class SearchPage extends Page {
 			System.out.println("Click on Add to Basket");
 			CommonHelper.elementToBeClickable("addToBasket_css");
 			WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
-			// click("addToBasket_css");
 			addToBasket.click();
 			Thread.sleep(2000);
 
@@ -861,7 +861,10 @@ public class SearchPage extends Page {
 
 	}
 
-	public void selectFormatClickOK() {
+	public void selectFormatClickOK() throws InterruptedException {
+
+		boolean productAddedTwiceAlert = false;
+
 		System.out.println("");
 		List<WebElement> okButtons = driver.findElements(By.xpath("//button[text()='Ok']"));
 		for (WebElement okButton : okButtons) {
@@ -875,6 +878,22 @@ public class SearchPage extends Page {
 				Assert.fail(e.getMessage());
 			}
 		}
+
+		Thread.sleep(5000);
+		List<WebElement> productAddedTwiceAlerts = driver
+				.findElements(By.xpath("//button[text()='Ok']"));
+		for (WebElement productAddedTwiceAlertbutton : productAddedTwiceAlerts) {
+			try {
+				if (productAddedTwiceAlertbutton.isDisplayed()) {
+					productAddedTwiceAlertbutton.click();
+				}
+			} catch (Exception e) {
+				CommonHelper.reportFailure("Click OK was unsuccessful");
+				e.printStackTrace();
+				Assert.fail(e.getMessage());
+			}
+		}
+
 	}
 
 	public void selectHardCopyFormat() {
@@ -1174,15 +1193,18 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, ("Click Reset Filters"));
 			Log.info("Click Reset Filters");
 			System.out.println("Click Reset Filters");
+			CommonHelper.elementToBeClickable("resetFilter_linkText");
 			click("resetFilter_linkText");
 
-			Thread.sleep(3000);
-			CommonHelper.scrolltoview("filterStatus_css");
+			Thread.sleep(5000);
+			CommonHelper.scrolltoview("filterStatus_id");
 			test.log(LogStatus.INFO, ("Select Status"));
 			Log.info("Select Status");
 			System.out.println("Select Status");
-			click("filterStatus_css");
+			CommonHelper.elementToBeClickable("filterStatus_id");
+			click("filterStatus_id");
 			Thread.sleep(1000);
+
 			test.log(LogStatus.INFO, ("Select Withdrawn"));
 			Log.info("Select Withdrawn");
 			System.out.println("Select Withdrawn");
@@ -1221,11 +1243,9 @@ public class SearchPage extends Page {
 				test.log(LogStatus.INFO, ("Verify Withdrawn Status Color Code"));
 				Log.info("Verify Withdrawn Status Color Code");
 				System.out.println("Verify Withdrawn Status Color Code");
-				// CommonHelper.scrolltoview("productStatus_css");
 				List<WebElement> withdrawn = driver.findElements(By.cssSelector("span[class*='font14']"));
 
 				for (int i = 0; i < withdrawn.size(); i++) {
-					// CommonHelper.scrolltoview("productStatus_css");
 					String withdrawnText = withdrawn.get(i).getText();
 					System.out.println("The Status of the product is: " + withdrawnText);
 					test.log(LogStatus.INFO, "The Status of the product is: " + withdrawnText);
@@ -1233,17 +1253,20 @@ public class SearchPage extends Page {
 					System.out.println("The Withdrawn Value is: " + withdrawnValue);
 
 					if (withdrawnText.equals("Withdrawn") && withdrawnValue.startsWith("status-green-colour")) {
-						System.out.println("Verification of Color code for Withdrawn status was unsucessful");
-						test.log(LogStatus.FAIL, "Verification of Color code for Withdrawn status was unsucessful");
+						System.out
+								.println("Verification of Color code for " + withdrawnText + " status was unsucessful");
+						test.log(LogStatus.FAIL,
+								"Verification of Color code for " + withdrawnText + " status was unsucessful");
 						System.out.println("The Color Code is not Red ");
 						test.log(LogStatus.INFO, "The Color Code is not Red ");
-						CommonHelper.takeScreenShot();
+						// CommonHelper.takeScreenShot();
 					} else {
 						System.out.println("The Color Code is Red ");
 						test.log(LogStatus.INFO, "The Color Code is Red ");
-						System.out.println("Verification of Color code for Withdrawn status was sucessful");
-						test.log(LogStatus.PASS, "Verification of Color code for Withdrawn status was sucessful");
-						CommonHelper.takeScreenShot();
+						System.out.println("Verification of Color code for " + withdrawnText + " status was sucessful");
+						test.log(LogStatus.PASS,
+								"Verification of Color code for " + withdrawnText + " status was sucessful");
+						// CommonHelper.takeScreenShot();
 					}
 				}
 
@@ -1285,17 +1308,20 @@ public class SearchPage extends Page {
 					System.out.println("The Withdrawn Value is: " + withdrawnValue);
 
 					if (withdrawnText.equals("Withdrawn") && withdrawnValue.startsWith("status-green-colour")) {
-						System.out.println("The Color Code for Withdrawn Status is not Red ");
-						test.log(LogStatus.INFO, "The Color Code for Withdrawn Status is not Red ");
-						System.out.println("Verification of Color code for Withdrawn status was unsucessful");
-						test.log(LogStatus.FAIL, "Verification of Color code for Withdrawn status was unsucessful");
-						CommonHelper.takeScreenShot();
+						System.out.println("The Color Code for " + withdrawnText + " Status is not Red ");
+						test.log(LogStatus.INFO, "The Color Code for " + withdrawnText + " Status is not Red ");
+						System.out
+								.println("Verification of Color code for " + withdrawnText + " status was unsucessful");
+						test.log(LogStatus.FAIL,
+								"Verification of Color code for " + withdrawnText + " status was unsucessful");
+						// CommonHelper.takeScreenShot();
 					} else {
-						System.out.println("The Color Code for Withdrawn Status is Red ");
-						test.log(LogStatus.INFO, "The Color Code for Withdrawn Status is Red ");
-						System.out.println("Verification of Color code for Withdrawn status was sucessful");
-						test.log(LogStatus.PASS, "Verification of Color code for Withdrawn status was sucessful");
-						CommonHelper.takeScreenShot();
+						System.out.println("The Color Code for " + withdrawnText + " Status is Red ");
+						test.log(LogStatus.INFO, "The Color Code for " + withdrawnText + " Status is Red ");
+						System.out.println("Verification of Color code for " + withdrawnText + " status was sucessful");
+						test.log(LogStatus.PASS,
+								"Verification of Color code for " + withdrawnText + " status was sucessful");
+						// CommonHelper.takeScreenShot();
 					}
 				}
 
@@ -1316,12 +1342,12 @@ public class SearchPage extends Page {
 			System.out.println("Click Reset Filters");
 			click("resetFilter_linkText");
 
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			CommonHelper.scrolltoview("filterStatus_css");
 			test.log(LogStatus.INFO, ("Select Status"));
 			Log.info("Select Status");
 			System.out.println("Select Status");
-			click("filterStatus_css");
+			click("filterStatus_id");
 			Thread.sleep(1000);
 			test.log(LogStatus.INFO, ("Select Current"));
 			Log.info("Select Current");
@@ -1348,7 +1374,7 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, ("Verify Current Status Color Code"));
 			Log.info("Verify Current Status Color Code");
 			System.out.println("Verify Current Status Color Code");
-			// CommonHelper.scrolltoview("productStatus_css");
+			CommonHelper.elementToBeClickable("productStatus_css");
 			List<WebElement> status = driver.findElements(By.cssSelector("span[class*='font14']"));
 
 			for (int i = 0; i < status.size(); i++) {
@@ -1360,17 +1386,18 @@ public class SearchPage extends Page {
 				System.out.println("The Status Value is: " + statusValue);
 
 				if (statusText.equals("Current") && statusValue.startsWith("status-green-colour")) {
-					System.out.println("The Color Code for Current Status is Green ");
-					test.log(LogStatus.INFO, "The Color Code for Current Status is Green ");
-					System.out.println("Verification of Color code for Current status was sucessful");
-					test.log(LogStatus.PASS, "Verification of Color code for Current status was sucessful");
-					CommonHelper.takeScreenShot();
+					System.out.println("The Color Code for " + statusText + " Status is Green ");
+					test.log(LogStatus.INFO, "The Color Code for " + statusText + " Status is Green ");
+					System.out.println("Verification of Color code for " + statusText + " status was sucessful");
+					test.log(LogStatus.PASS, "Verification of Color code for " + statusText + " status was sucessful");
+					// CommonHelper.takeScreenShot();
 				} else {
-					System.out.println("The Color Code for Current Status is not Green ");
-					test.log(LogStatus.INFO, "The Color Code for Current Status is not Green ");
-					System.out.println("Verification of Color code for Current status was unsucessful");
-					test.log(LogStatus.FAIL, "Verification of Color code for Current status was unsucessful");
-					CommonHelper.takeScreenShot();
+					System.out.println("The Color Code for " + statusText + " Status is not Green ");
+					test.log(LogStatus.INFO, "The Color Code for " + statusText + " Status is not Green ");
+					System.out.println("Verification of Color code for " + statusText + " status was unsucessful");
+					test.log(LogStatus.FAIL,
+							"Verification of Color code for " + statusText + " status was unsucessful");
+					// CommonHelper.takeScreenShot();
 				}
 			}
 
@@ -1390,12 +1417,12 @@ public class SearchPage extends Page {
 			System.out.println("Click Reset Filters");
 			click("resetFilter_linkText");
 
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			CommonHelper.scrolltoview("filterStatus_css");
 			test.log(LogStatus.INFO, ("Select Status"));
 			Log.info("Select Status");
 			System.out.println("Select Status");
-			click("filterStatus_css");
+			click("filterStatus_id");
 			Thread.sleep(1000);
 			test.log(LogStatus.INFO, ("Select Current Draft for Public Comment Status"));
 			Log.info("Select Current Draft for Public Comment Status");
@@ -1426,12 +1453,12 @@ public class SearchPage extends Page {
 			System.out.println("Click Reset Filters");
 			click("resetFilter_linkText");
 
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			CommonHelper.scrolltoview("filterStatus_css");
 			test.log(LogStatus.INFO, ("Select Status"));
 			Log.info("Select Status");
 			System.out.println("Select Status");
-			click("filterStatus_css");
+			click("filterStatus_id");
 
 			Thread.sleep(1000);
 			test.log(LogStatus.INFO, ("Select Current Revision Underway Status"));
@@ -1452,7 +1479,7 @@ public class SearchPage extends Page {
 		}
 	}
 
-	public void currentReviewFilterSearch() {
+	public void currentUnderReviewFilterSearch() {
 
 		try {
 			Thread.sleep(2000);
@@ -1462,12 +1489,12 @@ public class SearchPage extends Page {
 			System.out.println("Click Reset Filters");
 			click("resetFilter_linkText");
 
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			CommonHelper.scrolltoview("filterStatus_css");
 			test.log(LogStatus.INFO, ("Select Status"));
 			Log.info("Select Status");
 			System.out.println("Select Status");
-			click("filterStatus_css");
+			click("filterStatus_id");
 
 			Thread.sleep(1000);
 			test.log(LogStatus.INFO, ("Select Current Under Review Status"));
@@ -1491,41 +1518,44 @@ public class SearchPage extends Page {
 	public void verifyAmberColorCode() {
 
 		try {
-			Thread.sleep(2000);
+			// Thread.sleep(2000);
 			test.log(LogStatus.INFO, ("Verify Current Draft Status Color Code"));
 			Log.info("Verify Current Draft Status Color Code");
 			System.out.println("Verify Current Draft Status Color Code");
-			// CommonHelper.scrolltoview("productStatus_css");
+			CommonHelper.elementToBeClickable("productStatus_css");
 			List<WebElement> status = driver.findElements(By.cssSelector("span[class*='font14']"));
-			Thread.sleep(2000);
+			List<WebElement> product = driver.findElements(By.cssSelector("a[class='product-item-link']"));
+			// Thread.sleep(2000);
+			// for (int j = 0; j < product.size(); j++) {
 			for (int i = 0; i < status.size(); i++) {
 				Thread.sleep(1000);
-				// CommonHelper.scrolltoview("productStatus_css");
 				String statusText = status.get(i).getText();
 				System.out.println("The Status of the product is: " + statusText);
 				test.log(LogStatus.INFO, "The Status of the product is: " + statusText);
 				String statusValue = status.get(i).getAttribute("class");
 				System.out.println("The Status Value is: " + statusValue);
-				Thread.sleep(2000);
+				// String productName = product.get(j).getText();
+				// System.out.println("The Name of the product is: " + productName);
+				// test.log(LogStatus.INFO, "The Name of the product is: " + productName);
+				// Thread.sleep(2000);
 
 				if (statusText.contains("Current") && statusValue.startsWith("status-draft-color")) {
-					System.out.println("The Color Code for Current Status is Amber ");
-					test.log(LogStatus.INFO, "The Color Code for Current Status is Amber ");
-					System.out.println("Verification of Color code for Current status was sucessful");
-					test.log(LogStatus.PASS, "Verification of Color code for Current status was sucessful");
-					CommonHelper.takeScreenShot();
+					System.out.println("The Color Code for " + statusText + " status is Amber ");
+					test.log(LogStatus.INFO, "The Color Code for " + statusText + " status is Amber ");
+					System.out.println("Verification of Color code for " + statusText + " status was sucessful");
+					test.log(LogStatus.PASS, "Verification of Color code for " + statusText + " status was sucessful");
 				} else {
-					System.out.println("The Color Code for Current Status is not Amber ");
-					test.log(LogStatus.INFO, "The Color Code for Current Status is not Amber ");
-					System.out.println("Verification of Color code for Current status was unsucessful");
-					test.log(LogStatus.FAIL, "Verification of Color code for Current status was unsucessful");
-					CommonHelper.takeScreenShot();
+					System.out.println("The Color Code for " + statusText + " status is not Amber ");
+					test.log(LogStatus.INFO, "The Color Code for " + statusText + " status is not Amber ");
+					System.out.println("Verification of Color code for " + statusText + " status was not sucessful");
+					test.log(LogStatus.FAIL,
+							"Verification of Color code for " + statusText + " status was not sucessful");
 				}
 			}
+			// }
 
 		} catch (Exception e) {
-			CommonHelper
-					.reportFailure("Verification of Color Code for Current Draft statuses was unsuccessful");
+			CommonHelper.reportFailure("Verification of Color Code for Current Draft statuses was unsuccessful");
 			e.printStackTrace();
 		}
 	}

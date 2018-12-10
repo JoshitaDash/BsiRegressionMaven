@@ -75,7 +75,8 @@ public class VerifyProductStatusWithColorCode extends BaseTest {
 			System.out.println("Select maximum items");
 			Log.info("Select maximum items");
 			search.selectMaxItems();
-
+			
+			Thread.sleep(5000);
 			System.out.println("Verify Current Color Code");
 			Log.info("Verify Current Color Code");
 			search.verifyCurrentColorCode();
@@ -114,6 +115,7 @@ public class VerifyProductStatusWithColorCode extends BaseTest {
 			Log.info("Select maximum items");
 			search.selectMaxItems();
 
+			Thread.sleep(5000);
 			System.out.println("Verify Current Draft for Public Comment Color Code");
 			Log.info("Verify Current Draft for Public Comment Color Code");
 			search.verifyAmberColorCode();
@@ -154,6 +156,7 @@ public class VerifyProductStatusWithColorCode extends BaseTest {
 			Log.info("Select maximum items");
 			search.selectMaxItems();
 
+			Thread.sleep(5000);
 			System.out.println("Verify Current Revision Underway Color Code");
 			Log.info("Verify Current Revision Underway Color Code");
 			search.verifyAmberColorCode();
@@ -188,12 +191,13 @@ public class VerifyProductStatusWithColorCode extends BaseTest {
 
 			System.out.println("Filter Search with Current Under Review Status");
 			Log.info("Filter Search with Current Under Review Status");
-			search.currentReviewFilterSearch();
+			search.currentUnderReviewFilterSearch();
 
 			System.out.println("Select maximum items");
 			Log.info("Select maximum items");
 			search.selectMaxItems();
 
+			Thread.sleep(5000);
 			System.out.println("Verify Current Under Review Color Code");
 			Log.info("Verify Current Under Review Color Code");
 			search.verifyAmberColorCode();

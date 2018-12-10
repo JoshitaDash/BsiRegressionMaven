@@ -241,6 +241,7 @@ public class HomePage extends BaseTest {
 		System.out.println("Click on Search");
 		test.log(LogStatus.INFO, "Click on Search");
 		click("searchButton_css");
+		Thread.sleep(2000);
 	}
 
 	public void searchFireProduct() throws InterruptedException {

@@ -7,14 +7,14 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="isAdmin" value="No"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode">
+      <class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads">
         <methods>
           <include name="launchBrowser"/>
-          <include name="statusProductCode"/>
           <include name="getDriverInstance"/>
+          <include name="downloadSoftCopyfromOrderCofirmationPage"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads -->
     </classes>
   </test> <!-- Chrome Browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->
