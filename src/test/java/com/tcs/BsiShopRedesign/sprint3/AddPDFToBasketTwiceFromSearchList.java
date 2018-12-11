@@ -37,25 +37,22 @@ public class AddPDFToBasketTwiceFromSearchList extends BaseTest {
 			System.out.println("Select Format and Click Ok");
 			Log.info("Select Format and Click Ok");
 			search.selectFormatClickOK();
-			/*
-			 * System.out.println("Select Format"); Log.info("Select Format");
-			 * search.selectFormat();
-			 */
 
+			/*Thread.sleep(7000);
+			System.out.println("Click on Add to Basket again from Search List");
+			Log.info("Click on Add to Basket again from Search List");
+			test.log(LogStatus.INFO, "Click on Add to Basket again from Search List");
+			search.clickAddToBasket();*/
+			
 			Thread.sleep(7000);
-			System.out.println("Click on Add to Basket twice from Search List");
-			Log.info("Click on Add to Basket twice from Search List");
-			test.log(LogStatus.INFO, "Click on Add to Basket twice from Search List");
-			search.clickAddToBasket();
+			System.out.println("Add the same PDF product to Basket from Search List");
+			Log.info("Add the same PDF product to Basket from Search List");
+			test.log(LogStatus.INFO, "Add the same PDF product to Basket from Search List");
+			search.addSamePDFTwiceToBasket();
 
-			System.out.println("Select Format and Click Ok");
+			/*System.out.println("Select Format and Click Ok");
 			Log.info("Select Format and Click Ok");
-			search.selectFormatClickOK();
-
-			/*
-			 * System.out.println("Select Format"); Log.info("Select Format");
-			 * search.selectFormat();
-			 */
+			search.selectFormatPDFTwiceByClickOK();*/
 
 			System.out.println("Verify Alert message for adding PDF product twice");
 			Log.info("Verify Alert message for adding PDF product twice");

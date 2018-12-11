@@ -27,10 +27,10 @@
 			<class name="com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile" />
 			<class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile" />
 			<class name="com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab" />
-			<class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode" /> 
+			<class name="com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode" />
 			<class name="com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout" />
 			<class name="com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount" />
-			<class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress" />	
+			<class name="com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress" />
 			<class name="com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount" />
 			<class name="com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails" /> 

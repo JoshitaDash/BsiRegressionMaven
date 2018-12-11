@@ -26,16 +26,19 @@ public class CheckoutPage extends Page {
 	public void clickMiniCartCheckout() {
 
 		try {
+			Thread.sleep(2000);
 			System.out.println("Hover on Basket");
 			test.log(LogStatus.INFO, "Hover on Basket");
 			Log.info("Hover on Basket");
 			mouseHover("mouseHoverBasket_xpath");
+			Thread.sleep(2000);
 
 			System.out.println("Click Checkout");
 			test.log(LogStatus.INFO, "Click Checkout");
 			Log.info("Click Checkout");
 			click("miniCartCheckout_xpath");
 			Thread.sleep(1000);
+			
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("Click Checkout from mini cart was unsuccessful");
 			e.printStackTrace();

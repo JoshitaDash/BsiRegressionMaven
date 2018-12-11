@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="223392" started-at="2018-12-10T13:22:07Z" finished-at="2018-12-10T13:25:51Z">
+  <suite name="Suite" duration-ms="296112" started-at="2018-12-11T15:28:52Z" finished-at="2018-12-11T15:33:49Z">
     <groups>
     </groups>
-    <test name="Chrome Browser" duration-ms="223392" started-at="2018-12-10T13:22:07Z" finished-at="2018-12-10T13:25:51Z">
-      <class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="launchBrowser" is-config="true" duration-ms="10879" started-at="2018-12-10T13:22:07Z" finished-at="2018-12-10T13:22:18Z">
+    <test name="Chrome Browser" duration-ms="296112" started-at="2018-12-11T15:28:52Z" finished-at="2018-12-11T15:33:49Z">
+      <class name="com.tcs.BsiShopRedesign.sprint9.PayByInvoice">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@569cfc36]" name="launchBrowser" is-config="true" duration-ms="10786" started-at="2018-12-11T15:28:52Z" finished-at="2018-12-11T15:29:03Z">
           <params>
             <param index="0">
               <value>
@@ -23,31 +23,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="signIn" duration-ms="18545" started-at="2018-12-10T13:22:18Z" finished-at="2018-12-10T13:22:37Z">
+        <test-method status="PASS" signature="signInMember()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@569cfc36]" name="signInMember" duration-ms="10130" started-at="2018-12-11T15:29:03Z" finished-at="2018-12-11T15:29:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="downloadSoftCopyfromOrderCofirmationPage()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="downloadSoftCopyfromOrderCofirmationPage" duration-ms="150668" started-at="2018-12-10T13:22:37Z" finished-at="2018-12-10T13:25:08Z">
+        </test-method> <!-- signInMember -->
+        <test-method status="PASS" signature="payByInvoiceOrder()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@569cfc36]" name="payByInvoiceOrder" duration-ms="131635" started-at="2018-12-11T15:29:13Z" finished-at="2018-12-11T15:31:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- downloadSoftCopyfromOrderCofirmationPage -->
-        <test-method status="PASS" signature="downloadSoftCopyfromOrderHistoryPage()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="downloadSoftCopyfromOrderHistoryPage" duration-ms="42377" started-at="2018-12-10T13:25:08Z" finished-at="2018-12-10T13:25:50Z">
+        </test-method> <!-- payByInvoiceOrder -->
+        <test-method status="PASS" signature="verifyPayByInvoiceErrorMsg()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@569cfc36]" name="verifyPayByInvoiceErrorMsg" duration-ms="142629" started-at="2018-12-11T15:31:25Z" finished-at="2018-12-11T15:33:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- downloadSoftCopyfromOrderHistoryPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="tearDown" is-config="true" duration-ms="919" started-at="2018-12-10T13:25:50Z" finished-at="2018-12-10T13:25:51Z">
+        </test-method> <!-- verifyPayByInvoiceErrorMsg -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@569cfc36]" name="tearDown" is-config="true" duration-ms="912" started-at="2018-12-11T15:33:48Z" finished-at="2018-12-11T15:33:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.PayByInvoice -->
     </test> <!-- Chrome Browser -->
-    <test name="BSI Admin" duration-ms="0" started-at="2018-12-10T13:25:51Z" finished-at="2018-12-10T13:25:51Z">
-      <class name="com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="15" started-at="2018-12-10T13:22:07Z" finished-at="2018-12-10T13:22:07Z">
+    <test name="BSI Admin" duration-ms="0" started-at="2018-12-11T15:33:49Z" finished-at="2018-12-11T15:33:49Z">
+      <class name="com.tcs.BsiShopRedesign.sprint9.PayByInvoice">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.tcs.BsiShopRedesign.sprint9.PayByInvoice@569cfc36]" name="getDriverInstance" is-config="true" duration-ms="0" started-at="2018-12-11T15:28:52Z" finished-at="2018-12-11T15:28:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-      </class> <!-- com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads -->
+      </class> <!-- com.tcs.BsiShopRedesign.sprint9.PayByInvoice -->
     </test> <!-- BSI Admin -->
   </suite> <!-- Suite -->
 </testng-results>

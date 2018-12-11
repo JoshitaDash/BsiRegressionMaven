@@ -823,6 +823,40 @@ public class SearchPage extends Page {
 
 	}
 
+	public void addSamePDFTwiceToBasket() {
+
+		try {
+			Thread.sleep(3000);
+			test.log(LogStatus.INFO, "Click on Add to Basket");
+			Log.info("Click on Add to Basket");
+			System.out.println("Click on Add to Basket");
+			CommonHelper.elementToBeClickable("addToBasket_css");
+			WebElement addToBasket = driver.findElements(By.cssSelector("button[title='Add to Basket']")).get(1);
+			addToBasket.click();
+			Thread.sleep(2000);
+
+			System.out.println("");
+			List<WebElement> okButtons = driver.findElements(By.xpath("//button[text()='Ok']"));
+			for (WebElement okButton : okButtons) {
+				try {
+					if (okButton.isDisplayed()) {
+						okButton.click();
+					}
+				} catch (Exception e) {
+					CommonHelper.reportFailure("Click OK was unsuccessful");
+					e.printStackTrace();
+					Assert.fail(e.getMessage());
+				}
+			}
+
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Add Second PDF product to Basket was unsuccessful");
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
 	public void clickAddToBasketAgain() {
 
 		try {
@@ -863,7 +897,7 @@ public class SearchPage extends Page {
 
 	public void selectFormatClickOK() throws InterruptedException {
 
-		boolean productAddedTwiceAlert = false;
+		//boolean productAddedTwiceAlert = false;
 
 		System.out.println("");
 		List<WebElement> okButtons = driver.findElements(By.xpath("//button[text()='Ok']"));
@@ -880,12 +914,29 @@ public class SearchPage extends Page {
 		}
 
 		Thread.sleep(5000);
-		List<WebElement> productAddedTwiceAlerts = driver
-				.findElements(By.xpath("//button[text()='Ok']"));
+		List<WebElement> productAddedTwiceAlerts = driver.findElements(By.xpath("//button[text()='Ok']"));
 		for (WebElement productAddedTwiceAlertbutton : productAddedTwiceAlerts) {
 			try {
 				if (productAddedTwiceAlertbutton.isDisplayed()) {
 					productAddedTwiceAlertbutton.click();
+				}
+			} catch (Exception e) {
+				CommonHelper.reportFailure("Click OK was unsuccessful");
+				e.printStackTrace();
+				Assert.fail(e.getMessage());
+			}
+		}
+
+	}
+
+	public void selectFormatPDFTwiceByClickOK() throws InterruptedException {
+
+		System.out.println("");
+		List<WebElement> okButtons = driver.findElements(By.xpath("//button[text()='Ok']"));
+		for (WebElement okButton : okButtons) {
+			try {
+				if (okButton.isDisplayed()) {
+					okButton.click();
 				}
 			} catch (Exception e) {
 				CommonHelper.reportFailure("Click OK was unsuccessful");
@@ -947,16 +998,15 @@ public class SearchPage extends Page {
 			if (msg != null || msg.contains(
 					"The item you are trying to add is already in your basket. Because of copyright, you can't add this product a second time in PDF format.")) {
 				test.log(LogStatus.INFO, "Warning message is: " + msg);
-				// CommonHelper.elementToBeClickable("pdfAlert_xpath");
-				// CommonHelper.element("pdfAlert_xpath");
-				// CommonHelper.clickByJS("twiceAddPdfAlert_css");
-				// click("twiceAddPdfAlert_css");
+
 				Thread.sleep(1000);
 				driver.findElement(By.cssSelector("button[class='btn btn-default warning_submit']")).click();
 				Log.info("Check warning message on adding PDF product twice was successful ");
 				System.out.println("Check warning message on adding PDF product twice was successful ");
 				test.log(LogStatus.PASS, "Check warning message on adding PDF product twice was successful ");
+
 			} else {
+
 				Log.info("Check warning message on adding PDF product twice was unsuccessful ");
 				System.out.println("Check warning message on adding PDF product twice was unsuccessful ");
 				test.log(LogStatus.PASS, "Check warning message on adding PDF product twice was unsuccessful ");

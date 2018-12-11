@@ -41,6 +41,7 @@ public class UnregisteredUserCheckout extends BaseTest {
 			Log.info("Select Format and Click Ok");
 			search.selectFormatClickOK();
 
+			Thread.sleep(2000);
 			System.out.println("Click Checkout from Mini Basket");
 			Log.info("Click Checkout from Mini Basket");
 			test.log(LogStatus.INFO, "Click Checkout from Mini Basket");
