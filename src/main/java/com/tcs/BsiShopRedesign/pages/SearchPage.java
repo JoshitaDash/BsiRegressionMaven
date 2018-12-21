@@ -897,7 +897,7 @@ public class SearchPage extends Page {
 
 	public void selectFormatClickOK() throws InterruptedException {
 
-		//boolean productAddedTwiceAlert = false;
+		// boolean productAddedTwiceAlert = false;
 
 		System.out.println("");
 		List<WebElement> okButtons = driver.findElements(By.xpath("//button[text()='Ok']"));
@@ -907,13 +907,13 @@ public class SearchPage extends Page {
 					okButton.click();
 				}
 			} catch (Exception e) {
-				CommonHelper.reportFailure("Click OK was unsuccessful");
+				CommonHelper.reportFailure("Click OK for Selecting Format was unsuccessful");
 				e.printStackTrace();
 				Assert.fail(e.getMessage());
 			}
 		}
 
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		List<WebElement> productAddedTwiceAlerts = driver.findElements(By.xpath("//button[text()='Ok']"));
 		for (WebElement productAddedTwiceAlertbutton : productAddedTwiceAlerts) {
 			try {
@@ -921,7 +921,23 @@ public class SearchPage extends Page {
 					productAddedTwiceAlertbutton.click();
 				}
 			} catch (Exception e) {
-				CommonHelper.reportFailure("Click OK was unsuccessful");
+				CommonHelper.reportFailure("Adding of the same product in same format was unsuccessful");
+				e.printStackTrace();
+				Assert.fail(e.getMessage());
+			}
+		}
+
+		Thread.sleep(2000);
+		List<WebElement> productAddedDiffFormatAlerts = driver
+				.findElements(By.xpath("//button[text()='Yes, proceed']"));
+		for (WebElement productAddedDiffFormatAlertsbutton : productAddedDiffFormatAlerts) {
+			try {
+				if (productAddedDiffFormatAlertsbutton.isDisplayed()
+						&& productAddedDiffFormatAlertsbutton.isEnabled()) {
+					productAddedDiffFormatAlertsbutton.click();
+				}
+			} catch (Exception e) {
+				CommonHelper.reportFailure("Adding of product in diffrent format was unsuccessful");
 				e.printStackTrace();
 				Assert.fail(e.getMessage());
 			}
@@ -931,7 +947,9 @@ public class SearchPage extends Page {
 
 	public void selectFormatPDFTwiceByClickOK() throws InterruptedException {
 
-		System.out.println("");
+		System.out.println("Select the PDF Format twice by clicking OK");
+		test.log(LogStatus.INFO, "Select the PDF Format twice by clicking OK");
+		Log.info("Select the PDF Format twice by clicking OK");
 		List<WebElement> okButtons = driver.findElements(By.xpath("//button[text()='Ok']"));
 		for (WebElement okButton : okButtons) {
 			try {
@@ -939,7 +957,7 @@ public class SearchPage extends Page {
 					okButton.click();
 				}
 			} catch (Exception e) {
-				CommonHelper.reportFailure("Click OK was unsuccessful");
+				CommonHelper.reportFailure("Select the same Format twice by clicking OK was unsuccessful");
 				e.printStackTrace();
 				Assert.fail(e.getMessage());
 			}
@@ -979,6 +997,38 @@ public class SearchPage extends Page {
 			CommonHelper.elementToBeClickable("viewBasket_xpath");
 			click("viewBasket_xpath");
 			// driver.findElement(By.xpath("//*[@id='basket']/div/a/span[1]")).click();
+
+			Thread.sleep(3000);
+			List<WebElement> okButtons = driver.findElements(By.xpath("//button[text()='Okay']"));
+			for (WebElement okButton : okButtons) {
+				try {
+					if (okButton.isDisplayed()) {
+						okButton.click();
+						System.out.println("Click OK for List of Conflict Error");
+						test.log(LogStatus.INFO, "Click OK for List of Conflict Error");
+					}
+				} catch (Exception e) {
+					CommonHelper.reportFailure("Click Okay was unsuccessful");
+					e.printStackTrace();
+					Assert.fail(e.getMessage());
+				}
+			}
+
+			Thread.sleep(2000);
+			List<WebElement> okButtonsAgain = driver.findElements(By.xpath("//button[text()='Okay']"));
+			for (WebElement okButton : okButtonsAgain) {
+				try {
+					if (okButton.isDisplayed()) {
+						okButton.click();
+						System.out.println("Click OK for List of Conflict Error");
+						test.log(LogStatus.INFO, "Click OK for List of Conflict Error");
+					}
+				} catch (Exception e) {
+					CommonHelper.reportFailure("Click Okay was unsuccessful");
+					e.printStackTrace();
+					Assert.fail(e.getMessage());
+				}
+			}
 
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -1104,14 +1154,19 @@ public class SearchPage extends Page {
 
 		String prodName = null;
 		try {
+			System.out.println("");
 			test.log(LogStatus.INFO, ("Click product on the Search List"));
 			Log.info("Click product on the Search List");
 			System.out.println("Click product on the Search List");
-			driver.findElement(By.cssSelector("a[class='product-item-link']")).click();
+			WebElement prod = driver.findElements(By.cssSelector("a[class='product-item-link']")).get(2);
+			Thread.sleep(1000);
+			String product = prod.getText();
+			System.out.println("The product is: " + product);
+			prod.click();
 
 			prodName = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
 			System.out.println("The First Product is: " + prodName);
-			test.log(LogStatus.INFO, "The First Product is: " + prodName);
+			test.log(LogStatus.PASS, "The First Product is: " + prodName);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("The first product view was unsuccessful");
@@ -1124,14 +1179,18 @@ public class SearchPage extends Page {
 		String prodName = null;
 
 		try {
+			
 			test.log(LogStatus.INFO, ("Click product on the Search List"));
 			Log.info("Click product on the Search List");
 			System.out.println("Click product on the Search List");
-			driver.findElements(By.cssSelector("a[class='product-item-link']")).get(3).click();
-
+			WebElement prod = driver.findElements(By.cssSelector("a[class='product-item-link']")).get(4);
+			Thread.sleep(1000);
+			String product = prod.getText();
+			System.out.println("The product is: " + product);
+			prod.click();
 			prodName = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
 			System.out.println("The Second Product is: " + prodName);
-			test.log(LogStatus.INFO, "The Second Product is: " + prodName);
+			test.log(LogStatus.PASS, "The Second Product is: " + prodName);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("The Second product view was unsuccessful");
@@ -1146,11 +1205,11 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, ("Click product on the Search List"));
 			Log.info("Click product on the Search List");
 			System.out.println("Click product on the Search List");
-			driver.findElements(By.cssSelector("a[class='product-item-link']")).get(3).click();
+			driver.findElements(By.cssSelector("a[class='product-item-link']")).get(6).click();
 
 			prodName = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
 			System.out.println("The Third Product is: " + prodName);
-			test.log(LogStatus.INFO, "The Third Product is: " + prodName);
+			test.log(LogStatus.PASS, "The Third Product is: " + prodName);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("The Third product view was unsuccessful");
@@ -1165,11 +1224,11 @@ public class SearchPage extends Page {
 			test.log(LogStatus.INFO, ("Click product on the Search List"));
 			Log.info("Click product on the Search List");
 			System.out.println("Click product on the Search List");
-			driver.findElements(By.cssSelector("a[class='product-item-link']")).get(5).click();
+			driver.findElements(By.cssSelector("a[class='product-item-link']")).get(8).click();
 
 			String prodName = driver.findElement(By.cssSelector("span[data-ui-id='page-title-wrapper']")).getText();
 			System.out.println("The Fourth Product is: " + prodName);
-			test.log(LogStatus.INFO, "The Fourth Product is: " + prodName);
+			test.log(LogStatus.PASS, "The Fourth Product is: " + prodName);
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("The Fourth product view was unsuccessful");
@@ -1187,14 +1246,6 @@ public class SearchPage extends Page {
 			List<WebElement> recentlyViewedProducts = driver
 					.findElements(By.xpath("//a[@class='product-item-link active']"));
 
-			// List<String> texts =
-			// recentlyViewedProducts.stream().map(WebElement::getText).collect(Collectors.toList());
-			/*
-			 * List<String> strings = new ArrayList<String>(); for (WebElement e :
-			 * recentlyViewedProducts) { strings.add(e.getText()); }
-			 */
-			/* System.out.println(texts); */
-
 			String firstRVProd = recentlyViewedProducts.get(0).getText();
 			String secRVProd = recentlyViewedProducts.get(1).getText();
 			String thirdRVProd = recentlyViewedProducts.get(2).getText();
@@ -1206,7 +1257,7 @@ public class SearchPage extends Page {
 			} else {
 				System.out.println("Verification of Recently viewed for First product is unsuccessful");
 				test.log(LogStatus.INFO, "The First Recently viewed product is: " + firstRVProd);
-				test.log(LogStatus.PASS, "Verification of Recently viewed for First product is unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Recently viewed for First product is unsuccessful");
 			}
 
 			if (secRVProd.equals(secProd)) {
@@ -1216,7 +1267,7 @@ public class SearchPage extends Page {
 			} else {
 				System.out.println("Verification of Recently viewed for Second product is unsuccessful");
 				test.log(LogStatus.INFO, "The Second Recently viewed product is: " + secRVProd);
-				test.log(LogStatus.PASS, "Verification of Recently viewed for Second product is unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Recently viewed for Second product is unsuccessful");
 			}
 
 			if (thirdRVProd.equals(firstProd)) {
@@ -1227,7 +1278,7 @@ public class SearchPage extends Page {
 			} else {
 				System.out.println("Verification of Recently viewed for Third product is unsuccessful");
 				test.log(LogStatus.INFO, "The Third Recently viewed product is: " + thirdRVProd);
-				test.log(LogStatus.PASS, "Verification of Recently viewed for Third product is unsuccessful");
+				test.log(LogStatus.FAIL, "Verification of Recently viewed for Third product is unsuccessful");
 			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verification of Recently Viewed Products was unsuccessful");

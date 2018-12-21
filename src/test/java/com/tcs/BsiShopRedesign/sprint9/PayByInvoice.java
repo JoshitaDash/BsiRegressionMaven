@@ -31,6 +31,7 @@ public class PayByInvoice extends BaseTest {
 			Log.info("Member Signing In");
 			SignInPage signIn = new SignInPage(driver);
 			signIn.memberNewLogin();
+			
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Member Signing in was unsuccessful");
 			CommonHelper.takeScreenShot();

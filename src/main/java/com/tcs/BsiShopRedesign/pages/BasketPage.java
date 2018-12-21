@@ -54,7 +54,7 @@ public class BasketPage extends Page {
 				test.log(LogStatus.INFO, "The Final price is: " + beforeUpdateFinalPrice);
 
 				WebElement quantityCount = wait.until(ExpectedConditions
-						.visibilityOfElementLocated(By.cssSelector("input[class='input-text qty'][title='Qty']")));
+						.visibilityOfElementLocated(By.cssSelector("input[class*='input-text qty'][title='Qty']")));
 				WebElement update = wait.until(ExpectedConditions.elementToBeClickable(By.id("qty_upd")));
 				quantityCount.clear();
 				quantityCount.sendKeys("50");
@@ -77,10 +77,10 @@ public class BasketPage extends Page {
 
 				double afterUpdateUnitPriceOnly = Double.parseDouble(afterUpdateUnitPrice);
 				System.out.println(afterUpdateUnitPriceOnly);
-				// double afterUpdateFinalPriceOnly = new Double(afterUpdateFinalPrice);
+				double beforeUpdateFinalPriceOnly = new Double(beforeUpdateFinalPrice);
 				double afterUpdateFinalPriceOnly = Double.parseDouble(afterUpdateFinalPrice);
 				System.out.println(afterUpdateFinalPriceOnly);
-				double expectedFinalPrice = afterUpdateUnitPriceOnly * 50;
+				double expectedFinalPrice = beforeUpdateFinalPriceOnly * 50;
 				System.out.println(expectedFinalPrice);
 
 				if (afterUpdateFinalPriceOnly == expectedFinalPrice) {
@@ -119,7 +119,7 @@ public class BasketPage extends Page {
 				test.log(LogStatus.INFO, "Update Quantity in Basket");
 				Thread.sleep(2000);
 				WebElement quantityLaminatedCount = driver
-						.findElement(By.cssSelector("input[class='input-text qty'][title='Qty']"));
+						.findElement(By.cssSelector("input[class*='input-text qty'][title='Qty']"));
 
 				WebElement update = driver.findElement(By.id("qty_upd"));
 				quantityLaminatedCount.clear();
@@ -493,6 +493,7 @@ public class BasketPage extends Page {
 	}
 
 	public void clickCheckout() {
+		boolean checkoutButton = false;
 
 		try {
 			Thread.sleep(2000);
@@ -500,10 +501,11 @@ public class BasketPage extends Page {
 			System.out.println("Click Checkout");
 			Log.info("Click Checkout");
 			Thread.sleep(2000);
-			// CommonHelper.scrolltoview("checkoutNow_css");
+
 			WebElement checkout = driver.findElement(By.cssSelector("button[title='Checkout Now']"));
 			if (checkout.isDisplayed() || checkout.isEnabled()) {
 				Thread.sleep(5000);
+				CommonHelper.scrolltoview("checkoutNow_css");
 				// CommonHelper.clickJS(checkout);
 				checkout.click();
 				// click("checkoutNow_css");
@@ -526,9 +528,7 @@ public class BasketPage extends Page {
 
 		try {
 			boolean otherFormat = driver.findElement(By.id("OtherFormatFlag")).isDisplayed();
-			// driver.switchTo().activeElement();
 			driver.switchTo().frame(0);
-			// CommonHelper.handleAlert();
 			System.out.println(" ");
 			if (otherFormat) {
 				// WebElement otherForm = driver.findElement(By.id("otherFormat"));
@@ -551,11 +551,12 @@ public class BasketPage extends Page {
 
 	public void verifyMemPriceBasket(String searchMemPrice) {
 		String finalPriceText = null;
-		String memDiscount = null;
+		// String memDiscount = null;
 		try {
 			WebElement unitPrice = driver.findElements(By.cssSelector("td[data-th='Price']>div")).get(0);
 			WebElement finalPrice = driver.findElement(By.cssSelector("span[class='cart-price']"));
-			WebElement memPrice = driver.findElements(By.cssSelector("span[class='textcolour']")).get(1);
+			// WebElement memPrice =
+			// driver.findElements(By.cssSelector("span[class='textcolour']")).get(1);
 			WebElement totalPrice = driver.findElement(By.cssSelector("span[class='floatr']"));
 
 			// String memPriceText = memPrice.getText();
@@ -634,8 +635,9 @@ public class BasketPage extends Page {
 
 	}
 
-	public void removeMultipleProduct() {
+	public void removeMultipleProduct() throws InterruptedException {
 
+		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		test.log(LogStatus.INFO, "Remove Multiple Products from Basket");
 		List<WebElement> removeItem = driver.findElements(By.xpath("//img[@alt='delete']"));
@@ -700,7 +702,7 @@ public class BasketPage extends Page {
 				test.log(LogStatus.PASS, "Multiple Products has been removed from Basket successfully");
 
 			} else {
-				
+
 				test.log(LogStatus.INFO, "The Basket Page does not contain any products to be removed ");
 				test.log(LogStatus.PASS, "Basket Page verification was succesful");
 				System.out.println("The Basket Page does not contain any products to be removed ");

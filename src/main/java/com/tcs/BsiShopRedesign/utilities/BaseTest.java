@@ -12,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.SkipException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
@@ -98,9 +99,10 @@ public class BaseTest extends Page {
 						.addSystemInfo("Selenium Version", "3.8.0").addSystemInfo("Environment", url)
 						.addSystemInfo("Browser", "Mozilla Firefox 61.0");
 
-			} else if (driver == null) {
+			} else if (driver == null || url == null) {
 				System.out.println("The tescase is skipped");
 				test.log(LogStatus.SKIP, "The tescase is skipped");
+				throw new SkipException("Skipping this exception as driver or url was null");
 			}
 
 			// ****** Launch the Website
@@ -115,15 +117,16 @@ public class BaseTest extends Page {
 			} else {
 				System.out.println("Fetching the Admin URL");
 				driver.get(adminURL);
-				//test = extent.startTest("URL: " + adminURL);
 				System.out.println("URL: " + adminURL);
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				Thread.sleep(2000);
 
 			}
+
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
+			throw new SkipException("Skipped the testcase");
 		}
 		return browser;
 

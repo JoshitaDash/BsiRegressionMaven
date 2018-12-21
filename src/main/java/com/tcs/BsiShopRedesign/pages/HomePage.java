@@ -417,12 +417,12 @@ public class HomePage extends BaseTest {
 			System.out.println("The message is: " + manualAddressText);
 			test.log(LogStatus.PASS, "The message is: " + manualAddressText);
 
+			/*System.out.println("");
 			Log.info("Click Find Address");
 			System.out.println("Click Find Address");
 			test.log(LogStatus.INFO, "Click Find Address");
-			CommonHelper.clickByJS("findAddressReg_css");
-			// click("findAddressReg_css");
-			// click("findAddressReg_css");
+			driver.findElement(By.xpath("//*[@id='m2_address']/div/div/div[1]/button/span")).click();*/
+			
 
 			Log.info("Enter Address Name");
 			System.out.println("Enter Address Name");

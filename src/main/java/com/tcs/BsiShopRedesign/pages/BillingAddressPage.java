@@ -482,15 +482,12 @@ public class BillingAddressPage extends Page {
 					test.log(LogStatus.INFO, "Click on Confirm Delete Billing Address");
 					driver.findElement(By.cssSelector(".myprofile-okbutton")).click();
 					Thread.sleep(2000);
+
+					test.log(LogStatus.PASS, "Billing Address has been deleted successfully");
+					System.out.println("Billing Address has been deleted successfully");
 				}
 
-				test.log(LogStatus.PASS, "Billing Address has been deleted successfully");
-				System.out.println("Billing Address has been deleted successfully");
-
-			} /*
-				 * else { test.log(LogStatus.FAIL, "There is no Delete Address link available");
-				 * System.out.println("There is no Delete Address link available"); }
-				 */
+			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Delete Ten Billing Address was unsuccessful");
 			e.printStackTrace();

@@ -12,7 +12,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tcs.BsiShopRedesign.utilities.Page;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
-
 public class DeliveryAddressPage extends Page {
 
 	public DeliveryAddressPage(WebDriver driver) throws Exception {
@@ -28,8 +27,9 @@ public class DeliveryAddressPage extends Page {
 			Log.info("Click on Add new Delivery Address");
 			System.out.println("Click on Add new Delivery Address");
 			test.log(LogStatus.INFO, "Click on Add new Delivery Address");
-			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("> Add New Delivery Address")));
-			//driver.findElement(By.linkText("> Add New Delivery Address")).click();
+			// wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("> Add
+			// New Delivery Address")));
+			// driver.findElement(By.linkText("> Add New Delivery Address")).click();
 			System.out.println("");
 			CommonHelper.isElementPresent(By.linkText("> Add New Delivery Address"));
 			click("addDeliveryAddress_css");
@@ -74,16 +74,16 @@ public class DeliveryAddressPage extends Page {
 			test.log(LogStatus.INFO, "Enter Telephone Number");
 			driver.findElement(By.id("register-phn-no")).sendKeys("123456790");
 
-			/*Thread.sleep(1000);
-			System.out.println("Enter Fax Number");
-			test.log(LogStatus.INFO, "Enter Fax Number");
-			driver.findElement(By.id("fax")).sendKeys("0123456789");*/
+			/*
+			 * Thread.sleep(1000); System.out.println("Enter Fax Number");
+			 * test.log(LogStatus.INFO, "Enter Fax Number");
+			 * driver.findElement(By.id("fax")).sendKeys("0123456789");
+			 */
 
 			/*
 			 * Thread.sleep(1000); System.out.println("Enter Street Address");
 			 * test.log(LogStatus.INFO, "Enter Street Address");
-			 * driver.findElement(By.id("street-address")).sendKeys(
-			 * "London Street");
+			 * driver.findElement(By.id("street-address")).sendKeys( "London Street");
 			 * 
 			 * Thread.sleep(1000); System.out.println("Enter City");
 			 * test.log(LogStatus.INFO, "Enter City");
@@ -207,8 +207,7 @@ public class DeliveryAddressPage extends Page {
 				/*
 				 * Thread.sleep(1000); System.out.println("Edit Company Name");
 				 * test.log(LogStatus.INFO, "Edit Company Name");
-				 * driver.findElement(By.id("register-company-name")).sendKeys(
-				 * " EDITED");
+				 * driver.findElement(By.id("register-company-name")).sendKeys( " EDITED");
 				 */
 
 				Thread.sleep(1000);
@@ -216,20 +215,19 @@ public class DeliveryAddressPage extends Page {
 				test.log(LogStatus.INFO, "Edit Telephone Number");
 				driver.findElement(By.id("register-phn-no")).sendKeys("0123456789");
 
-				/*Thread.sleep(1000);
-				System.out.println("Edit Fax Number");
-				test.log(LogStatus.INFO, "Edit Fax Number");
-				driver.findElement(By.id("fax")).sendKeys("9874563210");*/
+				/*
+				 * Thread.sleep(1000); System.out.println("Edit Fax Number");
+				 * test.log(LogStatus.INFO, "Edit Fax Number");
+				 * driver.findElement(By.id("fax")).sendKeys("9874563210");
+				 */
 
 				/*
-				 * Thread.sleep(1000); System.out.println("Edit Street Address"
-				 * ); test.log(LogStatus.INFO, "Edit Street Address");
-				 * driver.findElement(By.id("street-address")).sendKeys(
-				 * " EDITED");
+				 * Thread.sleep(1000); System.out.println("Edit Street Address" );
+				 * test.log(LogStatus.INFO, "Edit Street Address");
+				 * driver.findElement(By.id("street-address")).sendKeys( " EDITED");
 				 * 
-				 * Thread.sleep(1000); System.out.println("Edit City");
-				 * test.log(LogStatus.INFO, "Edit City");
-				 * driver.findElement(By.id("city")).sendKeys(" EDITED");
+				 * Thread.sleep(1000); System.out.println("Edit City"); test.log(LogStatus.INFO,
+				 * "Edit City"); driver.findElement(By.id("city")).sendKeys(" EDITED");
 				 * 
 				 * Thread.sleep(1000); System.out.println("Edit State");
 				 * test.log(LogStatus.INFO, "Edit State");
@@ -299,8 +297,7 @@ public class DeliveryAddressPage extends Page {
 				/*
 				 * Thread.sleep(1000); System.out.println("Edit Company Name");
 				 * test.log(LogStatus.INFO, "Edit Company Name");
-				 * driver.findElement(By.id("register-company-name")).sendKeys(
-				 * " EDITED");
+				 * driver.findElement(By.id("register-company-name")).sendKeys( " EDITED");
 				 */
 
 				Thread.sleep(1000);
@@ -308,20 +305,18 @@ public class DeliveryAddressPage extends Page {
 				test.log(LogStatus.INFO, "Edit Telephone Number");
 				driver.findElement(By.id("register-phn-no")).sendKeys("0123456789");
 
-				/*Thread.sleep(1000);
-				System.out.println("Edit Fax Number");
-				test.log(LogStatus.INFO, "Edit Fax Number");
-				driver.findElement(By.id("fax")).sendKeys("9874563210");
-*/
 				/*
-				 * Thread.sleep(1000); System.out.println("Edit Street Address"
-				 * ); test.log(LogStatus.INFO, "Edit Street Address");
-				 * driver.findElement(By.id("street-address")).sendKeys(
-				 * " EDITED");
+				 * Thread.sleep(1000); System.out.println("Edit Fax Number");
+				 * test.log(LogStatus.INFO, "Edit Fax Number");
+				 * driver.findElement(By.id("fax")).sendKeys("9874563210");
+				 */
+				/*
+				 * Thread.sleep(1000); System.out.println("Edit Street Address" );
+				 * test.log(LogStatus.INFO, "Edit Street Address");
+				 * driver.findElement(By.id("street-address")).sendKeys( " EDITED");
 				 * 
-				 * Thread.sleep(1000); System.out.println("Edit City");
-				 * test.log(LogStatus.INFO, "Edit City");
-				 * driver.findElement(By.id("city")).sendKeys(" EDITED");
+				 * Thread.sleep(1000); System.out.println("Edit City"); test.log(LogStatus.INFO,
+				 * "Edit City"); driver.findElement(By.id("city")).sendKeys(" EDITED");
 				 * 
 				 * Thread.sleep(1000); System.out.println("Edit State");
 				 * test.log(LogStatus.INFO, "Edit State");
@@ -476,9 +471,11 @@ public class DeliveryAddressPage extends Page {
 					test.log(LogStatus.INFO, "Click on Confirm Delete Delivery Address");
 					driver.findElement(By.cssSelector(".action-primary.action-accept")).click();
 					Thread.sleep(3000);
+
+					test.log(LogStatus.PASS, "Ten Delivery Addresses has been deleted successfully");
+					System.out.println("Ten Delivery Addresses has been deleted successfully");
 				}
 
-				test.log(LogStatus.PASS, "Ten Delivery Addresses has been deleted successfully");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

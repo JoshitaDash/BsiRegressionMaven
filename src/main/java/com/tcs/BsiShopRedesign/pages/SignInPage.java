@@ -340,12 +340,16 @@ public class SignInPage extends Page {
 			click("adminSignin_xpath");
 			Thread.sleep(3000);
 
-			closeAlert = driver.findElement(By.cssSelector("button[data-role='closeBtn']")).isDisplayed();
-			if (closeAlert) {
-				test.log(LogStatus.INFO, "Close Alert");
-				System.out.println("Close Alert");
-				click("closeAlert_css");
-				Thread.sleep(1000);
+			try {
+				closeAlert = driver.findElement(By.cssSelector("button[data-role='closeBtn']")).isDisplayed();
+				if (closeAlert) {
+					test.log(LogStatus.INFO, "Close Alert");
+					System.out.println("Close Alert");
+					click("closeAlert_css");
+					Thread.sleep(1000);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 			String pageTitle = driver.getTitle();

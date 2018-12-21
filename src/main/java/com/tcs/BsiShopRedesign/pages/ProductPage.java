@@ -47,8 +47,7 @@ public class ProductPage extends Page {
 						ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span")))
 						.click();
 				status = wait
-						.until(ExpectedConditions.elementToBeClickable(
-								By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("span[class*='ml5p status']")))
 						.getText();
 				System.out.println("The status of the product is: " + status);
 				test.log(LogStatus.INFO, "The status of the product is: " + status);
@@ -73,9 +72,8 @@ public class ProductPage extends Page {
 				CommonHelper.elementToBeClickable("addToBasket_xpath");
 				click("addToBasket_xpath");
 
-				status = wait
-						.until(ExpectedConditions.visibilityOfElementLocated(
-								By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+				status = wait.until(
+						ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[class*='ml5p status']")))
 						.getText();
 				System.out.println("The status of the product is: " + status);
 				test.log(LogStatus.INFO, "The status of the product is: " + status);
@@ -112,8 +110,7 @@ public class ProductPage extends Page {
 				test.log(LogStatus.INFO, "This product cannot be added to Basket");
 
 				status = wait
-						.until(ExpectedConditions.elementToBeClickable(
-								By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("span[class*='ml5p status']")))
 						.getText();
 				System.out.println("The Status of the product is: " + status);
 				test.log(LogStatus.INFO, "The Status of the product is: " + status);
@@ -207,9 +204,8 @@ public class ProductPage extends Page {
 					wait.until(ExpectedConditions
 							.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span"))).click();
 
-					status = wait
-							.until(ExpectedConditions.elementToBeClickable(By
-									.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+					status = wait.until(
+							ExpectedConditions.elementToBeClickable(By.cssSelector("span[class*='ml5p status']")))
 							.getText();
 
 					System.out.println("The status of the product is: " + status);
@@ -239,9 +235,8 @@ public class ProductPage extends Page {
 					System.out.println("This product cannot be added to Basket");
 					test.log(LogStatus.INFO, "This product cannot be added to Basket");
 
-					status = wait
-							.until(ExpectedConditions.elementToBeClickable(
-									By.xpath("//*[@id='product-attribute-specs-table']/div[8]/div[1]/span[2]")))
+					status = wait.until(
+							ExpectedConditions.elementToBeClickable(By.cssSelector("span[class*='ml5p status']")))
 							.getText();
 
 					System.out.println("The Status of the product is: " + status);
@@ -306,8 +301,7 @@ public class ProductPage extends Page {
 						ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='product-addtocart-button']/span")))
 						.click();
 				status = wait
-						.until(ExpectedConditions.elementToBeClickable(
-								By.xpath("//*[@id='product-details-media']/div[2]/div[2]/div/div[7]/div[1]/span[2]")))
+						.until(ExpectedConditions.elementToBeClickable(By.cssSelector("span[class*='ml5p status']")))
 						.getText();
 				System.out.println("The status of the product is: " + status);
 				test.log(LogStatus.INFO, "The status of the product is: " + status);
@@ -623,18 +617,16 @@ public class ProductPage extends Page {
 			Log.info("Verify Pre Order Product");
 			System.out.println("Verify Pre Order Product");
 
-			String preOrderText = driver.findElement(By.cssSelector("span[data-th='Availability Check']"))
-					.getText();
+			String preOrderText = driver.findElement(By.cssSelector("span[data-th='Availability Check']")).getText();
 			if (preOrderText.contains("pre-order")) {
-				System.out.println(
-						"The text of the product is: " + preOrderText + "Pre Order Product was successful");
+				System.out.println("The text of the product is: " + preOrderText + "Pre Order Product was successful");
 				test.log(LogStatus.INFO, "The text of the product is: " + preOrderText);
 				test.log(LogStatus.PASS, "Pre Order Product was successful");
 			}
 
 			else {
-				System.out.println(
-						"The text of the product is: " + preOrderText + "Pre Order Product was unsuccessful");
+				System.out
+						.println("The text of the product is: " + preOrderText + "Pre Order Product was unsuccessful");
 				test.log(LogStatus.INFO, "The text of the product is: " + preOrderText);
 				test.log(LogStatus.FAIL, "Pre Order Product was unsuccessful");
 			}
@@ -793,7 +785,7 @@ public class ProductPage extends Page {
 
 		try {
 			if (existingFormat) {
-				 Thread.sleep(2000);
+				Thread.sleep(2000);
 				System.out.println("Select Hardcopy format");
 				test.log(LogStatus.INFO, "Select Hardcopy format");
 				Log.info("Select Hardcopy format");

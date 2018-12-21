@@ -73,11 +73,6 @@ public class EditOrderDetailsFromCheckout extends BaseTest {
 			test.log(LogStatus.INFO, "View Basket");
 			search.viewBasket();
 
-			/*
-			 * System.out.println("Click Alert"); Log.info("Click Alert"); BasketPage
-			 * checkout = new BasketPage(driver); checkout.clickOtherFormatOKAlert();
-			 */
-
 			System.out.println("Click Checkout Now");
 			Log.info("Click Checkout Now");
 			BasketPage checkout = new BasketPage(driver);
@@ -91,16 +86,10 @@ public class EditOrderDetailsFromCheckout extends BaseTest {
 			Log.info("Edit the Basket with Update Quantity");
 			System.out.println("Edit the Basket with Update Quantity");
 			test.log(LogStatus.INFO, "Edit the Basket with Update Quantity");
-			// BasketPage basket = new BasketPage(driver);
 			checkout.editBasketUpdateQuantity();
-
-			System.out.println("Click Alert");
-			Log.info("Click Alert");
-			checkout.clickOtherFormatOKAlert();
 
 			System.out.println("Click Checkout Now");
 			Log.info("Click Checkout Now");
-			// BasketPage checkout = new BasketPage(driver);
 			checkout.clickCheckout();
 
 			System.out.println("Enter Payment Details");
@@ -113,12 +102,6 @@ public class EditOrderDetailsFromCheckout extends BaseTest {
 			Log.info("Enter Order Details");
 			test.log(LogStatus.INFO, "Enter Order Details");
 			checkoutOrder.enterOrderDetails();
-
-			/*
-			 * System.out.println("Confirm Order Details");
-			 * Log.info("Confirm Order Details"); test.log(LogStatus.INFO,
-			 * "Confirm Order Details"); checkoutOrder.confirmOrderDetails();
-			 */
 
 			System.out.println("Verify Success Message on Order Confirmation Page");
 			Log.info("Verify Success Message on Order Confirmation Page");

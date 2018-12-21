@@ -39,7 +39,7 @@ public class PreBookProducts extends BaseTest {
 		}
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void verifyAdavanceAccessProduct() {
 
 		test = extent.startTest(

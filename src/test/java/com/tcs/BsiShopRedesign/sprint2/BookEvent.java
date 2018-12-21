@@ -84,7 +84,7 @@ public class BookEvent extends BaseTest {
 		}
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void BookFreeEvent() {
 
 		test = extent.startTest("Sprint 2 - Ecom-06 AC#27 ___Book Free Event");

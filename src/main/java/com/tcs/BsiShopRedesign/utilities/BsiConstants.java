@@ -14,14 +14,14 @@ public class BsiConstants {
 
 	// URLs-Store QA
 	public static final String STORE_QA_URL = "https://standards-storeqa.bsigroup.com/";
-	public static final String STORE_QA_USERNAME = "sharmilee.mohapatra@tcs.com";
+	public static final String STORE_QA_USERNAME = "subhrateja@rediffmail.com";
 	public static final String STORE_QA_PASSWORD = "Test@1234";
-	public static final String STORE_QA_MEM_USERNAME = "dash.joshita@tcs.com";
+	public static final String STORE_QA_MEM_USERNAME = "subhrateja.satapathy@tcs.com";
 	public static final String STORE_QA_MEM_PASSWORD = "Test@1234";
 	public static final String STORE_QA_REG_USERNAME = "autoTest@tcs.com";
 	public static final String STORE_QA_MEM_SEC_USERNAME = "sharmileemohapatra@gmail.com";
 	public static final String STORE_QA_MEM_SEC_PASSWORD = "June@2018";
-	public static final String STORE_QA_TEN_USERNAME = "tenAddress@tcs.com";
+	public static final String STORE_QA_TEN_USERNAME = "sharmilee.mohapatra@tcs.com";
 
 	// URLs-Prod
 	public static final String PROD_URL = "";

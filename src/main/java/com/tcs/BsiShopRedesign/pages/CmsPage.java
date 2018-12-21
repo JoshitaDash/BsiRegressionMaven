@@ -663,16 +663,20 @@ public class CmsPage extends Page {
 			click("viewCMSOrder_xpath");
 			Thread.sleep(5000);
 
-			driver.switchTo().defaultContent();
-			closeAlert = driver.findElement(By.cssSelector("button[data-role='closeBtn']")).isDisplayed();
-			if (closeAlert) {
-				test.log(LogStatus.INFO, "Close Alert");
-				System.out.println("Close Alert");
-				List<WebElement> alert = driver.findElements(By.cssSelector("button[data-role='closeBtn']"));
-				for (int i = 0; i <= alert.size(); i++) {
-					click("closeAlert_css");
+			try {
+				driver.switchTo().defaultContent();
+				closeAlert = driver.findElement(By.cssSelector("button[data-role='closeBtn']")).isDisplayed();
+				if (closeAlert) {
+					test.log(LogStatus.INFO, "Close Alert");
+					System.out.println("Close Alert");
+					List<WebElement> alert = driver.findElements(By.cssSelector("button[data-role='closeBtn']"));
+					for (int i = 0; i <= alert.size(); i++) {
+						click("closeAlert_css");
+					}
+					Thread.sleep(1000);
 				}
-				Thread.sleep(1000);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 			/*
