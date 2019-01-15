@@ -63,7 +63,8 @@
 			<class name="com.tcs.BsiShopRedesign.cms.ResetPassword" />
 			<class name="com.tcs.BsiShopRedesign.cms.CreatePromoCode" /> 
 			<class name="com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList" />
-			<class name="com.tcs.BsiShopRedesign.cms.ViewCMSPage" /> 				
+			<class name="com.tcs.BsiShopRedesign.cms.ViewCMSPage" />
+			<class name="com.tcs.BsiShopRedesign.cms.CreateDeleteCMSPage" /> 				
 	    </classes>
 	</test>
 </suite> 

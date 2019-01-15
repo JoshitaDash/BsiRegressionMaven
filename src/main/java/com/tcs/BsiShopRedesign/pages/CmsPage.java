@@ -5,9 +5,11 @@ import java.util.List;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -35,7 +37,7 @@ public class CmsPage extends Page {
 			click("magentoAllCustomer_xpath");
 
 			try {
-				remove = CommonHelper.isElementVisible("removeKeyword_css");
+				remove = CommonHelper.isElementVisible("removeKeyword_xpath");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -43,7 +45,7 @@ public class CmsPage extends Page {
 				System.out.println("Click Remove Keyword");
 				Log.info("Click Remove Keyword");
 				test.log(LogStatus.INFO, "Click Remove Keyword");
-				click("removeKeyword_css");
+				click("removeKeyword_xpath");
 			}
 
 			Thread.sleep(2000);
@@ -273,7 +275,7 @@ public class CmsPage extends Page {
 			click("magentoAllCustomer_xpath");
 
 			try {
-				remove = CommonHelper.isElementVisible("removeKeyword_css");
+				remove = CommonHelper.isElementVisible("removeKeyword_xpath");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -281,7 +283,7 @@ public class CmsPage extends Page {
 				System.out.println("Click Remove Keyword");
 				Log.info("Click Remove Keyword");
 				test.log(LogStatus.INFO, "Click Remove Keyword");
-				click("removeKeyword_css");
+				click("removeKeyword_xpath");
 			}
 			/*
 			 * Thread.sleep(2000); System.out.println("Enter keyword for search");
@@ -620,7 +622,7 @@ public class CmsPage extends Page {
 			boolean remove = false;
 
 			try {
-				remove = CommonHelper.isElementVisible("removeKeyword_css");
+				remove = CommonHelper.isElementVisible("removeKeyword_xpath");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -628,7 +630,7 @@ public class CmsPage extends Page {
 				System.out.println("Click Remove Keyword");
 				Log.info("Click Remove Keyword");
 				test.log(LogStatus.INFO, "Click Remove Keyword");
-				click("removeKeyword_css");
+				click("removeKeyword_xpath");
 			}
 
 			Thread.sleep(2000);
@@ -785,7 +787,7 @@ public class CmsPage extends Page {
 		try {
 			Thread.sleep(2000);
 			try {
-				remove = CommonHelper.isElementVisible("removeKeyword_css");
+				remove = CommonHelper.isElementVisible("removeKeyword_xpath");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -793,7 +795,7 @@ public class CmsPage extends Page {
 				System.out.println("Click Remove Keyword");
 				Log.info("Click Remove Keyword");
 				test.log(LogStatus.INFO, "Click Remove Keyword");
-				click("removeKeyword_css");
+				click("removeKeyword_xpath");
 			}
 
 			Thread.sleep(1000);
@@ -833,6 +835,259 @@ public class CmsPage extends Page {
 
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Verify CMS Content Page was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public String createPage() {
+		String page = "BSI_Shop Automation";
+
+		try {
+			System.out.println("Click Add New Page");
+			Log.info("Click Add New Page");
+			test.log(LogStatus.INFO, "Click Add New Page");
+			click("addPage_id");
+
+			System.out.println("Enter Page Title");
+			Log.info("Enter Page Title");
+			test.log(LogStatus.INFO, "Enter Page Title");
+			enterText("cmsTitle_css", "BSI_Shop Automation");
+
+			System.out.println("Enter Page Keyword");
+			Log.info("Enter Page Keyword");
+			test.log(LogStatus.INFO, "Enter Page Keyword");
+			enterText("cmskeyword_css", "BSI_Shop Automation");
+
+			System.out.println("Click on Content");
+			Log.info("Click on Content");
+			test.log(LogStatus.INFO, "Click on Content");
+			click("showContent_xpath");
+
+			System.out.println("Enter Page Text");
+			Log.info("Enter Page Text");
+			test.log(LogStatus.INFO, "Enter Page Text");
+			click("showHideEditor_xpath");
+			enterText("pageContent_id", "BSI_Shop Automation");
+			click("showHideEditor_xpath");
+
+			System.out.println("Show Hierarchy");
+			Log.info("Show Hierarchy");
+			test.log(LogStatus.INFO, "Show Hierarchy");
+			click("showHierarchy_xpath");
+
+			System.out.println("Select Hierarchy Folder");
+			Log.info("Select Hierarchy Folder");
+			test.log(LogStatus.INFO, "Select Hierarchy Folder");
+			click("selectHierarchy_id");
+
+			System.out.println("Click on Save Page");
+			Log.info("Click on Save Page");
+			test.log(LogStatus.INFO, "Click on Save Page");
+			click("savePage_xpath");
+			Thread.sleep(2000);
+
+			String verifySuccessMsg = driver.findElement(By.xpath("//*[@id='messages']/div/div/div")).getText();
+			if (verifySuccessMsg.contains("You saved the page.")) {
+				System.out.println("CMS Page creation was successful");
+				test.log(LogStatus.PASS, "CMS Page creation was successful");
+			}
+			//Thread.sleep(5000);
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("CMS Page creation was unsuccessful");
+			e.printStackTrace();
+		}
+		return page;
+	}
+
+	public void searchCMSPage(String cmsPage) {
+
+		boolean removeKeyword = false;
+
+		try {
+			Thread.sleep(2000);
+			try {
+				removeKeyword = driver
+						.findElement(By.xpath("//*[@id='container']/div/div[2]/div[1]/div[4]/div[2]/ul/li/button"))
+						.isDisplayed();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			if (removeKeyword) {
+				System.out.println("Click Clear All Keywords");
+				Log.info("Click Clear All Keywords");
+				test.log(LogStatus.INFO, "Click Clear All Keywords");
+				click("clearAllKeywords_xpath");
+
+				Thread.sleep(2000);
+				System.out.println("Enter keyword for search");
+				Log.info("Enter keyword for search");
+				test.log(LogStatus.INFO, "Enter keyword for search");
+				//CommonHelper.scrolltoview("searchKeywordText_xpath");
+				clearText("searchKeywordText_xpath");
+				Thread.sleep(2000);
+				enterText("searchKeywordText_xpath", cmsPage);
+
+				System.out.println("Click on Search");
+				Log.info("Click on Search");
+				test.log(LogStatus.INFO, "Click on Search");
+				click("searchDetails_xpath");
+				Thread.sleep(2000);
+
+			} else {
+
+				Thread.sleep(2000);
+				System.out.println("Enter keyword for search");
+				Log.info("Enter keyword for search");
+				test.log(LogStatus.INFO, "Enter keyword for search");
+				//CommonHelper.scrolltoview("searchKeywordText_xpath");
+				clearText("searchKeywordText_xpath");
+				Thread.sleep(2000);
+				enterText("searchKeywordText_xpath", cmsPage);
+
+				System.out.println("Click on Search");
+				Log.info("Click on Search");
+				test.log(LogStatus.INFO, "Click on Search");
+				click("searchDetails_xpath");
+				Thread.sleep(2000);
+			}
+		} catch (Exception e) {
+			CommonHelper.reportFailure("Search CMS Page was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void deleteCMSPage() {
+
+		try {
+			Thread.sleep(1000);
+			System.out.println("Delete CMS Page");
+			Log.info("Delete CMS Page");
+			test.log(LogStatus.INFO, "Delete CMS Page");
+			click("selectAction_xpath");
+			// selectDpdwnValue("selectAction_xpath", "delete");
+			click("selectDeletePage_xpath");
+			Thread.sleep(1000);
+			System.out.println("Confirm Delete CMS Page");
+			Log.info("Confirm Delete CMS Page");
+			test.log(LogStatus.INFO, "Confirm Delete CMS Page");
+			click("confirmDelete_xpath");
+			Thread.sleep(5000);
+
+			String verifySuccessMsg = driver.findElement(By.xpath("//*[@id='messages']/div/div/div")).getText();
+			if (verifySuccessMsg.contains("The page has been deleted.")) {
+				System.out.println("CMS Page was deleted successfully");
+				test.log(LogStatus.PASS, "CMS Page was deleted successfully");
+			}
+			Thread.sleep(2000);
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Delete CMS Page was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void editCMSPage() {
+
+		try {
+			Thread.sleep(1000);
+			System.out.println("Click on Edit CMS Page");
+			Log.info("Click on Edit CMS Page");
+			test.log(LogStatus.INFO, "Click on Edit CMS Page");
+			click("selectAction_xpath");
+			click("selectEdit_xpath");
+
+			Thread.sleep(2000);
+			System.out.println("Click Search Engine Optimisation");
+			Log.info("Click Search Engine Optimisation");
+			test.log(LogStatus.INFO, "Click Search Engine Optimisation");
+			click("searchEngineOpti_xpath");
+
+			Thread.sleep(2000);
+			System.out.println("Select Meta Robot");
+			Log.info("Select Meta Robot");
+			test.log(LogStatus.INFO, "Select Meta Robot");
+			CommonHelper.scrolltoview("metaRobot_css");
+			selectDpdwnText("metaRobot_css", "NOINDEX, NOFOLLOW");
+
+			Thread.sleep(1000);
+			System.out.println("Click on Schedule New Update");
+			Log.info("Click on Schedule New Update");
+			test.log(LogStatus.INFO, "Click on Schedule New Update");
+			click("scheduleUpdate_xpath");
+
+			Thread.sleep(2000);
+			System.out.println("Enter Update Name");
+			Log.info("Enter Update Name");
+			test.log(LogStatus.INFO, "Enter Update Name");
+			enterText("updateName_css", "BSI_Automation_Updated");
+
+			Thread.sleep(3000);
+			System.out.println("Click on Date Picker for Start Date");
+			Log.info("Click on Date Picker for Start Date");
+			test.log(LogStatus.INFO, "Click on Date Picker for Start Date");
+			List<WebElement> datePicker = driver
+					.findElements(By.cssSelector("button[class='ui-datepicker-trigger v-middle']"));
+			datePicker.get(0).click();
+
+			Thread.sleep(1000);
+			System.out.println("Select Start Month");
+			Log.info("Select Start Month");
+			test.log(LogStatus.INFO, "Select Start Month");
+			selectDpdwnText("calendarSelectMonth_xpath", "Apr");
+
+			System.out.println("Select Start Date");
+			Log.info("Select Start Date");
+			test.log(LogStatus.INFO, "Select Start Date");
+			click("calendarSelectStartDate_xpath");
+
+			System.out.println("Click Close Calendar");
+			Log.info("Click Close Calendar");
+			test.log(LogStatus.INFO, "Click Close Calendar");
+			click("calendarClose_css");
+
+			Thread.sleep(3000);
+			System.out.println("Click on Date Picker for End Date");
+			Log.info("Click on Date Picker for End Date");
+			test.log(LogStatus.INFO, "Click on Date Picker for End Date");
+			datePicker.get(1).click();
+
+			Thread.sleep(1000);
+			System.out.println("Select End Month");
+			Log.info("Select End Month");
+			test.log(LogStatus.INFO, "Select End Month");
+			selectDpdwnText("calendarSelectMonth_xpath", "Dec");
+
+			System.out.println("Select End Date");
+			Log.info("Select End Date");
+			test.log(LogStatus.INFO, "Select End Date");
+			click("calendarSelectStartDate_xpath");
+
+			System.out.println("Click Close Calendar");
+			Log.info("Click Close Calendar");
+			test.log(LogStatus.INFO, "Click Close Calendar");
+			click("calendarClose_css");
+
+			System.out.println("Click on Save");
+			Log.info("Click on Save");
+			test.log(LogStatus.INFO, "Click on Save");
+			CommonHelper.scrolltoview("editSave_css");
+			click("editSave_css");
+
+			System.out.println("Click on Save Page");
+			Log.info("Click on Save Page");
+			test.log(LogStatus.INFO, "Click on Save Page");
+			click("saveEditPage_css");
+			Thread.sleep(2000);
+
+			String verifySuccessMsg = driver.findElement(By.xpath("//*[@id='messages']/div/div/div")).getText();
+			if (verifySuccessMsg.contains("You saved the page.")) {
+				System.out.println("CMS Page edit and update was successful");
+				test.log(LogStatus.PASS, "CMS Page edit and update was successful");
+			}
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Edit and Update of CMS Page was unsuccessful");
 			e.printStackTrace();
 		}
 	}

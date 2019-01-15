@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Chrome Browser</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>89/25/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 12 13:56:19 UTC 2018</td>
+<td>Started on:</td><td>Wed Jan 02 15:16:11 UTC 2019</td>
 </tr>
-<tr><td>Total time:</td><td>99 seconds (99231 ms)</td>
+<tr><td>Total time:</td><td>13574 seconds (13574220 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,17 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment.verifyHardCopyDeliveryDetails()'><b>verifyHardCopyDeliveryDetails</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment</td>
-<td><div><pre>java.lang.AssertionError: Click Checkout was unsuccessful
+<td title='com.tcs.BsiShopRedesign.sprint2.BookEvent.BookFreeEvent()'><b>BookFreeEvent</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.BookEvent</td>
+<td><div><pre>java.lang.AssertionError: Click Book Now was unsuccessful
 	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
-	at com.tcs.BsiShopRedesign.pages.BasketPage.clickCheckout(BasketPage.java:518)
-	at com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment.verifyHardCopyDeliveryDetails(SecureAuthenticationPayment.java:78)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace826865256", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace826865256'><pre>java.lang.AssertionError: Click Checkout was unsuccessful
+	at com.tcs.BsiShopRedesign.pages.EventPage.bookFreeEvent(EventPage.java:484)
+	at com.tcs.BsiShopRedesign.sprint2.BookEvent.BookFreeEvent(BookEvent.java:101)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1788380050", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1788380050'><pre>java.lang.AssertionError: Click Book Now was unsuccessful
 	at org.testng.Assert.fail(Assert.java:94)
 	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
-	at com.tcs.BsiShopRedesign.pages.BasketPage.clickCheckout(BasketPage.java:518)
-	at com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment.verifyHardCopyDeliveryDetails(SecureAuthenticationPayment.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.bookFreeEvent(EventPage.java:484)
+	at com.tcs.BsiShopRedesign.sprint2.BookEvent.BookFreeEvent(BookEvent.java:101)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,8 +111,954 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>69</td>
-<td>com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment@569cfc36</td></tr>
+<td>253</td>
+<td>com.tcs.BsiShopRedesign.sprint2.BookEvent@6e171cd7</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.BookEvent.BookPaidEvent()'><b>BookPaidEvent</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.BookEvent</td>
+<td><div><pre>java.lang.AssertionError: Adding Delegate details was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.addDelegateDetails(EventPage.java:257)
+	at com.tcs.BsiShopRedesign.sprint2.BookEvent.BookPaidEvent(BookEvent.java:63)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1541046463", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1541046463'><pre>java.lang.AssertionError: Adding Delegate details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.addDelegateDetails(EventPage.java:257)
+	at com.tcs.BsiShopRedesign.sprint2.BookEvent.BookPaidEvent(BookEvent.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>885</td>
+<td>com.tcs.BsiShopRedesign.sprint2.BookEvent@6e171cd7</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket.BookPaidEventAndStandardProduct()'><b>BookPaidEventAndStandardProduct</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket</td>
+<td><div><pre>java.lang.AssertionError: Adding Delegate details was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.addDelegateDetails(EventPage.java:257)
+	at com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket.BookPaidEventAndStandardProduct(StandardProductAndEventRemoveBasket.java:71)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace925803196", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace925803196'><pre>java.lang.AssertionError: Adding Delegate details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.addDelegateDetails(EventPage.java:257)
+	at com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket.BookPaidEventAndStandardProduct(StandardProductAndEventRemoveBasket.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>885</td>
+<td>com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket@795cd85e</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket.BookPaidEventAndStandardProduct()'><b>BookPaidEventAndStandardProduct</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket</td>
+<td><div><pre>java.lang.AssertionError: Adding Delegate details was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.addDelegateDetails(EventPage.java:257)
+	at com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket.BookPaidEventAndStandardProduct(EssentialsProductAndEventRemoveBasket.java:67)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace696739588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace696739588'><pre>java.lang.AssertionError: Adding Delegate details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.addDelegateDetails(EventPage.java:257)
+	at com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket.BookPaidEventAndStandardProduct(EssentialsProductAndEventRemoveBasket.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>880</td>
+<td>com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket@59fd97a8</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket.addAndUpdateMultipleEvents()'><b>addAndUpdateMultipleEvents</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket</td>
+<td><div><pre>java.lang.AssertionError: Adding Delegate details was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.addDelegateDetails(EventPage.java:257)
+	at com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket.addAndUpdateMultipleEvents(MultipleEventUpdateBasket.java:61)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1721045976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1721045976'><pre>java.lang.AssertionError: Adding Delegate details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.EventPage.addDelegateDetails(EventPage.java:257)
+	at com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket.addAndUpdateMultipleEvents(MultipleEventUpdateBasket.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>885</td>
+<td>com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket@402bba4f</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.RenewMembership.addRenewMembershipToBasket()'><b>addRenewMembershipToBasket</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.RenewMembership</td>
+<td><div><pre>java.lang.AssertionError: Click Renew Membership was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.MyProfileMemberPage.clickRenewMembership(MyProfileMemberPage.java:162)
+	at com.tcs.BsiShopRedesign.sprint8.RenewMembership.addRenewMembershipToBasket(RenewMembership.java:54)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace223000346", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace223000346'><pre>java.lang.AssertionError: Click Renew Membership was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.MyProfileMemberPage.clickRenewMembership(MyProfileMemberPage.java:162)
+	at com.tcs.BsiShopRedesign.sprint8.RenewMembership.addRenewMembershipToBasket(RenewMembership.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>30</td>
+<td>com.tcs.BsiShopRedesign.sprint8.RenewMembership@6e20b53a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder.applyPromoCode()'><b>applyPromoCode</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder</td>
+<td><div><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder.applyPromoCode(PromoCodeOrder.java:125)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace152848959", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace152848959'><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder.applyPromoCode(PromoCodeOrder.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>248</td>
+<td>com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder@47af7f3d</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice.applyPromoCode()'><b>applyPromoCode</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice</td>
+<td><div><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice.applyPromoCode(ViewPDFInvoice.java:97)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace510368405", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace510368405'><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice.applyPromoCode(ViewPDFInvoice.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>363</td>
+<td>com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@4567f35d</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures.checkFreeEvent()'><b>checkFreeEvent</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures</td>
+<td><div><pre>java.lang.AssertionError: Free Event Price match is unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SearchPage.checkFreeEventPrice(SearchPage.java:479)
+	at com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures.checkFreeEvent(CheckProductFeatures.java:36)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace260638966", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace260638966'><pre>java.lang.AssertionError: Free Event Price match is unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SearchPage.checkFreeEventPrice(SearchPage.java:479)
+	at com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures.checkFreeEvent(CheckProductFeatures.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>33</td>
+<td>com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures@4d9e68d0</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures.checkPaidEvent()'><b>checkPaidEvent</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures</td>
+<td><div><pre>java.lang.AssertionError: Paid Event Price match is unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SearchPage.checkPaidEventPrice(SearchPage.java:729)
+	at com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures.checkPaidEvent(CheckProductFeatures.java:110)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1677543539", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1677543539'><pre>java.lang.AssertionError: Paid Event Price match is unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SearchPage.checkPaidEventPrice(SearchPage.java:729)
+	at com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures.checkPaidEvent(CheckProductFeatures.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>43</td>
+<td>com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures@4d9e68d0</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial.downloadPASMM()'><b>downloadPASMM</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial</td>
+<td><div><pre>java.lang.AssertionError: Click on Download Now was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.DownloadMMPage.clickDownloadNow(DownloadMMPage.java:53)
+	at com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial.downloadPASMM(DownloadMarketingMaterial.java:66)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1109752797", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1109752797'><pre>java.lang.AssertionError: Click on Download Now was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.DownloadMMPage.clickDownloadNow(DownloadMMPage.java:53)
+	at com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial.downloadPASMM(DownloadMarketingMaterial.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>33</td>
+<td>com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@123ef382</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderCofirmationPage()'><b>downloadSoftCopyfromOrderCofirmationPage</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads</td>
+<td><div><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderCofirmationPage(SoftCopyDownloads.java:114)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace622772003", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace622772003'><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderCofirmationPage(SoftCopyDownloads.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>433</td>
+<td>com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@71809907</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderHistoryPage()'><b>downloadSoftCopyfromOrderHistoryPage</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads</td>
+<td><div><pre>java.lang.AssertionError: SoftCopy Download was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderHistoryPage.downloadAndVerifySoftCopy(OrderHistoryPage.java:107)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderHistoryPage(SoftCopyDownloads.java:162)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1365711624", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1365711624'><pre>java.lang.AssertionError: SoftCopy Download was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderHistoryPage.downloadAndVerifySoftCopy(OrderHistoryPage.java:107)
+	at com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.downloadSoftCopyfromOrderHistoryPage(SoftCopyDownloads.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>22</td>
+<td>com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@71809907</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.PayByInvoice.payByInvoiceOrder()'><b>payByInvoiceOrder</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.PayByInvoice</td>
+<td><div><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.PayByInvoice.payByInvoiceOrder(PayByInvoice.java:108)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace818785904", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace818785904'><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.PayByInvoice.payByInvoiceOrder(PayByInvoice.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>452</td>
+<td>com.tcs.BsiShopRedesign.sprint9.PayByInvoice@7c729a55</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket.productUpdateBasket()'><b>productUpdateBasket</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket<br>Parameters: {Runmode=Y, Product_name=Pas 2030 Online, Browser=Chrome}</td>
+<td><div><pre>java.lang.AssertionError: Search and Update SCR Products was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket.productUpdateBasket(SCRProductsUpdateBasket.java:114)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace673672784", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace673672784'><pre>java.lang.AssertionError: Search and Update SCR Products was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket.productUpdateBasket(SCRProductsUpdateBasket.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>34</td>
+<td>com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket@40ef3420</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regBSOLQuote()'><b>regBSOLQuote</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions</td>
+<td><div><pre>java.lang.AssertionError: Enter BSOL Pardot form details was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SubscriptionsPage.enterBSOLPardotDetails(SubscriptionsPage.java:100)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regBSOLQuote(RegisterSubscriptions.java:39)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1917562344", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1917562344'><pre>java.lang.AssertionError: Enter BSOL Pardot form details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SubscriptionsPage.enterBSOLPardotDetails(SubscriptionsPage.java:100)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regBSOLQuote(RegisterSubscriptions.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>94</td>
+<td>com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions@f5ac9e4</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regCNQuote()'><b>regCNQuote</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions</td>
+<td><div><pre>java.lang.AssertionError: Enter Pardot Form details was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SubscriptionsPage.enterCNPardotDetails(SubscriptionsPage.java:327)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regCNQuote(RegisterSubscriptions.java:74)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1413886135", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1413886135'><pre>java.lang.AssertionError: Enter Pardot Form details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SubscriptionsPage.enterCNPardotDetails(SubscriptionsPage.java:327)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regCNQuote(RegisterSubscriptions.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>97</td>
+<td>com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions@f5ac9e4</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regEurocodes()'><b>regEurocodes</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions</td>
+<td><div><pre>java.lang.AssertionError: Enter Eurocode Pardot Form details was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SubscriptionsPage.enterEurocodePardotDetails(SubscriptionsPage.java:467)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regEurocodes(RegisterSubscriptions.java:109)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2032647583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2032647583'><pre>java.lang.AssertionError: Enter Eurocode Pardot Form details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.SubscriptionsPage.enterEurocodePardotDetails(SubscriptionsPage.java:467)
+	at com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions.regEurocodes(RegisterSubscriptions.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>95</td>
+<td>com.tcs.BsiShopRedesign.sprint2.RegisterSubscriptions@f5ac9e4</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails.validateCheckoutNonUKDetailsHardCopy()'><b>validateCheckoutNonUKDetailsHardCopy</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails</td>
+<td><div><pre>java.lang.AssertionError: Validate Checkout Details with Billing and Card Billing Address as non UK Country for Hardcopy product on Checkout Page was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails.validateCheckoutNonUKDetailsHardCopy(ValidateCountryCheckoutDetails.java:118)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace65438140", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace65438140'><pre>java.lang.AssertionError: Validate Checkout Details with Billing and Card Billing Address as non UK Country for Hardcopy product on Checkout Page was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails.validateCheckoutNonUKDetailsHardCopy(ValidateCountryCheckoutDetails.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>227</td>
+<td>com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails@6aba2b86</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails.verifyHardCopyDeliveryDetails()'><b>verifyHardCopyDeliveryDetails</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails</td>
+<td><div><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails.verifyHardCopyDeliveryDetails(VerifyHardCopyDetails.java:100)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2042884127", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2042884127'><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails.verifyHardCopyDeliveryDetails(VerifyHardCopyDetails.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>420</td>
+<td>com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails@3ce1e309</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment.verifyHardCopyDeliveryDetails()'><b>verifyHardCopyDeliveryDetails</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment</td>
+<td><div><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment.verifyHardCopyDeliveryDetails(SecureAuthenticationPayment.java:100)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1360533184", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1360533184'><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment.verifyHardCopyDeliveryDetails(SecureAuthenticationPayment.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>667</td>
+<td>com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment@5af3afd9</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress.verifyHardCopyDeliveryDetails()'><b>verifyHardCopyDeliveryDetails</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress</td>
+<td><div><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress.verifyHardCopyDeliveryDetails(CheckoutDeliveryAddress.java:99)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1062181581", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1062181581'><pre>java.lang.AssertionError: Placing of order was unsuccesful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.OrderConfirmationPage.verifyOrderSuccessMessage(OrderConfirmationPage.java:258)
+	at com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress.verifyHardCopyDeliveryDetails(CheckoutDeliveryAddress.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>419</td>
+<td>com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress@44ebcd03</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails.verifyIncorrectCardPayment()'><b>verifyIncorrectCardPayment</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails</td>
+<td><div><pre>java.lang.AssertionError: Enter Incorrect Card Details was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.CheckoutPage.verifyIncorrectCardPaymentDetails(CheckoutPage.java:269)
+	at com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails.verifyIncorrectCardPayment(VerifyIncorrectPaymentDetails.java:101)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1236303587", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1236303587'><pre>java.lang.AssertionError: Enter Incorrect Card Details was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.pages.CheckoutPage.verifyIncorrectCardPaymentDetails(CheckoutPage.java:269)
+	at com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails.verifyIncorrectCardPayment(VerifyIncorrectPaymentDetails.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>204</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails@2e005c4b</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType.verifyPAS2030ProductDetails()'><b>verifyPAS2030ProductDetails</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType</td>
+<td><div><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Pas 2030 Online&quot;}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.8.0&apos;, revision: &apos;924c4067df&apos;, time: &apos;2017-11-30T11:20:39.408Z&apos;
+System info: host: &apos;ShopRedesign04&apos;, ip: &apos;10.0.9.7&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.43.600210 (68dcf5eebde371..., userDataDir: C:\Users\shopqa\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49273}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
+Session ID: 8dcd0282f629ad8476e8f7b813747266
+*** Element info: {Using=link text, value=Pas 2030 Online}
+	at com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType.verifyPAS2030ProductDetails(VerifyDifferentProductType.java:160)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2117193231", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2117193231'><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Pas 2030 Online&quot;}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.8.0&apos;, revision: &apos;924c4067df&apos;, time: &apos;2017-11-30T11:20:39.408Z&apos;
+System info: host: &apos;ShopRedesign04&apos;, ip: &apos;10.0.9.7&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.43.600210 (68dcf5eebde371..., userDataDir: C:\Users\shopqa\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49273}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
+Session ID: 8dcd0282f629ad8476e8f7b813747266
+*** Element info: {Using=link text, value=Pas 2030 Online}
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType.verifyPAS2030ProductDetails(VerifyDifferentProductType.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>33</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@323b36e0</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.PreBookProducts.verifyPreOrderProduct()'><b>verifyPreOrderProduct</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.PreBookProducts</td>
+<td><div><pre>java.lang.AssertionError: Verification and Placing order of Pre Order Product was unsuccessful
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.sprint9.PreBookProducts.verifyPreOrderProduct(PreBookProducts.java:177)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace378814088", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace378814088'><pre>java.lang.AssertionError: Verification and Placing order of Pre Order Product was unsuccessful
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.tcs.BsiShopRedesign.utilities.CommonHelper.reportFailure(CommonHelper.java:78)
+	at com.tcs.BsiShopRedesign.sprint9.PreBookProducts.verifyPreOrderProduct(PreBookProducts.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>33</td>
+<td>com.tcs.BsiShopRedesign.sprint9.PreBookProducts@3bb9a3ff</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -122,10 +1068,450 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab.AddInvoiceToBasket()'><b>AddInvoiceToBasket</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab</td>
+<td></td>
+<td>25</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab@1a451d4d</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout.CheckLoginAlertOnChekout()'><b>CheckLoginAlertOnChekout</b><br>Test class: com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout</td>
+<td></td>
+<td>80</td>
+<td>com.tcs.BsiShopRedesign.sprint7.UnregisteredUserCheckout@15ff3e9e</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.addDeliveryAddress()'><b>addDeliveryAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.addNewBillingAddress()'><b>addNewBillingAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>22</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses.addTenBillingAddress()'><b>addTenBillingAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses</td>
+<td></td>
+<td>247</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@498d318c</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses.addTenDeliveryAddress()'><b>addTenDeliveryAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses</td>
+<td></td>
+<td>203</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@498d318c</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList.addToBasketSearchList()'><b>addToBasketSearchList</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList</td>
+<td></td>
+<td>125</td>
+<td>com.tcs.BsiShopRedesign.sprint3.AddPDFToBasketTwiceFromSearchList@14dd9eb7</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount.applyMemberAccountBandNineAbove()'><b>applyMemberAccountBandNineAbove</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount</td>
+<td></td>
+<td>15</td>
+<td>com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount@32eff876</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount.applyMemberAccountBelowBandNine()'><b>applyMemberAccountBelowBandNine</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount</td>
+<td></td>
+<td>70</td>
+<td>com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount@32eff876</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyOrderDetailsWithCMS.applyPromoCode()'><b>applyPromoCode</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyOrderDetailsWithCMS</td>
+<td></td>
+<td>174</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyOrderDetailsWithCMS@5ffead27</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult.blankSearch()'><b>blankSearch</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult</td>
+<td></td>
+<td>7</td>
+<td>com.tcs.BsiShopRedesign.sprint3.CheckBlankSearchResult@42e99e4a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts.blankSearch()'><b>blankSearch</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts</td>
+<td></td>
+<td>82</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyRecentlyViewedProducts@694abbdc</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus.checkBookStatus()'><b>checkBookStatus</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus</td>
+<td></td>
+<td>23</td>
+<td>com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus@7334aada</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus.checkEventStatus()'><b>checkEventStatus</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus</td>
+<td></td>
+<td>24</td>
+<td>com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus@7334aada</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures.checkPASProduct()'><b>checkPASProduct</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures</td>
+<td></td>
+<td>12</td>
+<td>com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures@4d9e68d0</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus.checkProductStatus()'><b>checkProductStatus</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus</td>
+<td></td>
+<td>32</td>
+<td>com.tcs.BsiShopRedesign.sprint3.CheckWithdrawnStatus@7334aada</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType.checkSortingOrderQuality()'><b>checkSortingOrderQuality</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType</td>
+<td></td>
+<td>109</td>
+<td>com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByProductType@1d9b7cce</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate.checkSortingOrderQuality()'><b>checkSortingOrderQuality</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate</td>
+<td></td>
+<td>351</td>
+<td>com.tcs.BsiShopRedesign.sprint3.SearchSortOrderByPublishedDate@52e6fdee</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket.checkWarningMsgPDF()'><b>checkWarningMsgPDF</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket</td>
+<td></td>
+<td>18</td>
+<td>com.tcs.BsiShopRedesign.sprint2.CheckWarningMsgAddtoBasket@384ad17b</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyContactUs.contactUs()'><b>contactUs</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyContactUs</td>
+<td></td>
+<td>10</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyContactUs@661972b0</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress.createBillingAddress()'><b>createBillingAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress</td>
+<td></td>
+<td>87</td>
+<td>com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress@5e0826e7</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile.createRegUserNonUKProfile()'><b>createRegUserNonUKProfile</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile</td>
+<td></td>
+<td>26</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@6c80d78a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile.createRegUserUKProfile()'><b>createRegUserUKProfile</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile</td>
+<td></td>
+<td>14</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@6c80d78a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode.currentDraftStatusColorCode()'><b>currentDraftStatusColorCode</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode</td>
+<td></td>
+<td>175</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@7fa98a66</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode.currentRevisionUnderwayStatusColorCode()'><b>currentRevisionUnderwayStatusColorCode</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode</td>
+<td></td>
+<td>177</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@7fa98a66</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode.currentStatusColorCode()'><b>currentStatusColorCode</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode</td>
+<td></td>
+<td>82</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@7fa98a66</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode.currentUnderReviewStatusColorCode()'><b>currentUnderReviewStatusColorCode</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode</td>
+<td></td>
+<td>174</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@7fa98a66</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.deleteBillingAddress()'><b>deleteBillingAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>8</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.deleteDeliveryAddress()'><b>deleteDeliveryAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>9</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses.deleteTenBillingAddress()'><b>deleteTenBillingAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses</td>
+<td></td>
+<td>75</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@498d318c</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses.deleteTenDeliveryAddress()'><b>deleteTenDeliveryAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses</td>
+<td></td>
+<td>121</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@498d318c</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.editBillingAddress()'><b>editBillingAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>20</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress.editBillingAddress()'><b>editBillingAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress</td>
+<td></td>
+<td>87</td>
+<td>com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress@6dc17b83</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.editDeliveryAddress()'><b>editDeliveryAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>19</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails.enterEmailID()'><b>enterEmailID</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails</td>
+<td></td>
+<td>11</td>
+<td>com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails@8dbdac1</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile.loginThroughAlreadyRegistered()'><b>loginThroughAlreadyRegistered</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile</td>
+<td></td>
+<td>25</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@6c80d78a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.makeDefaultBillingAddress()'><b>makeDefaultBillingAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>3</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.makeDefaultDeliveryAddress()'><b>makeDefaultDeliveryAddress</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>3</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyFooterHyperlinks.otherBSIWebsites()'><b>otherBSIWebsites</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyFooterHyperlinks</td>
+<td></td>
+<td>95</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyFooterHyperlinks@6356695f</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyFooterHyperlinks.otherServices()'><b>otherServices</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyFooterHyperlinks</td>
+<td></td>
+<td>54</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyFooterHyperlinks@6356695f</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket.productUpdateBasket()'><b>productUpdateBasket</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket<br>Parameters: {Runmode=Y, Product_name=BS 6070-1:1981, Browser=Chrome}</td>
+<td></td>
+<td>156</td>
+<td>com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket@40ef3420</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket.productUpdateBasket()'><b>productUpdateBasket</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket<br>Parameters: {Runmode=Y, Product_name=BIP 2197, Browser=Chrome}</td>
+<td></td>
+<td>161</td>
+<td>com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket@40ef3420</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode.registerMUNL()'><b>registerMUNL</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode</td>
+<td></td>
+<td>129</td>
+<td>com.tcs.BsiShopRedesign.sprint2.RegisterMUNLCode@dbf57b3</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.resetPassword()'><b>resetPassword</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>26</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint3.CheckSearchCount.searchPASCount()'><b>searchPASCount</b><br>Test class: com.tcs.BsiShopRedesign.sprint3.CheckSearchCount</td>
+<td></td>
+<td>164</td>
+<td>com.tcs.BsiShopRedesign.sprint3.CheckSearchCount@441772e</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfile.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfile</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfile@3835c46</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses</td>
+<td></td>
+<td>8</td>
+<td>com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses@498d318c</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.BookEvent.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.BookEvent</td>
+<td></td>
+<td>18</td>
+<td>com.tcs.BsiShopRedesign.sprint2.BookEvent@6e171cd7</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket</td>
+<td></td>
+<td>9</td>
+<td>com.tcs.BsiShopRedesign.sprint2.MultipleEventUpdateBasket@402bba4f</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket</td>
+<td></td>
+<td>18</td>
+<td>com.tcs.BsiShopRedesign.sprint2.StandardProductAndEventRemoveBasket@795cd85e</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint2.EssentialsProductAndEventRemoveBasket@59fd97a8</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint2.DownloadMarketingMaterial@123ef382</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint7.EditCheckoutBillingAddress@6dc17b83</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress</td>
+<td></td>
+<td>18</td>
+<td>com.tcs.BsiShopRedesign.sprint7.CreateCheckoutBillingAddress@5e0826e7</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount</td>
+<td></td>
+<td>18</td>
+<td>com.tcs.BsiShopRedesign.sprint8.ApplyMemberAccount@32eff876</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads</td>
+<td></td>
+<td>18</td>
+<td>com.tcs.BsiShopRedesign.sprint8.SoftCopyDownloads@71809907</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint8.VerifyHardCopyDetails@3ce1e309</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails@6aba2b86</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout@74e52303</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder</td>
+<td></td>
+<td>18</td>
+<td>com.tcs.BsiShopRedesign.sprint9.PromoCodeOrder@47af7f3d</td></tr>
+<tr>
 <td title='com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment</td>
 <td></td>
 <td>17</td>
-<td>com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment@569cfc36</td></tr>
+<td>com.tcs.BsiShopRedesign.sprint9.SecureAuthenticationPayment@5af3afd9</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint9.CheckoutDeliveryAddress@44ebcd03</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice@4567f35d</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyOrderDetailsWithCMS.signIn()'><b>signIn</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyOrderDetailsWithCMS</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyOrderDetailsWithCMS@5ffead27</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab.signInMember()'><b>signInMember</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab</td>
+<td></td>
+<td>8</td>
+<td>com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab@61862a7f</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile.signInMember()'><b>signInMember</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile</td>
+<td></td>
+<td>9</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile@62150f9e</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab.signInMember()'><b>signInMember</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab</td>
+<td></td>
+<td>8</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.AddInvoiceToBasketFromMemTab@1a451d4d</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount.signInMember()'><b>signInMember</b><br>Test class: com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount</td>
+<td></td>
+<td>9</td>
+<td>com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount@5fdcaa40</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails.signInMember()'><b>signInMember</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails</td>
+<td></td>
+<td>9</td>
+<td>com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails@8dbdac1</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.RenewMembership.signInMember()'><b>signInMember</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.RenewMembership</td>
+<td></td>
+<td>8</td>
+<td>com.tcs.BsiShopRedesign.sprint8.RenewMembership@6e20b53a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.PayByInvoice.signInMember()'><b>signInMember</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.PayByInvoice</td>
+<td></td>
+<td>9</td>
+<td>com.tcs.BsiShopRedesign.sprint9.PayByInvoice@7c729a55</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.PreBookProducts.signInMember()'><b>signInMember</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.PreBookProducts</td>
+<td></td>
+<td>9</td>
+<td>com.tcs.BsiShopRedesign.sprint9.PreBookProducts@3bb9a3ff</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails.signInMember()'><b>signInMember</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails</td>
+<td></td>
+<td>9</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyIncorrectPaymentDetails@2e005c4b</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyForgotPassword.validateCheckoutNonUKDetailsHardCopy()'><b>validateCheckoutNonUKDetailsHardCopy</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyForgotPassword</td>
+<td></td>
+<td>9</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyForgotPassword@4f18837a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails.validateCheckoutNonUKDetailsSoftCopy()'><b>validateCheckoutNonUKDetailsSoftCopy</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails</td>
+<td></td>
+<td>210</td>
+<td>com.tcs.BsiShopRedesign.sprint8.ValidateCountryCheckoutDetails@6aba2b86</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.PreBookProducts.verifyAdavanceAccessProduct()'><b>verifyAdavanceAccessProduct</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.PreBookProducts</td>
+<td></td>
+<td>85</td>
+<td>com.tcs.BsiShopRedesign.sprint9.PreBookProducts@3bb9a3ff</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile.verifyContactInformation()'><b>verifyContactInformation</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile</td>
+<td></td>
+<td>8</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@6c80d78a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType.verifyDCProduct()'><b>verifyDCProduct</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType</td>
+<td></td>
+<td>13</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@323b36e0</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout.verifyHardCopyDeliveryDetails()'><b>verifyHardCopyDeliveryDetails</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout</td>
+<td></td>
+<td>239</td>
+<td>com.tcs.BsiShopRedesign.sprint8.EditOrderDetailsFromCheckout@74e52303</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile.verifyLoginForRegisteredUser()'><b>verifyLoginForRegisteredUser</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile</td>
+<td></td>
+<td>14</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@6c80d78a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails.verifyMemberLink()'><b>verifyMemberLink</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails</td>
+<td></td>
+<td>40</td>
+<td>com.tcs.BsiShopRedesign.sprint8.VerifyMemberDetails@8dbdac1</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing.verifyMemberLink()'><b>verifyMemberLink</b><br>Test class: com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing</td>
+<td></td>
+<td>31</td>
+<td>com.tcs.BsiShopRedesign.sprint8.VerifyPDFPreviewing@158da8e</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount.verifyMemberPrice()'><b>verifyMemberPrice</b><br>Test class: com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount</td>
+<td></td>
+<td>210</td>
+<td>com.tcs.BsiShopRedesign.sprint7.VerifyMemberDiscount@5fdcaa40</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile.verifyMemberTab()'><b>verifyMemberTab</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile</td>
+<td></td>
+<td>4</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.VerifyMemberProfile@62150f9e</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType.verifyNewsFeed()'><b>verifyNewsFeed</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint9.VerifyDifferentProductType@323b36e0</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint9.PayByInvoice.verifyPayByInvoiceErrorMsg()'><b>verifyPayByInvoiceErrorMsg</b><br>Test class: com.tcs.BsiShopRedesign.sprint9.PayByInvoice</td>
+<td></td>
+<td>243</td>
+<td>com.tcs.BsiShopRedesign.sprint9.PayByInvoice@7c729a55</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab.verifyStatus()'><b>verifyStatus</b><br>Test class: com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab</td>
+<td></td>
+<td>4</td>
+<td>com.tcs.BsiShopRedesign.sprint2.VerifyMemberTab@61862a7f</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile.verifyTooltip()'><b>verifyTooltip</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile</td>
+<td></td>
+<td>17</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.RegistrationsWithDiffProfile@6c80d78a</td></tr>
+<tr>
+<td title='com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode.withdrawnStatusColorCode()'><b>withdrawnStatusColorCode</b><br>Test class: com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode</td>
+<td></td>
+<td>114</td>
+<td>com.tcs.BsiShopRedesign.sprint4_5.VerifyProductStatusWithColorCode@7fa98a66</td></tr>
 </table><p>
 </body>
 </html>

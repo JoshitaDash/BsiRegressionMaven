@@ -3,19 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="browser" value="IE"/>
   <parameter name="isAdmin" value="Yes"/>
-  <test name="Internet Explorer Browser(failed)">
+  <test name="BSI Admin(failed)">
     <parameter name="browser" value="IE"/>
-    <parameter name="isAdmin" value="No"/>
+    <parameter name="isAdmin" value="Yes"/>
     <classes>
-      <class name="com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures">
+      <class name="com.tcs.BsiShopRedesign.cms.CreateDeleteCMSPage">
         <methods>
+          <include name="verifyCmsDetails"/>
           <include name="launchBrowser"/>
-          <include name="checkFreeEvent"/>
-          <include name="checkPaidEvent"/>
           <include name="getDriverInstance"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tcs.BsiShopRedesign.sprint3.CheckProductFeatures -->
+      </class> <!-- com.tcs.BsiShopRedesign.cms.CreateDeleteCMSPage -->
     </classes>
-  </test> <!-- Internet Explorer Browser(failed) -->
+  </test> <!-- BSI Admin(failed) -->
 </suite> <!-- Failed suite [Suite] -->

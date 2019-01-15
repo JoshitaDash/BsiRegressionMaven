@@ -5,7 +5,7 @@
 		<parameter name="browser" value="chrome" />
 		<parameter name="isAdmin" value="No" />
 		<classes>
-		
+			
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
 			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses" />
