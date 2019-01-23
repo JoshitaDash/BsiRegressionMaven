@@ -6,7 +6,7 @@
 		<parameter name="isAdmin" value="No" />
 		<classes>
 			
-			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
+			<!-- <class name="com.tcs.BsiShopRedesign.sprint1.MyProfile"/> 
 			<class name="com.tcs.BsiShopRedesign.sprint1.SCRProductsUpdateBasket" />
 			<class name="com.tcs.BsiShopRedesign.sprint1.MyProfileTenAddresses" />
 			<class name="com.tcs.BsiShopRedesign.sprint2.BookEvent" />
@@ -53,7 +53,7 @@
 			<class name="com.tcs.BsiShopRedesign.sprint9.ViewPDFInvoice" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyOrderDetailsWithCMS" />
 			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyFooterHyperlinks" />
-			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyForgotPassword" /> 
+			<class name="com.tcs.BsiShopRedesign.sprint9.VerifyForgotPassword" />  -->
 			
 		</classes>
 	</test>
@@ -62,11 +62,13 @@
 		<parameter name="isAdmin" value="Yes" />
 		<classes>
 		
-			<class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails" />
+			<!-- <class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails" />
 			<class name="com.tcs.BsiShopRedesign.cms.ResetPassword" />
 			<class name="com.tcs.BsiShopRedesign.cms.CreatePromoCode" /> 
 			<class name="com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList" />
 			<class name="com.tcs.BsiShopRedesign.cms.ViewCMSPage" /> 
+			<class name="com.tcs.BsiShopRedesign.cms.CreateUpdateDeleteCMSPage" /> -->
+			<class name="com.tcs.BsiShopRedesign.cms.CreateCMSPageWithMedia" />
 			
 	    </classes>  
 	</test>

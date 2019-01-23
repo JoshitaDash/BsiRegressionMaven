@@ -61,10 +61,13 @@
 		<classes>	
 			<class name="com.tcs.BsiShopRedesign.cms.VerifyCmsDetails" />
 			<class name="com.tcs.BsiShopRedesign.cms.ResetPassword" />
-			<class name="com.tcs.BsiShopRedesign.cms.CreatePromoCode" /> 
+			<class name="com.tcs.BsiShopRedesign.cms.CreatePromoCode" />
 			<class name="com.tcs.BsiShopRedesign.cms.VerifyPromoCodeList" />
 			<class name="com.tcs.BsiShopRedesign.cms.ViewCMSPage" />
-			<class name="com.tcs.BsiShopRedesign.cms.CreateDeleteCMSPage" /> 				
+			<class name="com.tcs.BsiShopRedesign.cms.CreateUpdateDeleteCMSPage" />
+			<class name="com.tcs.BsiShopRedesign.cms.CMSPagePreview" />	
+			<class name="com.tcs.BsiShopRedesign.cms.CreateCMSPageWithMedia" />
+			<class name="com.tcs.BsiShopRedesign.cms.CreateCMSPageWithBlocks" />
 	    </classes>
 	</test>
 </suite> 

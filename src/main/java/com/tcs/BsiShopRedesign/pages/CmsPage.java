@@ -1,9 +1,16 @@
 package com.tcs.BsiShopRedesign.pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -891,7 +898,7 @@ public class CmsPage extends Page {
 				System.out.println("CMS Page creation was successful");
 				test.log(LogStatus.PASS, "CMS Page creation was successful");
 			}
-			//Thread.sleep(5000);
+			// Thread.sleep(5000);
 
 		} catch (InterruptedException e) {
 			CommonHelper.reportFailure("CMS Page creation was unsuccessful");
@@ -923,7 +930,7 @@ public class CmsPage extends Page {
 				System.out.println("Enter keyword for search");
 				Log.info("Enter keyword for search");
 				test.log(LogStatus.INFO, "Enter keyword for search");
-				//CommonHelper.scrolltoview("searchKeywordText_xpath");
+				// CommonHelper.scrolltoview("searchKeywordText_xpath");
 				clearText("searchKeywordText_xpath");
 				Thread.sleep(2000);
 				enterText("searchKeywordText_xpath", cmsPage);
@@ -940,7 +947,7 @@ public class CmsPage extends Page {
 				System.out.println("Enter keyword for search");
 				Log.info("Enter keyword for search");
 				test.log(LogStatus.INFO, "Enter keyword for search");
-				//CommonHelper.scrolltoview("searchKeywordText_xpath");
+				// CommonHelper.scrolltoview("searchKeywordText_xpath");
 				clearText("searchKeywordText_xpath");
 				Thread.sleep(2000);
 				enterText("searchKeywordText_xpath", cmsPage);
@@ -987,8 +994,7 @@ public class CmsPage extends Page {
 		}
 	}
 
-	public void editCMSPage() {
-
+	public void clickEdit() {
 		try {
 			Thread.sleep(1000);
 			System.out.println("Click on Edit CMS Page");
@@ -996,7 +1002,15 @@ public class CmsPage extends Page {
 			test.log(LogStatus.INFO, "Click on Edit CMS Page");
 			click("selectAction_xpath");
 			click("selectEdit_xpath");
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Click Edit was unsuccessful");
+			e.printStackTrace();
+		}
 
+	}
+
+	public void selectMetaRobot() {
+		try {
 			Thread.sleep(2000);
 			System.out.println("Click Search Engine Optimisation");
 			Log.info("Click Search Engine Optimisation");
@@ -1009,7 +1023,15 @@ public class CmsPage extends Page {
 			test.log(LogStatus.INFO, "Select Meta Robot");
 			CommonHelper.scrolltoview("metaRobot_css");
 			selectDpdwnText("metaRobot_css", "NOINDEX, NOFOLLOW");
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Select Meta Robot was unsuccessful");
+			e.printStackTrace();
+		}
+	}
 
+	public void scheduleNewUpdate() {
+
+		try {
 			Thread.sleep(1000);
 			System.out.println("Click on Schedule New Update");
 			Log.info("Click on Schedule New Update");
@@ -1068,6 +1090,29 @@ public class CmsPage extends Page {
 			test.log(LogStatus.INFO, "Click Close Calendar");
 			click("calendarClose_css");
 
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Schedule New Update was unsuccessful");
+			e.printStackTrace();
+		}
+	}
+
+	public void editCMSPage() {
+
+		try {
+
+			System.out.println("Click on Edit CMS Page");
+			Log.info("Click on Edit CMS Page");
+			clickEdit();
+
+			System.out.println("Select Meta Robot");
+			Log.info("Select Meta Robot");
+			selectMetaRobot();
+
+			System.out.println("Schedule New Update");
+			Log.info("Schedule New Update");
+			test.log(LogStatus.INFO, "Schedule New Update");
+			scheduleNewUpdate();
+
 			System.out.println("Click on Save");
 			Log.info("Click on Save");
 			test.log(LogStatus.INFO, "Click on Save");
@@ -1090,5 +1135,217 @@ public class CmsPage extends Page {
 			CommonHelper.reportFailure("Edit and Update of CMS Page was unsuccessful");
 			e.printStackTrace();
 		}
+	}
+
+	public void previewCMSPage(String preivewContent) {
+
+		try {
+			System.out.println("Click on Edit CMS Page");
+			Log.info("Click on Edit CMS Page");
+			clickEdit();
+
+			System.out.println("Click on Page Revision");
+			Log.info("Click on Page Revision");
+			test.log(LogStatus.INFO, "Click on Page Revision");
+			CommonHelper.scrolltoview("pageRevision_xpath");
+			click("pageRevision_xpath");
+
+			Thread.sleep(1000);
+			System.out.println("Select Preview CMS Page");
+			Log.info("Select Preview CMS Page");
+			test.log(LogStatus.INFO, "Select Preview CMS Page");
+			CommonHelper.scrolltoview("selectActionPreview_xpath");
+			click("selectActionPreview_xpath");
+			click("selectPreview_xpath");
+			Thread.sleep(1000);
+
+			Thread.sleep(1000);
+			System.out.println("Click Show Preview");
+			Log.info("Click Show Preview");
+			test.log(LogStatus.INFO, "Click Show Preview");
+			click("showPreview_xpath");
+			Thread.sleep(5000);
+
+			System.out.println("Switch to 2nd tab");
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			driver.manage().window().maximize();
+			System.out.println("Switched to 2nd tab");
+			Thread.sleep(5000);
+
+			String previewText = driver.findElement(By.cssSelector("div[id='authenticationPopup']+p")).getText();
+			if (previewText.contains(preivewContent)) {
+				System.out.println("The Preview Content is: " + previewText);
+				test.log(LogStatus.INFO, "The Preview Content is: " + previewText);
+				CommonHelper.takeScreenShot();
+				test.log(LogStatus.PASS, "Verification of Preview was succeccsful");
+			}
+
+			driver.close();
+			driver.switchTo().window(tabs2.get(0));
+			Thread.sleep(2000);
+			driver.findElement(By.id("back")).click();
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("Preview of CMS Page was unsuccessful");
+			e.printStackTrace();
+		}
+
+	}
+
+	public String createPageWithMedia() throws AWTException, IOException {
+
+		String page = "BSI_Shop Automation";
+
+		try {
+			System.out.println("Click Add New Page");
+			Log.info("Click Add New Page");
+			test.log(LogStatus.INFO, "Click Add New Page");
+			click("addPage_id");
+
+			System.out.println("Enter Page Title");
+			Log.info("Enter Page Title");
+			test.log(LogStatus.INFO, "Enter Page Title");
+			enterText("cmsTitle_css", "BSI_Shop Automation");
+
+			System.out.println("Enter Page Keyword");
+			Log.info("Enter Page Keyword");
+			test.log(LogStatus.INFO, "Enter Page Keyword");
+			enterText("cmskeyword_css", "BSI_Shop Automation");
+
+			System.out.println("Click on Content");
+			Log.info("Click on Content");
+			test.log(LogStatus.INFO, "Click on Content");
+			click("showContent_xpath");
+
+			System.out.println("Enter Page Text");
+			Log.info("Enter Page Text");
+			test.log(LogStatus.INFO, "Enter Page Text");
+			click("showHideEditor_xpath");
+			enterText("pageContent_id", "BSI_Shop Automation");
+			click("showHideEditor_xpath");
+
+			Thread.sleep(2000);
+			System.out.println("Click Insert Image File");
+			Log.info("Click Insert Image File");
+			test.log(LogStatus.INFO, "Click Insert Image File");
+			// CommonHelper.scrolltoview("insertImage_css");
+			click("insertImage_css");
+			Thread.sleep(2000);
+
+			// AutoIt Command to call the script
+			// Runtime.getRuntime().exec("C:\\AutoIT\\FileUpload.exe");
+			// Thread.sleep(10000);
+
+			StringSelection ss = new StringSelection(
+					"https://staging-standards.bsigroup.com/admin/cms/wysiwyg/directive/___directive/e3ttZWRpYSB1cmw9Ind5c2l3eWcvVENTX0F1dG9tYXRpb24vQlNJLUltYWdlLnBuZyJ9fQ,,/key/5e8b6a49c6fa17325dbcbc9fe2b211a8b907b4a81e3a2782d54f91b4bef16a33/");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+
+			// native key strokes for CTRL, V and ENTER keys
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_V);
+			robot.keyRelease(KeyEvent.VK_V);
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+
+			Thread.sleep(10000);
+			System.out.println("Show Hierarchy");
+			Log.info("Show Hierarchy");
+			test.log(LogStatus.INFO, "Show Hierarchy");
+			click("showHierarchy_xpath");
+
+			System.out.println("Select Hierarchy Folder");
+			Log.info("Select Hierarchy Folder");
+			test.log(LogStatus.INFO, "Select Hierarchy Folder");
+			click("selectHierarchy_id");
+
+			System.out.println("Click on Save Page");
+			Log.info("Click on Save Page");
+			test.log(LogStatus.INFO, "Click on Save Page");
+			click("savePage_xpath");
+			Thread.sleep(2000);
+
+			String verifySuccessMsg = driver.findElement(By.xpath("//*[@id='messages']/div/div/div")).getText();
+			if (verifySuccessMsg.contains("You saved the page.")) {
+				System.out.println("CMS Page creation was successful");
+				test.log(LogStatus.PASS, "CMS Page creation was successful");
+			}
+			// Thread.sleep(5000);
+
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("CMS Page creation was unsuccessful");
+			e.printStackTrace();
+		}
+		return page;
+	}
+
+	public String createFolderCMSPage() throws AWTException, IOException {
+
+		String page = "BSI_Shop Automation";
+
+		try {
+			System.out.println("Click Add New Page");
+			Log.info("Click Add New Page");
+			test.log(LogStatus.INFO, "Click Add New Page");
+			click("addPage_id");
+
+			System.out.println("Enter Page Title");
+			Log.info("Enter Page Title");
+			test.log(LogStatus.INFO, "Enter Page Title");
+			enterText("cmsTitle_css", "BSI_Shop Automation");
+
+			System.out.println("Enter Page Keyword");
+			Log.info("Enter Page Keyword");
+			test.log(LogStatus.INFO, "Enter Page Keyword");
+			enterText("cmskeyword_css", "BSI_Shop Automation");
+
+			System.out.println("Click on Content");
+			Log.info("Click on Content");
+			test.log(LogStatus.INFO, "Click on Content");
+			click("showContent_xpath");
+
+			System.out.println("Enter Page Text");
+			Log.info("Enter Page Text");
+			test.log(LogStatus.INFO, "Enter Page Text");
+			click("showHideEditor_xpath");
+			enterText("pageContent_id", "BSI_Shop Automation");
+			click("showHideEditor_xpath");
+
+			Thread.sleep(2000);
+			System.out.println("Click Insert Image File");
+			Log.info("Click Insert Image File");
+			test.log(LogStatus.INFO, "Click Insert Image File");
+			// CommonHelper.scrolltoview("insertImage_css");
+			click("insertImage_css");
+			Thread.sleep(2000);
+			
+			System.out.println("Click on Browse");
+			Log.info("Click on Browse");
+			test.log(LogStatus.INFO, "Click on Browse");
+			//Switching to Iframe
+			driver.switchTo().frame(driver.findElement(By.id("mce_26_ifr")));
+			click("browseImage_id");
+			Thread.sleep(2000);
+			click("subFolder_css");
+			Thread.sleep(2000);
+			click("createFolder_id");
+			Thread.sleep(2000);
+			enterText("folderName_id", "Automation Test Folder");
+			Thread.sleep(2000);
+			click("createFolderNameOk_xpath");
+			Thread.sleep(2000);
+
+
+			
+			
+		} catch (InterruptedException e) {
+			CommonHelper.reportFailure("CMS Page creation was unsuccessful");
+			e.printStackTrace();
+		}
+		return page;
 	}
 }

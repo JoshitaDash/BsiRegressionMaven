@@ -27,5 +27,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/shopqa/Downloads/jacob-1.19.zip"/>
+	<classpathentry kind="lib" path="C:/Users/shopqa/Downloads/AutoItX4Java.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

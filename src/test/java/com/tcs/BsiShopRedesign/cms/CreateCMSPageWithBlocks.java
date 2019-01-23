@@ -10,9 +10,9 @@ import com.tcs.BsiShopRedesign.utilities.BaseTest;
 import com.tcs.BsiShopRedesign.utilities.BsiConstants;
 import com.tcs.BsiShopRedesign.utilities.CommonHelper;
 
-public class CreateDeleteCMSPage extends BaseTest {
+public class CreateCMSPageWithBlocks extends BaseTest {
 
-	public CreateDeleteCMSPage() throws Exception {
+	public CreateCMSPageWithBlocks() throws Exception {
 		super();
 	}
 
@@ -38,10 +38,10 @@ public class CreateDeleteCMSPage extends BaseTest {
 	}
 
 	@Test(priority = 2, enabled = true)
-	public void verifyCmsDetails() {
+	public void createBlocks() {
 
 		try {
-			test = extent.startTest("CMS - CM-01, CM-5 AC#2,9 ___ Create and Delete CMS Page");
+			test = extent.startTest("CMS - CM-04,09 AC# 24___ Create and Delete Blocks in CMS Page");
 
 			System.out.println("Click on Content Menu");
 			Log.info("Click on Content Menu");
@@ -52,28 +52,28 @@ public class CreateDeleteCMSPage extends BaseTest {
 			Log.info("Click Pages Submenu");
 			customer.clickPages();
 
-			System.out.println("Create CMS Page");
-			Log.info("Create CMS Page");
+			System.out.println("Create Folder on CMS Page");
+			Log.info("Create Folder on CMS Page");
 			String CMSPage = customer.createPage();
 			
-			System.out.println("Search CMS Page");
+			/*System.out.println("Search CMS Page");
 			Log.info("Search CMS Page");
 			customer.searchCMSPage(CMSPage);
-			
+
 			System.out.println("Edit CMS Page");
 			Log.info("Edit CMS Page");
-			customer.editCMSPage();
-			
+			customer.previewCMSPage(CMSPage);
+
 			System.out.println("Search CMS Page");
 			Log.info("Search CMS Page");
 			customer.searchCMSPage(CMSPage);
-			
+
 			System.out.println("Delete CMS Page");
 			Log.info("Delete CMS Page");
-			customer.deleteCMSPage();
+			customer.deleteCMSPage();*/
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Create and Delete CMS Page was unsuccessful");
+			test.log(LogStatus.FATAL, "Create and Delete Blocks in CMS Page was unsuccessful");
 			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
