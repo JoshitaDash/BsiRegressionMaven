@@ -62,7 +62,19 @@ public class CMSPagePreview extends BaseTest {
 
 			System.out.println("Edit CMS Page");
 			Log.info("Edit CMS Page");
-			customer.previewCMSPage(CMSPage);	
+			customer.previewCMSPage(CMSPage);
+			
+			System.out.println("Search CMS Page");
+			Log.info("Search CMS Page");
+			customer.searchCMSPage(CMSPage);
+
+			System.out.println("Delete CMS Page");
+			Log.info("Delete CMS Page");
+			customer.deleteCMSPage();
+			
+			System.out.println("Click Admin Logout");
+			Log.info("Click Admin Logout");
+			customer.clickAdminLogout();
 			
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Verify Preview of CMS Page was unsuccessful");

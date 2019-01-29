@@ -487,6 +487,9 @@ public class BillingAddressPage extends Page {
 					System.out.println("Billing Address has been deleted successfully");
 				}
 
+				test.log(LogStatus.PASS, "Ten Billing Addresses has been deleted successfully");
+				System.out.println("Ten Billing Addresses has been deleted successfully");
+
 			}
 		} catch (Exception e) {
 			CommonHelper.reportFailure("Delete Ten Billing Address was unsuccessful");

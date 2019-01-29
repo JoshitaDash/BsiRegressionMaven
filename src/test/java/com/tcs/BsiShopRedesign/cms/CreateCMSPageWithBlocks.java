@@ -38,13 +38,49 @@ public class CreateCMSPageWithBlocks extends BaseTest {
 	}
 
 	@Test(priority = 2, enabled = true)
-	public void createBlocks() {
+	public void createDeleteBlocks() {
 
 		try {
 			test = extent.startTest("CMS - CM-04,09 AC# 24___ Create and Delete Blocks in CMS Page");
 
-			System.out.println("Click on Content Menu");
-			Log.info("Click on Content Menu");
+			System.out.println("Click Content Menu");
+			Log.info("Click Content Menu");
+			CmsPage customer = new CmsPage(driver);
+			customer.clickContent();
+
+			System.out.println("Click Blocks Submenu");
+			Log.info("Click Blocks Submenu");
+			customer.clickBlocks();
+
+			System.out.println("Add New Block");
+			Log.info("Add New Block");
+			String cmsBlock = customer.addNewBlockDetails();
+			
+			System.out.println("Search CMS Block");
+			Log.info("Search CMS Page");
+			customer.searchCMSBlock(cmsBlock);
+
+			System.out.println("Delete CMS Block");
+			Log.info("Delete CMS Block");
+			customer.deleteCMSBlock();
+
+
+		} catch (Exception e) {
+			test.log(LogStatus.FATAL, "Create and Delete Blocks in CMS Page was unsuccessful");
+			CommonHelper.takeScreenShot();
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+	}
+
+	@Test(priority = 3, enabled = true)
+	public void insertBlocksToCmsPage() {
+
+		try {
+			test = extent.startTest("CMS - CM-04,09 AC# 24___ Create CMS Page with Blocks");
+
+			System.out.println("Click Content Menu");
+			Log.info("Click Content Menu");
 			CmsPage customer = new CmsPage(driver);
 			customer.clickContent();
 
@@ -52,17 +88,17 @@ public class CreateCMSPageWithBlocks extends BaseTest {
 			Log.info("Click Pages Submenu");
 			customer.clickPages();
 
-			System.out.println("Create Folder on CMS Page");
-			Log.info("Create Folder on CMS Page");
-			String CMSPage = customer.createPage();
-			
-			/*System.out.println("Search CMS Page");
+			System.out.println("Create CMS Page with Blocks");
+			Log.info("Create CMS Page with Blocks");
+			String CMSPage = customer.createPageWithBlocks();
+
+			System.out.println("Search CMS Page");
 			Log.info("Search CMS Page");
 			customer.searchCMSPage(CMSPage);
 
-			System.out.println("Edit CMS Page");
-			Log.info("Edit CMS Page");
-			customer.previewCMSPage(CMSPage);
+			System.out.println("Preview CMS Page");
+			Log.info("Preview CMS Page");
+			customer.previewBlockCMSPage();
 
 			System.out.println("Search CMS Page");
 			Log.info("Search CMS Page");
@@ -70,10 +106,14 @@ public class CreateCMSPageWithBlocks extends BaseTest {
 
 			System.out.println("Delete CMS Page");
 			Log.info("Delete CMS Page");
-			customer.deleteCMSPage();*/
+			customer.deleteCMSPage();
+
+			System.out.println("Click Admin Logout");
+			Log.info("Click Admin Logout");
+			customer.clickAdminLogout();
 
 		} catch (Exception e) {
-			test.log(LogStatus.FATAL, "Create and Delete Blocks in CMS Page was unsuccessful");
+			test.log(LogStatus.FATAL, "Create CMS Page with Blocks was unsuccessful");
 			CommonHelper.takeScreenShot();
 			e.printStackTrace();
 			Assert.fail(e.getMessage());

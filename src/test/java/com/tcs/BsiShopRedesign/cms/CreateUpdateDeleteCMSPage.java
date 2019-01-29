@@ -38,7 +38,7 @@ public class CreateUpdateDeleteCMSPage extends BaseTest {
 	}
 
 	@Test(priority = 2, enabled = true)
-	public void verifyCmsDetails() {
+	public void createUpdateDeletePage() {
 
 		try {
 			test = extent.startTest("CMS - CM-01, CM-5 AC#2,9 ___ Create Update and Delete CMS Page");
@@ -71,6 +71,10 @@ public class CreateUpdateDeleteCMSPage extends BaseTest {
 			System.out.println("Delete CMS Page");
 			Log.info("Delete CMS Page");
 			customer.deleteCMSPage();
+			
+			System.out.println("Click Admin Logout");
+			Log.info("Click Admin Logout");
+			customer.clickAdminLogout();
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Create and Delete CMS Page was unsuccessful");

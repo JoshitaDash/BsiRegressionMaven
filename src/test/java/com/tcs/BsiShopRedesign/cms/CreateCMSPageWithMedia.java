@@ -55,7 +55,7 @@ public class CreateCMSPageWithMedia extends BaseTest {
 
 			System.out.println("Create CMS Page");
 			Log.info("Create CMS Page");
-			String CMSPage = customer.createPageWithMedia();
+			String CMSPage = customer.createPageWithImage();
 
 			System.out.println("Search CMS Page");
 			Log.info("Search CMS Page");
@@ -72,6 +72,10 @@ public class CreateCMSPageWithMedia extends BaseTest {
 			System.out.println("Delete CMS Page");
 			Log.info("Delete CMS Page");
 			customer.deleteCMSPage();
+			
+			System.out.println("Click Admin Logout");
+			Log.info("Click Admin Logout");
+			customer.clickAdminLogout();
 
 		} catch (Exception e) {
 			test.log(LogStatus.FATAL, "Create CMS Page with Image File was unsuccessful");

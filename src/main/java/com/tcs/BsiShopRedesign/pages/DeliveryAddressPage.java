@@ -451,13 +451,13 @@ public class DeliveryAddressPage extends Page {
 		// WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 			boolean deleteAddress = CommonHelper.checkVisibility(By.cssSelector(".action.delete>span"));
 
 			if (deleteAddress) {
 
 				for (int i = 1; i <= 9; i++) {
-					Thread.sleep(3000);
+					Thread.sleep(2000);
 					Log.info("Click on Delete Delivery Address");
 					System.out.println("Click on Delete Delivery Address");
 					test.log(LogStatus.INFO, "Click on Delete Delivery Address");
@@ -470,11 +470,14 @@ public class DeliveryAddressPage extends Page {
 					System.out.println("Click on Confirm Delete Delivery Address");
 					test.log(LogStatus.INFO, "Click on Confirm Delete Delivery Address");
 					driver.findElement(By.cssSelector(".action-primary.action-accept")).click();
-					Thread.sleep(3000);
+					Thread.sleep(5000);
 
-					test.log(LogStatus.PASS, "Ten Delivery Addresses has been deleted successfully");
-					System.out.println("Ten Delivery Addresses has been deleted successfully");
+					test.log(LogStatus.PASS, "Delivery Address has been deleted successfully");
+					System.out.println("Delivery Address has been deleted successfully");
 				}
+				
+				test.log(LogStatus.PASS, "Ten Delivery Addresses has been deleted successfully");
+				System.out.println("Ten Delivery Addresses has been deleted successfully");
 
 			}
 		} catch (Exception e) {
